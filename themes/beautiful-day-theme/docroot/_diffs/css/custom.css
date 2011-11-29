@@ -3,6 +3,7 @@
 #skip-to-content,
 #heading .community-title,
 #heading .page-title,
+#heading .site-title,
 #navigation h1,
 #navigation .child-menu {
 	clip: rect(0 0 0 0);
@@ -144,6 +145,14 @@ body {
 
 .aui-tab-active span a {
 	color: #FFF;
+}
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }
 
 /* -------- Footer -------- */

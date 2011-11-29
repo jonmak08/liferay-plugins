@@ -81,7 +81,7 @@ body {
 #navigation li,
 #navigation a {
 	float: left;
-	height: 50px;
+	height: 15px;
 }
 
 #navigation a {
@@ -128,6 +128,14 @@ body {
 	font-size: 16px;
 	margin-bottom: 8px;
 	padding: 6px;
+}
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }
 
 /* -------- Footer -------- */

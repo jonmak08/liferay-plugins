@@ -170,6 +170,14 @@ body {
 	color: #96C0E6;
 }
 
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
+}
+
 /* -------- Footer -------- */
 
 #footer,
