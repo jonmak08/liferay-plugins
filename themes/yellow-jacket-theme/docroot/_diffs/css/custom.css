@@ -261,6 +261,14 @@ content: "";
 	color: #FFF;
 }
 
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
+}
+
 .calendar-header,
 .calendar-container h3, 
 .calendar-container a,

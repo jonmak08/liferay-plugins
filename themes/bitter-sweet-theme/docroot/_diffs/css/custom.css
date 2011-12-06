@@ -61,7 +61,7 @@ body {
 
 #navigation {
 	background: url(../images/custom/navigation_bg.png) 0 100%;
-	height: 38px;
+	height: 42px;
 }
 
 #navigation ul {
@@ -111,6 +111,16 @@ body {
 
 #breadcrumbs {
 	display: none;
+}
+
+/* ---------- Portlet ---------- */
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }
 
 /* -------- Footer -------- */

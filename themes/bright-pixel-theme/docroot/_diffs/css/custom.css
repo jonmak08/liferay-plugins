@@ -144,6 +144,14 @@ body {
 	padding: 3px 0 6px;
 }
 
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
+}
+
 /* -------- Footer -------- */
 
 #footer p {

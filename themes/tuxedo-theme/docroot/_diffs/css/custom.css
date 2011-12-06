@@ -121,6 +121,8 @@
 	display: none;
 }
 
+/* -------- Portlet -------- */
+
 .portlet {
 	margin: 0 0 15px;
 }
@@ -141,6 +143,14 @@
 	color: #333;
 	font-size: 12px;
 	text-transform: uppercase;
+}
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }
 
 /* -------- Footer -------- */

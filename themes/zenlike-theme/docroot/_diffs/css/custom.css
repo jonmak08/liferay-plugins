@@ -69,8 +69,8 @@ body {
 	margin: 0;
 }
 
-.ie6 .#navigation ul,
-.ie7 .#navigation ul {
+.ie6 #navigation ul,
+.ie7 #navigation ul {
 	zoom: 1;
 }
 
@@ -110,6 +110,14 @@ body {
 .portlet-topper {
 	background: url(../images/custom/portlet_topper_bg.png) repeat-x;
 	padding: 6px;
+}
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }
 
 /* -------- Footer -------- */

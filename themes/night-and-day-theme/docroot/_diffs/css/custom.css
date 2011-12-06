@@ -76,6 +76,12 @@ body.signed-in {
 	margin: 56px 0 0;
 }
 
+#heading .site-title {
+	float: left;
+	position: absolute;
+	top: 18px;
+}
+
 /* -------- Navigation -------- */
 
 #navigation {
@@ -201,6 +207,14 @@ body.signed-in {
 
 .portlet-icons {
 	background: #FFF;
+}
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }
 
 /* -------- Tabs -------- */

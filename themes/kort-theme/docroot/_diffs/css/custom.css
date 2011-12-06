@@ -120,6 +120,16 @@ a:hover {
 	display: none;
 }
 
+/* -------- Portlet -------- */
+
 .portlet {
 	margin: 0 0 1em;
+}
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }

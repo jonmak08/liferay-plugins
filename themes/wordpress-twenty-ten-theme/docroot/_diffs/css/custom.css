@@ -129,6 +129,8 @@ body {
 	display: none;
 }
 
+/* ---------- Portlet ---------- */
+
 .portlet-title {
 	color: #000;
 	font-size: 21px;
@@ -136,6 +138,14 @@ body {
 
 .portlet-content {
 	padding: 12px 0 0;
+}
+
+.portlet-topper-toolbar .lfr-trigger .nobr {
+	float: right;
+}
+
+.portlet-topper-toolbar .lfr-trigger ul {
+	visibility: hidden;
 }
 
 /* -------- Footer -------- */
