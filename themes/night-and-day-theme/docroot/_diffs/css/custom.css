@@ -3,8 +3,8 @@
 /* -------- Global -------- */
 
 #skip-to-content,
-#heading .community-title,
 #heading .page-title,
+#heading .site-title,
 #navigation h1,
 #navigation .child-menu {
 	clip: rect(0 0 0 0);
@@ -76,6 +76,12 @@ body.signed-in {
 	margin: 56px 0 0;
 }
 
+#heading .site-title {
+	float: left;
+	position: absolute;
+	top: 18px;
+}
+
 /* -------- Navigation -------- */
 
 #navigation {
@@ -124,7 +130,7 @@ body.signed-in {
 
 .ie6 #navigation .selected a {
 	background: #2F2F2F none;
-}	
+}
 
 #navigation span {
 	text-shadow: 1px 1px #000;

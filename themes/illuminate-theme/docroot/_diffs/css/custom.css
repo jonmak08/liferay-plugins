@@ -1,8 +1,8 @@
 /* -------- Global -------- */
 
 #skip-to-content,
-#heading .community-title,
 #heading .page-title,
+#heading .site-title,
 #navigation h1,
 #navigation .child-menu {
 	clip: rect(0 0 0 0);
@@ -208,7 +208,7 @@ body {
 #footer {
 	background: #ACAFB4 url(../images/custom/footer-bg.jpg) 0 bottom repeat-x;
 	height: 70px;
-	position: absolute; 
+	position: absolute;
 	width: 100%;
 }
 
