@@ -3,6 +3,7 @@
 #skip-to-content,
 #heading .community-title,
 #heading .page-title,
+#heading .site-title,
 #navigation h1,
 #navigation .child-menu {
 	clip: rect(0 0 0 0);
@@ -60,9 +61,10 @@ body {
 /* -------- Navigation -------- */
 
 #navigation {
+	float: left;
+	left: 20px;
 	margin: 28px 0;
-	position: absolute;
-	right: 5px;
+	position: relative;
 	width: 182px;
 }
 
