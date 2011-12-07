@@ -76,6 +76,12 @@ body.signed-in {
 	margin: 56px 0 0;
 }
 
+#heading .site-title {
+	float: left;
+	position: absolute;
+	top: 18px;
+}
+
 /* -------- Navigation -------- */
 
 #navigation {
