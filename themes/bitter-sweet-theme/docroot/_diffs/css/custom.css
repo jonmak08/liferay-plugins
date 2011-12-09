@@ -1,8 +1,8 @@
 /* -------- Global -------- */
 
 #skip-to-content,
-#heading .community-title,
 #heading .page-title,
+#heading .site-title,
 #navigation h1,
 #navigation .child-menu {
 	clip: rect(0 0 0 0);
@@ -61,7 +61,7 @@ body {
 
 #navigation {
 	background: url(../images/custom/navigation_bg.png) 0 100%;
-	height: 38px;
+	height: 42px;
 }
 
 #navigation ul {

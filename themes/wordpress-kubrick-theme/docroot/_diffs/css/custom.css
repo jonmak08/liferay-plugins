@@ -1,8 +1,8 @@
 /* -------- Global -------- */
 
 #skip-to-content,
-#heading .community-title,
 #heading .page-title,
+#heading .site-title,
 #navigation h1,
 #navigation .child-menu {
 	clip: rect(0 0 0 0);
@@ -61,8 +61,8 @@ body {
 
 #navigation {
 	margin: 28px 0;
-	position: absolute;
 	right: 5px;
+	position: absolute;
 	width: 182px;
 }
 

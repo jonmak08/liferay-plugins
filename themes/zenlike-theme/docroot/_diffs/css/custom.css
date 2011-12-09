@@ -1,8 +1,8 @@
 /* -------- Global -------- */
 
 #skip-to-content,
-#heading .community-title,
 #heading .page-title,
+#heading .site-title,
 #navigation h1,
 #navigation .child-menu {
 	clip: rect(0 0 0 0);
@@ -69,8 +69,8 @@ body {
 	margin: 0;
 }
 
-.ie6 .#navigation ul,
-.ie7 .#navigation ul {
+.ie6 #navigation ul,
+.ie7 #navigation ul {
 	zoom: 1;
 }
 
