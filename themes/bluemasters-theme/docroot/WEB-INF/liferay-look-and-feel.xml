@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.1.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_1_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.1.0+</version>
+	</compatibility>
+	<theme id="bluemasters" name="Bluemasters">
+		<settings>
+			<setting configurable="true" key="slogan" type="text" value="Your slogan/tagline here."></setting>
+			<setting configurable="true" key="display-breadcrumbs" type="checkbox" value="true"></setting>
+		</settings>
+	</theme>
+</look-and-feel>

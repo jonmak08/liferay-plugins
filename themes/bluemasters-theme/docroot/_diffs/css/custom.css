@@ -1,0 +1,640 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+/* -------- Base Structure -------- */
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: #333949 url(../images/custom/bg.gif);
+	height: 100%; /*Fix for <iframe> .html-editor*/
+}
+
+body.html-editor {
+	height: 100%;
+}
+
+body {
+	background: url(../images/custom/bg.png) repeat-x;
+	color: #666;
+	font: 12px/1.4 Verdana, Helvetica, sans-serif;
+}
+
+body.signed-in {
+	background-position: 0 30px;
+}
+
+#wrapper, #footer {
+	margin: 0 auto;
+	position: relative;
+	width: 950px;
+}
+
+#banner, #content, #footer {
+	overflow: hidden;
+	position: relative;
+}
+
+#content {
+	background-image: url(../images/custom/home-block-box-bg.png);
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.content-top {
+	background-color: #FFF;
+	padding: 0 20px;
+	position: relative;
+}
+
+#main-content {
+	background-color: #FFF;
+}
+
+#column-1, .columns-3 #column-2 {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.has-breadcrumbs #column-1, .has-breadcrumbs .columns-3 #column-2 {
+	padding-top: 55px;
+}
+
+#column-1 .portlet-column-content, .columns-3 #column-2 .portlet-column-content {
+	padding: 0 20px;
+}
+
+.columns-3 #column-2 .portlet-column-content {
+	padding-left: 0;
+}
+
+#column-1.portlet-column-only {
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.columns-3 #column-3, .columns-2 #column-2 {
+	background-color: #EEF0F5;
+}
+
+.columns-3 #column-3 .portlet-column-content, .columns-2 #column-2 .portlet-column-content {
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+/* -------- Base Content -------- */
+
+a {
+	color: #1B8BB4;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 0 10px 0;
+}
+
+#content h1 {
+	font-size: 230%;
+	line-height: 1.25;
+}
+
+#content h2 {
+	border-bottom: 1px dotted #84A1AF;
+	font-size: 183%;
+	font-weight: bold;
+	line-height: 1.25;
+}
+
+#content h2 a {
+	color: #1C8CB5;
+	font-size: 26px;
+	text-decoration: none;
+}
+
+#content h2 a:hover {
+	text-decoration: underline;
+}
+
+#content h3 {
+	font-size: 140%;
+	font-weight: bold;
+}
+
+#content h4 {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#content h5 {
+	font-size: 100%;
+}
+
+#content blockquote {
+	background: #EEF0F5;
+	border: 1px solid #CED1DA;
+	color: #788093;
+	font-style: italic;
+	font-weight: bold;
+	margin: 20px 0;
+	padding: 20px;
+}
+
+/* -------- Page Admin Controls -------- */
+
+html > .lfr-dockbar-pinned {
+	padding-top: 31px;
+}
+
+.page-customization-bar {
+	left: 0;
+	filter:alpha(opacity=7);
+	opacity: 0.75;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+
+/* -------- Skip To Content -------- */
+
+#skip-to-content {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	color: #6A87A3;
+	font-size: 10px;
+	left: 50%;
+	line-height: 1.3;
+	margin-left: -87px;
+	position: absolute;
+	text-decoration: underline;
+	top: 20px;
+}
+
+#skip-to-content:focus, #skip-to-content:active {
+	clip: auto;
+	text-decoration: underline;
+}
+
+/* -------- Banner -------- */
+
+#banner {
+	height: 180px;
+	overflow: visible; /*hidden above*/
+}
+
+#banner, #banner a {
+	color: #FFF;
+}
+
+#heading {
+	left: 0;
+	position: absolute;
+	top: 80px;
+}
+
+.site-title {
+	font-size: 32px;
+	margin: 0;
+}
+
+#banner .site-name {
+	display: block;
+}
+
+.site-slogan {
+	bottom:-2em;
+	color: #485766;
+	font-size: 10px;
+	position: absolute;
+	text-transform: uppercase;
+}
+
+.page-title {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	position: absolute;
+}
+
+/* -------- Banner Sign-in -------- */
+
+#site-signin {
+	left: 0;
+	position: absolute;
+	top: 20px;
+}
+
+#site-signin a {
+	color: #6A87A3;
+	font-size: 10px;
+	line-height: 1.3;
+	text-decoration: none;
+}
+
+#site-signin a:hover {
+	color: #6A87A3;
+	text-decoration: underline;
+}
+
+/* -------- Banner Search -------- */
+
+#banner-search {
+	background-color: #101011;
+	border-color: #292D30;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border-style: none solid solid;
+	border-width: 0 1px 1px;
+	padding: 0 5px;
+	position: absolute;
+	right: 0;
+	top: 15px;
+}
+
+#banner-search .lfr-search-keywords input {
+	background: transparent;
+	border: none;
+	color: #6A87A3;
+	font-size: 11px;
+	outline: none;
+	width: 170px;
+}
+
+#banner-search .lfr-search-button input {
+	border: 0 none;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+	width: 25px;
+}
+
+.portlet-journal-content-search .lfr-search-keywords, .portlet-journal-content-search .lfr-search-button {
+	display: none; /*Remove in-page search*/
+}
+
+/* -------- Banner Navigation All -------- */
+
+#navigation {
+	position: absolute;
+	right: 0;
+	top: 90px;
+	z-index: 10;
+}
+
+#navigation h1 {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	position: absolute;
+}
+
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul ul {
+	display: none;
+	position: absolute;
+	width: 200px;
+}
+
+#navigation li {
+	float: left;
+	margin: 0;
+	padding: 0 5px 0 0;
+	position: relative; /*For child ul*/
+}
+
+#navigation a {
+	color: #7A8090;
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1.4;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+#navigation a:hover, #navigation .selected>a {
+	color: #FFF; /*Avoids parent hover color*/
+}
+
+#navigation li:hover>a, #navigation .selected>a {
+	background: #0D0F13;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	text-decoration: none;
+}
+
+#navigation li.has-children:hover>a, #navigation li.has-children.selected:hover>a {
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+#navigation .delete-tab {
+	top: 0;
+}
+
+/* -------- Banner Navigation Child -------- */
+
+#navigation .child-menu {
+	background: #0D0F13;
+	left: 0;
+	top: 100%;
+}
+
+#navigation li:hover .child-menu {
+	display: block;
+}
+
+#navigation .child-menu li {
+	float: none;
+	padding: 0;
+}
+
+#navigation .child-menu a, #navigation li:hover .child-menu a {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: transparent;
+	display: block;
+	font-size: 15px;
+	padding: 10px;
+}
+
+/* -------- Banner Navigation Grandchild -------- */
+
+#navigation .grandchild-menu {
+	background: #0D0F13;
+	display: none;
+	left: 200px;
+	position: absolute;
+	top: 0;
+}
+
+#navigation .child-menu :hover .grandchild-menu {
+	display: block;
+}
+
+/* -------- Breadcrumbs -------- */
+
+#breadcrumbs {
+	position: absolute;
+	top: 20px;
+}
+
+#breadcrumbs h1 {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	position: absolute;
+}
+
+#breadcrumbs ul {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+#breadcrumbs li {
+	display: block;
+	float: left;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0;
+	padding: 0 0.75em 0 0;
+	position: relative;
+}
+
+#breadcrumbs li.first {
+	padding-left: 0;
+}
+
+#breadcrumbs li:after {
+	color: #1C8CB5;
+	content: "»";
+	font-size: 14px;
+	line-height: 1.5;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+#breadcrumbs li.last:after {
+	content: "";
+}
+
+#breadcrumbs a {
+	color: #1C8CB5;
+	display: block;
+	padding: 0.25em 0.25em;
+	text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+/* -------- Portlet General -------- */
+
+.portlet-content {
+	padding: 0;
+}
+
+.columns-3 #column-3 .portlet-content, .columns-2 #column-2 .portlet-content, .columns-2 #column-2 .portlet-borderless-container {
+	padding: 10px 10px 0;
+}
+
+ .columns-2 #column-2 .collapse-margins .portlet-borderless-container {
+ 	padding: 0; /*user override class (.collapse-margins) to remove padding*/
+ }
+
+/* -------- Portlet Admin Controls -------- */
+
+.signed-in.controls-visible .portlet-boundary.portlet-draggable {
+	border: dashed #C0C0C0;
+	border-width: 2px 0;
+}
+
+.signed-in.controls-visible .portlet-boundary.portlet-draggable+.portlet-boundary.portlet-draggable {
+	border-top: none;
+}
+
+.signed-in.controls-visible .portlet-boundary.portlet-draggable.yui3-dd-dragging {
+	border-bottom: none;
+	border-top: none;
+}
+
+.signed-in.controls-visible .portlet-boundary.portlet-draggable .portlet-topper-toolbar a {
+	text-decoration: none;
+}
+
+.signed-in.controls-visible .portlet-boundary.portlet-draggable .portlet-topper-toolbar a:hover {
+	text-decoration: none;
+}
+
+.portlet-journal-content .icon-actions {
+	margin: 0;
+	padding: 8px;
+}
+
+.columns-2 #column-2 .portlet .icons-container, .columns-3 #column-3 .portlet .icons-container {
+	margin-left:-10px;
+}
+
+/* -------- Portlet Topper -------- */
+
+.columns-3 #column-3 .portlet-topper, .columns-2 #column-2 .portlet-topper {
+	background: #9097A9 no-repeat 10px 50%;
+	color: #FFF;
+	padding: 6px 15px 6px 15px;
+}
+
+#column-3 .theme-icon .portlet-topper, #column-2 .theme-icon .portlet-topper, #column-1 .theme-icon .portlet-topper {
+	background-position: 10px 50%;
+	background-repeat: no-repeat;
+	padding-left: 45px;
+}
+
+.columns-3 #column-3 .theme-icon-menu .portlet-topper, .columns-2 #column-2 .theme-icon-menu .portlet-topper {
+	background-image: url(../images/custom/icon-menu.png);
+	padding-left: 45px;
+}
+
+.columns-3 #column-3 .theme-icon-social .portlet-topper, .columns-2 #column-2 .theme-icon-social .portlet-topper {
+	background-image: url(../images/custom/icon-social.png);
+	padding-left: 45px;
+}
+
+#column-1 .portlet-title, .columns-3 #column-2 .portlet-title {
+	border-bottom: 1px dotted #84A1AF;
+	font-size: 183%;
+	font-weight: bold;
+}
+
+.columns-3 #column-3 .portlet-title, .columns-2 #column-2 .portlet-title {
+	font-size: 160%;
+	margin: 5px 0;
+}
+
+.portlet-title .icon {
+	display: none;
+}
+
+/* -------- Side Navigation -------- */
+
+.columns-3 #column-3 .nav-menu ul, .columns-2 #column-2 .nav-menu ul {
+	list-style: none;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.columns-3 #column-3 .nav-menu li, .columns-2 #column-2 .nav-menu li {
+	margin: 0 0 2px;
+	padding: 0;
+}
+
+.columns-3 #column-3 .nav-menu a, .columns-2 #column-2 .nav-menu a {
+	background: #E0E3EB url(../images/custom/menu-right-bg.png) no-repeat 95% 50%;
+	color: #747C93;
+	display: block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	overflow: hidden;
+	padding: 10px 20px 10px 10px;
+	text-decoration: none;
+}
+
+.columns-3 #column-3 .nav-menu a.selected, .columns-2 #column-2 .nav-menu a.selected {
+	color: #666;
+}
+
+.columns-3 #column-3 .nav-menu a:hover, .columns-2 #column-2 .nav-menu a:hover {
+	text-decoration: underline;
+}
+
+/* -------- Content Data Table -------- */
+
+table.data {
+	border: 1px solid #CDCDCD;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 100%;
+	margin: 15px 0;
+}
+
+table.data th, table.data td {
+	padding: 10px;
+}
+
+table.data th {
+	background: #9097A9;
+	border: 0;
+	color: #FFF;
+}
+
+table.data tr.even, table.data tr.odd {
+	background-color: #EEE;
+	border-bottom: 1px solid #CCC;
+	padding: 0.1em 0.6em;
+}
+
+table.data tr.odd {
+	background-color: #FFF;
+}
+
+table.data tr.even {
+	background-color: #E0E3EB;
+}
+
+/* -------- Footer -------- */
+
+#footer-wrapper {
+	background: #040507;
+	border-top: 1px solid #0F131F;
+	color: #6A7796;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	min-height: 50px;
+	padding: 20px 0;
+	margin-bottom:-25px; /*Chat bar fix*/
+}
+
+#footer-wrapper a {
+	color: #6A7796;
+	text-decoration: underline;
+}
+
+#footer-wrapper a:hover {
+	text-decoration: none;
+}
+
+/* -------- Misc. Bug Fixes -------- */
+.results-row.alt td {
+	border-width: 1px; /*In application.css*/
+}
+
+.signed-out .portlet-title-text {
+	cursor: auto;
+}
