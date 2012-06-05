@@ -70,6 +70,7 @@ $theme.include($body_top_include)
 				</div>
 			</div>
 		</div>
+
 		<div class="column-2">
 				<div class="footer-column-content">
 				<img alt="" height="76" src="${images_folder}/custom/Getting-Started-Video.png" width="76" />
@@ -79,6 +80,7 @@ $theme.include($body_top_include)
 				</div>
 			</div>
 		</div>
+
 		<div class="column-3">
 			<div class="footer-column-content">
 				<img src="${images_folder}/custom/IDE-logo.png" alt="" height="76" width="76" />
