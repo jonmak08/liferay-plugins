@@ -61,30 +61,32 @@ $theme.include($body_top_include)
 	</div>
 
 	<footer id="footer" role="contentinfo">
-		<div class="column-1">
+		<div id="getting-started" class="column-1">
 			<div class="footer-column-content">
-				<img src="${images_folder}/custom/Social-Office-Logo.png" alt="" height="76" width="76" />
+				<span class="footer-logo"></span>
 				<div class="footer-box">
 					<h3>Want Easy Social Collaboration?</h3>
-					<a href="#" id="">Get Social Office &#9658;</a>
+					<a href="http://liferay.com/eloqua-test?wh=14" id="">Get Social Office &#9658;</a>
 				</div>
 			</div>
 		</div>
-		<div class="column-2">
+
+		<div id="ide" class="column-2">
 				<div class="footer-column-content">
-				<img alt="" height="76" src="${images_folder}/custom/Getting-Started-Video.png" width="76" />
+				<span class="footer-logo"></span>
 				<div class="footer-box">
 					<h3>Need Help Getting Started?</h3>
-					<a href="#" id="">Click here &#9658;</a>
+					<a href="http://liferay.com/eloqua-test?wh=15" id="">Click here &#9658;</a>
 				</div>
 			</div>
 		</div>
-		<div class="column-3">
+
+		<div id="social-office" class="column-3">
 			<div class="footer-column-content">
-				<img src="${images_folder}/custom/IDE-logo.png" alt="" height="76" width="76" />
+				<span class="footer-logo"></span>
 				<div class="footer-box">
 					<h3>Develop Faster.</h3>
-					<a href="#" id="">Click here &#9658;</a>
+					<a href="http://liferay.com/eloqua-test?wh=16" id="">Click here &#9658;</a>
 				</div>
 			</div>
 		</div>
