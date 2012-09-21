@@ -1,0 +1,408 @@
+/* Body, Wrapper, footer and columns!!!!!!!!!! */
+@import "compass";
+
+html body {
+	padding-bottom: 0;
+}
+
+body {
+	background-color: #ECECEC; 
+	color: #008FAF; 
+	font: normal normal 12px arial,sans-serif;
+}
+
+#content {
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	margin: 15px 0 0;
+	padding: 30px 0 0;
+}
+
+p {
+	color: #777;
+	font: 16px arial, sans-serif;
+	width: 74.5%;
+	margin: 40px 0 15px 0;
+}
+
+a {
+	color: #008FAF;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		color: #777;
+	}
+}
+
+h2 {
+	font-size: 20px;
+
+	a:hover {
+		text-decoration:none;
+	}
+}
+
+.chat-bar {
+	display: none;
+}
+
+.lfr-menu-list ul, .lfr-actions, .aui-dialog-content, .aui-dialog .yui3-widget-hd, .modify-pages .delete-tab, input[type="submit"], input[type="button"], input[type="reset"], button, .tags-search-combobox .aui-field-input-text, .staging-icon-menu-container .staging-icon-menu.lfr-actions .lfr-trigger strong a, .active-area-proxy, .entry-display-style .entry-thumbnail img, .aui-paginator-link, .lfr-header-row .aui-toolbar-only, .lfr-translation-manager, .lfr-translation-manager-translation, .select-documents, .select-files, .taglib-ratings.stars:hover, .taglib-ratings.stars:hover .liferay-rating-vote, .rule-group-instance-container .rule-group-instance, .portlet-search .search-facet .facet-value, .lfr-api-results, .portlet-image-gallery-display .image-thumbnail img, .taglib-logo-selector .lfr-change-logo.show-background, .portlet-journal .lfr-table .journal-metadata {
+	border-radius: 0;
+	letter-spacing: 1px;
+}
+
+#wrapper {
+	margin: 15px auto 15px auto;
+	background-color: #FFF; 
+	color: #008FAF;
+	width: 1100px; 
+	padding: 25px;
+	position: relative;
+}
+
+#footer {
+	color: #777;
+	padding-top: 15px;
+
+	p {
+		margin: 15px 0 0;
+		padding: 0;
+		width: none;
+		font-size: 12px;
+	}
+}
+
+/* Div box for banner */
+#banner-image {
+	width: 1102px;
+
+	img{
+		margin: 17px auto 12px auto;
+		display: block;
+		border-bottom: 1px solid #D5D5D5;
+	}
+}
+
+#column-1 {
+	width: 60%;
+	padding: 0 25px 20px 0;
+
+	.portlet-topper {
+		text-align: center;
+	}
+}
+
+#column-2 {
+	width: 15%;
+	padding: 0px 25px 20px 0px;
+
+	input {
+		display: block;
+		width: 100%;
+	}
+
+	.portlet-title-text {
+		font-size: 15px;
+		color: #777;
+		text-transform: uppercase;
+	}
+}
+
+#column-3 {
+	width: 25%;
+	padding: 0px 25px 20px 0px;
+}
+
+/* PORTLETS!!!!!! */
+
+.icon {
+	display: none;
+}
+
+.portlet-title-text {
+	font-size: 20px;
+	color: #008FAF;
+
+		&:hover {
+		color: #777;
+	}
+}
+
+.portlet-body {
+	color: #777;
+	font: 15px arial,sans-serif;
+}
+
+input[type="text"] {
+	text-shadow: none;
+	font: normal 11px arial, sans-serif;
+	background-image: none;
+	background-color: #F0F0F0;
+	color: #000;
+    padding: 6px 5px;
+}
+
+input.focus, textarea.focus {
+	background-color: #FFF;
+	color: #000;
+	border: 1px solid #D5D5D5;
+}
+
+input[type="password"], input[type="file"], input[type="button"], input[type="reset"], input[type="submit"],select, textarea, .textarea, button, .aui-field-input-text {
+	text-shadow: none;
+	font: normal 11px arial, sans-serif;
+	text-transform: uppercase;
+	background-image: none;
+	color: #FFF;
+	background-color: #777;
+    padding: 6px 5px;
+}
+
+input [type="submit"] {
+	color: #FFF;
+	background-color: #777;
+}
+
+input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,select:hover, textarea:hover, .textarea:hover, button:hover {
+	background-image: none!important;
+	background-color: #008FAF;
+	color: #FFF;
+	font-weight: none;
+}
+
+.aui-field-input-text {
+	text-transform: none;
+	background-color: none;
+}
+
+.aui-tab-label {
+	color: #FFF;
+	text-shadow: none;
+
+
+	&:hover {
+		color: #FFF;
+		text-shadow: none;
+	}
+}
+
+.aui-tab-active .aui-tab-label {
+	text-shadow: none;
+	background-image: none;
+	background-color: #008FAF;
+
+	&:hover {
+		color: #FFF;
+		background-color: #008FAF;
+		text-shadow: none;
+	}
+}
+
+.aui-tabview-list, .aui-tab-content {
+	background-image: none;
+	background-color: #D5D5D5;
+}
+
+.portlet-boundary {
+	border-bottom: 1px solid #D5D5D5;
+	margin: 20px 0 40px 0;
+	padding: 20px 0 40px 0; 
+}
+
+.portlet-dockbar {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+#layout-column_column-2 .portlet-content input[type="text"] {
+	color: #000;
+}
+
+.portlet-boundary_1_WAR_chatportlet_ {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* Blog */
+
+.separator {
+	float: left;
+	height: 40px
+}
+
+.portlet-blogs {
+
+	.entry-date {
+		color: #008FAF;
+		background-image: none;
+		padding-left: 0;
+		float: left;
+			
+			&:hover {
+			color: #777;
+		}
+	}
+
+	.entry-author {
+		float: left;
+	}
+
+
+	p {
+		float: left;
+	}	
+}
+
+.subscribe a .taglib-text {
+	bottom: 0px;
+	right: 13px;
+	position: fixed; 
+	background-color: #464646;
+	box-shadow: 0 -1px 5px;
+	color: #CCC;
+	font: 13px/28px Helvetica Neue,sans-serif;
+	padding: 0 10px 0 8px;
+	text-decoration: none;
+}
+
+.entry-tags {
+	float: left;
+}
+
+/* Calendar */ 
+
+.aui-button-input {
+	border-radius: none;
+	background-image: none;
+	color: #FFF;
+
+	&:hover {
+		background-color: #008FAF;
+	}
+}
+
+.taglib-calendar .calendar-current-day a {
+	color: #008FAF;
+}
+
+/* Links!!!!!!!!!!! */
+
+#skip-to-content {
+	display: none;
+}
+
+#navigation {
+
+	ul {
+		list-style: none;
+		position: absolute;
+		top: 20px;
+		right: 4px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+	
+	li {
+		float: left;
+		color: #008FAF; 
+		font: 13px Arial,Helvetica,Sans-serif;
+		text-decoration: none;
+		margin: 0;
+		padding: 9px 14px;
+		text-transform: uppercase;
+	
+
+		&:hover {
+			color: #777;
+			background-color: #ECECEC;
+			text-decoration: none;
+		}
+	}
+}
+
+
+#breadcrumbs ul {
+	display: none;
+}
+
+.site-title img {
+	text-align: left;
+	display: block;
+	border: 2px solid #FFF;
+	margin: 0;
+	height: 70px;
+	width: 193px;
+
+	&:hover {
+		border: 2px solid #008FAF;
+	}
+}
+
+.child-menu {
+	display: none;
+}
+
+/* Titles and headings!!!!!!!!! */
+
+#site-logo {
+	color: #777;
+	text-align: center;
+	display: block;
+	font: italic normal 17px Times serif;
+	margin: 10px 0 0 0;
+}
+
+/* Liferay */
+
+.site-title {
+	margin: 0;
+}
+
+/* Welcome */
+
+.page-title {
+	display: none;
+}
+
+/* navigation */
+
+#navigation h1 {
+	display: none;
+}
+
+/* Breadcrumbs */
+
+#breadcrumbs h1 {
+	display: none;
+}
+
+/* Picture Gallery */ 
+
+.gallery {
+
+	a{
+		width: 150px;
+		height: 90px;
+	}
+
+	p:first-child {
+		margin: -15px 0 25px 0;
+	}
+
+	p:last-child {
+		margin: 25px 0 25px 0;
+	}
+		
+	.picture {
+		border: none;
+		margin: 20px 20px 20px 15px;
+		width: 150px;
+		height: 90px;
+		border: 2px solid #CFCFCF;
+	}
+}

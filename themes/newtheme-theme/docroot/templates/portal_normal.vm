@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class">
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+<div id="wrapper">
+	<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
+
+	<header id="banner" role="banner">
+		<div id="heading">
+			<hgroup id="hgroup">
+			<h1 class="site-title">
+				<a class="$logo_css_class" href="$site_default_url" title="#language("go-to") $site_name">
+					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+				</a>
+
+			</hgroup>
+				#if ($show_site_name)
+					<span class="site-name" title="#language("go-to") $site_name">
+						$site_name
+					</span>
+				#end
+			</h1>
+
+			<h2 class="page-title">
+				<span>$the_title</span>
+			</h2>
+		</div>
+
+		#if (!$is_signed_in)
+			<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+		#end
+
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</header>
+
+	<h2 id="site-logo">Enterprise. Open Source. For Life. </h2>
+
+	<div id="banner-image">
+			<img class="headerimage" align="center" width="1102px" height="350px>" src=" http://s1.wp.com/wp-content/themes/pub/yoko/images/headers/ginko.jpg?m=1341022788g" />
+		</div>
+
+	<div id="content">
+		<nav class="site-breadcrumbs" id="breadcrumbs">
+			<h1>
+				<span>#language("breadcrumbs")</span>
+			</h1>
+
+			#breadcrumbs()
+		</nav>
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+
+	<div id="gallery1" class="gallery" width="600px">
+
+		<p>A gallery of images compiled by <a>Brandon Pettit</a> of 
+			beautiful landscapes</p> 
+
+
+	<div class="top-pics" width="600px">
+		<a href="http://thingstolookathigh.com/wp-content/uploads/2011/03/non-earth-landscape.jpg" title="Cool landscape 1">
+		<img  class="picture" src="http://thingstolookathigh.com/wp-content/uploads/2011/03/non-earth-landscape.jpg" />
+		</a>
+
+		<a href="http://3.bp.blogspot.com/_OPyD9vfIhCs/S9dPh1AKEHI/AAAAAAAAA3E/31P3MphhM9o/s1600/landscape-wallpapers-rezolucija-ekrana.jpg" title="Cool landscape 2">
+		<img  class="picture" src="http://3.bp.blogspot.com/_OPyD9vfIhCs/S9dPh1AKEHI/AAAAAAAAA3E/31P3MphhM9o/s1600/landscape-wallpapers-rezolucija-ekrana.jpg" />
+		</a>
+
+		<a href="http://fc01.deviantart.net/fs71/i/2012/138/3/f/lunar_landscape_by_tytoalba19499-d506zye.jpg" title="Cool landscape 3">
+		<img  class="picture" src="http://fc01.deviantart.net/fs71/i/2012/138/3/f/lunar_landscape_by_tytoalba19499-d506zye.jpg" />
+		</a>
+	</div>
+
+	<div class="bottom-pics" width="600px">
+		<a href="http://www.winwallpapers.net/w1/2010/05/Landscape-Pictures-31.jpg" title="Cool landscape 4">
+		<img  class="picture" src="http://www.winwallpapers.net/w1/2010/05/Landscape-Pictures-31.jpg" />
+		</a>
+
+		<a href="http://coolbackgroundsite.com/wp-content/uploads/2012/06/Awesome-Wallpapers.jpeg" title="Cool landscape 5">
+		<img  class="picture" src="http://coolbackgroundsite.com/wp-content/uploads/2012/06/Awesome-Wallpapers.jpeg" />
+		</a>
+
+		<a href="http://1.bp.blogspot.com/-3qpUvARrVsw/T9AK7HbqNUI/AAAAAAAAEtQ/nucth4Fh_PA/s1600/awesome-landscape-wallpapers-5.jpg" title="Cool landscape 6">
+		<img  class="picture" src="http://1.bp.blogspot.com/-3qpUvARrVsw/T9AK7HbqNUI/AAAAAAAAEtQ/nucth4Fh_PA/s1600/awesome-landscape-wallpapers-5.jpg" />
+		</a>
+	</div> 
+
+	<p>This gallery contains <a>6 photos</a></p>
+
+
+</div>
+
+<script type="text/javascript">
+
+AUI().ready('aui-image-viewer-base', function(A) {
+
+	var imageViewer1 = new A.ImageViewer({
+		links: '#gallery1 a',
+		caption: 'Liferay Champion Soccer',
+		captionFromTitle: true,
+		// preloadNeighborImages: true,
+		preloadAllImages: true,
+		showInfo: true,
+		// lockScroll: false,
+		// infoTemplate: 'Image {current} of {total}, modified.',
+
+		// showArrows: false,
+		// showClose: false,
+		// anim: false,
+		//currentIndex: 3,
+		imageAnim: {
+			// duration: 2,
+			// easing: 'bounceOut',
+		},
+
+		// modal: false,
+
+		// modal: {
+		// 	background: 'lightblue',
+		// 	opacity: .4
+		// },
+		after: {
+			anim: function(event) {
+				// console.log('anim', event);
+				// event.image.setStyle('opacity', .5);
+			},
+			request: function(event) {
+				// console.log('request', event);
+			},
+			load: function(event) {
+				// console.log('load', event);
+			}
+		}
+	})
+	.render();
+
+	//imageViewer1.show();
+	// imageViewer1.destroy();
+
+	A.one('#log').html('Ready, click on the images.');
+});
+
+</script>
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		<p class="powered-by">
+			#language("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+		</p>
+
+		<a href="#wrapper" id="backToTopLink" ><b>Top</b></a>
+
+		<script type="text/javascript" charset="utf-8">
+	AUI().ready(
+		'aui-simple-anim',
+		function(A) {
+			var fx = new A.SimpleAnim(
+				{
+					duration: 500,
+					from: 0,
+					intervalRate: 1,
+					to: 0,
+					onTween: function(value) {
+						window.scrollTo(window, value);
+					}
+				}
+			);
+
+			A.all('#backToTopLink, #toBottomLink').on(
+				'click',
+				function(event) {
+					event.preventDefault();
+					fx.from = event.currentTarget.getXY()[1];
+					fx.to = A.one(event.currentTarget.getAttribute('href')).getXY()[1];
+					fx.start();
+				}
+			);
+		}
+	);
+</script>
+
+	</footer>
+</div>
+
+$theme.include($body_bottom_include)
+
+</body>
+
+$theme.include($bottom_include)
+
+</html>
