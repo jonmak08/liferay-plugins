@@ -1,4 +1,5 @@
 /* Body, Wrapper, footer and columns!!!!!!!!!! */
+@import "compass";
 
 html body {
 	padding-bottom: 0;
@@ -27,19 +28,19 @@ p {
 a {
 	color: #008FAF;
 	text-decoration: none;
-}
 
-a:hover {
-	text-decoration: underline;
-	color: #777;
+	&:hover {
+		text-decoration: underline;
+		color: #777;
+	}
 }
 
 h2 {
 	font-size: 20px;
-}
 
-h2 a:hover {
-	text-decoration: none;
+	a:hover {
+		text-decoration:none;
+	}
 }
 
 .chat-bar {
@@ -63,34 +64,49 @@ h2 a:hover {
 #footer {
 	color: #777;
 	padding-top: 15px;
-}
 
-#footer p {
-	margin: 15px 0 0;
-	padding: 0;
-	width: none;
-	font-size: 12px;
+	p {
+		margin: 15px 0 0;
+		padding: 0;
+		width: none;
+		font-size: 12px;
+	}
 }
 
 /* Div box for banner */
 #banner-image {
 	width: 1102px;
-}
 
-#banner-image img{
-	margin: 17px auto 12px auto;
-	display: block;
-	border-bottom: 1px solid #D5D5D5;
+	img{
+		margin: 17px auto 12px auto;
+		display: block;
+		border-bottom: 1px solid #D5D5D5;
+	}
 }
 
 #column-1 {
 	width: 60%;
 	padding: 0 25px 20px 0;
+
+	.portlet-topper {
+		text-align: center;
+	}
 }
 
 #column-2 {
 	width: 15%;
 	padding: 0px 25px 20px 0px;
+
+	input {
+		display: block;
+		width: 100%;
+	}
+
+	.portlet-title-text {
+		font-size: 15px;
+		color: #777;
+		text-transform: uppercase;
+	}
 }
 
 #column-3 {
@@ -107,25 +123,10 @@ h2 a:hover {
 .portlet-title-text {
 	font-size: 20px;
 	color: #008FAF;
-}
 
-.portlet-title-text:hover {
-	color: #777;
-}
-
-#column-1 .portlet-topper {
-	text-align: center;
-}
-
-#column-2 input {
-	display: block;
-	width: 100%;
-}
-
-#column-2 .portlet-title-text {
-	font-size: 15px;
-	color: #777;
-	text-transform: uppercase;
+		&:hover {
+		color: #777;
+	}
 }
 
 .portlet-body {
@@ -158,11 +159,6 @@ input[type="password"], input[type="file"], input[type="button"], input[type="re
     padding: 6px 5px;
 }
 
-.aui-field-input-text {
-	text-transform: none;
-	background-color: none;
-}
-
 input [type="submit"] {
 	color: #FFF;
 	background-color: #777;
@@ -175,26 +171,32 @@ input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hov
 	font-weight: none;
 }
 
+.aui-field-input-text {
+	text-transform: none;
+	background-color: none;
+}
+
 .aui-tab-label {
 	color: #FFF;
 	text-shadow: none;
-}
 
-.aui-tab-label:hover {
-	color: #FFF;
-	text-shadow: none;
+
+	&:hover {
+		color: #FFF;
+		text-shadow: none;
+	}
 }
 
 .aui-tab-active .aui-tab-label {
 	text-shadow: none;
 	background-image: none;
 	background-color: #008FAF;
-}
 
-.aui-tab-active .aui-tab-label:hover {
-	color: #FFF;
-	background-color: #008FAF;
-	text-shadow: none;
+	&:hover {
+		color: #FFF;
+		background-color: #008FAF;
+		text-shadow: none;
+	}
 }
 
 .aui-tabview-list, .aui-tab-content {
@@ -231,19 +233,27 @@ input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hov
 	height: 40px
 }
 
-.portlet-blogs .entry-date {
-	color: #008FAF;
-	background-image: none;
-	padding-left: 0;
-	float: left;
-}
+.portlet-blogs {
 
-.portlet-blogs .entry-author {
-	float: left;
-}
+	.entry-date {
+		color: #008FAF;
+		background-image: none;
+		padding-left: 0;
+		float: left;
+			
+			&:hover {
+			color: #777;
+		}
+	}
 
-.portlet-blogs .entry-date:hover {
-	color: #777;
+	.entry-author {
+		float: left;
+	}
+
+
+	p {
+		float: left;
+	}	
 }
 
 .subscribe a .taglib-text {
@@ -258,10 +268,6 @@ input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hov
 	text-decoration: none;
 }
 
-.portlet-blogs p {
-	float: left;
-}
-
 .entry-tags {
 	float: left;
 }
@@ -272,10 +278,10 @@ input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hov
 	border-radius: none;
 	background-image: none;
 	color: #FFF;
-}
 
-.aui-button-input:hover {
-	background-color: #008FAF;
+	&:hover {
+		background-color: #008FAF;
+	}
 }
 
 .taglib-calendar .calendar-current-day a {
@@ -288,32 +294,37 @@ input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hov
 	display: none;
 }
 
-#navigation ul {
-	list-style: none;
-	position: absolute;
-	top: 20px;
-	right: 4px;
+#navigation {
+
+	ul {
+		list-style: none;
+		position: absolute;
+		top: 20px;
+		right: 4px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+	
+	li {
+		float: left;
+		color: #008FAF; 
+		font: 13px Arial,Helvetica,Sans-serif;
+		text-decoration: none;
+		margin: 0;
+		padding: 9px 14px;
+		text-transform: uppercase;
+	
+
+		&:hover {
+			color: #777;
+			background-color: #ECECEC;
+			text-decoration: none;
+		}
+	}
 }
 
-#navigation ul a {
-	text-decoration: none ;
-}
-
-#navigation li {
-	float: left;
-	color: #008FAF; 
-	font: 13px Arial,Helvetica,Sans-serif;
-	text-decoration: none;
-	margin: 0;
-	padding: 9px 14px;
-	text-transform: uppercase;
-}
-
-#navigation li:hover {
-	color: #777;
-	background-color: #ECECEC;
-	text-decoration: none;
-}
 
 #breadcrumbs ul {
 	display: none;
@@ -326,10 +337,10 @@ input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hov
 	margin: 0;
 	height: 70px;
 	width: 193px;
-}
 
-.site-title img:hover {
-	border: 2px solid #008FAF;
+	&:hover {
+		border: 2px solid #008FAF;
+	}
 }
 
 .child-menu {
@@ -372,23 +383,26 @@ input[type="password"]:hover, input[type="file"]:hover, input[type="button"]:hov
 
 /* Picture Gallery */ 
 
-.gallery a{
-	width: 150px;
-	height: 90px;
-}
+.gallery {
 
-.gallery p:first-child {
-	margin: -15px 0 25px 0;
-}
+	a{
+		width: 150px;
+		height: 90px;
+	}
 
-.gallery p:last-child {
-	margin: 25px 0 25px 0;
-}
+	p:first-child {
+		margin: -15px 0 25px 0;
+	}
+
+	p:last-child {
+		margin: 25px 0 25px 0;
+	}
 		
-.gallery .picture {
+	.picture {
 		border: none;
 		margin: 20px 20px 20px 15px;
 		width: 150px;
 		height: 90px;
 		border: 2px solid #CFCFCF;
 	}
+}
