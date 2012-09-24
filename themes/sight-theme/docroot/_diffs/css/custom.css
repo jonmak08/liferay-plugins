@@ -1,0 +1,341 @@
+@import "compass";
+
+$border-color: #D5D5D5;
+
+body {
+	background: #252525;
+	font-family: georgia, "times new roman", serif;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper { /*site wrapper*/
+	background: #FFF;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 40px;
+	padding: 40px 0 0 0;
+	position: relative;
+	width: 975px;
+}
+
+.site-title { /* Liferay logo */
+	color: #000;
+	float: left;
+	font-size: 7em;
+	font-weight: bold;
+	margin: -25px 0 65px 40px;
+}
+
+.page-title { /* "welcome" subtitle */
+	color: #666;
+	float: left;
+	font: 11px Arial;
+	margin: 0 0 0 85px;
+}
+
+#navigation h1, #breadcrumbs h1 { /*titles i don't want*/
+	display: none;
+}
+
+#skip-to-content, #sign-in { /* top right links */
+	clear: right;
+	color: #000;
+	float: right;
+	font-size: 11px;
+	margin: 0 200px 10px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 120px;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.breadcrumbs {
+	display:none;
+}
+
+#navigation ul { /* nav bar */
+	border-top: 1px solid $border-color;
+	clear: both;
+	float: left;
+	list-style: none !important;
+	margin: 0;
+	width: 975px;
+
+	li { /* nav bar link containers */
+		border-left: 1px solid $border-color;
+		display: inline;
+		float: left;
+		font-size: 14px;
+		margin-bottom: 10px;
+		padding: 18px 15px 2px 15px;
+		text-transform: uppercase;
+
+		&:hover {
+			background: black;
+
+			a {
+				color: white;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	a {
+		color: #000;
+		padding: 18px 0 2px 0;
+		text-decoration: none;
+	}
+}
+
+.selected { /* the active nav link */
+	font-weight: bold;
+}
+
+.child-menu { /* nav bar child links */
+	border: none;
+	clear: none;
+	display: none;
+	width: auto;
+
+	li {
+		border: none;
+		display: block;
+		float: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#content { /* adjusts div box for the entire content section*/
+	clear: both;
+	margin-top: 20px;
+}
+
+#column-2 .portlet-body {
+	margin-bottom: 25px;
+}
+
+#column-3 { /* right column */
+	padding: 0 25px 0 20px;
+}
+
+#column-2 a, #column-3 a { /* links */
+	color: #000;
+	text-decoration: none;
+
+	&:hover {
+		color: #555;
+		text-decoration: underline;
+	}
+}
+
+#holder {
+	height: 290px;
+	margin-bottom: 15px;
+	padding: 0;
+}
+
+.icon { /* adjusts the title icons for all of the portlets */
+	display: none;
+}
+
+input { /* search bars */
+	background-image: none !important;
+	vertical-align: middle;
+}
+
+.portlet { /* generic portlet settings */
+	margin-bottom: 30px;
+
+	h2 { /* portlet headings */
+	font-weight: normal;
+	margin: 5px 0 5px 0;
+
+		a:hover {
+			color: #000 !important;
+		}
+	}
+}
+
+.portlet-title { /* Portlet titles */
+	border-bottom: 1px solid $border-color;
+	font-size: 19px;
+	font-weight: normal;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+}
+
+#column-2 .portlet-title { /* left side portlet titles */
+	padding-left: 25px;
+}
+
+#column-3 .portlet-title { /* right side portlet titles */
+	color: #222;
+	font-size: 14px;
+	padding-top: 6px;
+}
+
+.portlet-content p { /* portlet body text */
+	font: 12px arial;
+	line-height: 1.8em;
+}
+
+#column-2 .portlet-content { /* portlet content container */
+	font-weight: normal;
+}
+
+#column-3 .portlet-content { /* right side portlet body formatting */
+	font-size: 12px;
+	line-height: 20px;
+	padding: 20px 0 30px 0;
+}
+
+.portlet-boundary, .portlet, .portlet-content-container, .portlet-body, .lfr-panel.lfr-extended, .lfr-panel-container, .lfr-panel-content, .lfr-floating-container, li.aui-tree-node, .aui-tree-node-content, .aui-tree-label span, .results-grid, .results-row td { /* portlet boxes */
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.portlet-content, .portlet-minimized .portlet-content-container {
+	padding: 0;
+}
+
+.entry, .search-results, .portlet-content .portlet-body .aui-fieldset {
+	padding-left: 25px;
+}
+
+.entry-date { /* tags indicating time & date of blog posts */
+	margin-bottom: 25px;
+}
+
+.lfr-panel-titlebar, .aui-button-input, .user-details, .entry-footer {
+	display: none;
+}
+
+.aui-tree-node-leaf { /* categories portlet items */
+	padding-top: 2px;
+}
+
+.portlet .taglib-user-display .user-name, .taglib-text { /* AUTHORS portlet tinkering */
+    text-decoration: none;
+}
+
+.separator { /* blog post (and more?) separator lines */
+	border-top: 1px solid $border-color;
+	clear: both;
+}
+
+.entry-body {
+	padding-bottom: 10px;
+
+	p.imagetext {
+		padding-left: 300px;
+	}
+
+	img {
+		height: 290px;
+		padding-bottom: 10px;
+		width: 290px;
+	}
+}
+
+.subscribe {
+	display: none;
+}
+
+.results-row:hover td { /* AUTHORS portlet tinkering */
+	background: #FFF;
+}
+
+#portlet_77 { /* top right search bar */
+	position: absolute;
+	right: 15px;
+	top: 25px;
+	z-index: 10;
+
+	.portlet-title { /* top right search bar title */
+		border: none;
+	}
+
+	#_77_keywords { /* top right search bar text field */
+		background: #DDD;
+		border: none !important;
+		color: #FFF;
+		font: 10px arial, sans-serif;
+		height: 32px;
+		padding: 0 0 0 8px;
+		text-transform: uppercase;
+		width: 125px;
+
+		&.focus {
+			background: #DDD;
+			color: #000;
+		}
+	}
+}
+
+#portlet_33 input { /* lower search bar */
+	border: 1px solid $border-color;
+	color: #666;
+	font: 12px consolas, monospace;
+	position: absolute;
+	right: -227px;
+	top: 15px;
+	width: 180px;
+	z-index: 100;
+
+	&.focus {
+		border: 1px solid $border-color;
+		background: none;
+		color: #000;
+	}
+}
+
+#portlet_3 .portlet-body { /* makes right column search bar invisible */
+	display: none;
+}
+
+#portlet_3 .portlet-content-container { /* makes right column search bar still take space so other search bar can fill in */
+	height: 40px;
+}
+
+#footer { /* footer general settings */
+	border-top: 1px solid $border-color;
+	color: #999;
+	font-size: 13px;
+	padding-top: 25px 0 18px 0;
+	text-align: center;
+
+	a {
+		color: #000;
+		text-decoration: none;
+
+		&:hover {
+			color: #555;
+			text-decoration: underline;
+		}
+	}
+
+	p {
+		padding: 25px;
+	}
+}
+
+#column-3 .portlet-content { /* right side portlet body formatting */
+	opacity: 0.9;
+}
+
+.aui-carousel {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
