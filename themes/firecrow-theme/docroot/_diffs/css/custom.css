@@ -1,0 +1,287 @@
+/* Global */
+#wrapper {
+	background-image: url("../images/custom/bg.jpg");
+	background-size: cover;
+	position: relative;
+	height: 475px;
+	width: 989px;
+	padding-left: 115px;
+}
+
+ul {
+	position: relative;
+	display: block;
+}
+
+body {
+	background-color: #000;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td{
+	
+	padding: 1px;
+}
+
+body a {
+	font: 62.5%/1.4 Arial, Helvetica, Verdana, sans-serif;
+    margin-top: 0;
+    position: relative;
+}
+
+/* unused icons*/
+
+#rjus, #ptbr, #gezi, hr, .separator {
+	display:none;
+}
+
+
+/*footer logo*/
+
+.powered-by {
+	background-image: url("../images/custom/post.png");
+	bottom: 0;
+	color: #D4D5D7;
+	margin:600px 0 0 -116px;
+	padding-right: 914px;
+	position: fixed;
+}
+
+/* potlet class section*/
+
+.portlet-content, .portlet-minimized .portlet-content-container {
+	background: url("../images/custom/post.png") repeat scroll 0 0 transparent;
+}
+
+
+.portlet-login .navigation {
+	background: none!important;
+	border:none!important;
+}  
+
+.portlet-icon-back {
+	font-family: Georgia;
+    font-size: 8pt;
+    font-weight: bold;
+    padding: 5px 5px 5px 18px;
+    text-decoration: none;
+}
+
+.portlet-layout {
+	background-image: transparent;
+	background-size: 100%;
+}
+
+.portlet-title img {
+	display: none;
+}
+
+.portlet-title {
+	background-image: url("../images/custom/post.png");
+	margin:-9px 0 0 15px;
+}
+
+.portlet-title-text {
+	color: #CBCDCF;
+	font-family: Georgia, Sans-serif;
+	font-size: 12pt; 
+	font-weight: bold;
+}
+
+.aui-field-label-inline-label, .aui-choice-label, .aui-field-hint, .aui-helper-unselectable, .aui-helper-unselectable *{
+	color: #3399FF;
+}
+
+/* random bits */
+#sign-in {
+	color: #D4D5D7;
+	font-family: Georgia;
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 0 0 5px 723px;
+    position: absolute;
+    right: 327px;
+    text-decoration: none;
+    top: 4px;
+}
+
+#skip-to-content {
+	display: none;
+}
+
+.logo {
+	background: transparent;
+	height: 65px;
+    line-height: 1px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+#navigation {
+	color: #D4D5D7;
+	font-family: Georgia;
+	font-size: 6pt;
+	left: 500px;
+	margin: 0;
+	position: absolute;
+	top:-11px;
+}
+
+#breadcrumbs {
+	color: #D4D5D7;
+	font-family: Georgia;  
+	font-size: 6pt;
+	left:312px;
+	position: absolute;
+	top: -11px;
+}
+
+#banner {
+	height: 50%;
+	width: 20%; 
+}
+
+.site-title img { 
+	background: none repeat scroll 0 0 #D4D5D7;
+	height: 50px;
+    margin-left: 120px;
+    top:0px;
+ 	width: 300px;
+}
+
+.modify-pages li a {
+ 	color: #D4D5D7;
+ 	display: block;
+ 	font-family: Georgia;
+ 	font-size: 15px;
+ 	font-weight: bold;
+ 	position: absolute;
+ 	right: 83px;
+ 	text-decoration: none;
+ 	top: -37px;
+}
+
+.breadcrumbs-horizontal a {
+	color: #D4D5D7;
+	display: inline;
+	font-family: Georgia;
+	font-size: 15px;
+	font-weight: bold; 
+	left: 276px;
+	text-decoration: none;
+	top: -36px;
+} 
+
+ .taglib-text {
+	border-right-color:#3399FF;
+	color: #3399FF;
+}
+
+ /* page */
+#main-content { 
+ 	background-color: #0D0F22;
+ 	background-image: url("../images/custom/bg1.png");
+ 	background-repeat: no-repeat;
+ 	background-size: 100%;
+	display: inline;
+ 	margin-top: -160px;
+ 	padding: 15px;
+}
+
+/* ID portlet section */
+#portlet_30 {
+	background: url("../images/custom/bg1.png") repeat scroll 0 0 #00588F;
+	background: #000;
+	color: #C44711;
+	margin: 10px;
+}
+ 
+ .portlet-boundary {
+ 	color: #C44711;
+ 	margin: 10px;
+ }
+ 
+#column-1 { 
+	background:transparent;
+	margin:0 5px 0 100px;
+	padding: 20px;
+	width: 550px;	
+}
+
+.lfr-textarea, .aui-form .aui-fieldset .aui-field.lfr-textarea-container textarea {
+	background-image: url("../images/custom/dummy.png");
+    border: 8px;
+    height: 100px;
+    max-width: 500px;
+    width: 100%;
+}
+
+/*buttons and text area*/
+input[type="text"], input[type="password"], input[type="file"], input[type="submit"], input[type="button"], input[type="reset"], select, textarea, button{
+    background-image: url("../images/custom/dummy.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    border: 1px solid black;
+    font: 1em Arial, Helvetica, Verdana, sans-serif; 
+}    
+
+input[type="submit"], input[type="button"], input[type="reset"], button {
+background: none repeat scroll 0 0 transparent;
+border-bottom: none;
+border-left: solid;
+border-radius: 0;
+border-right: solid;
+border-top: none;
+border-width: 1px;
+color: #3399FF;
+float: right;
+font: bold; 
+text-shadow:none;
+}
+
+/* aui section */
+.aui-tab-active .aui-tab-label {
+	background-color: #212223;
+	border: none;
+	color: #C44711;
+}
+
+.aui-tab-label {
+	background-color: #212223;
+	border: none;
+	color: #C44711;
+	padding: 10px;
+	text-shadow: none; 
+}
+
+.aui-tabview-list, .aui-tab-content {
+    background: none repeat scroll;
+    border:none;
+    padding: 0;
+} 
+
+/* right column */
+.columns-2 {
+	margin-left: 100px;
+	position: absolute;
+	width:800px;
+}
+
+#portlet_47 {
+	background: #000;
+	color: #C44711;
+	margin-top: 50px 0 0 0;
+}
+
+#column-2 { 
+	background-image:url("../images/custom/bg1.png");
+	background-repeat: no-repeat;
+	color: #212224;
+	margin-right: 100px;
+	padding: 20px;
+	position: relative;
+	width: 250px;
+}
+
+#footer {
+	height: 1em;
+	position: absolute;
+}
