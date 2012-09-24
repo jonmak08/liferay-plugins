@@ -1,0 +1,32 @@
+<div id="holder">
+	<div id="demo">
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article0.png); width: 940px; height: 253px;" class="aui-carousel-item aui-carousel-item-active">Article0</div>
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article1.png); width: 940px; height: 253px;" class="aui-carousel-item">Article1</div>
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article2.png); width: 940px; height: 253px;" class="aui-carousel-item">Article2</div>
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article3.png); width: 940px; height: 253px;" class="aui-carousel-item">Article3</div>
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article0.png); width: 940px; height: 253px;" class="aui-carousel-item">Article4</div>
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article1.png); width: 940px; height: 253px;" class="aui-carousel-item">Article5</div>
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article2.png); width: 940px; height: 253px;" class="aui-carousel-item">Article6</div>
+		<div style="background: url(https://dl.dropbox.com/u/101485540/article3.png); width: 940px; height: 253px;" class="aui-carousel-item">Article7</div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+
+AUI().ready('aui-carousel', function(A) {
+
+	var component = new A.Carousel(
+		{
+			intervalTime: 3,
+			contentBox: '#demo',
+			activeIndex: 0,
+			// activeIndex: 'rand',
+			height: 254,
+			width: 940
+			// nodeMenu: '#customMenu',
+			// nodeMenuItemSelector: 'li'
+		}
+	).render();
+});
+
+</script>
