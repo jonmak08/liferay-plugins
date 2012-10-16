@@ -8,6 +8,10 @@ $hover-color: #EAEAEA;
 body {
 	color: $gray-font;
 	font: 13px/1.5em Helvetica, Arial, sans-serif;
+
+	&.lfr-dockbar-pinned {
+		padding-top: 33px;
+	}
 }
 
 #navigation h1,
@@ -71,10 +75,6 @@ body {
 	.site-name {
 		font-size: .85em;
 	}
-}
-
-body.lfr-dockbar-pinned {
-	padding-top: 33px;
 }
 
 #footer {
@@ -517,7 +517,7 @@ form input[type="text"] {
 				ul.child-menu a,
 				.selected a,
 				ul.child-menu .selected a,
-				ul.child-menu ul.grandchild-menu .selected a, 
+				ul.child-menu ul.grandchild-menu .selected a,
 				ul.child-menu .selected:hover a {
 					background: transparent;
 					border-width: 0;
@@ -586,13 +586,13 @@ form input[type="text"] {
 				}
 			}
 
-			 
-			ul.child-menu li a:hover, 
-			ul.child-menu ul.grandchild-menu li a:hover, 
-			li a:hover, 
-			ul ul.child-menu li a:hover, 
-			ul ul.child-menu li ul.grandchild-menu li a:hover, 
-			.child-menu li:first-child a:hover, 
+
+			ul.child-menu li a:hover,
+			ul.child-menu ul.grandchild-menu li a:hover,
+			li a:hover,
+			ul ul.child-menu li a:hover,
+			ul ul.child-menu li ul.grandchild-menu li a:hover,
+			.child-menu li:first-child a:hover,
 			.child-menu li:last-child a:hover {
 				background: transparent;
 			}
@@ -615,7 +615,7 @@ form input[type="text"] {
 					margin-top: 0;
 				}
 			}
-		
+
 			&.lfr-dockbar-pinned {
 				#banner {
 					margin-top: -51px;
@@ -623,12 +623,7 @@ form input[type="text"] {
 					z-index: 1;
 				}
 
-				#toggle {
-					left: 225px;
-					position: relative;
-				}
-
-				#heading {
+				#heading, #toggle {
 					left: 225px;
 					position: relative;
 				}
@@ -672,7 +667,7 @@ form input[type="text"] {
 		padding: 0;
 		width: 50%;
 	}
-	
+
 	#column-1 {
 		float: left;
 	}
@@ -697,7 +692,7 @@ form input[type="text"] {
 		#navigation {
 			ul {
 				margin-top: 50px;
-				
+
 				ul {
 					margin-top: 0;
 				}
@@ -710,7 +705,7 @@ form input[type="text"] {
 
 		&.lfr-dockbar-pinned {
 			padding-top: 0;
-			
+
 			#banner {
 				margin-top: 0;
 				top: 0;
@@ -741,8 +736,8 @@ form input[type="text"] {
 #navigation ul,
 #sign-in,
 .portlet-topper,
-.mobile .mobile-enabled #navigation ul li a, 
-.mobile .mobile-enabled #navigation ul li a:hover, 
+.mobile .mobile-enabled #navigation ul li a,
+.mobile .mobile-enabled #navigation ul li a:hover,
 #navigation form {
 	@include background(linear-gradient(#FFF, $hover-color));
 }
@@ -773,7 +768,7 @@ form input[type="text"] {
 
 #sign-in,
 .portlet-topper,
-.lfr-panel-container, 
+.lfr-panel-container,
 form input[type="text"] {
 	@include border-radius(4px);
 }
@@ -910,39 +905,39 @@ form input[type="text"] {
 }
 
 .mobile .mobile-enabled #navigation {
-	.child-menu li #right-triangle, 
+	.child-menu li #right-triangle,
 	.child-menu li:hover #right-triangle {
 		@include border-radius(20px);
 	}
 
-	ul, 
-	li, 
-	ul.child-menu, 
-	ul.grandchild-menu, 
-	ul.child-menu li, 
-	ul.child-menu ul.grandchild-menu li, 
-	li:first-child a, li:last-child a, 
-	.child-menu li:first-child:hover a, 
-	.child-menu li:last-child:hover a, 
-	li .child-menu li:first-child:last-child a, 
-	li:first-child a, li:last-child a, 
-	.child-menu li .grandchild-menu li:first-child:hover a, 
-	.child-menu li .grandchild-menu li:last-child:hover a, 
-	li .child-menu li .grandchild-menu li:first-child:last-child a, 
-	ul li:hover li a, 
-	li.selected:first-child a, 
-	li.selected:last-child a, 
+	ul,
+	li,
+	ul.child-menu,
+	ul.grandchild-menu,
+	ul.child-menu li,
+	ul.child-menu ul.grandchild-menu li,
+	li:first-child a, li:last-child a,
+	.child-menu li:first-child:hover a,
+	.child-menu li:last-child:hover a,
+	li .child-menu li:first-child:last-child a,
+	li:first-child a, li:last-child a,
+	.child-menu li .grandchild-menu li:first-child:hover a,
+	.child-menu li .grandchild-menu li:last-child:hover a,
+	li .child-menu li .grandchild-menu li:first-child:last-child a,
+	ul li:hover li a,
+	li.selected:first-child a,
+	li.selected:last-child a,
 	.grandchild-menu li.selected:first-child a,
 	.grandchild-menu li.selected:last-child a {
 		@include border-radius(0px);
 		@include box-shadow(0 0 0 0);
 	}
 
-	li:hover ul, 
-	.child-menu li:hover ul, 
-	.child-menu li:hover:last-child, 
+	li:hover ul,
+	.child-menu li:hover ul,
+	.child-menu li:hover:last-child,
 	.child-menu li:first-child:hover li a,
-	.child-menu li:last-child:hover li a, 
+	.child-menu li:last-child:hover li a,
 	 {
 		@include box-shadow(0 0 0 0);
 	}

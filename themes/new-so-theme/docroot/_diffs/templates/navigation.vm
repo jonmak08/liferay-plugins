@@ -15,20 +15,21 @@
 			#if ($nav_item.isSelected())
 				#set ($nav_item_class = "selected")
 			#end
+
 			#if ($navHasChildren)
 				#set ($nav_item_class = ${nav_item_class} + " has-children parent-menu")
 			#end
 
 			<li class="$nav_item_class">
 				<a href="$nav_item.getURL()" $nav_item.getTarget()>
-						<span>
-							$nav_item.icon() $nav_item.getName()
+					<span>
+						$nav_item.icon() $nav_item.getName()
 
-							#if ($navHasChildren)
-								<span class="triangle">&#9660;</span>
-							#end
-						</span>
-					</a>
+						#if ($navHasChildren)
+							<span class="triangle">&#9660;</span>
+						#end
+					</span>
+				</a>
 
 				#if ($navHasChildren)
 					<ul class="child-menu aui-helper-hidden">
@@ -36,12 +37,10 @@
 							#set ($hasGrandChildren = $nav_child.hasChildren())
 							#set ($nav_child_class = "")
 
-							#if ($nav_child.isSelected())
+							#if ($nav_child.isSelected() || $nav_child.isChildSelected())
 								#set ($nav_child_class = "selected")
 							#end
-							#if ($nav_child.isChildSelected())
-								#set ($nav_child_class = "selected")
-							#end
+
 							#if ($hasGrandChildren)
 								#set ($nav_child_class = ${nav_child_class} + " has-children")
 							#end
@@ -61,6 +60,7 @@
 											#else
 												<li>
 											#end
+
 												<a href="$nav_grandchild.getURL()" $nav_grandchild.getTarget()>$nav_grandchild.getName()</a>
 											</li>
 										#end
