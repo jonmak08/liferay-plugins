@@ -14,7 +14,10 @@
 
 package com.liferay.resourcesimporter.util;
 
+import com.liferay.portal.kernel.util.FileUtil;
 import com.liferay.portal.kernel.util.StringPool;
+
+import java.io.InputStream;
 
 import java.net.URL;
 import java.net.URLConnection;
@@ -48,7 +51,7 @@ public class ResourceImporter extends FileSystemImporter {
 				continue;
 			}
 
-			String name = getName(resourcePath);
+			String name = FileUtil.getShortFileName(resourcePath);
 
 			URL url = servletContext.getResource(resourcePath);
 
@@ -79,13 +82,11 @@ public class ResourceImporter extends FileSystemImporter {
 				continue;
 			}
 
-			int pos = resourcePath.lastIndexOf(StringPool.SLASH);
+			String name = FileUtil.getShortFileName(resourcePath);
 
-			String name = resourcePath.substring(pos + 1);
+			URL url = servletContext.getResource(resourcePath);
 
-			URL resourceURL = servletContext.getResource(resourcePath);
-
-			URLConnection urlConnection = resourceURL.openConnection();
+			URLConnection urlConnection = url.openConnection();
 
 			doAddJournalArticles(
 				journalStructureId, journalTemplateId, name,
@@ -111,11 +112,11 @@ public class ResourceImporter extends FileSystemImporter {
 				continue;
 			}
 
-			String name = getName(resourcePath);
+			String name = FileUtil.getShortFileName(resourcePath);
 
-			URL resourceURL = servletContext.getResource(resourcePath);
+			URL url = servletContext.getResource(resourcePath);
 
-			URLConnection urlConnection = resourceURL.openConnection();
+			URLConnection urlConnection = url.openConnection();
 
 			doAddJournalStructures(
 				parentStructureId, name, urlConnection.getInputStream());
@@ -140,11 +141,11 @@ public class ResourceImporter extends FileSystemImporter {
 				continue;
 			}
 
-			String name = getName(resourcePath);
+			String name = FileUtil.getShortFileName(resourcePath);
 
-			URL resourceURL = servletContext.getResource(resourcePath);
+			URL url = servletContext.getResource(resourcePath);
 
-			URLConnection urlConnection = resourceURL.openConnection();
+			URLConnection urlConnection = url.openConnection();
 
 			doAddJournalTemplates(
 				journalStructureId, name, urlConnection.getInputStream());
@@ -152,31 +153,16 @@ public class ResourceImporter extends FileSystemImporter {
 	}
 
 	@Override
-	protected void setupSettings(String settingsName) throws Exception {
-		URL settingsJSONURL = servletContext.getResource(
-			resourcesDir.concat(settingsName));
+	protected InputStream getInputStream(String fileName) throws Exception {
+		URL url = servletContext.getResource(resourcesDir.concat(fileName));
 
-		if (settingsJSONURL == null) {
-			return;
+		if (url == null) {
+			return null;
 		}
 
-		URLConnection urlConnection = settingsJSONURL.openConnection();
+		URLConnection urlConnection = url.openConnection();
 
-		setupSettings(urlConnection.getInputStream());
-	}
-
-	@Override
-	protected void setupSitemap(String sitemapName) throws Exception {
-		URL sitemapJSONURL = servletContext.getResource(
-			resourcesDir.concat(sitemapName));
-
-		if (sitemapJSONURL == null) {
-			return;
-		}
-
-		URLConnection urlConnection = sitemapJSONURL.openConnection();
-
-		setupSitemap(urlConnection.getInputStream());
+		return urlConnection.getInputStream();
 	}
 
 }
