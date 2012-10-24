@@ -1,3 +1,5 @@
+@import "compass";
+
 /**
  * Copyright (c) 2000-2010 Liferay, Inc. All rights reserved.
  *
@@ -112,11 +114,11 @@
 
 .opensocial-portlet-editor .aui-tabview-list .aui-tab-content .gadget-editor-tab-close {
 	background-image: url(../images/close.png);
-	opacity: 0.4;
+	@include opacity(0.4);
 }
 
 .opensocial-portlet-editor .aui-tabview-list .aui-tab-content .gadget-editor-tab-close:hover {
-	opacity: 1;
+	@include opacity(1);
 }
 
 .opensocial-portlet-editor .aui-tabview-list, .opensocial-portlet-editor .aui-tabview-list-content {
@@ -189,11 +191,11 @@
 }
 
 .ie .opensocial-portlet-editor .aui-tabview-list .aui-tab-content .gadget-editor-tab-close {
-	filter: alpha(opacity=20);
+	@include opacity(0.2);
 }
 
 .ie .opensocial-portlet-editor .aui-tabview-list .aui-tab-content .gadget-editor-tab-close:hover {
-	filter: alpha(opacity=100);
+	@include opacity(1);
 	zoom: 1;
 }
 
