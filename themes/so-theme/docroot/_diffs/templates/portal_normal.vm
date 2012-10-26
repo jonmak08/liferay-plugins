@@ -12,6 +12,8 @@
 
 <body class="$css_class">
 
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
 $theme.include($body_top_include)
 
 #if ($is_signed_in)
@@ -19,8 +21,6 @@ $theme.include($body_top_include)
 #end
 
 <div id="wrapper">
-	<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
-
 	<header id="banner" role="banner">
 		<hgroup id="heading">
 			<div class="company-title">
@@ -37,7 +37,12 @@ $theme.include($body_top_include)
 
 					#if ($is_signed_in)
 						<div class="member-button" id="memberButton">
+							#set ($user_local_service = $serviceLocator.findService("com.liferay.portal.service.UserLocalService"))
+
 							#set ($member = $user_local_service.hasGroupUser($page_group.getGroupId(), $user_id))
+
+							#set ($membership_request_local_service = $serviceLocator.findService("com.liferay.portal.service.MembershipRequestLocalService"))
+
 							#set ($membership_request = $membership_request_local_service.hasMembershipRequest($user_id, $page_group.getGroupId(), 0))
 
 							#if (!$member)
@@ -108,10 +113,10 @@ $theme.include($body_top_include)
 						<div class="taglib-logo-selector" id="_SO_THEME_taglibLogoSelector">
 							<div class="taglib-logo-selector-content" id="_SO_THEME_taglibLogoSelectorContent">
 								<a href="$current_user_profile_url">
-									<img class="avatar" id="_SO_THEME_avatar" src="$current_user_profile_portrait_url" alt="$current_user_name">
+									<img alt="$current_user_name" class="avatar" id="_SO_THEME_avatar" src="$current_user_profile_portrait_url">
 								</a>
 
-								#if ($is_current_users_public_layout)
+								#if ($show_edit_profile_button)
 									<span class="aui-button edit-logo-button">
 										<button class="aui-button-content" onClick="editPortrait._openEditLogoWindow();">
 											<span class="aui-buttonitem-icon aui-icon aui-icon-edit"></span>
@@ -151,11 +156,15 @@ $theme.include($body_top_include)
 		</div>
 	</div>
 
-	<footer id="footer" role="contentinfo">
-		<p class="powered-by">
-			#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
-		</p>
-	</footer>
+	#set ($releaseInfo = $portal.getClass().forName("com.liferay.portal.kernel.util.ReleaseInfo"))
+
+	#if (!$releaseInfo.getReleaseInfo().contains("EE"))
+		<footer id="footer" role="contentinfo">
+			<p class="powered-by">
+				#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+			</p>
+		</footer>
+	#end
 </div>
 
 $theme.include($body_bottom_include)
@@ -166,7 +175,7 @@ $theme.include($bottom_include)
 
 </html>
 
-#if ($is_current_users_public_layout)
+#if ($show_edit_profile_button)
 	<script type="text/javascript">
 		AUI().use(
 			'liferay-logo-selector',

@@ -78,6 +78,7 @@ import javax.portlet.WindowState;
 /**
  * @author Ryan Park
  * @author Jonathan Lee
+ * @author Evan Thibodeau
  */
 public class SitesPortlet extends MVCPortlet {
 
@@ -188,7 +189,6 @@ public class SitesPortlet extends MVCPortlet {
 		String keywords = DAOParamUtil.getLike(resourceRequest, "keywords");
 		int maxResultSize = ParamUtil.getInteger(
 			resourceRequest, "maxResultSize", 10);
-		String name = ParamUtil.getString(resourceRequest, "keywords");
 		String searchTab = ParamUtil.getString(resourceRequest, "searchTab");
 		int start = ParamUtil.getInteger(resourceRequest, "start");
 
@@ -248,8 +248,6 @@ public class SitesPortlet extends MVCPortlet {
 				"name", group.getDescriptiveName(themeDisplay.getLocale()));
 
 			if (group.hasPrivateLayouts() || group.hasPublicLayouts()) {
-				Layout layout = themeDisplay.getLayout();
-
 				PortletURL portletURL = liferayPortletResponse.createActionURL(
 					PortletKeys.SITE_REDIRECTOR);
 
@@ -267,8 +265,6 @@ public class SitesPortlet extends MVCPortlet {
 				SocialOfficeServiceUtil.isSocialOfficeGroup(group.getGroupId());
 
 			groupJSONObject.put("socialOfficeGroup", socialOfficeGroup);
-
-			Layout layout = themeDisplay.getLayout();
 
 			PortletURL siteAssignmentsPortletURL =
 				liferayPortletResponse.createActionURL(PortletKeys.SITES_ADMIN);
@@ -341,8 +337,14 @@ public class SitesPortlet extends MVCPortlet {
 				siteAssignmentsPortletURL.setParameter(
 					"removeUserIds", String.valueOf(themeDisplay.getUserId()));
 
-				groupJSONObject.put(
-					"leaveUrl", siteAssignmentsPortletURL.toString());
+				if ((group.getType() != GroupConstants.TYPE_SITE_PRIVATE) ||
+					GroupPermissionUtil.contains(
+						permissionChecker, group.getGroupId(),
+						ActionKeys.ASSIGN_MEMBERS)) {
+
+					groupJSONObject.put(
+						"leaveUrl", siteAssignmentsPortletURL.toString());
+				}
 			}
 
 			if (GroupPermissionUtil.contains(

@@ -1,0 +1,387 @@
+@import "compass";
+
+$blueGlow: #1982D1;
+$background: #E1E1E1;
+$greyText: #575757;
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background-color: $background;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+#wrapper {
+	margin: 0 auto;
+    position: relative;
+    width: 80%;
+}
+
+#banner {
+	border-right: 15px;
+	height: 500px;
+	margin: 90px 0 0 50px;
+	padding-right: 15px;
+	position: fixed;
+	top: 0;
+	text-align: right;
+	width: 200px;
+}
+
+#heading {
+	color: $greyText;		
+}
+
+#page-search {
+	.aui-field-input {
+		background: $background;
+		border: 1.5px solid #EDEDED;
+		border-radius: 3px;
+		color: #575757;
+		height: 20px;
+		left: 14px;
+		position: relative;
+		width: 100px;
+
+		&:focus {
+  			border: 1.5px solid #EDEDED;
+  			width: 160px;
+  		}
+	}
+
+	.aui-field-input[type="image"] {
+		display: none;
+	}
+}
+
+#navigation {
+	color: $greyText;
+	margin-top: 50px;
+  	text-decoration: none;
+
+   h1 {
+   	font-size: inherit;
+   }
+
+   a {
+   	color: $greyText;
+   	display: block;
+   	padding: 5px 0 5px 10px;
+   	text-decoration: none;
+
+   		&:hover {
+   			color: $blueGlow;
+   		}
+   }
+
+   ul {
+   		margin-right: 0;
+
+   		ul {
+   			background-color: #FFF; 
+			display: block;
+			left: -999em;
+			position: absolute;
+			top: 20px;
+			width: 115px;
+			z-index: 999;
+
+			li {
+				border-bottom: 1px dotted #CFCFCF;
+				height: 25px;
+				
+				a {
+					text-align: left;
+					margin: auto 0;
+				}
+			}
+   		}
+    }
+
+   li {
+   		list-style-type: none;
+		padding-bottom: 10px;
+
+		ul {
+			background-color: #FFF; 
+			display: block;
+			width: 115px;
+		}
+    }
+}
+
+#navigation ul li:hover > ul, #navigation ul ul:hover {
+	left: 115px;
+}
+
+
+
+heading h2 {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+#content {
+	margin: 55px 20px 100px 300px;
+	padding-bottom: 40px;
+}
+
+.portlet {
+	background-color: #FFF;
+	margin-bottom: 25px;
+	margin-right: 15px;
+	min-width: 350px;
+	padding: 10px;
+}
+
+.portlet-topper {
+	color: #222;
+	font-size: 26px;
+	margin: 30px 45px 0 45px;
+
+	.portlet-topper-toolbar {
+		color: black !important; 
+		text-decoration: none;
+
+		&:hover {
+		color: $blueGlow;
+		}
+
+		ul {
+			margin-top: 11px;
+			margin-right: 4px;
+		}
+	}
+}
+
+.portlet-title-text:hover {
+   	color: $blueGlow;
+}
+
+.portlet-body a {
+	color: #222;
+	text-decoration: none;
+}
+
+.portlet-toolbar {
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.portlet-icon-back {
+	background: none;
+	color: black !important; 
+	text-decoration: none;
+
+	
+
+}
+
+.entry-title em {
+	float: left;
+	max-height: 100px;
+	width: 100px;
+}
+
+.entry-title h2 a {
+	color: #222;
+	font-size: 26px;
+	text-decoration: none;
+	
+
+	&:hover {
+		color: $blueGlow;
+	}
+}
+
+.entry-tags a {
+	text-decoration: none;
+	color: $greyText;
+
+	&:hover {
+		color: $blueGlow;
+	}
+}
+
+.entry {
+	text-decoration: none;
+
+	.icon {
+		display: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: $greyText;
+
+		&:hover {
+			color: $blueGlow;
+		}
+	}
+
+	span {
+		text-decoration: none;
+	}
+
+	.taglib-flags .taglib-text {
+		text-decoration: none;
+	}
+}
+
+.lifr-meta-actions {
+	color: $greyText;
+
+	&:hover {
+		color: $blueGlow;
+	}
+
+	.taglib-text {
+		text-decoration: none;
+	}
+}
+
+span .asset-entry {
+	border-radius: 0;
+	display: block;
+	margin-right: 20px;
+}
+
+div.entry-date {
+	color: $greyText !important;
+}
+
+.entry-content {
+	color: #000;
+}
+
+.taglib-social-bookmarks {
+	background-color: $background;
+}
+
+.portlet-content {
+	color: #222;
+	font-family: inherit;
+	line-height: 2;
+	margin: 10px 35px 20px 35px;
+}
+
+input[type="text"], input[type="password"] {
+	background: #F2F2F2;
+	border: 1.5px solid #ADADAD;
+	border-radius: 3px;
+	color: $greyText;
+}
+
+#sign-in {
+	font-size: inherit;
+	padding-bottom: 40px;
+	text-decoration: none;
+
+   &:hover {
+   		color: $blueGlow;
+   		text-decoration: none;
+   }
+}
+
+#breadcrumbs, #skip-to-content, h1 .icon {
+	display: none;
+}
+
+a:visited { 
+	color: $greyText;
+	text-decoration: none; 
+}
+
+.page-title {
+	color: $greyText;
+	font-family: inherit;
+	font-weight: normal;
+	font-size: 16px;
+	margin-bottom: 60px;
+}
+
+div .subscribe a .taglib-text{
+	color: $greyText;
+	text-decoration: none;
+
+	&:hover {
+		color: $blueGlow;
+	}
+}
+
+#footer {
+	bottom: -30px;
+	height:60px;
+	position:absolute;
+    width:100%;
+   
+   p {
+   	color: $greyText;
+   	margin-right: auto;
+   	margin-left: auto;
+   	text-align: center;
+   }
+
+   a {
+		color: #4A4A4A;
+		font-weight: bold;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:visited {
+			color: #000;
+		}
+	}
+}
+
+/* ---------- Extras ---------- */
+
+@mixin color-transition {
+	transition: color .3s ease-in-out;
+   -moz-transition: color .3s ease-in-out;
+   -webkit-transition: color .3s ease-in-out;
+}
+
+#banner {
+	opacity: 0.4;
+   transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -webkit-transition: opacity .5s ease-in-out;
+
+   &:hover {
+   	opacity: 1;
+   }
+}
+
+#sign-in, #navigation a, .portlet-icon-back, .portlet-title-text,
+div .subscribe a .taglib-text, .lifr-meta-actions, .entry-title h2 a,
+.entry a, .entry-tags a {
+	@include color-transition;
+}
+
+.portlet {
+	box-shadow: 0 0 5px #BFBFBF;
+}
+
+#page-search {
+	opacity: 1;
+
+	.aui-field-input {
+		
+		-o-transition: width .5s ease-in-out;
+		-moz-transition: width .5s ease-in-out;
+		transition: width .5s ease-in-out;
+	}
+}
+
+#navigation ul ul {
+	box-shadow: 3px 3px 6px #CFCFCF;
+}
