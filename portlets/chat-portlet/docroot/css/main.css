@@ -310,6 +310,17 @@ html body {
 	width: 12px;
 }
 
+.panel-button.clear-history {
+	background: url(../images/chat-clear-history_button.png) left bottom;
+	position: absolute;
+	right: 44px;
+	top: 6px;
+}
+
+.panel-button.clear-history:hover {
+	background-position: left top;
+}
+
 .panel-button.close {
 	background: url(../images/chat-close_button.png) left bottom;
 	position: absolute;
