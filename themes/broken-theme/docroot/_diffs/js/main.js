@@ -7,13 +7,13 @@ AUI().ready(
 			navigation.plug(Liferay.NavigationInteraction);
 		}
 
-		var siteBreadcrumb = A.one('.site-breadcrumbs');
+		var siteBreadcrumbs = A.one('.site-breadcrumbs');
 
 		if (siteBreadcrumbs) {
 			siteBreadcrumbs.plug(A.Hudcrumbs);
 		}
 
-		A.getBody().delegate('click', eventHanler, 'a.logo');
+		A.getBody().delegate('click', eventHandler, 'a.logo');
 
 		var eventHandler function(event){
 			event.preventDefault();

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 #parse ($init)
 
 <html class="#language ("lang.dir")" dir="#language ("lang.dir")" lang="$w3c_language_id">
@@ -43,7 +45,7 @@ $theme.include($body_top_include)
 		#end
 
 		#if ($has_navigation || $is_signed_in)
-			#include ("$full_templates_path/navigation.vm")
+			#parse ("$full_templates_path/navigation.vm")
 		#end
 	</header>
 

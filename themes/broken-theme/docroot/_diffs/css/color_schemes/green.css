@@ -85,10 +85,10 @@ body.green, .green .portlet {
 
 	.aui-tab-active {
 		background-color: #333;
-	}
 
-	.aui-tab-active, .aui-tab-active a {
-		color: #FFF;
+		&, a {
+			color: #FFF;
+		}
 	}
 
 	.portlet-communities .portlet-enterprise-admin {
