@@ -1,0 +1,104 @@
+body {
+	background-color: #000;
+	background-image: url('../images/Imagefolder/body2.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: #D4D5D7;
+	font-family: Georgia;
+	margin: 0 auto;
+}
+
+a {
+	color: #D4D5D7;
+	font: bold 12px Georgia;
+	padding: 0 10px 0 0;
+	text-decoration: none;
+}
+ 
+p {
+	padding: 10px;
+}
+
+#wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+#breadcrumbs,.child-menu, #navigation h1, #skip-to-content {
+	display: none;
+}
+
+#navigation {
+	background-image:url('../images/Imagefolder/menu.png');
+	padding: 0 0 0 115px;
+	position: absolute;
+    top: 0px;
+    width:100%;
+}
+
+#navigation li {
+	display: inline;
+}
+
+#main-content {
+	background-image: url('../images/Imagefolder/casing.png');
+	background-size: cover;
+	margin: 0 auto;
+	width: 1435px;
+}
+
+#layout-column_column-1 {
+	margin: 25px 10px 25px 10px;
+}
+
+#layout-column_column-2 {
+	margin: 25px 10px 25px 10px;
+}
+
+.logo {
+	margin: 60px 0 0 100px;
+}
+
+.site-name {
+	display: none; 
+}
+
+.page-title {
+	margin: -15px 0 10px 0;
+	padding: 0 0 0 115px;
+}
+
+.portlet-title-text {
+	color: #3399FF;
+}
+
+.portlet-body {
+	background-image: url('../images/Imagefolder/menu.png');
+	background-size: cover;
+	margin: 10px;
+}
+
+.icon {
+	display: none;
+}
+
+.gallery {
+	
+	a {
+		height: 75px;
+		width: 100px;	
+	}
+
+	.picture {
+		border: 3px;
+		height: 75px;
+		padding: 10px;
+		width: 100px;
+	}
+}	
+
+.powered-by {
+	background-image: url('../images/Imagefolder/post.png');
+	margin: 0 auto;
+	width: 1415px;
+}					

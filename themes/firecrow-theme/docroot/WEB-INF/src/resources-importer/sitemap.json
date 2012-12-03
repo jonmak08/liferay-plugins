@@ -1,0 +1,223 @@
+{
+	"layouts":[
+		{
+			"name": "Home",
+			"title": "Home",
+			"friendlyURL": "/home",
+			"layoutTemplateId":"2_columns_iii",
+			"columns": [
+				[
+					"Home Carousel.html"	
+				],	
+			],
+		},
+		{
+			"name": "Page1",
+			"title": "Page1",
+			"friendlyURL": "/page1",
+			"layoutTemplateId":"2_columns_iii",
+			"columns": [
+				[
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Image Rotater.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Image Rotater",
+							"portletSetupUseCustomTitle": "true"							
+						}
+					},
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Na-nu Na-nu",
+							"portletSetupUseCustomTitle": "true"
+						}
+					},
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Na-nu Na-nu",
+							"portletSetupUseCustomTitle": "true"
+							
+						}
+					},
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Na-nu Na-nu",
+							"portletSetupUseCustomTitle": "true"
+						}
+					},
+				],
+				[
+					"Home Carousel.html"
+				],
+			]
+		},		
+		{
+			"name": "Page2",
+			"title": "Page2",
+			"friendlyURL": "/page2",
+			"layoutTemplateId":"2_columns_iii",
+			"columns": [
+				[
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Purdy Pixsures.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Purdy Pixsures",
+							"portletSetupUseCustomTitle": "true"								
+						}
+					}	
+				],
+				[
+					"Home Carousel.html"
+				],
+			]
+		},
+		{
+			"name": "Page3",
+			"title": "Page3",
+			"friendlyURL": "/page3",
+			"layoutTemplateId":"2_columns_iii",
+			"columns": [
+				[
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "FormBuilder.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "FormBuilder",
+							"portletSetupUseCustomTitle": "true"							
+						}
+					}
+				],
+				[
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Egg shells and spaceships",
+							"portletSetupUseCustomTitle": "true"		
+						}
+					},
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "If the eggship has no doors then how do you get in?",
+							"portletSetupUseCustomTitle": "true"		
+						}
+					},
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "...And then there was Mindy",
+							"portletSetupUseCustomTitle": "true"							
+						}
+					},
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Na-nu Na-nu",
+							"portletSetupUseCustomTitle": "true"
+						}
+					},
+				]	
+			]
+		},	
+		{
+			"name": "About",
+			"title": "Firecrow",
+			"friendlyURL": "/about",
+			"columns": [
+				[			
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Na-nu Na-nu",
+							"portletSetupUseCustomTitle": "true"
+						}
+					}
+				],
+				[
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Na-nu Na-nu.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupTitle_en_US" : "Na-nu Na-nu",
+							"portletSetupUseCustomTitle": "true"
+						}
+					}
+				],
+				[
+					{
+						"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Mork from Ork.html",
+							"groupId": "${groupId}",
+							"portletSetShowBorders": "true",
+							"portletSetupUseCustomTitle": "true",
+							"portletSetupTitle_en_US" : "About Mork"
+					 	}
+					},	
+					{
+						"portletId": "71",
+						"portelPerference": {
+							"bulletStyle": "Dots",
+							"displayStyle": "[custom]",
+							"headerType": "none",
+							"nestedChildren": "1",
+							"portletSetShowBorders": "true",
+							"portletSetupUseCustomTitle": "true",
+							"portletSetupTitle_en_US": "Secondary Nav",
+							"rootLayoutLevel": "0",
+							"rootLayoutType": "relative"							
+						}
+					},
+				]
+			],
+		"layouts": [
+			{
+				"name": "Secondary Nav 1",
+				"friendlyURL": "/secondary-nav-1",
+				"columns": [
+					["Lorem Ipsum Long.html"],
+					["Lorem Ipsum Long.html"]
+
+					]
+				}
+			]	
+		}
+	],
+	"layoutTemplateId": "2_columns_iii"
+}
