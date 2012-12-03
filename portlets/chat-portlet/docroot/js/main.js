@@ -160,6 +160,14 @@ AUI().use(
 		};
 
 		Liferay.Chat.Panel.prototype = {
+			clearHistory: function() {
+				var instance = this; 
+				
+				A.all('.user.selected').all('.panel-output').setContent("");
+
+				instance.fire('clearHistory');
+			},
+
 			close: function() {
 				var instance = this;
 
@@ -257,6 +265,9 @@ AUI().use(
 						}
 						else if (target.hasClass('close')) {
 							instance.close();
+						}
+						else if (target.hasClass('clear-history')) {
+							instance.clearHistory();
 						}
 					}
 				);
@@ -591,6 +602,7 @@ AUI().use(
 									'</div>' +
 									'<div class="chat-panel">' +
 										'<div class="panel-window">' +
+											'<div class="panel-button clear-history"></div>' +
 											'<div class="panel-button minimize"></div>' +
 											'<div class="panel-button close"></div>' +
 											'<img alt="" class="panel-icon" src="' + userImagePath + '" />' +
@@ -801,6 +813,7 @@ AUI().use(
 				panel.on('close', instance._onPanelClose, instance);
 				panel.on('hide', instance._onPanelHide, instance);
 				panel.on('show', instance._onPanelShow, instance);
+				panel.on('clear', instance._onPanelClear, instance);
 			},
 
 			_createBuddyListPanel: function() {
@@ -1040,6 +1053,17 @@ AUI().use(
 				var closedDate = instance._closedChats[userId] || 0;
 
 				return (createDate > initDate && createDate > closedDate);
+			},
+
+			_onPanelClear: function(event) {
+				var instance = this; 
+
+				instance.send(
+					{
+						clearTime: Liferay.Chat.Util.getCurrentTimestamp(),
+						clearedId: instance._panelId
+					}
+				);
 			},
 
 			_onPanelClose: function(event) {

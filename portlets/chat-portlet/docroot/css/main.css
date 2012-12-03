@@ -310,6 +310,17 @@ html body {
 	width: 12px;
 }
 
+.panel-button.clear-history {
+	background: url(../images/chat-clear-history_button.png) left bottom;
+	position: absolute;
+	right: 44px;
+	top: 6px;
+}
+
+.panel-button.clear-history:hover {
+	background-position: left top;
+}
+
 .panel-button.close {
 	background: url(../images/chat-close_button.png) left bottom;
 	position: absolute;
@@ -382,10 +393,9 @@ html body {
 	color: #eee;
 	font-size: 10px;
 	font-style: normal;
-	margin-top: -2em;
+	margin-top: -1.5em;
 	position: absolute;
 	right: 8px;
-	top: 50%;
 }
 
 .panel-output .incoming .date {
