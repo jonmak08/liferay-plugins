@@ -300,7 +300,7 @@ hr, .separator {
 /* ---------- Hudcrumbs ---------- */
 
 .lfr-hudcrumbs {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: 440;
 
@@ -377,10 +377,6 @@ hr, .separator {
 
 	#navigation ul {
 		padding: 2px;
-	}
-
-	#nav-site-logo menu {
-		border-width: 0;
 	}
 }
 
