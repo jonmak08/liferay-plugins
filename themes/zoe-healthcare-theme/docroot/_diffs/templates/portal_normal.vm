@@ -8,6 +8,8 @@
 	<title>$the_title - $company_name</title>
 
 	$theme.include($top_head_include)
+
+	$meta_data_mobile
 </head>
 
 <body class="$css_class">
@@ -23,6 +25,7 @@ $theme.include($body_top_include)
 <div id="wrapper">
 	<header id="banner" role="banner">
 		<div id="heading">
+			<a id="toggle"><span>Toggle Navigation</span></a>
 			<h1 class="site-title">
 				<a class="$logo_css_class" href="$site_default_url" title="#language ("go-to") $site_name">
 					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
@@ -76,73 +79,15 @@ $theme.include($body_top_include)
 	</div>
 </div>
 
-#if ($theme_settings.display-footer != "false")
-	<footer id="footer" role="contentinfo">
-		<div id="footerContent">
-			<div class="aui-layout-content">
-				<div class="aui-column aui-column-first aui-w50" id="footerSection1">
-					<div class="aui-column-content aui-column-content-first">
-						#if ($footer_section_1)
-							$footer_section_1
-						#end
-					</div>
-				</div>
-
-				<div class="aui-column aui-w25" id="footerSection2">
-					<div class="aui-column-content">
-						#if ($theme_settings.footer-section-2-article-id)
-							#if ($footer_section_2)
-								$footer_section_2
-							#end
-						#else
-							<div id="footerNavigation">
-								<h3>$theme_settings.footer-nav-title</h3>
-
-								<ul>
-									#foreach ($nav_item in $nav_items)
-										#set ($navItemClass = "item-" + $velocityCount)
-
-										#set ($selected_attr = "")
-
-										#if ($velocityCount == 1)
-											#set ($navItemClass = $navItemClass + " first")
-										#end
-
-										#if (!$velocityHasNext)
-											#set ($navItemClass = $navItemClass + " last")
-										#end
-
-										#if ($nav_item.isSelected())
-											#set ($navItemClass = $navItemClass + " selected")
-
-											#set ($selected_attr = "aria-selected=\"true\"")
-										#end
-
-										<li $selected_attr class="$navItemClass">
-											<a href="$nav_item.getURL()" $nav_item.getTarget()>
-												<span>$nav_item.icon() $nav_item.getName()</span>
-											</a>
-										</li>
-									#end
-								</ul>
-							</div>
-						#end
-					</div>
-				</div>
-
-				<div class="aui-column aui-column-last aui-w25" id="footerSection3">
-					<div class="aui-column-content aui-column-content-last">
-						#if ($footer_section_3)
-							$footer_section_3
-						#end
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+#if ($theme_settings.display-footer == true)
+	#parse ("$full_templates_path/footer.vm")
 #end
 
 $theme.include($body_bottom_include)
+
+#if ($is_mobile)
+	<a id="desktop-view-link" class="desktop-link">$desktop_text</a>
+#end
 
 </body>
 
