@@ -1,0 +1,397 @@
+{
+	"layouts": [
+		{
+			"name": "Home",
+			"title": "Home",
+			"friendlyURL": "/home",
+			"layoutTemplateId": "1_column",
+			"columns": [
+				[
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Welcome Image.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Welcome",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+						"portletId": "3",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Search",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Lorem Ipsum",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Egestas Risus",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Convallis Pellentesque",
+							"portletSetupUseCustomTitle": "true",
+						}
+					}
+				]
+			],
+			"layouts": [
+				{
+					"name": "Child Page",
+					"title": "Child Page",
+					"friendlyURL": "/child-page",
+					"columns": [
+						[
+							{
+							"portletId": "56",
+								"portletPreferences": {
+									"articleId": "Lorem Ipsum",
+									"groupId": "${groupId}",
+									"portletSetupShowBorders": "true",
+									"portletSetupTitle_en_US": "Son",
+									"portletSetupUseCustomTitle": "true"
+								}
+							}
+						],
+					]
+				},
+				{
+					"name": "Child Page 2",
+					"title": "Child Page 2",
+					"friendlyURL": "/child-page-2",
+					"columns": [
+						[
+							{
+							"portletId": "56",
+								"portletPreferences": {
+									"articleId": "Lorem Ipsum",
+									"groupId": "${groupId}",
+									"portletSetupShowBorders": "true",
+									"portletSetupTitle_en_US": "Son 2",
+									"portletSetupUseCustomTitle": "true"
+								}
+							}
+						],
+					]
+				},
+				{
+					"name": "Child Page 3",
+					"title": "Child Page ",
+					"friendlyURL": "/child-page-3",
+					"columns": [
+						[
+							{
+							"portletId": "56",
+								"portletPreferences": {
+									"articleId": "Lorem Ipsum",
+									"groupId": "${groupId}",
+									"portletSetupShowBorders": "true",
+									"portletSetupTitle_en_US": "Daughter",
+									"portletSetupUseCustomTitle": "true"
+								}
+							}
+						],
+					]
+				}
+			],
+		},
+		{
+			"name": "Information",
+			"title": "Info",
+			"friendlyURL": "/info",
+			"columns": [
+				[
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Welcome Image.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Info",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "36",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "84",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Convallis Pellentesque",
+							"portletSetupUseCustomTitle": "true",
+						}
+					}
+				]
+			]
+		},
+		{
+			"name": "Finance",
+			"title": "Finance",
+			"friendlyURL": "/finance",
+			"columns": [
+				[
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Finances",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "61",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Loans",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "16",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Currency",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "8",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Calender",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Convallis Pellentesque",
+							"portletSetupUseCustomTitle": "true",
+						}
+					}
+				],
+			]
+		},
+		{
+			"name": "Fourth Page",
+			"title": "Fourth Page",
+			"friendlyURL": "/fourth-page",
+			"columns": [
+				[
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Random Image.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Fourth Page",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+						"portletId": "3",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Search",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Lorem Ipsum",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Egestas Risus",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Convallis Pellentesque",
+							"portletSetupUseCustomTitle": "true",
+						}
+					}
+				],
+			]
+		},
+		{
+			"name": "Shopping",
+			"title": "Shopping",
+			"friendlyURL": "/shopping",
+			"columns": [
+				[
+					{
+					"portletId": "34",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Shopping",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+						"portletId": "3",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Search",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Amazon",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Ebay",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Half.com",
+							"portletSetupUseCustomTitle": "true",
+						}
+					}
+				],
+			]
+		},
+		{
+			"name": "Last Page",
+			"title": "Last Page",
+			"friendlyURL": "/last-page",
+			"columns": [
+				[
+					{
+					"portletId": "26",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Translator",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+						"portletId": "3",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Search",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "70",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Password Generator",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Egestas Risus",
+							"portletSetupUseCustomTitle": "true",
+						}
+					},
+					{
+					"portletId": "56",
+						"portletPreferences": {
+							"articleId": "Lorem Ipsum.html",
+							"groupId": "${groupId}",
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Convallis Pellentesque",
+							"portletSetupUseCustomTitle": "true",
+						}
+					}
+				],
+			]
+		},
+	],
+	"layoutTemplateId": "1_column"
+}
