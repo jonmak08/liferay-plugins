@@ -1,0 +1,82 @@
+#sign-in {
+  display: none;
+}
+
+
+body {
+  background-image: url(http://www.freecsstemplates.org/previews/magnetic/images/main-bg.jpg);
+  }
+
+ h1.site-title {
+  text-align: center;
+  }
+
+h2.page-title {
+  display: none;
+  }
+
+nav.site-breadcrumbs {
+  background-image: url(http://www.freecsstemplates.org/previews/magnetic/images/fotogrph-compass-on-the-roc.jpg);
+  display: block;
+  margin: auto;
+  height: 361px;
+  width: 1000px;
+  position: center;
+  }
+
+#navigation  li {
+  display: inline-block;
+  border-right: 1px solid #FFFFFF;
+  background: #83003E;
+  font-size: 20px;
+  }
+
+#navigation ul {
+  overflow: hidden;
+  width: 1000px;
+  padding: 15px 0px;
+  margin: 0px auto 30px auto;
+  background: #83003E;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  }
+
+#navigation a {
+  display: inline-block;
+  padding: 0px 40px 0px 40px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight:400;
+  color: #FFFFFF;
+  border: none;
+  }
+
+nav h1 {
+  display: none;
+}
+
+
+
+
+#breadcrumbs h1 {
+  display: none;
+  }
+
+
+* {
+  font-family: georgia ;
+
+}
+
+
+#skip-to-content {
+  display: none;
+}
+
+/* #portlet_56_INSTANCE_CcAMsz65fMa8 {
+  font-family: Georgia;
+  font-size: 2.4em;
+} */
+
