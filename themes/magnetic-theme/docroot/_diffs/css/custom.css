@@ -1,0 +1,52 @@
+nav h1, h2.page-title, .icon, #breadcrumbs h1, #skip-to-content, #sign-in {
+  display: none;
+}
+
+body {
+  background-image: url('main-bg.jpg');
+  font-family: georgia, serif;
+}
+
+h1.site-title {
+  text-align: center;
+}
+
+nav.site-breadcrumbs {
+  background-image: url('fotogrph-compass-on-the-roc.jpg');
+  display: block;
+  height: 361px;
+  margin: auto;
+  position: center;
+  width: 1000px;
+}
+
+#navigation {
+  ul {
+  background: #83003E;
+  color: black;
+  font-family: georgia, serif;
+  font-size: 20px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  padding: 15px 0px;
+  text-align: center;
+  width: 1000px; }
+
+  li {
+  background: #83003E;
+  border-right: 1px solid #FFF;
+  display: inline-block;
+  font-family: georgia, serif;
+  font-size: 20px; }
+
+  a {
+  border-width: 0;
+  color: #FFF;
+  display: inline-block;
+  font-family: georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 40px 0px 40px;
+  text-align: center;
+  text-decoration: none; }
+  }
