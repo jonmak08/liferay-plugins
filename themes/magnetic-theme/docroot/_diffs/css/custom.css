@@ -1,52 +1,58 @@
-nav h1, h2.page-title, .icon, #breadcrumbs h1, #skip-to-content, #sign-in {
+@import "compass";
+
+nav h1, h2.page-title, #breadcrumbs h1, #skip-to-content, {
   display: none;
 }
 
 body {
-  background-image: url('main-bg.jpg');
-  font-family: georgia, serif;
-}
+  background-image: url(../images/main-bg.jpg);
+  font-family: Georgia, serif;
+  }
 
-h1.site-title {
+h1.site-title, h2.page-title, body {
   text-align: center;
 }
 
-nav.site-breadcrumbs {
-  background-image: url('fotogrph-compass-on-the-roc.jpg');
-  display: block;
-  height: 361px;
-  margin: auto;
-  position: center;
-  width: 1000px;
+.h1 {
+  margin: 0 auto;
 }
+
+.aui-carousel {
+  margin: 0 auto;
+  width: 30%;
+  }
 
 #navigation {
-  ul {
-  background: #83003E;
-  color: black;
-  font-family: georgia, serif;
-  font-size: 20px;
-  margin: 0 auto 30px auto;
-  overflow: hidden;
-  padding: 15px 0px;
-  text-align: center;
-  width: 1000px; }
+  ul  {
+      background: #83003E;
+      color: black;
+      margin: 0 auto 30px auto;
+      overflow: hidden;
+      padding: 15px 0px;
+      text-align: center;
+      width: 1000px;
+    }
 
-  li {
-  background: #83003E;
-  border-right: 1px solid #FFF;
-  display: inline-block;
-  font-family: georgia, serif;
-  font-size: 20px; }
+  li  {
+      background: #83003E;
+      border-right: 1px solid #FFF;
+      display: inline-block;
+      font-size: 20px;
+    }
 
-  a {
-  border-width: 0;
-  color: #FFF;
-  display: inline-block;
-  font-family: georgia, serif;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 0 40px 0px 40px;
-  text-align: center;
-  text-decoration: none; }
-  }
+  a   {
+      border-width: 0;
+      color: #FFF;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 0 40px 0px 40px;
+      text-align: center;
+      text-decoration: none;
+    }
+}
+
+
+ul {
+  @include border-radius(10px); 
+}
