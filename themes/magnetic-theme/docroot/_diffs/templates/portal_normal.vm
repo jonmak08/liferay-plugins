@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language ("lang.dir")" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	$theme.include($top_head_include)
+	<script src="../../build/aui/aui.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" href="../../build/aui-skin-classic/css/aui-skin-classic-all-min.css" type="text/css" media="screen" />
+
+	<style type="text/css" media="screen">
+		body {
+			font-size: 12px;
+		}
+
+		#wrapper {
+			padding: 10px;
+		}
+
+		.aui-carousel {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		.aui-carousel-item {
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+
+			text-indent: -9999em;
+		}
+
+		#customMenu {
+			position: relative;
+			z-index: 40;
+			background: #ccc;
+		}
+	</style>
+</head>
+
+<body class="$css_class">
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+<div id="wrapper">
+	<header id="banner" role="banner">
+		<div id="heading">
+			<h1 class="site-title">
+				<a class="$logo_css_class" href="$site_default_url" title="#language ("go-to") $site_name">
+					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+				</a>
+
+				#if ($show_site_name)
+					<span class="site-name" title="#language ("go-to") $site_name">
+						$site_name
+					</span>
+				#end
+			</h1>
+
+			<h2 class="page-title">
+				<span>$the_title</span>
+			</h2>
+		</div>
+
+		#if (!$is_signed_in)
+			<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+		#end
+
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</header>
+
+	<div id="content">
+		<nav class="site-breadcrumbs" id="breadcrumbs">
+			<h1>
+				<span>#language ("breadcrumbs")</span>
+			</h1>
+
+			#breadcrumbs()
+		</nav>
+
+	<h1>Carousel</h1>
+
+	<div id="magnetic">
+		<div style="background: url(http://blogimages.thescore.com/counterattack/files/2011/02/Wayne-Rooney-bicycle-kick-goal1-590x260.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item aui-carousel-item-active">Article0</div>
+		<div style="background: url(http://howmanyarethere.net/wp-content/uploads/2012/04/michael-jordan-dunking.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article1</div>
+		<div style="background: url(http://download.xbox.com/content/images/66acd000-77fe-1000-9115-d8025454082b/1033/screenlg9.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article2</div>
+		<div style="background: url(http://www.freecsstemplates.org/previews/magnetic/images/fotogrph-compass-on-the-roc.jpg) no-repeat; background-size: 100% auto; width: 940px; height: 253px;" class="aui-carousel-item">Article2</div>
+		>
+		
+	</div>
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		<p class="powered-by">
+			#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+		</p>
+	</footer>
+</div>
+
+$theme.include($body_bottom_include)
+<script type="text/javascript" charset="utf-8">
+
+AUI().ready('aui-carousel', function(A) {
+
+	var component = new A.Carousel(
+		{
+			intervalTime: 3,
+			contentBox: '#magnetic',
+			activeIndex: 0,
+			// activeIndex: 'rand',
+			height: 254,
+			width: 940
+			// nodeMenu: '#customMenu',
+			// nodeMenuItemSelector: 'li'
+		}
+	).render();
+});
+
+</script>
+</body>
+
+$theme.include($bottom_include)
+
+</html>

@@ -14,7 +14,6 @@
 
 package com.liferay.portal.workflow.kaleo.service.persistence;
 
-import com.liferay.portal.NoSuchModelException;
 import com.liferay.portal.kernel.bean.BeanReference;
 import com.liferay.portal.kernel.cache.CacheRegistryUtil;
 import com.liferay.portal.kernel.dao.jdbc.MappingSqlQuery;
@@ -1811,8 +1810,8 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 
 		FinderCacheUtil.putResult(FINDER_PATH_FETCH_BY_KII_KTI,
 			new Object[] {
-				Long.valueOf(kaleoTaskInstanceToken.getKaleoInstanceId()),
-				Long.valueOf(kaleoTaskInstanceToken.getKaleoTaskId())
+				kaleoTaskInstanceToken.getKaleoInstanceId(),
+				kaleoTaskInstanceToken.getKaleoTaskId()
 			}, kaleoTaskInstanceToken);
 
 		kaleoTaskInstanceToken.resetOriginalValues();
@@ -1895,8 +1894,8 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 		KaleoTaskInstanceToken kaleoTaskInstanceToken) {
 		if (kaleoTaskInstanceToken.isNew()) {
 			Object[] args = new Object[] {
-					Long.valueOf(kaleoTaskInstanceToken.getKaleoInstanceId()),
-					Long.valueOf(kaleoTaskInstanceToken.getKaleoTaskId())
+					kaleoTaskInstanceToken.getKaleoInstanceId(),
+					kaleoTaskInstanceToken.getKaleoTaskId()
 				};
 
 			FinderCacheUtil.putResult(FINDER_PATH_COUNT_BY_KII_KTI, args,
@@ -1910,8 +1909,8 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 			if ((kaleoTaskInstanceTokenModelImpl.getColumnBitmask() &
 					FINDER_PATH_FETCH_BY_KII_KTI.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
-						Long.valueOf(kaleoTaskInstanceToken.getKaleoInstanceId()),
-						Long.valueOf(kaleoTaskInstanceToken.getKaleoTaskId())
+						kaleoTaskInstanceToken.getKaleoInstanceId(),
+						kaleoTaskInstanceToken.getKaleoTaskId()
 					};
 
 				FinderCacheUtil.putResult(FINDER_PATH_COUNT_BY_KII_KTI, args,
@@ -1927,8 +1926,8 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 		KaleoTaskInstanceTokenModelImpl kaleoTaskInstanceTokenModelImpl = (KaleoTaskInstanceTokenModelImpl)kaleoTaskInstanceToken;
 
 		Object[] args = new Object[] {
-				Long.valueOf(kaleoTaskInstanceToken.getKaleoInstanceId()),
-				Long.valueOf(kaleoTaskInstanceToken.getKaleoTaskId())
+				kaleoTaskInstanceToken.getKaleoInstanceId(),
+				kaleoTaskInstanceToken.getKaleoTaskId()
 			};
 
 		FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_KII_KTI, args);
@@ -1937,8 +1936,8 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 		if ((kaleoTaskInstanceTokenModelImpl.getColumnBitmask() &
 				FINDER_PATH_FETCH_BY_KII_KTI.getColumnBitmask()) != 0) {
 			args = new Object[] {
-					Long.valueOf(kaleoTaskInstanceTokenModelImpl.getOriginalKaleoInstanceId()),
-					Long.valueOf(kaleoTaskInstanceTokenModelImpl.getOriginalKaleoTaskId())
+					kaleoTaskInstanceTokenModelImpl.getOriginalKaleoInstanceId(),
+					kaleoTaskInstanceTokenModelImpl.getOriginalKaleoTaskId()
 				};
 
 			FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_KII_KTI, args);
@@ -1971,7 +1970,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 	 */
 	public KaleoTaskInstanceToken remove(long kaleoTaskInstanceTokenId)
 		throws NoSuchTaskInstanceTokenException, SystemException {
-		return remove(Long.valueOf(kaleoTaskInstanceTokenId));
+		return remove((Serializable)kaleoTaskInstanceTokenId);
 	}
 
 	/**
@@ -2090,7 +2089,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 			if ((kaleoTaskInstanceTokenModelImpl.getColumnBitmask() &
 					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_COMPANYID.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
-						Long.valueOf(kaleoTaskInstanceTokenModelImpl.getOriginalCompanyId())
+						kaleoTaskInstanceTokenModelImpl.getOriginalCompanyId()
 					};
 
 				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_COMPANYID,
@@ -2099,7 +2098,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 					args);
 
 				args = new Object[] {
-						Long.valueOf(kaleoTaskInstanceTokenModelImpl.getCompanyId())
+						kaleoTaskInstanceTokenModelImpl.getCompanyId()
 					};
 
 				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_COMPANYID,
@@ -2111,7 +2110,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 			if ((kaleoTaskInstanceTokenModelImpl.getColumnBitmask() &
 					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_KALEODEFINITIONID.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
-						Long.valueOf(kaleoTaskInstanceTokenModelImpl.getOriginalKaleoDefinitionId())
+						kaleoTaskInstanceTokenModelImpl.getOriginalKaleoDefinitionId()
 					};
 
 				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_KALEODEFINITIONID,
@@ -2120,7 +2119,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 					args);
 
 				args = new Object[] {
-						Long.valueOf(kaleoTaskInstanceTokenModelImpl.getKaleoDefinitionId())
+						kaleoTaskInstanceTokenModelImpl.getKaleoDefinitionId()
 					};
 
 				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_KALEODEFINITIONID,
@@ -2132,7 +2131,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 			if ((kaleoTaskInstanceTokenModelImpl.getColumnBitmask() &
 					FINDER_PATH_WITHOUT_PAGINATION_FIND_BY_KALEOINSTANCEID.getColumnBitmask()) != 0) {
 				Object[] args = new Object[] {
-						Long.valueOf(kaleoTaskInstanceTokenModelImpl.getOriginalKaleoInstanceId())
+						kaleoTaskInstanceTokenModelImpl.getOriginalKaleoInstanceId()
 					};
 
 				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_KALEOINSTANCEID,
@@ -2141,7 +2140,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 					args);
 
 				args = new Object[] {
-						Long.valueOf(kaleoTaskInstanceTokenModelImpl.getKaleoInstanceId())
+						kaleoTaskInstanceTokenModelImpl.getKaleoInstanceId()
 					};
 
 				FinderCacheUtil.removeResult(FINDER_PATH_COUNT_BY_KALEOINSTANCEID,
@@ -2200,13 +2199,24 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 	 *
 	 * @param primaryKey the primary key of the kaleo task instance token
 	 * @return the kaleo task instance token
-	 * @throws com.liferay.portal.NoSuchModelException if a kaleo task instance token with the primary key could not be found
+	 * @throws com.liferay.portal.workflow.kaleo.NoSuchTaskInstanceTokenException if a kaleo task instance token with the primary key could not be found
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
 	public KaleoTaskInstanceToken findByPrimaryKey(Serializable primaryKey)
-		throws NoSuchModelException, SystemException {
-		return findByPrimaryKey(((Long)primaryKey).longValue());
+		throws NoSuchTaskInstanceTokenException, SystemException {
+		KaleoTaskInstanceToken kaleoTaskInstanceToken = fetchByPrimaryKey(primaryKey);
+
+		if (kaleoTaskInstanceToken == null) {
+			if (_log.isWarnEnabled()) {
+				_log.warn(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY + primaryKey);
+			}
+
+			throw new NoSuchTaskInstanceTokenException(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY +
+				primaryKey);
+		}
+
+		return kaleoTaskInstanceToken;
 	}
 
 	/**
@@ -2220,19 +2230,7 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 	public KaleoTaskInstanceToken findByPrimaryKey(
 		long kaleoTaskInstanceTokenId)
 		throws NoSuchTaskInstanceTokenException, SystemException {
-		KaleoTaskInstanceToken kaleoTaskInstanceToken = fetchByPrimaryKey(kaleoTaskInstanceTokenId);
-
-		if (kaleoTaskInstanceToken == null) {
-			if (_log.isWarnEnabled()) {
-				_log.warn(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY +
-					kaleoTaskInstanceTokenId);
-			}
-
-			throw new NoSuchTaskInstanceTokenException(_NO_SUCH_ENTITY_WITH_PRIMARY_KEY +
-				kaleoTaskInstanceTokenId);
-		}
-
-		return kaleoTaskInstanceToken;
+		return findByPrimaryKey((Serializable)kaleoTaskInstanceTokenId);
 	}
 
 	/**
@@ -2245,20 +2243,8 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 	@Override
 	public KaleoTaskInstanceToken fetchByPrimaryKey(Serializable primaryKey)
 		throws SystemException {
-		return fetchByPrimaryKey(((Long)primaryKey).longValue());
-	}
-
-	/**
-	 * Returns the kaleo task instance token with the primary key or returns <code>null</code> if it could not be found.
-	 *
-	 * @param kaleoTaskInstanceTokenId the primary key of the kaleo task instance token
-	 * @return the kaleo task instance token, or <code>null</code> if a kaleo task instance token with the primary key could not be found
-	 * @throws SystemException if a system exception occurred
-	 */
-	public KaleoTaskInstanceToken fetchByPrimaryKey(
-		long kaleoTaskInstanceTokenId) throws SystemException {
 		KaleoTaskInstanceToken kaleoTaskInstanceToken = (KaleoTaskInstanceToken)EntityCacheUtil.getResult(KaleoTaskInstanceTokenModelImpl.ENTITY_CACHE_ENABLED,
-				KaleoTaskInstanceTokenImpl.class, kaleoTaskInstanceTokenId);
+				KaleoTaskInstanceTokenImpl.class, primaryKey);
 
 		if (kaleoTaskInstanceToken == _nullKaleoTaskInstanceToken) {
 			return null;
@@ -2271,20 +2257,20 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 				session = openSession();
 
 				kaleoTaskInstanceToken = (KaleoTaskInstanceToken)session.get(KaleoTaskInstanceTokenImpl.class,
-						Long.valueOf(kaleoTaskInstanceTokenId));
+						primaryKey);
 
 				if (kaleoTaskInstanceToken != null) {
 					cacheResult(kaleoTaskInstanceToken);
 				}
 				else {
 					EntityCacheUtil.putResult(KaleoTaskInstanceTokenModelImpl.ENTITY_CACHE_ENABLED,
-						KaleoTaskInstanceTokenImpl.class,
-						kaleoTaskInstanceTokenId, _nullKaleoTaskInstanceToken);
+						KaleoTaskInstanceTokenImpl.class, primaryKey,
+						_nullKaleoTaskInstanceToken);
 				}
 			}
 			catch (Exception e) {
 				EntityCacheUtil.removeResult(KaleoTaskInstanceTokenModelImpl.ENTITY_CACHE_ENABLED,
-					KaleoTaskInstanceTokenImpl.class, kaleoTaskInstanceTokenId);
+					KaleoTaskInstanceTokenImpl.class, primaryKey);
 
 				throw processException(e);
 			}
@@ -2294,6 +2280,18 @@ public class KaleoTaskInstanceTokenPersistenceImpl extends BasePersistenceImpl<K
 		}
 
 		return kaleoTaskInstanceToken;
+	}
+
+	/**
+	 * Returns the kaleo task instance token with the primary key or returns <code>null</code> if it could not be found.
+	 *
+	 * @param kaleoTaskInstanceTokenId the primary key of the kaleo task instance token
+	 * @return the kaleo task instance token, or <code>null</code> if a kaleo task instance token with the primary key could not be found
+	 * @throws SystemException if a system exception occurred
+	 */
+	public KaleoTaskInstanceToken fetchByPrimaryKey(
+		long kaleoTaskInstanceTokenId) throws SystemException {
+		return fetchByPrimaryKey((Serializable)kaleoTaskInstanceTokenId);
 	}
 
 	/**
