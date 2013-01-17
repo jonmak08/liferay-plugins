@@ -1,3 +1,5 @@
+@import "compass";
+
 @import url(custom_common.css);
 
 @import url(color_schemes/green.css);
@@ -9,7 +11,6 @@
 body {
 	background: #EEF0F2;
 	font-size: 11px;
-	line-height: 3em;
 }
 
 a {
@@ -227,6 +228,10 @@ hr, .separator {
 	padding: 0;
 }
 
+.portlet-asset-publisher .asset-content, .portlet-asset-publisher .asset-summary, .portlet-asset-publisher .asset-title, .portlet-asset-publisher .header-title, .portlet-asset-publisher li.title-list, .portlet-asset-publisher .results-row, .portlet-blogs .entry-body, .portlet-blogs .entry-title, .portlet-blogs .header-title, .portlet-journal-content .journal-content-article, .portlet-message-boards .header-title, .portlet-message-boards .thread-body, .portlet-search .results-row {
+	@include hyphenation;
+}
+
 .portlet-icons {
 	float: none;
 
@@ -299,7 +304,7 @@ hr, .separator {
 /* ---------- Hudcrumbs ---------- */
 
 .lfr-hudcrumbs {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	z-index: 440;
 
@@ -370,16 +375,16 @@ hr, .separator {
 }
 
 .ie7 {
-	* {
-		display: none !important;
-	}
-
 	#banner {
 		z-index: 2;
 	}
 
 	#navigation ul {
 		padding: 2px;
+	}
+
+	.portlet-message-boards .thread-body {
+		@include force-wrap();
 	}
 
 	#nav-site-logo menu {
