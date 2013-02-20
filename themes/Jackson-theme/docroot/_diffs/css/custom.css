@@ -1,0 +1,278 @@
+body {
+	background: url(../images/custom/banner-picture-bg.png) repeat-x scroll left top;
+	background-position: 50% 27px;
+	font-family: tahoma, verdana, sans-serif;
+}
+
+#skip-to-content {
+	display: none;
+}
+
+#banner {
+	background: url(../images/custom/header-bg.gif) repeat-x scroll 0 0 transparent;
+	display: inline-block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#heading {
+	height: 20px;
+	margin: 0 auto;
+	width: 960px;
+}
+
+#pageSearch {
+	float: right;
+	position: relative;
+	top: 25px;
+}
+
+#keywords {
+	font-size: 12px;
+	height: 15px;
+	width: 150px;
+}
+
+.page-title {
+	visibility: hidden;
+}
+
+#sign-in {
+	bottom: 20px;
+	color: white;
+	float: right;
+	left: 180px;
+	position: relative;
+	text-decoration: none;
+}
+
+#navigation {
+	margin: auto;
+	width: 1000px;
+
+	h1 {
+		visibility: hidden;
+	}
+
+	ul {
+		width: 960px;
+	}
+
+	li {
+		background: url(../images/custom/nav-bar.png) repeat-x scroll left top transparent;
+		display: inline;
+		float: left;
+		height: 45px;
+		line-height: 45px;
+		padding: 0 46px;
+		text-align: center;
+
+		&:hover {
+			background-position: left -45px;
+		}
+	}
+
+	a {
+		color: #FFF;
+		display: inline-block;
+		font-size: 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+		vertical-align: middle;
+
+		&:hover {
+			color: #FFF;
+			text-decoration: none;
+		}
+	}
+
+	&:after {
+		content: url(../images/custom/jackson-banner-picture.png);
+		position: relative;
+		left: 19px;
+		top: 10px;
+	}
+}
+
+#content {
+	background: url(../images/custom/content-bg.gif) repeat-x scroll 0 0 transparent;
+	background-position: 50% 18px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#breadcrumbs {
+	display: none;
+}
+
+.columns-1-3-2-4 {
+	color: #5A6A6A;
+	margin: 0 auto;
+	width: 960px;
+
+	a {
+		color: #CF710D;
+		text-decoration: none;
+
+		&:hover {
+		text-decoration: underline;
+		}
+	}
+}
+
+.portlet-layout {
+	margin-bottom: 15px;
+}
+
+#layout-column_column-0 {
+	margin: 15px auto;
+	padding: 0;
+}
+
+#column-1, #column-2,  #column-3 {
+	background-color: #FFF;
+	border-bottom: 2px solid #DEDEDE;
+	border-top: 2px solid #DEDEDE;
+	margin-top: 5px;
+
+	h2 {
+		color: #D0730C;
+		margin-top: 5px;
+	}
+
+	p {
+		margin-top: 0;
+	}
+
+	.portlet-body {
+		padding: 0 10px;
+	}
+
+	.portlet-content {
+		padding: 0;
+	}
+
+	.portlet-topper {
+		color: #D0730C;
+		font-size: 16px;
+		margin-top: 5px;
+		padding-left: 20px;
+	}
+}
+
+#column-1 {
+	border-left: 2px solid #DEDEDE;
+
+	#layout-column_column-1 {
+		background: -moz-linear-gradient(-45deg, rgba(239,239,239,1) 5%, rgba(239,239,239,0.55) 15%, rgba(241,241,241,0) 27%, rgba(255,255,255,0) 100%);
+	}
+}
+
+#column-1 .portlet-body, #column-2 .portlet-body {
+	border-right: 1px solid #DEDEDE;
+}
+
+#column-3 {
+	border-right: 2px solid #DEDEDE;
+}
+
+#column-4 {
+	border-radius: 3px;
+	border: 2px solid #DEDEDE;
+	padding: 0 3px;
+
+	h2 {
+		background-color: #CF710D;
+		color: #FFF;
+		margin-top: 3px;
+		padding-left: 6px;
+	}
+
+	p {
+	padding: 0 12px 0 15px;
+	}
+
+	.portlet-topper {
+		background-color: #CF710D;
+		color: #FFF;
+		font-size: 15px;
+		margin-top: 3px;
+		padding-left: 6px;
+	}
+
+	.portlet-boundary {
+		background: -moz-linear-gradient(-45deg, rgba(239,239,239,1) 5%, rgba(239,239,239,0.55) 15%, rgba(241,241,241,0) 27%, rgba(255,255,255,0) 100%);
+	}
+
+	.portlet-content {
+		padding-left: 0;
+	}
+}
+
+#super-column-5 {
+	padding-left: 15px
+}
+
+#column-5 {
+
+	.portlet-topper {
+		font-size: 15px;
+	}
+
+	.portlet-content {
+		padding-left: 0;
+	}
+}
+
+#column-6 {
+	margin-right: 10px
+}
+
+#column-6, #column-7 {
+
+	.portlet-topper {
+		font-size: 14px;
+	}
+
+	.portlet-content {
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+
+	.portlet-body {
+		padding-right: 30px;
+	}
+}
+	
+#column-8, #column-9, #column-10, #column-11 {
+	background-color: #102624;
+	color: #FFF;
+
+	h {
+		margin-top: 6px;
+	}
+
+	.portlet-topper {
+		font-size: 14px;
+		margin-top: 6px;
+		padding: 12px;
+	}
+
+	.portlet-body {
+		padding-bottom: 20px;
+		padding-left: 10px;
+	}
+
+	.portlet-content {
+		padding-left: 2px;
+	}
+
+	p a {
+		color: #FFF;
+	}
+}
+
+footer {
+	text-align: right;
+	width: 980px;
+}
