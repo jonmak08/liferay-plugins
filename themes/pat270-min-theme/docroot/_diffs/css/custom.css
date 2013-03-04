@@ -7,7 +7,6 @@
 html, body {
 	background: #21221B;
 	font-size: 11px;
-	height: 100%;
 }
 
 html > .lfr-dockbar-pinned {
@@ -104,8 +103,9 @@ input[type="button"].aui-button-input-cancel:hover, input[type="button"].aui-but
 	background: #85A83A;
 }
 
-input[value="Checkout"], input[value="Delete"], input[value="Cancel"] {
+input[value="Cancel"], input[value="Checkout"], input[value="Delete"], input[value="Reset"] {
 	background: #89B93F;
+
 	&:hover, &:focus {
 		background: #85A83A;
 	}
@@ -113,6 +113,7 @@ input[value="Checkout"], input[value="Delete"], input[value="Cancel"] {
 
 input[value="Permissions"] {
 	background: #BB2C2C;
+
 	&:hover, &:focus {
 		background: #AC2727;
 	}
@@ -367,7 +368,7 @@ input[value="New Message"] {
 .portlet-topper-toolbar {
 	background: white;
 	margin: 0;
-	padding: 2px;
+	padding: 0;
 	position: absolute;
 	right: 3px;
 	text-align: right;
