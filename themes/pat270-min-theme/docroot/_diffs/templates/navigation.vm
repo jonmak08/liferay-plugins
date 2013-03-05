@@ -6,13 +6,17 @@
 	<ul>
 		#foreach ($nav_item in $nav_items)
 			#if ($nav_item.isSelected())
-				#if ($velocityCount == 1)
+				#if ($velocityCount == 1 && $nav_item.hasChildren())
+					<li aria-selected="true" class="selected first hasChildren">
+				#elseif ($velocityCount == 1)
 					<li aria-selected="true" class="selected first">
 				#else
 					<li aria-selected="true" class="selected">
 				#end
 			#else
-				#if ($velocityCount == 1)
+				#if ($velocityCount == 1 && $nav_item.hasChildren())
+					<li class="first hasChildren">
+				#elseif ($velocityCount == 1)
 					<li class="first">
 				#else
 					<li>
