@@ -1,2 +1,5 @@
-#set ($myCommunityPublicUrl = "/web/$user.getScreenName()/home")
-#set ($myCommunityPrivateUrl = "/user/$user.getScreenName()/home")
+#set ($currentURL = $themeDisplay.getURLCurrent())
+#set ($currentFullURL = ($themeDisplay.getPortalURL()) + $currentURL)
+
+#set ($myCommunityPublicURL =  $themeDisplay.getPathFriendlyURLPublic() + "/$user.getScreenName()/home")
+#set ($myCommunityPrivateURL = $themeDisplay.getPathFriendlyURLPrivateUser() + "/$user.getScreenName()/home")
