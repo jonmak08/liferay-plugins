@@ -1,3 +1,2 @@
-#*
-This file allows you to override and define new Velocity variables.
-*#
+#set ($myCommunityPublicUrl = "/web/$user.getScreenName()/home")
+#set ($myCommunityPrivateUrl = "/user/$user.getScreenName()/home")
