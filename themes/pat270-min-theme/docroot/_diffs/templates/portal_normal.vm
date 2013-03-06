@@ -24,24 +24,16 @@ $theme.include($body_top_include)
 	
 		<div id="very_top_menu">
 			<ul>
+
 			#if ($is_signed_in)
-
-				#if (!($currentFullURL == $home_url))
-					<li><a href="$home_url">$home_text</a></li>
-				#end
-
-				#if (!($currentURL == $myCommunityPublicURL))
-					<li><a href="$myCommunityPublicURL">$user_name Public</a></li>
-				#end
-
-				#if (!($currentURL == $myCommunityPrivateURL))
-					<li><a href="$myCommunityPrivateURL">$user_name Private</a></li>
-				#end
+				<li><a href="$home_url">$home_text</a></li>
+				<li><a href="$myCommunityPublicURL">$user_name Public</a></li>
+				<li><a href="$myCommunityPrivateURL">$user_name Private</a></li>
 				<li><a href="$sign_out_url">$sign_out_text</a></li>
-
 			#else
 				<li><a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a></li>
 			#end
+
 			</ul>
 		</div>
 
@@ -50,6 +42,7 @@ $theme.include($body_top_include)
 			#if ($is_signed_in)
 				<p>$user_greeting</p>
 			#end
+			
 		</div>
 
 	<div id="wrapper">
