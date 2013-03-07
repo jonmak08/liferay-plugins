@@ -67,10 +67,16 @@ input[type="text"], input[type="password"], textarea, .textarea, .aui-field-inpu
 	font: 1em Arial, Helvetica, Verdana, sans-serif;
 	padding: 5px;	
 	height: 21px;
+
+	&:focus {
+		background: #FFF;
+		outline: none;
+	}
 }
 
-input.focus {
+input.focus, textarea.focus {
 	background: #FFF;
+	border-color: #EAEAEA;
 	outline: none;
 }
 
@@ -103,7 +109,7 @@ input[type="button"].aui-button-input-cancel:hover, input[type="button"].aui-but
 	background: #85A83A;
 }
 
-input[value="Cancel"], input[value="Checkout"], input[value="Delete"], input[value="Reset"] {
+input[value="Cancel"], input[value="Checkout"], input[value="Delete"], input[value="Reset"], input[value="Convert"], input[value="Calculate"] {
 	background: #89B93F;
 
 	&:hover, &:focus {
@@ -147,7 +153,6 @@ input[value="New Message"] {
 #WrapperForBg {
 	background: #FFF;
 	margin-top: 0;
-/*	margin-top: -20px;*/
 	min-height: 100%;
 }
 
@@ -238,20 +243,40 @@ input[value="New Message"] {
 	background: #000;
 	color: #999;
 	margin-top: 0;
-/*	margin-top: 20px;*/
 	min-height: 15px;
 	padding: 10px 15px;
 	text-align: right;
 
+	p {
+		margin: 0;
+	}
+
 	a {
 		color: #888;
-		font-size: 1.2em;
+		font-size: 1.1em;
 		text-decoration: none;
 
 		&:hover {
 			text-decoration: underline;
 		}
+	}
 
+	ul {
+		list-style: none;
+		margin: 0;
+
+		li {
+			display: inline;
+			padding: 0 0 0 10px;
+		}
+	}
+}
+
+#welcomeMessage {
+
+	p {
+		padding: 6px 6px 0 0;
+		text-align: right;
 	}
 }
 
@@ -295,7 +320,6 @@ input[value="New Message"] {
 			background: #363636;
 			color: #FFF;
 			outline: 0;
-			text-shadow: -1px -1px #000;
 		}
 	}
 }
@@ -304,7 +328,6 @@ input[value="New Message"] {
 	background: #363636;
 	color: #FFF;
 	outline: 0;
-	text-shadow: -1px -1px #000;
 }
 
 #navigation li.selected > a, #navigation .selected > a:hover {
@@ -578,6 +601,16 @@ input[value="New Message"] {
 	}
 }
 
+#portlet_33 {
+
+	.entry-body {
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
 #portlet_33 .separator { 
 	border: 0; 
 }
@@ -640,6 +673,10 @@ input[value="New Message"] {
 	border-bottom: 1px solid;
 	margin-top: 0;
 	padding: 20px;
+
+	p img {
+		width: 100%;
+	}
 }
 
 .entry-content, .portlet-blogs-aggregator  .abstract {
@@ -906,6 +943,11 @@ body.portal-popup {
 	padding: 25px 25px 25px;
 }
 
+/* -------- wysiwyg select boxes background -------- */
+.cke_ltr {
+	background: #FCFCFC;
+}
+
 /* ---------- aui tabs styles override ---------- */
 
 .aui-tab-label, .aui-tab-label a {
@@ -1091,7 +1133,7 @@ input[type="text"], input[type="password"], textarea, .textarea, .aui-field-inpu
 		@include border-radius(4px 0 0 4px);
 	}
 
-	.first.hover > a {
+	.first.hasChildren.hover > a {
 		@include border-radius(4px 0 0 0);
 	}
 
@@ -1184,4 +1226,173 @@ input[type="text"], input[type="password"], textarea, .textarea, .aui-field-inpu
 
 .aui-tabview-list .aui-tab-active {
 	@include border-radius(4px);
+}
+
+.asset-content .asset-more a {
+	@include border-radius(17px);
+	@include text-shadow(#3c3c3c 0 1px 0);
+
+	&:hover, &:active{
+		@include text-shadow(none);		
+
+	}
+}
+
+/* -------- Blog Aggregator Display as List -------- */
+
+.blog-agg-display-as-list {
+
+	.portlet-title-text { 
+		font-weight: 100; 
+	}
+
+	.entry-content {
+		border: 0;
+		padding: 0;
+	}
+
+	.entry-title {
+		font-size: 1.3em;
+		font-weight: normal;
+		a {
+			color: #676767;
+		}
+	}
+
+	.entry-author { 
+		display: none; 
+	}
+	
+	.entry-date { 
+		display: none; 
+	}
+
+	.search-container {
+		display: none;
+	}
+}
+
+/* -------- Asset Publisher Tile Blogs Theme Style -------- */
+
+.asset-publisher-tile-blogs {
+
+	.asset-abstract {
+		float: left;
+		width: 25%;
+	}
+
+	.asset-actions {
+		margin-top: 34px;
+	}
+
+	.asset-title {
+		margin-left: 8px;
+
+		a {
+			color: #333;
+		}
+
+		img {
+			display: none;
+		}
+	}
+
+	.asset-content {
+		margin: 0 10px;
+
+		.asset-more {
+			margin-top: 20px;
+
+			a {
+				border-bottom: 1px solid #000;
+				border-bottom: 1px solid rgba(0,0,0,0.7);
+				border-top: 1px solid #52a0cd;
+				background: #52a0cd;
+				padding: 5px 13px;
+			  color: #FFF;
+			  font-size: 10px;
+			  font-family: Georgia, serif;
+			  text-decoration: none;
+			  vertical-align: middle;
+
+			  &:hover, &:active {
+					border-top-color: #4985A6;
+					border-bottom-color: #4985A6;
+					background: #4985A6;
+					color: #FFF;	  	
+			  }
+			}
+		}
+
+		p img {
+			border: 1px solid #D3D3D3;
+			padding: 5px;
+			width: 95%;
+		}
+	}
+
+	.asset-full-content {
+
+		.asset-more {
+			display: none;
+		}
+	}
+
+	.final-separator {
+		clear: both;
+		padding-bottom: 1em;
+	}
+
+	.header-back-to {
+		display: none;
+	}
+
+	.subscribe-action {
+		display: none;
+	}
+}
+
+/* -------- Portlet Promotion Theme Style -------- */
+
+.portlet-promotion-panel {
+	background: #EAEAEA;
+	border: 1px solid #D3D3D3;
+	margin-bottom: 2em;
+	padding: 10px 10px 0;
+}
+
+/* ------- Portlet Features Theme Style -------- */
+
+.portlet-features-panel {
+	margin-bottom: 2em;
+
+	.portlet-body {
+
+		p {
+
+			img {
+				border: 1px solid #D3D3D3;
+				padding: 5px;
+				width: 95%;
+			}
+		}
+
+	}
+}
+
+/* -------- Portlet Alloy UI Carousel Theme Style -------- */
+.aui-carousel {
+	overflow: hidden;
+
+	.aui-carousel-item {
+		
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	menu {
+		background: transparent;
+	}
 }
