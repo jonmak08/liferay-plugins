@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 #parse ($init)
 
 <html class="#language ("lang.dir")" dir="#language ("lang.dir")" lang="$w3c_language_id">
@@ -27,7 +29,7 @@ $theme.include($body_top_include)
 				</a>
 
 				#if ($show_site_name)
-					<span class="site-name company-title" title="#language ("go-to") $site_name">
+					<span class="site-name" title="#language ("go-to") $site_name">
 						$site_name
 					</span>
 				#end
@@ -43,7 +45,7 @@ $theme.include($body_top_include)
 		#end
 
 		#if ($has_navigation || $is_signed_in)
-			#include ("$full_templates_path/navigation.vm")
+			#parse ("$full_templates_path/navigation.vm")
 		#end
 	</header>
 
