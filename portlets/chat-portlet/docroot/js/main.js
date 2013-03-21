@@ -1336,21 +1336,23 @@ AUI().use(
 								function(item, index, collection) {
 									var buddy = buddies[item];
 
-									var buddyUserId = buddy.userId;
+									if (buddy)	{
+										var buddyUserId = buddy.userId;
 
-									if (buddy && buddyUserId != instance._activePanelId) {
-										var chat = instance._chatSessions[buddyUserId];
+										if (buddyUserId != instance._activePanelId) {
+											var chat = instance._chatSessions[buddyUserId];
 
-										if (!chat) {
-											chat = instance._createChatSession(buddy);
+											if (!chat) {
+												chat = instance._createChatSession(buddy);
 
-											chat.restore();
+												chat.restore();
 
-											chat.minimize();
+												chat.minimize();
 
-											var panel = chat.getPanel();
+												var panel = chat.getPanel();
 
-											panel.one('.unread').hide();
+												panel.one('.unread').hide();
+											}
 										}
 									}
 								}
