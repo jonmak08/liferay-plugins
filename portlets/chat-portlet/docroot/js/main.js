@@ -989,13 +989,17 @@ AUI().use(
 					for (var i in entryCache) {
 						var entry = entryCache[i];
 
-						if (entry.flag) {
+						var fromUserId = entry.fromUserId;
+
+						var incoming = (fromUserId == userId);
+
+						if (entry.flag || (fromUserId == themeDisplay.getUserId())) {
 							chat.update(
 								{
 									cache: true,
 									content: entry.content,
 									createDate: entry.createDate,
-									incoming: (entry.fromUserId == userId)
+									incoming: incoming
 								}
 							);
 						}
@@ -1271,7 +1275,9 @@ AUI().use(
 
 					var entryProcessed = (entryIds.indexOf('|' + entry.entryId) > -1);
 
-					if (!entryProcessed || (instance._initialRequest && !entry.flag)) {
+					var initialRequest = instance._initialRequest;
+
+					if (!entryProcessed || (initialRequest && !entry.flag)) {
 						var userId = entry.toUserId;
 						var incoming = false;
 
@@ -1282,10 +1288,12 @@ AUI().use(
 
 						var buddy = instance._buddies[userId];
 
-						if (buddy && incoming) {
+						var content = entry.content;
+
+						if ((buddy && incoming) || (initialRequest && content)) {
 							var chat = instance._chatSessions[userId];
 
-							if (!chat && entry.content) {
+							if (!chat && content) {
 								chat = instance._createChatSession(
 									{
 										portraitId: buddy.portraitId,
@@ -1300,7 +1308,7 @@ AUI().use(
 								chat.update(
 									{
 										incoming: incoming,
-										content: entry.content,
+										content: content,
 										createDate: entry.createDate,
 										entryId: entry.entryId,
 										statusMessage: buddy.statusMessage
@@ -1348,10 +1356,16 @@ AUI().use(
 												chat.restore();
 
 												chat.minimize();
+											}
 
-												var panel = chat.getPanel();
+											var panel = chat.getPanel();
 
-												panel.one('.unread').hide();
+											var unread = panel.one('.unread');
+
+											var unreadCount = unread.text();
+
+											if (!unreadCount || (parseInt(unreadCount, 10) < 2)) {
+												unread.hide();
 											}
 										}
 									}
