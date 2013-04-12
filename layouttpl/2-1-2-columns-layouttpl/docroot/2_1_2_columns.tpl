@@ -13,7 +13,7 @@
 
 		<table class="portlet-layout">
 		<tr>
-			<td class="portlet-column portlet-column-only" id="column-3">
+			<td class="aui-w100 portlet-column portlet-column-only" id="column-3">
 				$processor.processColumn("column-3", "portlet-column-content portlet-column-content-only")
 			</td>
 		</tr>
@@ -41,7 +41,7 @@
 		</div>
 
 		<div class="portlet-layout">
-			<div class="portlet-column portlet-column-only" id="column-3">
+			<div class="aui-w100 portlet-column portlet-column-only" id="column-3">
 				$processor.processColumn("column-3", "portlet-column-content portlet-column-content-only")
 			</div>
 		</div>
