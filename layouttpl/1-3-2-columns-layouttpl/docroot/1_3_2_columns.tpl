@@ -71,7 +71,7 @@
 		</div>
 
 		<div class="portlet-layout">
-			<div class="aui-w66 portlet-column">
+			<div class="aui-w66 portlet-column portlet-column-first">
 				<div class="portlet-layout">
 					<div class="aui-w100 portlet-column portlet-column-only">
 						$processor.processColumn("column-5", "portlet-column-content portlet-column-content-only")
