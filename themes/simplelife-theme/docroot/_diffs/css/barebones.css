@@ -1,0 +1,171 @@
+/* ---------- Barebones Theme ---------- */
+
+* {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+h1, h2, h3 {
+    margin: 0 0 0.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    margin: 0
+}
+
+#wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+#sign-in {
+    border: 1px solid #CCC;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#heading {
+    border: 1px solid #CCC;
+}
+
+#navigation {
+    margin-bottom: 1em;
+}
+
+#navigation li {
+    border-right: 1px solid #CCC;
+    display: inline-block;
+    padding: 10px;
+}
+
+#navigation ul {
+    border: 1px solid #CCC;
+    list-style: none;
+    margin: 0;
+}
+
+#breadcrumbs {
+    border: 1px solid #CCC;
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+#breadcrumbs li {
+    border-right: 1px solid #CCC;
+    display: inline-block;
+    padding: 10px;
+}
+
+#breadcrumbs h1, #navigation h1, .page-title, #skip-to-content {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+.breadcrumbs {
+    margin: 0
+}
+
+#content {
+    border: 1px solid #CCC;
+    padding: 10px 10px 0 10px;
+}
+
+.portlet {
+    border: 1px solid #CCC;
+    margin-bottom: 1em;
+    padding: 0;
+}
+
+.portlet .breadcrumbs {
+    margin-left: 0;
+}
+
+.portlet-title {
+    background: #EEE;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.portlet-topper-toolbar {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.portlet-content {
+    padding: 10px;
+}
+
+.portlet-content ul {
+    margin-left: 1em;
+}
+
+.portlet-column-content {
+    padding: 0 5px;
+}
+
+#footer {
+    padding: 10px 0;
+    text-align: right;
+}
+
+/* ---------- Portlets ---------- */
+
+.featured {
+    background: url(../images/custom/tablet_man.jpg) no-repeat center top;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    margin-bottom: 1em;
+    padding: 75px 0;
+    text-align: center;
+}
+
+.featured h1 {
+    font-size: 3em;
+    font-weight: 200;
+    margin: 0;
+}
+
+.featured p {
+    color: #000;
+    display: inline-block;
+    font-size: 1.7em;
+    font-weight: 300;
+    margin: 0;
+    width: 80%;
+}
+
+.portlet-no-title .portlet {
+    border: 0;
+}
+
+.portlet-no-title .portlet-title {
+    display: none;
+}
+
+.portlet-no-title .portlet-content {
+    padding: 0;
+}
+
+.taglib-ratings.stars .liferay-rating-score {
+    padding-left: 0;
+}
