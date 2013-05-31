@@ -1,0 +1,391 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:200,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+
+$color: #3991CC;
+
+body {
+    background: #EEE;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8em;
+}
+
+a {
+	color: $color;
+}
+
+#breadcrumbs, #breadcrumbs h1, #navigation h1, .page-title, #skip-to-content {
+    display: none;
+}
+
+#sign-in {
+	color: #FFF;
+	font-family: "Oswald";
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	padding: 1em;
+	position: absolute;
+	right: 15%;
+	text-decoration: none;
+	text-transform: uppercase;
+	top: 0;
+	z-index: 99;
+	&:hover {
+		background: #444;
+	}
+}
+
+#wrapper {
+	position: relative;
+}
+
+#banner {
+	background: $color ;
+	background-size: 100%;
+}
+
+#heading {
+	margin: 0 auto;
+	padding-top: 3em;
+	width: 70%;
+}
+
+.logo img {
+	padding: 2em 0;
+}
+
+#navigation {
+	background: #333;
+	font-family: "Oswald";
+	font-weight: 300;
+	left: 0;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-transform: uppercase;
+	ul {
+		margin: 0 auto;
+		width: 70%;
+	}
+	li {
+		float: left;
+		margin: 0;
+		padding: 1em 2em;
+		&:hover {
+		background: #444;
+		}
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+	.selected {
+		background: $color;
+		z-index: 1;
+		&:hover {
+			background: $color;
+		}
+	}
+}
+
+#content {
+	background: #FFF;
+	margin: 0 auto;
+	padding: 1em 1em 0;
+	width: 70%;
+}
+
+.portlet-column-content {
+	padding: 0;
+}
+
+.feature {
+	background: #eee url(../images/custom/tablet_man.jpg) center top;
+	font-weight: 200;
+	padding: 5em 0;
+	h1 {
+		background: $color;
+		color: #fff;
+		display: inline-block;
+		float: left;
+		font-size: 2em;
+		font-weight: 200;
+		padding: 0.5em 0.5em 0.5em 0.75em;
+		position: relative;
+	}
+	p {
+		background: #fff;
+		clear: left;
+		color: #333;
+		float: left;
+		font-size: 1.5em;
+		line-height: 1.5em;
+		max-width: 50%;
+		padding: 0.5em 0.5em 0.5em 1em;
+	}
+}
+
+.aui-carousel-item {
+	height: 250px;
+	width: 700px;
+}
+
+.portlet {
+	clear: both;
+	margin-bottom: 1em;
+	.portlet-title {
+		background: #fff;
+		border-bottom: 1px solid #DDD;
+		font-size: 1.5em;
+		font-weight: 200;
+		padding: 0.5em 0;
+		margin: 0 0.5em;
+		.icon {
+			display: none;
+		}
+	}
+}
+
+.portlet-content {
+	padding: 1em;
+}
+
+.portlet-asset-publisher .asset-content {
+	margin: 0;
+	img {
+		display: block;
+		width: 100% !important;
+	}
+}
+
+#footer {
+	background: #333;
+	color: #f2f2f2;
+	font-size: .9em;
+	margin: 0 auto 2em;
+	padding: 1em;
+	width: 70%;
+}
+
+#menu-button {
+	display: none;
+}
+
+.ui-col3 {
+	.portlet-body {
+		overflow: hidden;
+		.portlet-body {
+			margin-top: 0;
+		}
+	}
+	.asset-full-content {
+		float: left;
+		width: 33.3333333%;
+		.asset-content {
+			margin: 0 0.5em;
+			position: relative;
+			p {
+				background: $color;
+				bottom: 25px;
+				color: #fff;
+				font-size: 1.3em;
+				font-weight: 200;
+				left: 0;
+				margin-top: 0.5em;
+				padding: 10px;
+				position: absolute;				
+			}
+		}
+	}
+}
+
+/*.lfr-meta-actions {
+			display: none;
+		}*/
+
+.ui-col4 {
+	.portlet-body {
+		overflow: hidden;
+		.portlet-body {
+			margin-top: 0;
+		}
+	}
+	.asset-full-content {
+		float: left;
+		width: 25%;
+		.asset-content {
+			margin: 0 0.5em;
+			position: relative;
+			p {
+				background: $color;
+				bottom: 25px;
+				color: #fff;
+				font-size: 1.3em;
+				font-weight: 200;
+				left: 0;
+				margin-top: 0.5em;
+				padding: 10px;
+				position: absolute;
+			}
+		}
+	}
+}
+
+
+
+.portlet-borderless {
+	margin-bottom: 1em;
+}
+
+.ul-col3, .ui-col4 {
+	.portlet-borderless {
+		margin: 0;
+	}
+}
+
+.blurb {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	color: #999;
+	font-size: 1.7em;
+	font-weight: 200;
+	line-height: 1.5em;
+	padding: 0.5em;
+	text-align: center;
+	.portlet-borderless-container {
+		min-height: 0;
+	}
+	p {
+		margin: 0 auto;
+		width: 50%;
+	}
+}
+
+.separator {
+		display: none;
+	}
+
+@media screen and (max-width: 400px) {
+	#menu-button {
+		background: #000;
+		display: block;
+		height: 35px;
+		position: absolute;
+		right: 1em;
+		top: 0.5em;
+		width: 40px;
+	}
+	.aui-toolbar {
+		li {
+			display: block;
+		}
+	}
+	#heading {
+		width: auto;
+	}
+	#heading {
+		padding: 0;
+	}
+	.logo img {
+		height: 50%;
+		max-width: 50%;
+		padding: 1em;
+	}
+
+	#sign-in {
+		background: #333;
+		border-bottom: 1px solid #000;
+		border-top: 1px solid #666;
+		color: #fff;
+		display: none;
+		font-size: 1.2em;
+		padding: 1.3em 1em;
+		position: relative;
+		right: 0;
+		width: auto;		
+	}
+	#navigation {
+		display: none;
+		font-size: 1.2em;
+		position: relative;
+		ul {
+			width: auto;
+		}
+		li {
+			border-top: 1px solid #666;
+			border-bottom: 1px solid #000;
+			float: none;
+			display: block;
+			padding: 1.3em 1em;
+		}
+		.selected {
+			background: #000;
+			border-top: 1px solid #000;
+		}
+	}
+	#content {
+		width: auto;
+	}
+
+	#main-content {
+		.portlet-column {
+			display: block;
+			width: auto;
+		}
+	}
+
+
+
+
+	.feature {
+		background: url(../images/custom/tablet_man.jpg) center top no-repeat;
+		h1 {
+			width: auto;
+		}
+		p {
+			font-size: 1.3em;
+			max-width: 100%;
+		}
+	}
+
+	.blurb {
+		p {
+			font-size: .8em;
+			line-height: 1.3em;
+			width: auto;
+		}
+	}
+
+	.ui-col3, .ui-col4 {
+		.asset-full-content {
+			float: left;
+			width: auto;
+			.asset-content {
+				margin: 1em 0;
+				p {
+					font-size: 100%;
+					max-width: 80%;
+				}
+			}
+		}
+	}
+
+	.aui-3col .asset-full-content {
+		float: left;
+		max-height: 230px;
+		width: 100%;
+	}
+	.portlet-asset-publisher .asset-full-content.show-asset-title .asset-content {
+		margin: 0;
+	}
+
+	.col {
+		max-height: 200px;
+	}
+
+	#footer {
+		margin: 0;
+		width: auto;
+	}
+}

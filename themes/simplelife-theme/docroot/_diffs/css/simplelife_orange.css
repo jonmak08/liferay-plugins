@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+body {
+    background: #EEE url(../images/custom/noise_lines.png) repeat;
+    font-family: "Open Sans", sans-serif;
+}
+
+#breadcrumbs, #breadcrumbs h1, #navigation h1, .page-title, #skip-to-content {
+    display: none;
+}
+
+#wrapper {
+    position: relative;
+    margin: 1em auto;
+    width: 70%;
+}
+
+#banner {
+    background: #e76e27;
+    padding: 1em;
+}
+
+#sign-in {
+    font-size: .7em;
+    position: absolute;
+    right: 1em;
+    bottom: 0.5em;
+}
+
+.logo img {
+    height: 40%;
+    width: 40%;
+}
+
+#navigation {
+    position: absolute;
+    font-size: .8em;
+    font-weight: 400;
+    letter-spacing: .1em;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    li {
+        display: inline-block;
+        margin: 2em 1.5em;
+    }
+}
+
+#content {
+    background: #FFF;
+    clear: both;
+    margin-top: 1em;
+    padding: 1em 1em 0;
+}
+
+.featured {
+    background: #eee;
+    br {
+        display: none;
+    }
+}
+
+.portlet {
+    border: 1px solid #ccc;
+    font-size: .8em;
+    font-weight: 400;
+    margin-bottom: 1em;
+    }
+
+
+.portlet-title {
+    background: #EEE;
+    padding: 0.5em;
+    .icon {
+    display: none;
+    }
+}
+
+.portlet-content {
+    padding: 1em;
+}
+
+.portlet-msg-info {
+    margin: 0;
+}
+
+.portlet-asset-publisher .final-separator {
+    margin-bottom: 1em;
+}
+
+.portlet-asset-publisher .asset-full-content .asset-content {
+    margin: 0;
+    padding: 1em;
+}
+
+#footer {
+    font-size: 0.7em;
+    padding: 0.5em 1em;
+}
