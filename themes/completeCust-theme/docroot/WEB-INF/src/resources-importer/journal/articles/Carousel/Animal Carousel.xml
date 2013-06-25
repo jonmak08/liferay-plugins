@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="kei0kiTt" name="height" type="text" index-type="">
+		<dynamic-content><![CDATA[200]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="xfOW5N0E" name="width" type="text" index-type="">
+		<dynamic-content><![CDATA[250]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="snCThL7c" name="interval" type="text" index-type="">
+		<dynamic-content><![CDATA[3]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="Zgm2cfgG" name="image" type="document_library" index-type="">
+		<dynamic-content><![CDATA[/documents/19/0/img1.jpg/ecd2da60-e649-4f9f-8314-dd4838f43b64?t=1372443590850]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="xqntQhYo" name="image" type="document_library" index-type="">
+		<dynamic-content><![CDATA[/documents/19/0/img2.jpg/c5c3a10b-e6cb-4044-aee5-3b22b5bd04db?t=1372443604383]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="gcsXQZnI" name="image" type="document_library" index-type="">
+		<dynamic-content><![CDATA[/documents/19/0/img3.jpg/5f3ce4ab-ec39-4a14-b461-11c12fb7ccfd?t=1372443621091]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="WZk5zPHH" name="border-radius" type="text" index-type="">
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+</root>

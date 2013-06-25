@@ -1,0 +1,32 @@
+<style type="text/css">
+	.carousel-image {
+		#if ($border-radius.data)
+			border-radius: ${border-radius.getData()}px;
+		#end
+		height: ${height.getData()}px;
+		width: ${width.getData()}px;
+	}
+</style>
+
+<div id="carousel">
+	#foreach ($item in $image.getSiblings())
+		#if ($item.getData())
+			<img class="carousel-image" src="$item.getData();">
+		#end
+	#end
+</div>
+
+<script type="text/javascript">
+	AUI().ready('aui-carousel', function(A)
+		{
+			new A.Carousel(
+				{
+					contentBox: '#carousel',
+					height: $height.getData(),
+					intervalTime: $interval.getData(),
+					width: $width.getData()
+				}
+			).render();
+		}
+	);
+</script>
