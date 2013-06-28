@@ -1,0 +1,32 @@
+@import "compass";
+
+td {
+	background-color: #F00;
+	height: 30px;
+	width: 30px;
+}
+
+p {
+	margin: 15px 0 15px 0;
+}
+
+#top table {
+	display: inline-block;
+
+	td {
+		padding: 2px;
+	}
+}
+
+#info {
+	display: inline-block;
+	margin-left: 20px;
+	position: absolute;
+	top: 0;
+}
+
+#main {
+	table td {
+		padding: 0;
+	}
+}

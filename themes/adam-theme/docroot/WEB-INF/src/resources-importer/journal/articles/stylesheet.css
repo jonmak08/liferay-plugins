@@ -1,0 +1,7 @@
+@import "compass";
+
+img {
+	height: 300px;
+	position: relative;
+	z-index: -1;
+}
