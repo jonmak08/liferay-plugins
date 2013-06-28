@@ -1,0 +1,418 @@
+@import "compass";
+
+/* -------- Common Color Variables -------- */
+
+$pcolor: #FCFCFC;
+$brcolor: #E2E2E2;
+$spcolor: transparent; 
+
+/* -------- Set Compass Defaults -------- */
+
+$default-background-attachment: scroll;
+$default-background-clip: border-box;
+$default-background-origin: padding-box;
+$default-background-size: auto auto;
+$default-box-shadow: #000  0 0 6px #000 inset;
+@mixin background-attachment {
+    background-attachment: scroll;
+}
+
+/* -------- Global -------- */
+
+a {
+    color: #1982D1;
+}
+
+body {
+    background: #33383A url(http://www.brandvee.com/wp-content/themes/core1/framework/theme_options/images/pattern/bg-patterns/crosslines-pattern.png) repeat 0 0; 
+    font-family: Arial,Helvetica,Verdana,sans-serif;
+    padding: 1em 5em;
+}
+
+body, input, textarea {
+    color: #726F6F;
+    font: 15px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.625;
+}
+
+div section {
+    background-color: #FFF;
+    border: 1px $brcolor solid;
+    clear: both;
+    display: block;
+    float: left;
+    font-size: 12px;
+    margin-bottom: 2em;
+    padding: 1em 1.5em 1.5em 1.5em
+} 
+
+/* -------- Wrapper / Skip / Sign-in -------- */
+
+#wrapper {
+    background-color: #FFF;
+    border: #FFF solid;
+    border-width: 0 3px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0 auto 2em auto;
+    max-width: 1000px;
+}
+
+/* -------- Heading -------- */
+
+#header {
+    background-color: #FFF;
+    position: relative;
+    
+    #navigation {
+    background: #FFF url(http://www.devsaran.com/theme/new/impact_theme/theme/new/impact_theme/sites/all/themes/impact_theme/images/menu_bg.png) repeat 0 0;
+    clear: both;
+    display: block;
+    float: left;
+    margin: 0 auto 2px auto;
+    text-decoration: none;
+    width: 100%;
+    }
+
+    #site-logo {
+        margin: 0 2%;
+        padding: 2em 0;
+
+        img {
+        height: auto;
+        float:left;
+        }
+    }
+
+    .social-profile {
+        top: 2em 
+    }
+}
+
+.social-profile {
+    float: none;
+    position: absolute;
+    right: 1em;
+    text-align: center;
+    top: 2em;
+
+    ul {
+     clear: none;
+        float: none;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul li {
+        display: inline-block;
+        float: left;
+    }
+    
+    ul li a {
+        display: block;
+        height: 40px;
+        text-indent: -99999px;
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: ease;
+        width: 40px;
+    }
+    
+    li a:hover {
+        background-position: 0 -40px !important;
+    }
+    
+    .facebook {
+        a {
+        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/facebook.png) no-repeat 0 0;
+        }
+
+        a:hover {
+        background-color: #3B5998;
+        }
+    }
+    
+    .twitter { 
+        a {
+        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/twitter.png) no-repeat 0 0;
+        }
+
+        a:hover {
+        background-color: #48C4D2;
+        background-position: 0 -40px !important;
+        }
+    }
+
+    .google-plus {
+        a { 
+        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/google.png) no-repeat 0 0;
+        }
+
+        a:hover {
+        background-color: #F45750;
+        }
+    }
+    
+    .rss {
+        a {
+        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/rss.png) no-repeat 0 0;
+        }
+        
+        a:hover {
+        background-color: #FE9900;
+        }
+    }
+}
+
+/* -------- Navigation -------- */
+
+#navigation {/*
+    background: #3779AE none repeat 0 0;
+    clear: both;
+    display: block;
+    float: left;
+    margin: 0 auto 2px auto;
+    text-decoration: none;
+    width: 100%;*/
+
+    a {
+        border-right: 1px #726F2F solid;
+        color: #FFF;
+        padding: 0.89em 1em;
+        text-decoration: none;
+
+        &.selected {
+            &:focus, &hover{
+                background-color: #169FE6;;
+            }
+        }
+    }
+
+    li {
+        display: inline-block;
+        font-size: 14;
+        list-style: none outside none;
+        margin: 0;
+        padding-left: 0;
+
+        &:hover a {
+            background: #169FE6;
+            color: #FFF
+        }
+
+        &.selected {
+            &:focus, &hover {
+                 background-color: #169FE6;
+            }
+        }
+    }
+
+    .modify-pages {
+        display: inline-block;
+        border-right-color: #726F6F;
+    }
+    
+    ul {
+        padding: 0 1.2125em;
+
+        a {
+            display: block;
+            color: #FFF;
+            line-height: 3em;
+        }
+    }
+}
+
+/* -------- Content -------- */
+
+#content {
+    background: $pcolor;
+    clear: both;
+    padding: 1.5em 0 0 0;
+}
+
+/* -------- Footer -------- */
+
+#footer-area {
+    background-color: #F7F7F7;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 1em 2%;
+
+    h2 {
+        border-bottom: 1px #CCC solid;
+        color: #269CCB;
+        font: 1.1em bold inherit;
+        margin: 0 0 0.5em 0;
+        padding: 0.5em 0 0 0;
+    }
+
+    p {
+        font: inherit;
+        margin-bottom: 1em
+    }
+}
+
+#footer-bottom {
+    border-top: 1px #CCC solid;
+    border-bottom: 1px #CCC solid;
+    clear: both;
+}
+
+#footer-block-wrap .footer-block {
+    float: left;
+    margin-right: 1em;
+    width: 31.3%;
+}
+/* -------- Portlet -------- */
+
+div.portlet-column {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.portlet {
+    background-color: #FFF;
+    border: 1px $brcolor solid;
+    margin-bottom: 10px;
+    padding: 3px;
+    text-align: left;
+}
+
+.portlet-column {
+    border: 0 $brcolor none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline-style: none;
+    outline-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.portlet-content {
+    background-color: #FFF none repeat 0 0 ;
+    border-style: none;
+}
+
+#portlet-layout {
+    float: left;
+    margin-right: 3%;
+
+    .portlet > h1 {
+    border-bottom: 1px #EEE solid;
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0em -0.75em 1em -0.75em;
+    padding: 0 1em 0.5em 1em;
+    text-transform: uppercase;
+    }
+}
+
+.portlet-title  {
+    border-bottom: 1px solid #EEE;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    margin:0 -0.75em 1em;
+    padding: 0 1em 0.5em;
+    text-transform: uppercase;
+}
+
+/* -------- Portlet Max -------- */
+
+/* -------- Custom Classes -------- */
+
+/* -------- AUI -------- */
+
+/* -------- Web Content -------- */
+
+/* -------- Columns -------- */
+
+#column-1 {
+    display: block;
+    float: left;
+    margin: 0 0 0 3%;
+    width: 64%;
+
+    img {
+        visibility:hidden;
+    }
+
+    .portlet-body .portlet {
+        background-color: $pcolor;
+        border-bottom: 1px #E2E2E2 solid;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    .portlet-content {
+        background-color: $pcolor;
+        max-width: 240em
+    }
+
+    .portlet-title {
+        background: $pcolor url(http://www.brandvee.com/wp-content/themes/core1/framework/theme_options/images/pattern/bg-patterns/crosslines-pattern.png);
+        width: 240%
+    }
+}
+
+#column-2 {
+    display: block;
+    float: right;
+    margin-right: 3%;
+    width: 27%;
+
+    .portlet {
+        background-color: #FFF;
+        border: 1px $brcolor solid;
+        clear: both;
+        font-size: 12px;
+        margin-bottom: 2em;
+        padding: 1em 1.5em 1.5em 1.5em;
+    }
+
+    .portlet-title img {
+        visibility: hidden;
+    }
+}
+
+/* -------- Extras -------- */
+
+body .portlet-content .social-profile{
+    @include background-attachment;
+}
+
+#column-2 .portlet {
+    @include border-radius(5px);
+}
+
+div section {
+    @include border-radius(5px);
+}
+
+#header {
+    @include border-radius(5px);
+}
+
+.portlet-content {
+    @include box-shadow(none);
+}
+
+.social-profile li a:active {
+    @include box-shadow(0 0 6px #000 inset); 
+}
+
+#wrapper {
+    @include border-radius(5px);
+}

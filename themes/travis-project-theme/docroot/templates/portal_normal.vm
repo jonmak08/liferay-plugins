@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class">
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+#if (!$is_signed_in)
+	<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+#end
+	 	
+<div id="wrapper">
+	<header id="header" role="banner">
+		<div id= "site-logo">
+			<a class="$logo_css_class" href="$site_default_url" title="#language("go-to") $site_name">
+				<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+			</a>
+
+			<div class="social-profile">
+				<ul>
+					<li class="facebook">
+						<a href="http://www.facebook.com/liferay" title="Official Liferay Facebook Page" target="_blank">Official Liferay Facebook Page</a>
+					</li>
+
+					<li class="twitter">
+						<a href="http://twitter.com/Liferay" title="Official Liferay Twitter" target="_blank">Official Liferay Twitter </a>
+					</li>
+
+					<li class="google-plus">
+						<a href="https://plus.google.com/communities/114672043374945629203" title="Official Liferay Google+ Community" target="_blank"> Official Liferay Google+ Community </a>
+					</li>
+
+					<li class="rss">
+						<a href="http://localhost:8080/web/guest/xd/-/blogs/rss" title="Impact Theme in RSS" target="_blank"> My RSS feed </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<nav>
+			#if ($has_navigation || $is_signed_in)
+				#parse ("$full_templates_path/navigation.vm")
+			#end
+		</nav>
+	</header>
+	
+	<div id="content" class="portlet-content">	
+		#if ($selectable) 
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+				
+			portletDisplay.setTitle($the_title)
+				
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end		
+	</div>
+	
+	<footer id="footer-bottom" role="contentinfo">
+		<div id="footer-area" class="clearfix">
+             <div id="footer-block-wrap" class="clearfix in3">
+         		<div class="footer-block">
+            		<div class="region region-footer-first">
+  						<div>
+
+        					<h2>First Bottom
+        					</h2>
+    							<div class="content">
+    								<p>This process has been rewarding and difficult. I have enjoyed the challenge that has come with making this theme and I am looking forward to learning more and working hard.</p>
+  								</div>
+  						</div> 
+					</div>
+          		</div>          
+          		<div class="footer-block">
+            		<div class="region region-footer-second">
+  						<div>
+
+       					 	<h2>Second Bottom
+       					 	</h2>
+  							<div class="content">
+    							<p>I hope to apply these skills to learning more about the Liferay Portal. I hope to be able to work efficiently and continue to refine the Liferay platform by working with the team here.</p>
+  							</div>
+ 						</div>
+					</div>
+          		</div>          
+          		<div class="footer-block">
+            		<div class="region region-footer-third">
+  						<div>
+
+       						<h2>Thrid Bottom</h2>
+    							<div class="content">
+    								<p>And this would be the third block of footer text.</p>
+  								</div>
+  						</div> 
+					</div>
+          		</div>        
+      		</div>
+        </div>
+		<div id="bottom" class="clearfix">
+    
+		<p class="powered-by">
+			#language("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+			<p>
+        #if($theme.getSetting("display-slogan-footer") == true)
+            Nosester $theme.getSetting("slogan")
+        #else
+            Nosester
+        #end
+		</p>
+	</footer>
+		$theme.include($body_bottom_include)
+</div>
+
+</body>
+
+$theme.include($bottom_include)
+
+</html>
