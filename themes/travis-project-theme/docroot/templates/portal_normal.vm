@@ -88,19 +88,20 @@ $theme.include($body_top_include)
             		<div class="region region-footer-second">
   						<div>
 
-       					 	<h2>Second Bottom
-       					 	</h2>
+       					 	<h2>Second Bottom</h2>
+  							
   							<div class="content">
     							<p>I hope to apply these skills to learning more about the Liferay Portal. I hope to be able to work efficiently and continue to refine the Liferay platform by working with the team here.</p>
   							</div>
+  							
  						</div>
 					</div>
           		</div>          
           		<div class="footer-block">
             		<div class="region region-footer-third">
   						<div>
-
-       						<h2>Thrid Bottom</h2>
+							<h2>Thrid Bottom</h2>
+    							
     							<div class="content">
     								<p>And this would be the third block of footer text.</p>
   								</div>

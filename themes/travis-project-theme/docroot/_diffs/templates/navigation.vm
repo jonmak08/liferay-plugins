@@ -1,29 +1,120 @@
-<nav class="$nav_css_class" id="navigation">
-
-	<ul>
-		#foreach ($nav_item in $nav_items)
-			#if ($nav_item.isSelected())
-				<li class="selected">
-			#else
-				<li>
-			#end
-				<a href="$nav_item.getURL()" $nav_item.getTarget()><span>$nav_item.icon() $nav_item.getName()</span></a>
-
-				#if ($nav_item.hasChildren())
-					<ul class="child-menu">
-						#foreach ($nav_child in $nav_item.getChildren())
-							#if ($nav_child.isSelected())
-								<li class="selected">
-							#else
-								<li>
-							#end
-								<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
-							</li>
-						#end
-					</ul>
-				#end
-			</li>
-		#end
-	</ul>
-
-</nav>
+<div id="navigation" class="sort-pages modify-pages">
+      <ul id="nav">
+          #set($counter=0)
+          #foreach ($nav_item in $nav_items)
+              #if ($nav_item.isSelected())
+                  #set ($nav_item_class = "selected")
+              #else
+                  #set ($nav_item_class = "")
+              #end
+            #if($nav_item.getName()!="")
+                   #if ($nav_item.hasChildren())
+                    <li class="$nav_item_class">
+                        <div>
+                        <a href="$nav_item.getURL()" $nav_item.getTarget()><span>$nav_item.getName()</span>
+                        <!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+                        <ul class="child-menu">
+                            #foreach ($nav_child in $nav_item.getChildren())
+                               #if ($nav_child.isSelected())
+                                        #set ($nav_child_class = "selected")
+                                #else
+                                        #set ($nav_child_class = "")
+                                #end
+                                 #if ($nav_child.hasChildren())
+                                 <li>
+                                     <a href="$nav_child.getURL()" $nav_child.getTarget() class="$nav_child_class"><span>$nav_child.getName()</span>
+                                    <!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+                                        <ul class="child-menu">
+                                             #foreach ($nav_child2 in $nav_child.getChildren())
+                                                 #if ($nav_child2.isSelected())
+                                                         #set ($nav_child2_class = "selected")
+                                                #else
+                                                         #set ($nav_child2_class = "")
+                                                 #end
+                                                 #if ($nav_child2.hasChildren())
+                                                 <li>
+                                                     <a href="$nav_child2.getURL()" $nav_child2.getTarget()><span>$nav_child2.getName()</span>
+                                                     <!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+                                                         <ul class="child-menu">
+                                                             #foreach ($nav_child3 in $nav_child2.getChildren())
+                                                                 #if ($nav_child3.isSelected())
+                                                                         #set ($nav_child3_class = "selected")
+                                                                 #else
+                                                                         #set ($nav_child3_class = "")
+                                                                 #end
+                                                                 #if ($nav_child3.hasChildren())
+                                                                 <li>
+                                                                     <a href="$nav_child3.getURL()" $nav_child3.getTarget()><span>$nav_child3.getName()</span>
+                                                                     <!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+                                                                         <ul class="child-menu">
+                                                                             #foreach ($nav_child4 in $nav_child3.getChildren())
+                                                                                 #if ($nav_child4.isSelected())
+                                                                                         #set ($nav_child4_class = "selected")
+                                                                                 #else
+                                                                                         #set ($nav_child4_class = "")
+                                                                                 #end
+                                                                                 #if ($nav_child4.hasChildren())
+                                                                                 <li>
+                                                                                     <a href="$nav_child4.getURL()" $nav_child4.getTarget()><span>$nav_child4.getName()</span>
+                                                                                     <!--[if IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+                                                                                         <ul class="child-menu">
+                                                                                             #foreach ($nav_child5 in $nav_child4.getChildren())
+                                                                                                 #if ($nav_child5.isSelected())
+                                                                                                         #set ($nav_child5_class = "selected")
+                                                                                                 #else
+                                                                                                         #set ($nav_child5_class = "")
+                                                                                                 #end
+                                                                                                 <li>
+                                                                                                     <a href="$nav_child5.getURL()" $nav_child5.getTarget() ><span>$nav_child5.getName()<span></a>
+                                                                                                 </li>
+                                                                                             #end
+                                                                                         </ul>
+                                                                                     <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                                                                                 #else
+                                                                                 <li>
+                                                                                 <a href="$nav_child4.getURL()" $nav_child4.getTarget()><span>$nav_child4.getName()</span></a>
+                                                                                 #end   
+                                                                             #end
+                                                                         </ul>
+                                                                     <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                                                                 #else
+                                                                 <li>
+                                                                 <a href="$nav_child3.getURL()" $nav_child3.getTarget()><span>$nav_child3.getName()</span></a>
+                                                                 #end   
+                                                             #end
+                                                         </ul>
+                                                     <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                                                 #else
+                                                <li>
+                                                 <a href="$nav_child2.getURL()" $nav_child2.getTarget()><span>$nav_child2.getName()</span></a>
+                                                 #end   
+                                                 </li>   
+                                             #end
+                                            
+                                         </ul>
+                                     <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                                 #else
+                                 <li>
+                                 <a href="$nav_child.getURL()" $nav_child.getTarget()><span>$nav_child.getName()</span></a>
+                                 #end   
+                                </li>   
+                            #end
+                        </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    #else
+                    <li>
+                    <div>
+                    <a href="$nav_item.getURL()" $nav_item.getTarget()><span>$nav_item.getName()</span></a>
+                    #end
+                    </div>
+                </li>       
+            #else
+                #if($counter!=0)
+                #else
+                    <li><span>&nbsp;</span></li>
+                    #set($counter=1)
+                #end
+            #end
+        #end
+    </ul>
+</div>

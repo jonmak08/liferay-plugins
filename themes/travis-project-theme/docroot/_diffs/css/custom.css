@@ -56,6 +56,10 @@ div section {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     margin: 0 auto 2em auto;
     max-width: 1000px;
+
+    img {
+        visibility: visible;
+    }
 }
 
 /* -------- Heading -------- */
@@ -63,16 +67,6 @@ div section {
 #header {
     background-color: #FFF;
     position: relative;
-    
-    #navigation {
-    background: #FFF url(http://www.devsaran.com/theme/new/impact_theme/theme/new/impact_theme/sites/all/themes/impact_theme/images/menu_bg.png) repeat 0 0;
-    clear: both;
-    display: block;
-    float: left;
-    margin: 0 auto 2px auto;
-    text-decoration: none;
-    width: 100%;
-    }
 
     #site-logo {
         margin: 0 2%;
@@ -97,7 +91,7 @@ div section {
     top: 2em;
 
     ul {
-     clear: none;
+        clear: none;
         float: none;
         list-style: none outside none;
         margin: 0;
@@ -126,62 +120,68 @@ div section {
     
     .facebook {
         a {
-        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/facebook.png) no-repeat 0 0;
+            background: $spcolor url(../images/social-media-icons/facebook.png) no-repeat 0 0;
         }
 
         a:hover {
-        background-color: #3B5998;
+            background-color: #3B5998;
         }
     }
     
     .twitter { 
         a {
-        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/twitter.png) no-repeat 0 0;
+            background: $spcolor url(../images/social-media-icons/twitter.png) no-repeat 0 0;
         }
 
         a:hover {
-        background-color: #48C4D2;
-        background-position: 0 -40px !important;
+            background-color: #48C4D2;
+            background-position: 0 -40px !important;
         }
     }
 
     .google-plus {
         a { 
-        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/google.png) no-repeat 0 0;
+            background: $spcolor url(../images/social-media-icons/google.png) no-repeat 0 0;
         }
 
         a:hover {
-        background-color: #F45750;
+            background-color: #F45750;
         }
     }
     
     .rss {
         a {
-        background: $spcolor url(http://www.devsaran.com/theme/new/impact_theme/sites/all/themes/impact_theme/images/rss.png) no-repeat 0 0;
+            background: $spcolor url(../images/social-media-icons/rss.png) no-repeat 0 0;
         }
         
         a:hover {
-        background-color: #FE9900;
+            background-color: #FE9900;
         }
     }
 }
 
 /* -------- Navigation -------- */
 
-#navigation {/*
-    background: #3779AE none repeat 0 0;
+#navigation {
+    background: $spcolor url(../images/navigation/menu_bg.png) repeat 0 0;
     clear: both;
     display: block;
     float: left;
     margin: 0 auto 2px auto;
+    padding-bottom: 1em;
     text-decoration: none;
-    width: 100%;*/
+    width: 100%;
+    z-index:9999;
 
     a {
-        border-right: 1px #726F2F solid;
+        border-right: 1px #006797 solid;
         color: #FFF;
-        padding: 0.89em 1em;
+        display: block;
         text-decoration: none;
+
+        &:hover {
+            color: #169FE6;
+        }
 
         &.selected {
             &:focus, &hover{
@@ -190,22 +190,48 @@ div section {
         }
     }
 
+    .cancel-page {
+        display: none;
+    }
+
+    .child-menu ul { 
+        background: #169FE6 none repeat 0 0;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-color: #F9F9F9;
+        border-bottom: 1px #CCC dotted;
+        color: #444;
+        font-size: 13px;
+        font-weight: normal;
+        height: auto;
+        line-height: 1em;
+        margin:0em;
+        padding: 10px;
+        width: 168px;
+    }
+
+    .drop1 a:hover {
+        background-color: #169FE6;
+        border-bottom: 1px #CCC dotted;
+        color: #FFF;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 1em;
+        padding: 10px;
+        width: 168px;
+    }
+    
     li {
         display: inline-block;
         font-size: 14;
         list-style: none outside none;
         margin: 0;
         padding-left: 0;
+        position: relative;
 
         &:hover a {
-            background: #169FE6;
-            color: #FFF
-        }
-
-        &.selected {
-            &:focus, &hover {
-                 background-color: #169FE6;
-            }
+            background-color: #F9F9F9;
+            color: #000;
         }
     }
 
@@ -213,14 +239,99 @@ div section {
         display: inline-block;
         border-right-color: #726F6F;
     }
-    
-    ul {
-        padding: 0 1.2125em;
+    .save-page {
+        display: inline;
+    }
 
-        a {
-            display: block;
-            color: #FFF;
-            line-height: 3em;
+    table {
+        position: absolute;
+    }
+
+    ul :hover ul ul{
+        visibility:hidden;
+    }
+
+    ul :hover ul :hover ul ul {
+        visibility:hidden;
+    }
+
+    ul li:hover ul, #navigation ul a:hover ul {
+        visibility:visible;
+    }
+
+    ul :hover ul :hover ul{
+        visibility:visible;
+    }
+
+    ul :hover ul :hover ul ul{
+        visibility:hidden;
+    }
+
+    ul :hover ul :hover ul{
+        visibility:visible;
+    }
+
+    ul :hover ul :hover ul :hover ul {
+        visibility:visible;
+    }
+    
+    ul ul {
+        background-color: #F9F9F9;
+        border-bottom: 1px #CCC dotted;
+        color: #444;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 1em;
+        margin: -1em;
+        padding: 10px;
+        width: 168px;
+    }
+}
+
+#nav { 
+    
+    #nav ul {
+        display: block;
+        margin:0;
+        padding:0;
+        list-style-type:none;
+        list-style-position:outside;
+        position:relative;
+        line-height:1.5em;
+    }
+
+    a:hover {
+        background-color: #169FE6;
+        color: #FFF;
+    }
+
+    li { 
+        width:12em;
+        float:left;
+        position:relative;
+        
+        &:hover {
+
+            ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul{
+                display:none;
+            }
+
+            ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul {
+                display:block;
+            }
+        }
+
+        ul ul {
+            left:12em;
+            margin:0px 0 0 10px;
+        }
+    }
+
+    ul {
+        position:relative;
+
+        ul {
+            top: auto;
         }
     }
 }
@@ -334,6 +445,36 @@ div.portlet-column {
 
 /* -------- AUI -------- */
 
+.aui-carousel-menu-index {
+    visibility: hidden;
+}
+
+.aui-carousel menu {
+    background: $spcolor none repeat 0 0 !important;
+    bottom: 6px;
+    left: 236px;
+    list-style:none;
+    margin: 0;
+    padding: 3px;
+    position: absolute;
+    right: 0px;
+    z-index: 4;
+
+    .aui-carousel-menu-pause {
+        visibility: hidden;
+    }
+}
+
+.aui-carousel-menu-next {
+    background-color: #FFF;
+    background-image: url(../imgages/aui/next.png);
+}
+
+.aui-carousel-menu-prev {
+    background-color: #FFF;
+    background-image: url(../images/aui/prev.png);
+}
+       
 /* -------- Web Content -------- */
 
 /* -------- Columns -------- */
@@ -343,10 +484,6 @@ div.portlet-column {
     float: left;
     margin: 0 0 0 3%;
     width: 64%;
-
-    img {
-        visibility:hidden;
-    }
 
     .portlet-body .portlet {
         background-color: $pcolor;
@@ -362,8 +499,14 @@ div.portlet-column {
     }
 
     .portlet-title {
-        background: $pcolor url(http://www.brandvee.com/wp-content/themes/core1/framework/theme_options/images/pattern/bg-patterns/crosslines-pattern.png);
+        background: $pcolor url(../images/crosslines-pattern.png);
         width: 240%
+    }
+
+    .portlet-topper {
+        img {
+            visibility: hidden;
+        }
     }
 }
 
@@ -382,12 +525,22 @@ div.portlet-column {
         padding: 1em 1.5em 1.5em 1.5em;
     }
 
+    .portlet-content {
+        img {
+            visibility: hidden;
+        }
+    }
+
     .portlet-title img {
         visibility: hidden;
     }
 }
 
 /* -------- Extras -------- */
+
+.aui-carousel-item {
+    @include border-radius(5px);
+}
 
 body .portlet-content .social-profile{
     @include background-attachment;
