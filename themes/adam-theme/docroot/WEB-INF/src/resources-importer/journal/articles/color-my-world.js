@@ -25,7 +25,7 @@ function reset() {
 		}
 	}
 	expand(firstColor, 1, 1);
-	$("span").html(moves.toString());
+	$("span#moves").html(moves.toString());
 }
 
 function rules() {
@@ -49,7 +49,7 @@ function flood(color) {
 			}
 		}
 		moves--;
-		$("span").html(moves.toString());
+		$("span#moves").html(moves.toString());
 		if (win())
 			alert("You win!");
 		else if (moves === 0)
