@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<root>
+	<dynamic-element name="activeIndex" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Index of the first visible item of the carousel]]></entry>
+			<entry name="label"><![CDATA[activeIndex]]></entry>
+			<entry name="predefinedValue"><![CDATA[0]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="timeInterval" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Interval time in seconds between an item transition.]]></entry>
+			<entry name="label"><![CDATA[timeInterval]]></entry>
+			<entry name="predefinedValue"><![CDATA[0.75]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="maxImageHeight" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Provide max height of image element. Min limit advisable is 40]]></entry>
+			<entry name="label"><![CDATA[maxImageHeight]]></entry>
+			<entry name="predefinedValue"><![CDATA[254]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="maxImageWidth" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Provide max width of image element. Min limit advisable is 130]]></entry>
+			<entry name="label"><![CDATA[maxImageWidth]]></entry>
+			<entry name="predefinedValue"><![CDATA[600]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="ImageElementSet" type="selection_break" index-type="keyword" repeatable="true">
+		<dynamic-element name="image" type="image" index-type="keyword" repeatable="false" />
+		<dynamic-element name="linkUrl" type="text" index-type="keyword" repeatable="false"/>
+	</dynamic-element>
+</root>
