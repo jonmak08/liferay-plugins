@@ -1,0 +1,49 @@
+{
+	"privatePages": [
+		{
+			"columns": [
+				[
+					{
+						"portletId": "71"
+					},
+					{
+						"portletId": "58"
+					},
+					{
+						"portletId": "85"
+					}
+				],
+				[
+					"Information Topic.html",
+					"Animal Carousel.xml"
+				],
+				[
+					{
+						"portletId": "3"
+					}
+				]
+
+			],
+			"friendlyURL": "/home",
+			"layoutTemplateId": "3_columns",
+			"name": "Information",
+			"title": "Information"
+		},
+		{
+			"columns": [
+				[
+					{
+					"portletId": "71"
+					}
+				],
+				[
+					"About Us.html"
+				]
+			],
+			"friendlyURL": "/about",
+			"layoutTemplateId": "2_columns_ii",
+			"name": "About Us",
+			"title": "About Us"
+		}
+	]
+}
