@@ -8,7 +8,7 @@
 						"portletId": "3"
 					},
 					{
-						"portletId": "71"
+						"portletId": "85"
 					},
 					{
 						"portletId": "58"
@@ -30,8 +30,9 @@
 					{
 						"portletId": "47"
 					},
-					"sample-web-content.html",
-					"color-my-world.html",
+					{
+						"portletId": "56"
+					},
 					{
 						"portletId": "33"
 					},
@@ -43,14 +44,16 @@
 						"portletPreferences": {
 							"mapAddress": "1400 Montefino Avenue, Diamond Bar, CA",
 							"mapInputEnabled": "true",
-							"directionsAddress": "1556 Marjorie Avenue, Claremont, CA",
 							"directionsInputEnabled": "true",
 							"enableChangingTravelingMode": "true",
 							"height": "600"
 						}
 					},
 					{
-						"portletId": "48"
+						"portletId": "48",
+						"portletPreferences": {
+							"src": "http://git-scm.com/book"
+						}
 					}
 				]
 			],
@@ -66,7 +69,7 @@
 						"portletId": "3"
 					},
 					{
-						"portletId": "71"
+						"portletId": "85"
 					}
 				],
 				[
@@ -83,7 +86,7 @@
 						"portletId": "3"
 					},
 					{
-						"portletId": "71"
+						"portletId": "85"
 					}
 				],
 				[
@@ -101,7 +104,7 @@
 						"portletId": "3"
 					},
 					{
-						"portletId": "71"
+						"portletId": "85"
 					},
 					{
 						"portletId": "148"

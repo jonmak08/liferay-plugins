@@ -1,5 +1,5 @@
 var increment = 25;
-var id = "picture";
+var id = "swcImage";
 
 function resetMargins() {
 	document.getElementById(id).style.marginLeft = "0px";
@@ -7,7 +7,7 @@ function resetMargins() {
 }
 
 function displayDate() {
-	document.getElementById("paragraph").innerHTML=Date();
+	document.getElementById("swcParagraph").innerHTML=Date();
 }
 
 function showBoat() {

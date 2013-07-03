@@ -353,7 +353,7 @@ textarea, .textarea {
 }
 
 .aui-button-input, button, input[type="button"], input[type="reset"], input[type="submit"], {
-	background: url(../images/buttons/button_bg.PNG) repeat-x 0 0;
+	background: url(../images/buttons/button_bg.png) repeat-x 0 0;
 	background-size: contain;
 	border: 1px solid #FAFAFA;
 	color: #444;
@@ -363,7 +363,7 @@ textarea, .textarea {
 	padding: 0 5px 0 5px;
 
 	&:hover{
-		background: url(../images/buttons/button_hover.PNG) repeat-x 0 0;
+		background: url(../images/buttons/button_hover.png) repeat-x 0 0;
 		background-size: contain;
 		border: 1px solid #F5FBFE;
 	}
@@ -462,8 +462,8 @@ textarea, .textarea {
 			color: $lightColor;
 		}
 
-		ul {
-			margin: 0 0 0 8px;
+		.portlet-body > ul {
+			margin: 0 0 0 20px;
 		}
 
 		tr {
