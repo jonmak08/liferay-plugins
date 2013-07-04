@@ -1,0 +1,225 @@
+@import "compass";
+
+/* -------- Common Variables -------- */
+
+$commonBorder: 1px solid #C9C9C6;
+
+/* -------- Global -------- */
+
+html {
+	font-family: "Times New Roman",Georgia,Arial,Verdana,Tahoma,sans-serif;
+}
+
+body {
+	background: #AAA url(../images/custom/bg_white.gif) repeat-y scroll 50% top;
+	display: block;
+	font-family: Georgia,"Times New Roman",Arial,Verdana,Tahoma,sans-serif;
+	font-size: 0.9em;
+	margin: 0 auto;
+	padding: 0;
+
+	h1 {
+		font-family: "Times New Roman",Georgia,Arial,Verdana,Tahoma,sans-serif;
+		margin: 0;
+	}
+}
+
+a {
+	color: #8D6E00;
+}
+
+input[type=text] {
+	width: 99%;
+}
+
+#wrapper {
+	background-color: #F5F5F1;
+	height: auto;
+	margin: auto;
+	width: 1000px;
+}
+
+/*------------- Logo/Header ---------------*/
+
+div #heading {
+	border-top: 1px solid #000;
+	margin-bottom: 3px;
+	padding-top: 3px;
+
+
+}
+
+#sign-in {
+	text-align: right;
+}
+
+.site-title {
+	background: transparent url(../images/custom/header-image.jpg) repeat scroll right top; 
+	margin: 0;
+
+	&:after {
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		margin: 0;
+		visibility: hidden;
+	}
+}
+
+.page-title {
+	display: none;
+}
+
+header .logo {
+	background-color: #C82128;
+	border-right: 3px solid #FFF;
+	color: #FFF;
+	float: left;
+	padding: 8px 50px;
+	visibility: visible;
+}
+
+#navigation {
+	background-color: #343434;
+	color: #FFF;
+	display: block;
+	font-family: "Myriad Pro","Times New Roman",Georgia,Arial,Verdana,sans-serif;
+	margin-bottom: 14px;
+	text-align: left;
+}
+
+#navigation:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+#navigation ul {
+	color: #FFF;
+	display: inline;
+
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	list-style: none outside none;
+
+		li a {
+			color: #FFF;
+			display: block;
+			float: left;
+			font-size: 1.2em;
+			list-style: none outside none;
+			margin: 0;
+			padding: 0.35em 1.3em 0.5em;
+		}
+}
+
+#navigation h1 span {
+	display: none;
+}
+
+#breadcrumbs {
+	display: none;
+}
+
+/*----------Layout-------------------*/
+
+.columns-3 {
+		float: left;
+		margin-bottom: 30px;
+		overflow: hidden;
+		text-align: left;
+
+	#column-1 {
+		border-right: $commonBorder;
+		overflow: hidden;
+		padding: 0px 10px 10px 0px;
+		width: 161px;
+
+		.portlet-boundary:first-child .portlet-topper {
+			background-color: transparent;
+			margin: -10px;
+
+			.portlet-title {
+				display: none;
+			}
+		}
+	}
+
+	#column-2 {
+		border-left: $commonBorder;
+		border-right: $commonBorder;
+		margin-left: -1px;
+		overflow: hidden;
+		padding: 0 10px 10px;
+		width: 524px;
+
+		.portlet-topper {
+			background-color: transparent;
+			color: #000;
+		}
+	}
+
+	#column-3 {
+		border-left: $commonBorder;
+		margin-left: -1px;
+		padding: 0 0 10px 10px;
+		width: 273px;
+	}
+}
+
+/*----------- Portlets ---------------*/
+
+.portlet {
+	border-bottom: $commonBorder;
+	margin-bottom: 15px;
+}
+
+.portlet-topper {
+	background-color: #747474;
+	color: #FFF;
+	margin: 0 0 0.5em;
+	padding: 5px 10px;
+
+	.icon {
+		display: none;
+	}
+
+	menu .icon {
+		display: inline;
+	}
+}
+
+.portlet-title-text {
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.portlet-content {
+	padding: 0 8px 4px;
+}
+
+/*----------- Nav Portlet -----------*/
+
+.nav-menu ul {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+
+	li {
+		display: block;
+		
+		ul {
+			border-left: 4px solid #C9C9C6;
+		}
+	}
+}
+
+/*--------- Extras ----------*/
+
+#skip-to-content {
+	display:none;
+}
