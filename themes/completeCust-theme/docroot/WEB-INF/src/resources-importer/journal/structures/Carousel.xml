@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<root>
+	<dynamic-element name="height" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="label"><![CDATA[Height]]></entry>
+			<entry name="predefinedValue"><![CDATA[200]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="width" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="label"><![CDATA[Width]]></entry>
+			<entry name="predefinedValue"><![CDATA[250]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="interval" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Time in seconds before slide changes.]]></entry>
+			<entry name="label"><![CDATA[Time Interval]]></entry>
+			<entry name="predefinedValue"><![CDATA[3]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="image" type="document_library" index-type="" repeatable="true">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[]]></entry>
+			<entry name="label"><![CDATA[Image]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name="border-radius" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Leave blank if you prefer square corners]]></entry>
+			<entry name="label"><![CDATA[border-radius]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+</root>
