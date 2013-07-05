@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="T07c9R5o" name="activeIndex" type="text" index-type="">
+		<dynamic-content><![CDATA[0]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="8o9YNdbm" name="timeInterval" type="text" index-type="">
+		<dynamic-content><![CDATA[5]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="KzlAb9xJ" name="maxImageHeight" type="text" index-type="">
+		<dynamic-content><![CDATA[320]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="f2Kls7b3" name="maxImageWidth" type="text" index-type="">
+		<dynamic-content><![CDATA[620]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="120e7c5Y" name="ImageElementSet" type="selection_break" index-type="keyword">
+		<dynamic-element instance-id="3fqXNTle" name="image" type="image" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="vyY0uLxL" name="linkUrl" type="text" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="PBuTY1H9" name="ImageElementSet" type="selection_break" index-type="keyword">
+		<dynamic-element instance-id="xgSShvDQ" name="image" type="image" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="hJHJPD6C" name="linkUrl" type="text" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="QwiMTNYF" name="ImageElementSet" type="selection_break" index-type="keyword">
+		<dynamic-element instance-id="mSg22tla" name="image" type="image" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="ERPy4TTF" name="linkUrl" type="text" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="igS9I25I" name="ImageElementSet" type="selection_break" index-type="keyword">
+		<dynamic-element instance-id="p4SVM0aL" name="image" type="image" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="XLKXDfl8" name="linkUrl" type="text" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element instance-id="sZKFffvU" name="ImageElementSet" type="selection_break" index-type="keyword">
+		<dynamic-element instance-id="v1NOAI86" name="image" type="image" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element instance-id="UgrYgn56" name="linkUrl" type="text" index-type="keyword">
+			<dynamic-content><![CDATA[]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+</root>
