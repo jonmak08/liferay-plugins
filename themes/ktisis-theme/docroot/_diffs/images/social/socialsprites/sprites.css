@@ -1,0 +1,52 @@
+.google, .facebook, .twitter, .rss, .facebook_hover, .twitter_hover, .google_hover, .rss_hover{
+	background: url(sprites.png) no-repeat;
+}
+
+.google{
+	background-position: -101px -51px ;
+	width: 48px;
+	height: 48px;
+}
+
+.facebook{
+	background-position: 0 -51px ;
+	width: 48px;
+	height: 48px;
+}
+
+.twitter{
+	background-position: -50px -51px ;
+	width: 48px;
+	height: 48px;
+}
+
+.rss{
+	background-position: -150px -51px ;
+	width: 48px;
+	height: 48px;
+}
+
+.facebook_hover{
+	background-position: 0 -51px ;
+	width: 48px;
+	height: 48px;
+}
+
+.twitter_hover{
+	background-position: -50px -51px ;
+	width: 48px;
+	height: 48px;
+}
+
+.google_hover{
+	background-position: -101px -51px ;
+	width: 48px;
+	height: 48px;
+}
+
+.rss_hover{
+	background-position: -150px -51px ;
+	width: 48px;
+	height: 48px;
+}
+
