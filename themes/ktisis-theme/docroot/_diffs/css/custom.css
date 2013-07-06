@@ -40,7 +40,7 @@ body {
 	font-family:"YanoneKaffeesatzRegular",arial;
 	font-size:28px;
 	font-weight:normal;
-	margin:0px auto;
+	margin:0 auto;
 	text-transform: none;
 }
 
@@ -68,7 +68,7 @@ hr, .separator {
 	border-width: 1px 0;
 }
 
-input[type="submit"], input[type="button"], input[type="reset"], button {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
 	background: none repeat scroll 0 0 #575757;
 	border: 1px solid #000;
 	color: #FFF;
@@ -78,7 +78,7 @@ input[type="submit"], input[type="button"], input[type="reset"], button {
 	padding: 4px 6px;
 }
 
-input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
 	background: none repeat scroll 0 0 #454444;
 	border: 1px solid #000;
 	color: #FFF;
@@ -88,6 +88,13 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 	padding: 4px 6px;
 }
 
+#banner {
+	background: none;
+	height: auto;
+	margin-top: 1.4em;
+	position: relative;
+}
+
 #wrapper {
 	background: #FFF;
 	margin: 30px auto;
@@ -95,17 +102,6 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 	padding: 30px 50px;
 	position: relative;
 	width: 900px;
-}
-
-.ie6 #wrapper {
-	width: 62.5em;
-}
-
-#banner {
-	background: none;
-	height: auto;
-	margin-top: 1.4em;
-	position: relative;
 }
 
 .sit-title {
@@ -124,14 +120,6 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 	}
 }
 
-.page-template .site-title .site-name {
-	background-image: url(../images/common/page_template.png);
-}
-
-.site-template .site-title .site-name {
-	background-image: url(../images/common/site_template.png);
-}
-
 .company-site .site-title .site-name {
 	background-image: url(../images/common/folder.png);
 }
@@ -140,8 +128,8 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 	background-image: url(../images/common/organization_icon_white.png);
 }
 
-.user-site .site-title .site-name {
-	background-image: url(../images/common/user_icon_white.png);
+.page-template .site-title .site-name {
+	background-image: url(../images/common/page_template.png);
 }
 
 .private-page .site-title .site-name:after {
@@ -155,10 +143,12 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 	width: 10px;
 }
 
-#skip-to-content:focus {
-	clip: rect(auto auto auto auto);
-	right: 0;
-	z-index: 200;
+.site-template .site-title .site-name {
+	background-image: url(../images/common/site_template.png);
+}
+
+.user-site .site-title .site-name {
+	background-image: url(../images/common/user_icon_white.png);
 }
 
 #sign-in {
@@ -170,12 +160,10 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 	top: -1.2em;
 }
 
-.ie6 #banner {
-	height: 1%;
-
-	h1.logo {
-		height: 1%;
-	}
+#skip-to-content:focus {
+	clip: rect(auto auto auto auto);
+	right: 0;
+	z-index: 200;
 }
 
 /* ---------- Social Links ---------- */
@@ -195,20 +183,10 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	height: 48px;
 	margin: 10px;
 	width: 48px;
-	-webkit-transition: all ease 0.3s;
-	-moz-transition: all ease 0.3s;
-	-o-transition: all ease 0.3s;
-	-ms-transition: all ease 0.3s;
-	transition: all ease 0.3s;
-
-	&:hover {
-		/* background-position: 0px -48px; */
-		box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.8);
-	}
 }
 
 .ftwitter {
-	background-position: -192px 0px;
+	background-position: -192px 0;
 
 	&:hover {
 		background-position: -192px -48px;
@@ -216,15 +194,15 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 }
 
 .ffacebook {
-	background-position: 0px 0px;
+	background-position: 0 0;
 
 	&:hover {
-		background-position: 0px -48px;
+		background-position: 0 -48px;
 	}
 }
 
 .flinkedin {
-	background-position: -144px 0px;
+	background-position: -144px 0;
 
 	&:hover {
 		background-position: -144px -48px;
@@ -232,7 +210,7 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 }
 
 .fgoogle {
-	background-position: -48px 0px;
+	background-position: -48px 0;
 
 	&:hover {
 		background-position: -48px -48px;
@@ -261,15 +239,15 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	@include border-radius(0);
 
 	a {
-		border-radius: 0;
 		color: #BBB;
 		display: block;
 		margin: 0;
-		padding: 0px 10px;
+		padding: 0 10px;
 		position: relative;
 		text-decoration: none;
-		text-shadow: 1px 1px 0px #000;
+		text-shadow: 1px 1px 0 #000;
 		text-transform: uppercase;
+		@include border-radius(0);
 	}
 
 	.child-menu {
@@ -285,18 +263,23 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 				cursor: pointer !important;
 			}
 
-		.selected a {
-			background: #020509 url(@theme_image_path@/navigation/bullet_selected.png) no-repeat 5px 50%;
-		}
+			.selected a {
+				background: #020509 url(@theme_image_path@/navigation/bullet_selected.png) no-repeat 5px 50%;
+			}
 		}
 	}
 
+	.child-menu li a:hover, #navigation li a.active {
+		background-color: #4A4A4A;
+		color: #FFF;
+	}
+
 	li {
-		border-radius: 0;
+		@include border-radius(0);
 		display: inline-block;
 		font-size: 18px;
 		line-height: 40px;
-		padding: 0px 10px;
+		padding: 0 10px;
 		position: relative;
 		vertical-align: top;
 
@@ -308,7 +291,6 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 		}
 
 		li {
-
 			a {
 				background: #444;
 				border-bottom: 1px solid #333;
@@ -318,10 +300,11 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 				font-size: 12px;
 				line-height: 30px;
 				margin: 0;
-				padding: 0px 10px;
+				padding: 0 10px;
 				position: relative;
 				text-transform: none;
 				width: 148px;
+				z-index: 20;
 
 				&:hover {
 					color: #FFF;
@@ -347,66 +330,32 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	}
 }
 
-#navigation .selected a, #navigation li.hover a, #navigation a:hover, #navigation a:focus, #navigation .child-menu li a, #navigation .yui3-dd-dragging, .lfr-navigation-proxy {
+.lfr-navigation-proxy, #navigation a:focus, #navigation a:hover, #navigation .child-menu li a, #navigation li.hover a, #navigation .selected a, #navigation .yui3-dd-dragging {
 	color: #FFF;
 	outline: 0;
-}
-
-#navigation .child-menu li a:hover, #navigation li a.active {
-	background-color: #4A4A4A;
-	color: #FFF;
 }
 
 .nav-menu-style-arrows ul {
 	list-style-image: url(@theme_image_path@/navigation/bullet_selected.png);
 }
 
-.ie7 #navigation {
-	a {
-		padding: 4px 15px;
-	}
-
-	li, a {
-		display: inline;
-		z-index: 200;
-		zoom: 1;
-	}
-
-	ul {
-		padding: 2px;
-
-		&.child-menu-visible, li.hover &.child-menu {
-			left: 0;
-			top: 25px;
-		}
-	}
-
-	.child-menu li a {
-		zoom: 1;
-	}
-}
-
-.ie6 #navigation {
-	a {
-		padding: 4px 15px;
-	}
-
-	li, a {
-		display: inline;
-		z-index: 200;
-		zoom: 1;
-	}
-
-	ul.child-menu-visible, li.hover ul.child-menu {
-		left: 0;
-		top: 25px;
-	}
-}
-
 /* ---------- Portlet wrapper and icons ---------- */
 
+.lfr-portlet-title-editable {
+	margin-top: -4px;
+	z-index: 9999;
+
+	&-content {
+		padding: 0;
+	}
+}
+
+.page-maximized .portlet-icons {
+	font-size: 11px;
+}
+
 .portlet {
-	border: none;
+	border-width: 0;
 	margin: 0 0 10px;
 	padding: 3px;
 	text-align: left;
@@ -415,10 +364,18 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 		background: #F4F4F4;
 	}
 
-	input[type="text"], input[type="password"] {
+	&-icons {
+		float: none;
+
+		.portlet-close-icon {
+			border-width: 0;
+		}
+	}
+
+	input[type="password"], input[type="text"] {
 		background-image: none;
 		border: 1px solid #ACACAC;
-		margin: 0em;
+		margin: 0;
 		padding: 4px 5px;
 		vertical-align: middle;
 
@@ -463,69 +420,16 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	padding-right: 80px;
 }
 
-.lfr-portlet-title-editable {
-	margin-top: -4px;
-	z-index: 9999;
-
-	&-content {
-		padding: 0;
-	}
-}
-
-.ie .lfr-portlet-title-editable {
-	margin-top: -6px;
-}
-
-.ie .lfr-portlet-title-editable-content {
-	margin-top: 4px;
-}
-
-.portlet-icons {
-	float: none;
-
-	.portlet-close-icon {
-		border-width: 0;
-	}
-}
-
-.page-maximized .portlet-icons {
-	font-size: 11px;
-}
-
-.portlet-icon-back {
-}
-
 .taglib-icon .taglib-text {
 	text-decoration: none;
 }
 
-.ie .portlet-title {
-	padding-bottom: 5px;
-}
-
-.ie6 .portlet-topper {
-	zoom: 1;
-}
-
 /* ---------- Portlet Edits ---------- */
-
-.taglib-asset-tags-summary .tag, .tag-items a {
-	background: url(/ktisis-theme/images/tag.png) no-repeat;
-	color: #333;
-	display: inline-block;
-	font-size: 12px;
-	height: 22px;
-	padding: 0px 8px 0 16px;
-
-	&:hover {
-		color: #205194;
-	}
-}
 
 .portlet {
 	.entry-author, .entry-date, .stats, .taglib-flags, .taglib-icon, .taglib-text {
 		background: #D3D1D1;
-		border: none;
+		border-width: 0;
 		color: #383838;
 		font-weight: normal;
 		padding: 4px 5px;
@@ -537,6 +441,19 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 
 	&-blogs .taglib-asset-tags-summary {
 		border-left: none;
+	}
+}
+
+.taglib-asset-tags-summary .tag, .tag-items a {
+	background: url(/ktisis-theme/images/tag.png) no-repeat;
+	color: #333;
+	display: inline-block;
+	font-size: 12px;
+	height: 22px;
+	padding: 0 8px 0 16px;
+
+	&:hover {
+		color: #205194;
 	}
 }
 
@@ -598,11 +515,83 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 	}
 }
 
-/* ---------- Misc. ---------- */
+/* ---------- Internet Explorer ---------- */
 
-.lfr-panel-container {
-	background-color: transparent;
+.ie {
+	.lfr-portlet-title-editable {
+		margin-top: -6px;
+
+		&-content {
+			margin-top: 4px;
+		}
+	}
+
+	.portlet-title {
+		padding-bottom: 5px;
+	}
 }
+
+.ie6 {
+	#banner {
+		height: 1%;
+
+		h1.logo {
+			height: 1%;
+		}
+	}
+
+	#navigation {
+		a {
+			padding: 4px 15px;
+		}
+
+		&, li {
+			display: inline;
+			z-index: 200;
+			zoom: 1;
+		}
+
+		ul.child-menu-visible, li.hover ul.child-menu {
+			left: 0;
+			top: 25px;
+		}
+	}
+
+	.portlet-topper {
+		zoom: 1;
+	}
+
+	#wrapper {
+		width: 62.5em;
+	}
+}
+
+.ie7 #navigation {
+	a {
+		padding: 4px 15px;
+	}
+
+	li, a {
+		display: inline;
+		z-index: 200;
+		zoom: 1;
+	}
+
+	ul {
+		padding: 2px;
+
+		&.child-menu-visible, li.hover &.child-menu {
+			left: 0;
+			top: 25px;
+		}
+	}
+
+	.child-menu li a {
+		zoom: 1;
+	}
+}
+
+/* ---------- Misc. ---------- */
 
 .aui-combobox .aui-field {
 	float: left;
@@ -613,6 +602,10 @@ http://bradsknutson.com/blog/css3-rollover-social-media-icons/ */
 		font-size: 11px;
 		height: 15px;
 	}
+}
+
+.lfr-panel-container {
+	background-color: transparent;
 }
 
 .lfr-portlet-title-editable-content .aui-field {
@@ -633,14 +626,29 @@ blockquote, q {
 	@include text-shadow(#FFF 1px 1px 0);
 }
 
-input[type="submit"], input[type="button"], input[type="reset"], button {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
 	@include border-radius(5px);
 	@include text-shadow(#300033 1px 1px 1px);
 }
 
-input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
 	@include border-radius(5px);
 	@include text-shadow(#300033 1px 1px 1px);
+}
+
+.aui-combobox .aui-toolbar-first {
+	@include border-bottom-left-radius(0);
+	@include border-top-left-radius(0);
+}
+
+.fsocial {
+	@include transition-property(all);
+	@include transition-duration(0.3s);
+	@include transition-timing-function(ease);
+
+	&:hover {
+		@include box-shadow(0 0 4px 1px rgba(0,0,0,0.8));
+	}
 }
 
 .portlet {
@@ -649,7 +657,7 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 		@include box-shadow(#000 0 1px 3px inset);
 	}
 
-	input[type="text"], input[type="password"] {
+	input[type="password"], input[type="text"] {
 		@include border-radius(5px);
 	}
 
@@ -681,16 +689,11 @@ input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hove
 		@include text-shadow(#000 -1px -1px 0);
 	}
 
-	.selected a, li.hover a, a:hover, a:focus, .child-menu li a, .yui3-dd-dragging, .lfr-navigation-proxy {
+	a:focus, a:hover, .child-menu li a, .lfr-navigation-proxy, li.hover a, .selected a, .yui3-dd-dragging {
 		@include text-shadow(#000 -1px -1px 0);
 	}
 }
 
 #wrapper {
 	@include box-shadow(0 0 5px rgba(0, 0, 0, 0.8), 1px 1px 1px #FFF);
-}
-
-.aui-combobox .aui-toolbar-first {
-	@include border-bottom-left-radius(0);
-	@include border-top-left-radius(0);
 }
