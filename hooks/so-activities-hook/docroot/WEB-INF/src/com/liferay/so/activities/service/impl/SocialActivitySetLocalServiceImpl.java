@@ -159,15 +159,17 @@ public class SocialActivitySetLocalServiceImpl
 			new SocialActivitySetModifiedDateComparator());
 	}
 
+	@Override
 	public List<SocialActivitySet> getUserActivitySets(
 			long userId, int start, int end)
 		throws SystemException {
 
-		return socialActivitySetFinder.findByUser(userId, start, end);
+		return socialActivitySetPersistence.findByUserId(userId, start, end);
 	}
 
+	@Override
 	public int getUserActivitySetsCount(long userId) throws SystemException {
-		return socialActivitySetFinder.countByUser(userId);
+		return socialActivitySetPersistence.countByUserId(userId);
 	}
 
 	public List<SocialActivitySet> getUserGroupsActivitySets(
@@ -181,6 +183,19 @@ public class SocialActivitySetLocalServiceImpl
 		throws SystemException {
 
 		return socialActivitySetFinder.countByUserGroups(userId);
+	}
+
+	public List<SocialActivitySet> getUserViewableActivitySets(
+			long userId, int start, int end)
+		throws SystemException {
+
+		return socialActivitySetFinder.findByUser(userId, start, end);
+	}
+
+	public int getUserViewableActivitySetsCount(long userId)
+		throws SystemException {
+
+		return socialActivitySetFinder.countByUser(userId);
 	}
 
 	public void incrementActivityCount(long activitySetId, long activityId)
