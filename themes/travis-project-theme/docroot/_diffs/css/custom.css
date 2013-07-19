@@ -1,0 +1,513 @@
+@import "compass";
+@import "compass/css3/transition";
+
+/* -------- Common Color Variables -------- */
+
+$pcolor: #FCFCFC;
+$brcolor: #E2E2E2;
+$spcolor: transparent; 
+
+/* -------- Set Compass Defaults -------- */
+
+$default-background-attachment: scroll;
+$default-background-clip: border-box;
+$default-background-origin: padding-box;
+$default-background-size: auto auto;
+$default-box-shadow: #000  0 0 6px #000 inset;
+$default-transition-timing-function: ease;
+@mixin background-attachment {
+	background-attachment: scroll;
+}
+
+/* -------- Global -------- */
+
+a {
+	color: #FFF;
+}
+
+body {
+	background: #33383A url(../images/crosslines-pattern.png) repeat 0 0; 
+	font-size: 15px "Helvetica Neue", Helvetica, Verdana, sans-serif;
+	padding: 1em 5em;
+}
+
+body, input, textarea {
+	color: #726F6F;
+	font: 15px "Helvetica Neue",Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	line-height: 1.625;
+}
+
+div section {
+	background-color: #FFF;
+	border: 1px $brcolor solid;
+	clear: both;
+	display: block;
+	float: left;
+	font-size: 12px;
+	margin-bottom: 2em;
+	padding: 1em 1.5em 1.5em;
+}
+
+h2 {
+	border-bottom: 1px #CCC solid;
+	color: #269CCB;
+	font: bold 1.1em "Helvetica Neue",Helvetica, Arial, sans-serif;
+} 
+
+/* -------- Wrapper / Skip / Sign-in -------- */
+
+#wrapper {
+	border-width: 0 3px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0 auto 2em;
+	max-width: 1000px;
+
+	img {
+		visibility: visible;
+	}
+}
+
+/* -------- Heading -------- */
+
+#header {
+	background-color: #FFF;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	position: relative;
+
+	#site-logo {
+		margin: 0 2%;
+		padding: 2em 0;
+
+		img {
+		height: auto;
+		float: left;
+		}
+	}
+}
+
+.social-profile {
+	position: absolute;
+	right: 1em;
+	top: 2em;
+
+	ul {
+		clear: none;
+		float: none;
+		list-style: none outside none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			display: block;
+			height: 40px;
+			width: 40px;
+		}
+
+		li {
+			display: inline-block;
+			float: left;
+
+			a:hover {
+				background-position: 0 -40px;
+			}
+		} 
+	}
+	
+	.facebook {
+		a {
+			background: $spcolor url(../images/social-media-icons/facebook.png) no-repeat 0 0;
+
+			&:hover {
+				background-color: #3B5998;
+			}
+		}
+	}
+	
+	.twitter { 
+		a {
+			background: $spcolor url(../images/social-media-icons/twitter.png) no-repeat 0 0;
+		
+
+			&:hover {
+				background-color: #48C4D2;
+				background-position: 0 -40px;
+			}
+		}
+	}
+
+	.google-plus {
+		a { 
+			background: $spcolor url(../images/social-media-icons/google.png) no-repeat 0 0;
+
+			&:hover {
+				background-color: #F45750;
+			}
+		}	
+	}
+	
+	.rss {
+		a {
+			background: $spcolor url(../images/social-media-icons/rss.png) no-repeat 0 0;
+
+			&:hover {
+				background-color: #FE9900;
+			}
+		}
+	}
+}
+
+/* -------- Navigation -------- */
+
+#navigation {
+	background: $spcolor url(../images/navigation/menu_bg.png) repeat-x 0 0; 
+	clear: both;
+	margin: 0 2px;
+	min-height: 2.2em;
+	padding: 0 5px;
+	position: relative;
+	
+
+	a {
+		border-right: 1px #006797 solid;
+		display: block;
+		font-size: 1.1em;
+		margin: 0 1px;
+		padding: 3px 15px;
+		text-decoration: none;
+	}
+
+	.child-menu {
+		display: none;
+
+		li a {
+			background: #F9F9F9 none repeat 0 0;
+			border-bottom: 1px #CCC dotted;
+			color: #444;
+			display: block;
+			font-size: 13px;
+			line-height: 1em;
+			width: 168px;
+
+			&:hover {
+				background: #169FE6 none repeat 0 0;
+				color: #FFF;
+			}
+		}
+	}
+
+	li {
+		position: relative;
+		vertical-align: top;
+		display: inline-block;
+
+		&:hover .child-menu {
+			background: #F9F9F9 none repeat 0 0;
+			border: 1px #726F6F solid;
+			clear: both;
+			display: inline-block;
+			position: absolute;
+			width: 196px;   
+		}
+	}
+
+
+	h1 {
+	visibility: hidden;
+	}   
+
+	.selected a {
+		background: #169FE6 none repeat 0 0; 
+		color: #FFF;
+		display: block;
+		text-decoration: none;
+	}
+
+	ul {
+		border: 1px #726F6F solid;
+		margin: 0;
+		padding: 3px;
+	}
+}
+
+/* -------- Content -------- */
+
+#content {
+	background: $pcolor;
+	clear: both;
+	padding: 1.5em 0 0;
+}
+
+/* -------- Footer -------- */
+
+#bottom {
+	background: #FFF none repeat 0 0;
+	border-top: 1px #CCC solid;
+	border-bottom: 1px #CCC solid;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	clear: both;
+
+	p {
+		margin-left: 3%;
+		font-size: 12px;
+	}
+}
+
+#footer-area {
+	background-color: #F7F7F7;
+	border-top: 1px #DDADAD solid;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding: 1em 2%;
+
+	p {
+		font: inherit;
+		margin-bottom: 1em
+	}
+}
+
+#footer-block-wrap .footer-block {
+	float: left;
+	font-size: 12px;
+	margin-right: 1em;
+	width: 31.3%;
+
+	&:hover {
+		background: #E2EEF3 none repeat  0 0
+	}
+
+	#footer-title h2 {
+	margin-bottom: 0.5em;
+	padding-top: 0.5em;
+	}
+}
+
+.powered-by {
+	color: #555;
+	float: right;
+	font: inherit;
+	font-size: 12px;
+	text-align: right;
+	margin-right: 3%;
+
+	a {
+		color: #555;
+		text-decoration: none;
+	}
+
+	p {
+		color: #966;
+		font-family: inherit;
+		font-size: 12px;
+		margin-left: 3%;
+	}
+}
+
+/* -------- Portlet -------- */
+
+.portlet {
+	background-color: #FFF;
+	border: 1px $brcolor solid;
+	margin-bottom: 10px;
+	padding: 3px;
+	text-align: left;
+}
+
+.portlet-column {
+	border: 0 $brcolor none;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline-style: none;
+	outline-width: 0;
+	padding: 0;
+	vertical-align: baseline;
+
+	div {
+		overflow-x: hidden;
+		overflow-y: hidden;
+		width: 100%;
+	}
+}
+
+.portlet-content {
+	background-color: #FFF none repeat 0 0 ;
+	border-width: 0;
+}
+
+#portlet-layout {
+	float: left;
+	margin-right: 3%;
+
+	.portlet > h1 {
+	border-bottom: 1px #EEE solid;
+	color: #555;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0em -0.75em 1em;
+	padding: 0 1em 0.5em;
+	text-transform: uppercase;
+	}
+}
+
+.portlet-title {
+	border-bottom: 1px #EEE solid;
+	color: #555;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 -0.75em 1em;
+	padding: 0 1em 0.5em;
+	text-transform: uppercase;
+}
+
+/* -------- Portlet Max -------- */
+
+/* -------- Custom Classes -------- */
+
+/* -------- AUI -------- */
+
+.aui-carousel-menu-index {
+	visibility: hidden;
+}
+
+.aui-carousel menu {
+	background: $spcolor none repeat 0 0;
+	bottom: 6px;
+	left: 236px;
+	list-style: none;
+	margin: 0;
+	padding: 3px;
+	position: absolute;
+	right: 0px;
+	z-index: 4;
+
+	.aui-carousel-menu-pause {
+		visibility: hidden;
+	}
+}
+
+.aui-carousel-menu-next {
+	background-color: #FFF;
+	background-image: url(../imgages/aui/next.png);
+}
+
+.aui-carousel-menu-prev {
+	background-color: #FFF;
+	background-image: url(../images/aui/prev.png);
+}
+	   
+/* -------- Web Content -------- */
+
+.yui3-dd-drop a {
+	cursor: move;
+}
+
+#myCarousel {
+	visibility: visible;
+}
+
+/* -------- Columns -------- */
+
+#column-1 {
+	display: block;
+	float: left;
+	margin-left: 3%;
+	width: 64%;
+
+	.portlet-body .portlet {
+		background-color: $pcolor;
+		border-bottom: 1px #E2E2E2 solid;
+		border-width: 0;
+	}
+
+	.portlet-content a {
+		background-color: $pcolor;
+		color: #726F6F;
+		max-width: 240em;
+		text-decoration: none;
+	}
+
+	.portlet-title {
+		background: $pcolor url(../images/crosslines-pattern.png);
+		width: 240%
+	}
+
+	.portlet-topper {
+		img {
+			visibility: hidden;
+		}
+	}
+}
+
+#column-2 {
+	display: block;
+	float: right;
+	margin-right: 3%;
+	width: 27%;
+
+	.portlet {
+		background-color: #FFF;
+		border: 1px $brcolor solid;
+		clear: both;
+		font-size: 12px;
+		margin-bottom: 2em;
+		padding: 1em 1.5em 1.5em;
+	}
+
+	.portlet-content {
+		img {
+			visibility: hidden;
+		}
+	}
+
+	.portlet-title img {
+		visibility: hidden;
+	}
+}
+
+/* -------- Extras -------- */
+
+.aui-carousel-item {
+	@include border-radius(5px);
+}
+
+body .portlet-content .social-profile{
+	@include background-attachment;
+}
+
+#column-2 .portlet {
+	@include border-radius(5px);
+}
+
+div section {
+	@include border-radius(5px);
+}
+
+.footer-block {
+	@include border-radius(5px);
+}
+
+.portlet-content {
+	@include box-shadow(none);
+}
+
+.social-profile a {
+	@include transition-property(all);
+	@include transition-duration(.2s);
+	@include transition-timing-function(ease);
+	@include transition-delay(0s);
+}
+.social-profile li a:active {
+	@include box-shadow(0 0 6px #000 inset); 
+}
+
+#wrapper {
+	@include border-radius(5px);
+}
