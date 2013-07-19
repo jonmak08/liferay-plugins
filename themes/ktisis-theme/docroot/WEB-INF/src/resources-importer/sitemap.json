@@ -1,0 +1,77 @@
+{
+    "layoutTemplateId": "1_3_2_3_4_columns",
+    "privatePages": [
+        {
+            "columns": [
+                [
+                    {
+                        "portletId": "58"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "71"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "1"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "2"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "4"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "5"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "6"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "7"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "3"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "7"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "7"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "10"
+                    }
+                ],
+                [
+                    {
+                        "portletId": "7"
+                    }
+                ]
+            ],
+            "friendlyURL": "/home",
+            "name": "OH Yeah",
+            "title": "Oh Yeah"
+		}
+	]
+}
