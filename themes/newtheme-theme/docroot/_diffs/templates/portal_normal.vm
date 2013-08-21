@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+	$theme.include($top_head_include)
+</head>
+
+<body class="$css_class">
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+<div class="container-fluid" id="wrapper">
+	<div class="row-fluid">
+		<header id="banner" role="banner">
+			<div class="span4" id="heading">
+				<h1 class="site-title">
+					<a class="$logo_css_class" href="$site_default_url" title="#language ("go-to") $site_name">
+						<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+					</a>
+
+					#if ($show_site_name)
+						<span class="site-name" title="#language ("go-to") $site_name">
+							$site_name
+						</span>
+					#end
+				</h1>
+
+				<h2 class="page-title">
+					<span>$the_title</span>
+				</h2>
+			</div>
+
+			#if (!$is_signed_in)
+				<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+			#end
+
+			#if ($has_navigation || $is_signed_in)
+				#parse ("$full_templates_path/navigation.vm")
+			#end
+
+		</header>
+	</div>
+	<div id="content">
+		<nav id="breadcrumbs">#breadcrumbs()</nav>
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	<footer class="row-fluid" id="footer" role="contentinfo">
+		<a class="icon-rss span4 text-center" href="#" title="Subscribe to rss feed"></a>
+		<p class="powered-by span4 text-center">
+			#language ("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+		</p>	
+		<a class="span4 text-center" href="#" id="back-to-top">Back to top</a>
+	</footer>
+</div>
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+<script type="text/javascript" src="$javascript_folder/jquery.js"></script>  
+<script type="text/javascript" src="$javascript_folder/bootstrap.js"></script>  
+
+</body>
+
+</html>

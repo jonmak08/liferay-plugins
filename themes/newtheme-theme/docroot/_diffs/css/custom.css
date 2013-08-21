@@ -1,0 +1,292 @@
+@import "compass";
+
+$blue: #08C;
+$charcoal: #5A5A5A;
+$gray: #E9EAEE;
+$light-gray: #F1F1F1;
+$navy: #29527A;
+
+.aui {
+	a:not(.btn) {
+		color: $blue;
+	}
+
+	body {
+		color: $charcoal;
+	}
+
+	.btn {
+		background: #0074AD no-repeat;
+		border-bottom-color: rgba(0, 0, 0, 0.247059);
+		color: #FFF;
+
+		&:hover {
+			background-color: #005580;
+			color: #FFF;
+		}
+	}
+
+	.page-btn:after {
+		content: " \00BB";
+	}
+}
+
+#banner {
+	margin-top: 40px;
+}
+
+#breadcrumbs {
+	a:hover {
+		color: $navy;
+	}
+
+	.divider {
+		display: none;
+	}
+
+	li:after {
+		color: $charcoal;
+		content: " \00BB";
+		padding: 0 5px;
+	}
+
+	ul {
+		background-color: #FFF;
+	}
+}
+
+.columns-1-3-1 {
+	#column-1 {
+		background: $light-gray url(../images/phare.jpg) no-repeat;
+		height: 250px;
+		width: 100%;
+	}
+
+	#column-2, #column-3, #column-4 {
+		.portlet:before {
+			background: $light-gray none;
+			content: "";
+			display: block;
+			height: 150px;
+			margin: 50px auto;
+			width: 150px;
+		}
+
+		.portlet-title, .portlet-body {
+			text-align: center;
+		}
+
+		.portlet-title img {
+			display: none;
+		}
+
+		.portlet-title-text {
+			font: 32px normal;
+		}
+	}
+
+	#column-5 {
+		clear: both;
+		padding: 10px 0 10px 0;
+
+		.portlet-asset-publisher {
+			.asset-title a {
+				font-size: 32px;
+
+				&:hover {
+					color: $navy;
+					text-decoration: none;
+				}
+			}
+
+			.portlet-content {
+				padding: 0;
+			}
+
+			.portlet-title {
+				display: none;
+			}
+		}
+	}
+
+	.portlet-layout {
+		margin: auto;
+		width: 85%;
+		
+	}
+
+	.portlet-layout:first-child {
+		width: 100%;
+	}
+}
+
+#content {
+    border-top: 10px solid $gray;
+}
+
+.dockbar {
+	float: right;
+
+	.brand {
+		display: none;
+	}
+
+	.dropdown-menu 
+		li {
+			color: $charcoal;
+
+			&.active a {
+				background: #F2F2F2 none;
+				color: $charcoal;
+				font-weight: bold;
+		}
+
+		ul li {
+			padding-left: 45px;
+		}
+	}
+
+	.nav {
+		.divider-vertical {
+			display: none;
+		}
+
+		& > li:hover > a, .dropdown-menu li:hover > a {
+			background: $light-gray none;
+			color: $blue;
+		}
+	}
+
+	.navbar-inner {
+		margin-right: 20px;
+		padding: 0;
+
+		.container {
+			background-color: #FFF;
+		}
+	}
+}
+
+#footer {
+	border-top: 12px solid $gray;
+	padding-top: 10px;
+
+	a, p {
+		color: $charcoal;
+		font-size: 11px;
+	}
+
+	.icon-rss {
+		font-size: 15px;
+	}
+}
+
+#heading .site-name {
+	color:  #08c;
+	display: inline-block;
+	font-size: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+#navigation {
+	border: 0;
+	margin-top: 15px; 
+	padding: 0;
+
+	.btn-navbar {
+		background-color: #006394;
+		margin: 8px;
+		padding: 7px 10px;
+	}
+
+	h1 {
+		display: none;
+	}
+
+	li {
+		a {
+			padding-right: 20px;
+		}
+
+		&.active > a {
+			color: $charcoal;
+			font-weight: bold;
+		}
+	}
+
+	li:hover {
+		& > a {
+			color: $blue;
+		}
+
+		ul.dropdown-menu {
+			display: block;
+			top: 38px;
+
+			a:hover {
+				background: #F2F2F2 none;
+			}
+		}
+	}
+
+	ul.dropdown-menu li.active a {
+		background: #F2F2F2 none;
+	}
+}
+
+.page-title, #skip-to-content {
+	display: none;
+}
+
+#sign-in {
+	position: absolute;
+	right: 40px;
+	top: 0;
+
+	&:hover {
+		color: #29527A;
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 979px) {
+    #banner .span8 {
+        padding: 0;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
+/**********************Extras************************/
+.aui .btn {
+	@include background-image(linear-gradient($blue, #005580));
+	@include border-radius(4px);
+	@include text-shadow(none);
+}
+
+.columns-1-3-1 {
+	#column-1 {
+		@include background-size(100% 100%);
+	}
+
+	#column-2, #column-3, #column-4 {
+		.portlet:before {
+			@include border-radius(100%);
+		}
+
+		.portlet:hover:before {
+			@include scale(1.3);
+			@include transition(all 0.5s);
+		}
+	}
+}
+
+#navigation {
+	@include background-image(linear-gradient(#FFF, #F2F2F2));
+	@include box-shadow(rgba(0, 0, 0, 0.25) 0 2px 10px);
+
+	.btn-navbar {
+		@include background-image(linear-gradient(to bottom, #0077B3, #046));
+	}
+}
