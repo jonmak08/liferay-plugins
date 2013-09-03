@@ -731,19 +731,21 @@ AUI.add(
 					_createDialog: function(title, bodyContent, modal, close, buttons) {
 						var instance = this;
 
-						return new A.Dialog(
+						return Liferay.Util.Window.getWindow(
 							{
-								bodyContent: bodyContent,
-								buttons: buttons,
-								centered: true,
-								close: close,
-								destroyOnClose: true,
-								draggable: true,
-								height: 200,
-								modal: modal,
-								resizable: false,
-								title: title,
-								width: 500
+								dialog: {
+									bodyContent: bodyContent,
+									buttons: buttons,
+									centered: true,
+									close: close,
+									destroyOnClose: true,
+									draggable: true,
+									height: 200,
+									modal: modal,
+									resizable: false,
+									width: 500
+								},
+								title: title
 							}
 						);
 					},

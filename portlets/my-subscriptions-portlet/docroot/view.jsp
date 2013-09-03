@@ -117,18 +117,20 @@
 		window,
 		'<portlet:namespace />displayPopup',
 		function(url, title) {
-			var dialog = new A.Dialog(
+			var dialog = Liferay.Util.Window.getWindow(
 				{
-					align: {
-						node: null,
-						points: ['tc', 'tc']
+					dialog: {
+						align: {
+							node: null,
+							points: ['tc', 'tc']
+						},
+						constrain2view: true,
+						cssClass: 'portlet-my-subscription',
+						modal: true,
+						resizable: false,
+						width: 950
 					},
-					constrain2view: true,
-					cssClass: 'portlet-my-subscription',
-					modal: true,
-					resizable: false,
-					title: title,
-					width: 950
+					title: title
 				}
 			).plug(
 				A.Plugin.DialogIframe,
@@ -137,7 +139,7 @@
 				}
 			).render();
 		},
-		['aui-dialog', 'aui-dialog-iframe']
+		['aui-dialog-iframe', 'liferay-util-window']
 	);
 
 	Liferay.provide(

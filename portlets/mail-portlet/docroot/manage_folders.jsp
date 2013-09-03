@@ -57,7 +57,7 @@ long accountId = ParamUtil.getLong(request, "accountId");
 
 	</table>
 
-	<aui:script use="aui-io">
+	<aui:script use="aui-io,liferay-util-window">
 		var <portlet:namespace />onIOFailure = function(event, id, obj) {
 			Liferay.Mail.setStatus('error', '<liferay-ui:message key="unable-to-connect-with-mail-server" />');
 		}
@@ -129,14 +129,16 @@ long accountId = ParamUtil.getLong(request, "accountId");
 			function(event) {
 				var folderId = event.currentTarget.getAttribute('data-folderId');
 
-				new A.Dialog(
+				Liferay.Util.Window.getWindow(
 					{
-						centered: true,
-						cssClass: 'mail-dialog',
-						destroyOnClose: true,
-						modal: true,
-						title: '<liferay-ui:message key="rename-folder" />',
-						width: 600
+						dialog: {
+							centered: true,
+							cssClass: 'mail-dialog',
+							destroyOnClose: true,
+							modal: true,
+							width: 600
+						},
+						title: '<liferay-ui:message key="rename-folder" />'
 					}
 				).plug(
 					A.Plugin.IO,

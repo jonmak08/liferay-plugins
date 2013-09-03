@@ -1,7 +1,7 @@
 AUI().use(
 	'aui-base',
-	'aui-dialog',
-	'aui-io-plugin',
+	'aui-io-plugin-deprecated',
+	'liferay-util-window',
 	function(A) {
 		Liferay.namespace('Tasks');
 
@@ -48,7 +48,7 @@ AUI().use(
 
 				popup.show();
 
-				popup.set('title', title);
+				popup.titleNode.html(title);
 
 				popup.io.set('uri', url);
 				popup.io.start();
@@ -58,17 +58,19 @@ AUI().use(
 				var instance = this;
 
 				if (!instance._popup) {
-					instance._popup = new A.Dialog(
+					instance._popup = Liferay.Util.Window.getWindow(
 						{
-							align: {
-								node: null,
-								points: ['tc', 'tc']
-							},
-							constrain2view: true,
-							cssClass: 'tasks-dialog',
-							modal: true,
-							resizable: false,
-							width: 600
+							dialog: {
+								align: {
+									node: null,
+									points: ['tc', 'tc']
+								},
+								constrain2view: true,
+								cssClass: 'tasks-dialog',
+								modal: true,
+								resizable: false,
+								width: 600
+							}
 						}
 					).plug(
 						A.Plugin.IO,

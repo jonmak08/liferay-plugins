@@ -34,14 +34,16 @@ AUI.add(
 			addAccount: function() {
 				var instance = this;
 
-				new A.Dialog(
+				Liferay.Util.Window.getWindow(
 					{
-						centered: true,
-						cssClass: 'mail-dialog',
-						destroyOnClose: true,
-						modal: true,
-						title: Liferay.Language.get('add-account'),
-						width: 600
+						dialog: {
+							centered: true,
+							cssClass: 'mail-dialog',
+							destroyOnClose: true,
+							modal: true,
+							width: 600
+						},
+						title: Liferay.Language.get('add-account')
 					}
 				).plug(
 					A.Plugin.IO,
@@ -118,14 +120,16 @@ AUI.add(
 			editAccount: function(accountId) {
 				var instance = this;
 
-				var dialog = new A.Dialog(
+				var dialog = Liferay.Util.Window.getWindow(
 					{
-						centered: true,
-						cssClass: 'mail-dialog',
-						destroyOnClose: true,
-						modal: true,
-						title: Liferay.Language.get('edit-account'),
-						width: 600
+						dialog: {
+							centered: true,
+							cssClass: 'mail-dialog',
+							destroyOnClose: true,
+							modal: true,
+							width: 600
+						},
+						title: Liferay.Language.get('edit-account')
 					}
 				).plug(
 					A.Plugin.IO,
@@ -345,14 +349,16 @@ AUI.add(
 			passwordPrompt: function(accountId, inboxFolderId) {
 				var instance = this;
 
-				new A.Dialog(
+				Liferay.Util.Window.getWindow(
 					{
-						centered: true,
-						cssClass: 'mail-dialog',
-						destroyOnClose: true,
-						modal: true,
-						title: Liferay.Language.get('password'),
-						width: 600
+						dialog: {
+							centered: true,
+							cssClass: 'mail-dialog',
+							destroyOnClose: true,
+							modal: true,
+							width: 600
+						},
+						title: Liferay.Language.get('password')
 					}
 				).plug(
 					A.Plugin.IO,
@@ -747,6 +753,6 @@ AUI.add(
 	},
 	'',
 	{
-		requires: ['aui-base', 'aui-datatype', 'aui-dialog', 'aui-io']
+		requires: ['aui-base', 'aui-datatype', 'aui-io', 'liferay-util-window']
 	}
 );

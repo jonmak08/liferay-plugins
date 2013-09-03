@@ -393,7 +393,7 @@ AUI.add(
 
 						instance._popup.show();
 
-						instance._popup.set('title', title);
+						instance._popup.titleNode.html(title);
 
 						instance._popup.io.set('uri', uri);
 
@@ -581,17 +581,19 @@ AUI.add(
 						if (!instance._popup) {
 							var contactsPortlet = A.one('.contacts-portlet');
 
-							instance._popup = new A.Dialog(
+							instance._popup = Liferay.Util.Window.getWindow(
 								{
-									align: {
-										node: contactsPortlet,
-										points: ['tc', 'tc']
-									},
-									constrain2view: true,
-									cssClass: 'contact-dialog',
-									modal: true,
-									resizable: false,
-									width: 500
+									dialog: {
+										align: {
+											node: contactsPortlet,
+											points: ['tc', 'tc']
+										},
+										constrain2view: true,
+										cssClass: 'contact-dialog',
+										modal: true,
+										resizable: false,
+										width: 500
+									}
 								}
 							).plug(
 								A.Plugin.IO,
@@ -1114,6 +1116,6 @@ AUI.add(
 	},
 	'',
 	{
-		requires: ['aui-dialog','aui-io-plugin','aui-toolbar','autocomplete-base','datasource-io','json-parse','liferay-portlet-base','liferay-portlet-url']
+		requires: ['aui-io-plugin-deprecated','aui-toolbar','autocomplete-base','datasource-io','json-parse','liferay-portlet-base','liferay-portlet-url','liferay-util-window']
 	}
 );

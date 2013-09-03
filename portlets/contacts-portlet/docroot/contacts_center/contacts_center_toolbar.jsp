@@ -68,7 +68,7 @@ if (user2 != null) {
 	</div>
 </div>
 
-<aui:script position="inline" use="aui-dialog,aui-dialog-iframe">
+<aui:script position="inline" use="aui-dialog-iframe,liferay-util-window">
 	var buttonRow = A.one('#<portlet:namespace />userToolbar');
 
 	var contactsToolbarChildren = [];
@@ -166,14 +166,16 @@ if (user2 != null) {
 						</c:otherwise>
 					</c:choose>
 
-					new A.Dialog(
+					Liferay.Util.Window.getWindow(
 						{
-							align: Liferay.Util.Window.ALIGN_CENTER,
-							cssClass: 'private-messaging-portlet',
-							destroyOnClose: true,
-							modal: true,
-							title: '<%= UnicodeLanguageUtil.get(pageContext, "new-message") %>',
-							width: 600
+							dialog: {
+								align: Liferay.Util.Window.ALIGN_CENTER,
+								cssClass: 'private-messaging-portlet',
+								destroyOnClose: true,
+								modal: true,
+								width: 600
+							},
+							title: '<%= UnicodeLanguageUtil.get(pageContext, "new-message") %>'
 						}
 					).plug(
 						A.Plugin.IO,

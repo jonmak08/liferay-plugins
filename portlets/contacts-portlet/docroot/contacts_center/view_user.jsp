@@ -330,7 +330,7 @@ request.setAttribute("view_user.jsp-user", user2);
 </c:if>
 
 <c:if test="<%= themeDisplay.getUserId() == user2.getUserId() %>">
-	<aui:script use="aui-base">
+	<aui:script use="aui-base,liferay-util-window">
 			var contactsProfile = A.one('#<portlet:namespace />contactsProfile');
 
 			contactsProfile.delegate(
@@ -360,19 +360,21 @@ request.setAttribute("view_user.jsp-user", user2);
 					uri = Liferay.Util.addParams('extension=' + node.getAttribute('data-extension'), uri) || uri;
 				}
 
-				var dialog = new A.Dialog(
+				var dialog = Liferay.Util.Window.getWindow(
 					{
-						align: {
-							node: null,
-							points: ['tc', 'tc']
+						dialog: {
+							align: {
+								node: null,
+								points: ['tc', 'tc']
+							},
+							constrain2view: true,
+							cssClass: 'profile-dialog',
+							destroyOnClose: true,
+							modal: true,
+							resizable: false,
+							width: 500
 						},
-						constrain2view: true,
-						cssClass: 'profile-dialog',
-						destroyOnClose: true,
-						modal: true,
-						resizable: false,
-						title: node.getAttribute('data-title'),
-						width: 500
+						title: node.getAttribute('data-title')
 					}
 				).plug(
 					A.Plugin.IO,
