@@ -4,8 +4,8 @@
 			$processor.processColumn("column-1", "portlet-column-content portlet-column-content-first")
 		</div>
 
-		<div class="portlet-column span6" id="column-2">
-				$processor.processColumn("column-2", "portlet-column-content portlet-column-content-last")
+		<div class="portlet-column portlet-column-last span6" id="column-2">
+			$processor.processColumn("column-2", "portlet-column-content portlet-column-content-last")
 		</div>
 	</div>
 
@@ -20,7 +20,7 @@
 			$processor.processColumn("column-4", "portlet-column-content portlet-column-content-first")
 		</div>
 
-		<div class="portlet-column span6" id="column-5">
+		<div class="portlet-column portlet-column-last span6" id="column-5">
 			$processor.processColumn("column-5", "portlet-column-content portlet-column-content-last")
 		</div>
 	</div>

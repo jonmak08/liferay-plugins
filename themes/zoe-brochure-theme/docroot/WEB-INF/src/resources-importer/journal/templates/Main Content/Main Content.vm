@@ -43,7 +43,7 @@
 				$col-one.data
 			</div>
 
-			<div class="column span4 center">
+			<div class="center column span4">
 				$col-two.data
 			</div>
 
