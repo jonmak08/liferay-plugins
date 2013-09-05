@@ -1,0 +1,11 @@
+<div class="featured-page-content">
+	<img class="image" src="$image.getData()" />
+
+	<a href="$page_link.getFriendlyUrl()">
+		<p class="featured-title">$page_title.getData()</p>
+	</a>
+
+	<p class="featured-description">$description.getData()</p>
+
+	<a class="btn page-btn" href="$page_link.getFriendlyUrl()">Read more</a>
+</div>

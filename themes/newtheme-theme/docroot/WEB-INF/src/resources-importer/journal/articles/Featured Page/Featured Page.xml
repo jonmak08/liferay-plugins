@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element indexType="keyword" name="image" type="wcm-image">
+		<dynamic-content><![CDATA[../../newtheme-theme/images/circle.png]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element indexType="keyword" name="page_title" type="text">
+		<dynamic-content><![CDATA[Featured Page]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element indexType="keyword" name="description" type="textarea">
+		<dynamic-content><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element indexType="keyword" name="page_link" type="ddm-link-to-page">
+		<dynamic-content><![CDATA[#]]></dynamic-content>
+	</dynamic-element>
+</root>

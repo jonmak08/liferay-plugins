@@ -1,0 +1,53 @@
+{
+	"layoutTemplateId": "1_3_1_columns",
+	"privatePages": [
+		{
+			"columns": [
+				[
+					"Home Carousel.xml"
+				],
+				[
+					"Featured Page.xml"
+				],
+				[
+					"Featured Page.xml"
+				],
+				[
+					"Featured Page.xml"
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "Home",
+			"title": "Home"
+		},
+		{
+			"friendlyURL": "/products",
+			"name": "Products",
+			"title": "Products"
+		},
+		{
+			"friendlyURL": "/News",
+			"name": "News",
+			"title": "News"
+		},
+		{
+			"columns": [
+				[
+					"About.html"
+				],
+				[
+					"List.html"
+				]
+			],
+			"friendlyURL": "/about-us",
+			"layoutTemplateId": "2_columns_iii",
+			"name": "About Us",
+			"title": "About Us"
+		},
+		{
+			"friendlyURL": "/contact-us",
+			"name": "Contact Us",
+			"title": "Contact Us"
+		}
+	]
+}

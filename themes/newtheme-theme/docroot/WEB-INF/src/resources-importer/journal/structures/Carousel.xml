@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="double" fieldNamespace="ddm" indexType="keyword" name="time_interval" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-decimal" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Time Interval]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[3.50]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Interval time in seconds between an item transition]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="integer" fieldNamespace="ddm" indexType="keyword" name="image_height" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-integer" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Image Height]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[300]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="image_width" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Image Width]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[auto]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Use 'auto' for responsive full window width]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="image" fieldNamespace="wcm" indexType="keyword" name="image" readOnly="false" repeatable="true" required="false" showLabel="true" type="wcm-image" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Image]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Each image element should have corresponding caption, content and URL elements. Elements are paired in order.]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="caption" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Caption]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="content" readOnly="false" repeatable="true" required="false" showLabel="true" type="textarea" width="large">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Content]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="url" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="medium">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[URL]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Enter a friendly URL for link page]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

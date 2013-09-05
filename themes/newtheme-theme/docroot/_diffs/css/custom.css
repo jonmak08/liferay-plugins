@@ -1,0 +1,321 @@
+@import "compass";
+
+$blue: #08C;
+$charcoal: #5A5A5A;
+$gray: #E9EAEE;
+$light-gray: #F1F1F1;
+$navy: #29527A;
+
+.aui {
+	a:not(.btn) {
+		color: $blue;
+	}
+
+	body {
+		color: $charcoal;
+	}
+
+	.btn {
+		background: #0074AD no-repeat;
+		border-bottom-color: rgba(0, 0, 0, 0.247059);
+		color: #FFF;
+
+		&:hover {
+			background-color: #005580;
+			color: #FFF;
+		}
+	}
+
+	.page-btn:after {
+		content: " \00BB";
+	}
+}
+
+#banner {
+	margin-top: 40px;
+}
+
+#breadcrumbs {
+	a:hover {
+		color: $navy;
+	}
+
+	.divider {
+		display: none;
+	}
+
+	li:after {
+		color: $charcoal;
+		content: " \00BB";
+		padding: 0 5px;
+	}
+
+	ul {
+		background-color: #FFF;
+	}
+}
+
+#carouselContainer {
+	width: 100%;
+
+	.aui-carousel-item {
+		background-color: #FFF;
+	}
+
+	.carousel-content-box {
+		background-color: #000;
+		height: 100%;
+		left: -20px;
+		padding: 20px;
+		position: absolute;
+		top: -20px;
+		width: 100%;
+		z-index: -10;
+	}
+
+	.carousel-text {
+		color: #FFF;
+		margin: auto;
+		position: relative;
+		top: 15%;
+		width: 70%;
+
+		p {
+			font-size: 18px;
+			overflow-y: auto;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+.columns-1-3-1 {
+	.portlet-layout {
+		height: auto;
+		margin: auto;
+		max-width: 1200px;
+		width: 85%;
+
+		&:first-child {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+#content {
+	border-top: 10px solid $gray;
+}
+
+.dockbar {
+	float: right;
+
+	.brand {
+		display: none;
+	}
+
+	.dropdown-menu
+		li {
+			color: $charcoal;
+
+			&.active a {
+				background: #F2F2F2 none;
+				color: $charcoal;
+				font-weight: bold;
+		}
+
+		ul li {
+			padding-left: 45px;
+		}
+	}
+
+	.nav {
+		.divider-vertical {
+			display: none;
+		}
+
+		& > li:hover > a, .dropdown-menu li:hover > a {
+			background: $light-gray none;
+			color: $blue;
+		}
+	}
+
+	.navbar-inner {
+		margin-right: 20px;
+		padding: 0;
+
+		.container {
+			background-color: #FFF;
+		}
+	}
+}
+
+.featured-page-content {
+	text-align: center;
+
+	.image {
+		background: $light-gray none;
+		display: block;
+		height: 150px;
+		margin: 60px auto;
+		width: 150px;
+	}
+
+	p.featured-description {
+		padding-top: 10px;
+	}
+
+	p.featured-title {
+		font-size: 32px;
+	}
+}
+
+#footer {
+	border-top: 12px solid $gray;
+	padding-top: 10px;
+
+	a, p {
+		color: $charcoal;
+		font-size: 11px;
+	}
+
+	.icon-rss {
+		font-size: 15px;
+	}
+}
+
+#heading .site-name {
+	color:  $blue;
+	display: inline-block;
+	font-size: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+#navigation {
+	border: 0;
+	margin-top: 15px;
+	padding: 0;
+
+	.btn-navbar {
+		background-color: #006394;
+		margin: 8px;
+		padding: 7px 10px;
+	}
+
+	h1 {
+		display: none;
+	}
+
+	li {
+		a {
+			padding-right: 20px;
+		}
+
+		&.active > a {
+			color: $charcoal;
+			font-weight: bold;
+		}
+	}
+
+	li:hover {
+		& > a {
+			color: $blue;
+		}
+
+		ul.dropdown-menu {
+			display: block;
+			top: 38px;
+
+			a:hover {
+				background: #F2F2F2 none;
+			}
+		}
+	}
+
+	ul.dropdown-menu li.active a {
+		background: #F2F2F2 none;
+	}
+}
+
+.page-title, #skip-to-content {
+	display: none;
+}
+
+#searchBar {
+	float: right;
+	max-height: 56px;
+	margin: 0;
+	min-width: 260px;
+
+	header {
+		display: none;
+	}
+
+	select {
+		width: 110px;
+	}
+}
+
+#sign-in {
+	position: absolute;
+	right: 40px;
+	top: 0;
+
+	&:hover {
+		color: #29527A;
+		text-decoration: none;
+	}
+}
+
+@media (max-width: 979px) {
+	#banner .span8 {
+		padding: 0;
+		width: 100%;
+		margin: 0 0 20px 0;
+	}
+}
+
+@media (max-width: 480px) {
+	.carousel-text {
+		display: none;
+	}
+}
+
+/**********************Extras************************/
+
+.aui .btn {
+	@include background-image(linear-gradient($blue, #005580));
+	@include border-radius(4px);
+	@include text-shadow(none);
+}
+
+#carouselContainer {
+	.aui-carousel-item {
+		@include background-size(100% 100%);
+	}
+
+	.carousel-content-box {
+		@include opacity(0.2);
+	}
+}
+
+.featured-page-content {
+	&:hover .image {
+		@include scale(1.4);
+		@include transition(all 0.5s);
+	}
+}
+
+#navigation {
+	@include background-image(linear-gradient(#FFF, #F2F2F2));
+	@include box-shadow(rgba(0, 0, 0, 0.25) 0 2px 10px);
+
+	.btn-navbar {
+		@include background-image(linear-gradient(to bottom, #0077B3, #046));
+	}
+
+	#collapse-content ul {
+		@include background-image(linear-gradient(#FFF, #F2F2F2));
+		@include border-bottom-radius(5px);
+	}
+}

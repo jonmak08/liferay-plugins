@@ -1,0 +1,59 @@
+#if($image_width.getData() == "auto")
+	#set($width = "100%")
+#else
+	#set($width = "${image_width.getData()}px")
+#end
+
+<style>
+	.carousel-text p {
+		#set($maxH = 0)
+		#set($maxH = $maxH.parseInt($image_height.getData()) * 0.25)
+		max-height: ${maxH}px;
+	}
+</style>
+
+#set($totalCount = 0)
+<div id="carouselContainer">
+	#if($image.getSiblings().size() == $url.getSiblings().size())
+		#foreach($image_item in $image.getSiblings())
+			#set($image = "")
+
+			#if($image_item.getData() != "")
+				#set($image = "background: left top/100% 100% no-repeat url($image_item.getData()); ")
+			#end
+
+			<div class="aui-carousel-item" style="$image height: ${image_height.getData()}px; width: $width">
+				<div class="carousel-text">
+					<div class="carousel-content-box"></div>
+
+					<h1>$caption.getSiblings().get($totalCount).getData()</h1>
+
+					<p>$content.getSiblings().get($totalCount).getData()</p>
+
+					#if($url.getSiblings().get($totalCount).getData() != "")
+						<a class="btn" href="$url.getSiblings().get($totalCount).getData()">More...</a>
+					#end
+				</div>
+			</div>
+
+			#set($totalCount = $totalCount + 1)
+		#end
+	#end
+</div>
+
+<script type="text/javascript">
+	AUI().ready(
+		'aui-carousel',
+
+		function(A) {
+			new A.Carousel(
+				{
+					contentBox: "#carouselContainer",
+					height: $image_height.getData(),
+					intervalTime: $time_interval.getData(),
+					width: "$width"
+				}
+			).render();
+		}
+	);
+</script>
