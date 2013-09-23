@@ -1,7 +1,11 @@
 @import "compass";
 @import "mixins";
 
-@import url(custom_common.css);
+$dockbarGradientEnd: #7C9057;
+$dockbarGradientStart: #A0BA70;
+
+$dockbarOpenGradientEnd: #85A056;
+$dockbarOpenGradientStart: #A7C86C;
 
 /* -------- Global -------- */
 
@@ -35,6 +39,48 @@
 		}
 	}
 
+	/* ---------- Dockbar ---------- */
+
+	.dockbar-split .dockbar {
+		.navbar-inner {
+			.nav {
+				background-color: $dockbarGradientEnd;
+
+				li.dropdown {
+					&.open, &.active, &.open.active {
+						> .dropdown-toggle {
+							background-color: $dockbarOpenGradientEnd;
+						}
+					}
+				}
+
+				&.nav-account-controls > li > a {
+					padding: 6px 15px;
+
+					&:hover {
+						background-color: $dockbarOpenGradientStart;
+					}
+				}
+			}
+
+			.nav-add-controls {
+				background: transparent;
+
+				> li > a {
+					background: #85a056;
+
+					&:hover {
+						background: #647840;
+					}
+
+					&.toggle-controls-link {
+						background: #92F545;
+					}
+				}
+			}
+		}
+	}
+
 	/* -------- Wrapper / Sign-in -------- */
 
 	#wrapper {
@@ -49,9 +95,8 @@
 
 		&, #signIn {
 			color: #E8E8E8;
-			padding: 17px 0;
 			position: absolute;
-			top: 0;
+			top: -14px;
 		}
 	}
 
@@ -62,9 +107,9 @@
 	/* -------- Banner -------- */
 
 	#banner {
-		background: url(../images/custom/banner-bg.png) repeat-x 0 50px;
+		background: url(../images/custom/banner-bg.png) repeat-x 0 23px;
 		margin: 0 auto;
-		padding: 50px 0 0;
+		padding: 22px 0 0;
 		position: relative;
 		width: 960px;
 
@@ -94,7 +139,7 @@
 		}
 
 		.page-search {
-			margin: 38px 0;
+			margin: 10px 0;
 			position: absolute;
 			right: 10px;
 			top: 50px;
@@ -154,10 +199,6 @@
 				padding: 20px 15px 16px 15px;
 				text-decoration: none;
 				text-transform: uppercase;
-			}
-
-			&:hover {
-				background-color: rgba(150, 181, 98, 0.3);
 			}
 		}
 	}
@@ -271,7 +312,7 @@
 			border-color: #4D4D4D transparent #3F3F3F transparent;
 			font-size: 1.16em;
 			margin: 0;
-			padding: 8px;
+			padding: 0 8px;
 			text-transform: uppercase;
 
 			a {
@@ -308,14 +349,14 @@
 		}
 	}
 
-	input {
-		&[type="submit"], &[type="submit"]:hover, &[type="reset"], &[type="reset"]:hover {
-			background-color: #343434;
-			color: #A4C667;
-			margin: 5px 0;
-		}
+	button[type="submit"], button[type="submit"]:hover, input[type="reset"], input[type="reset"]:hover {
+		background-color: #343434;
+		background-image: none;
+		color: #A4C667;
+	}
 
-		&[type="submit"]:hover, &[type="button"]:hover, &[type="reset"]:hover {
+	button[type="submit"], input[type="reset"] {
+		&:hover {
 			color: #E8E8E8;
 		}
 	}
@@ -440,6 +481,18 @@
 
 	/* -------- Extras -------- */
 
+	.dockbar-split .dockbar {
+		.navbar-inner {
+			.nav li.dropdown.open > .dropdown-toggle {
+				@include background-image(linear-gradient($dockbarOpenGradientStart, $dockbarOpenGradientEnd));
+			}
+
+			.nav-account-controls {
+				@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 10%, $dockbarGradientEnd 100%));
+			}
+		}
+	}
+
 	#banner {
 		.site-title .site-name {
 			@include border-radius(4px);
@@ -468,11 +521,11 @@
 		@include box-shadow(#888 2px 2px 4px);
 	}
 
-	input[type="submit"], input[type="submit"]:hover, input[type="reset"], input[type="reset"]:hover, .portlet-navigation .nav-menu h2 {
+	input[type="reset"], input[type="reset"]:hover, .portlet-navigation .nav-menu h2 {
 		@include background-image(linear-gradient(left top, #343434, #242424));
 	}
 
-	input[type="submit"], input[type="submit"]:hover, input[type="reset"], input[type="reset"]:hover, #footer #footerContent, #navigation a:link, #navigation a:visited {
+	button[type="submit"], button[type="submit"]:hover, input[type="reset"], input[type="reset"]:hover, #footer #footerContent, #navigation a:link, #navigation a:visited {
 		@include text-shadow(1px 1px 1px #000);
 	}
 

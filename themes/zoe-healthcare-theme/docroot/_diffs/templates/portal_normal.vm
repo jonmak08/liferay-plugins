@@ -10,7 +10,7 @@
 	$theme.include($top_head_include)
 </head>
 
-<body class="$css_class dockbar-split">
+<body class="$css_class">
 
 <a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
 
@@ -22,29 +22,25 @@ $theme.include($body_top_include)
 
 <div class="container-fluid" id="wrapper">
 	<header id="banner" role="banner">
-		<div class="row-fluid">
-			<div class="span12">
-				<div id="heading">
-					<h1 class="site-title">
-						<a class="$logo_css_class" href="$site_default_url" title="#language ("go-to") $site_name">
-							<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
-						</a>
+		<div id="heading">
+			<h1 class="site-title">
+				<a class="$logo_css_class" href="$site_default_url" title="#language ("go-to") $site_name">
+					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
+				</a>
 
-						#if ($show_site_name)
-							<span class="site-name" title="#language ("go-to") $site_name">
-								$site_name
-							</span>
-						#end
-					</h1>
+				#if ($show_site_name)
+					<span class="site-name" title="#language ("go-to") $site_name">
+						$site_name
+					</span>
+				#end
+			</h1>
 
-					<h2 class="page-title">
-						<span>$the_title</span>
-					</h2>
+			<h2 class="page-title">
+				<span>$the_title</span>
+			</h2>
 
-					<div class="page-search">
-						$theme.journalContentSearch()
-					</div>
-				</div>
+			<div class="page-search">
+				$theme.journalContentSearch()
 			</div>
 		</div>
 
@@ -55,29 +51,30 @@ $theme.include($body_top_include)
 		#end
 
 		#if ($has_navigation || $is_signed_in)
-			<div class="row-fluid">
-				<div class="span12">
-					#parse ("$full_templates_path/navigation.vm")
-				</div>
-			</div>
+			#parse ("$full_templates_path/navigation.vm")
 		#end
 	</header>
 
-	<div class="row-fluid">
-		<div class="span12">
-			<div id="content">
-				#if ($selectable)
-					$theme.include($content_include)
-				#else
-					$portletDisplay.recycle()
+	<div id="content">
+		<nav class="site-breadcrumbs" id="breadcrumbs">
+			<h1>
+				<span>#language ("breadcrumbs")</span>
+			</h1>
 
-					$portletDisplay.setTitle($the_title)
+			#breadcrumbs()
+		</nav>
 
-					$theme.wrapPortlet("portlet.vm", $content_include)
-				#end
-			</div>
-		</div>
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
 	</div>
+</div>
 
 #if ($theme_settings.display-footer != "false")
 	<footer id="footer" role="contentinfo">
@@ -136,7 +133,6 @@ $theme.include($body_top_include)
 		</div>
 	</footer>
 #end
-</div>
 
 $theme.include($body_bottom_include)
 
