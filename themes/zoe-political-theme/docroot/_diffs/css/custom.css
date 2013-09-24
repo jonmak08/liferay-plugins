@@ -3,7 +3,12 @@
 @import url(color_schemes/democrat.css);
 @import url(color_schemes/republican.css);
 @import url(color_schemes/independent.css);
-@import url(custom_common.css);
+
+$dockbarGradientEnd: #1273C7;
+$dockbarGradientStart: #118ADE;
+
+$dockbarOpenGradientEnd: #0993DD;
+$dockbarOpenGradientStart: #0EA6F9;
 
 /* -------- Global -------- */
 
@@ -45,8 +50,47 @@
 		}
 	}
 
+	/* ---------- Dockbar ---------- */
+
+	.dockbar-split .dockbar {
+		.navbar-inner {
+			.nav {
+				background-color: $dockbarGradientEnd;
+
+				li.dropdown {
+					&.open, &.active, &.open.active {
+						> .dropdown-toggle {
+							background-color: $dockbarOpenGradientEnd;
+						}
+					}
+				}
+
+				> li > a:hover {
+					background-color: #2FA4F5;
+				}
+			}
+
+			.nav-add-controls {
+				background: transparent;
+
+				> li > a {
+					background: #0DB5E7;
+
+					&:hover {
+						background: #0993DD;
+					}
+
+					&.toggle-controls-link {
+						background: #92F545;
+					}
+				}
+			}
+		}
+	}
+
 	#wrapper {
-		margin: 0 auto;
+		margin: 0;
+		padding: 0;
 		position: relative;
 
 		a {
@@ -150,8 +194,8 @@
 
 				a {
 					display: block;
-					font-size: 1.3em;
-					padding: 7px 25px;
+					font-size: 1.2em;
+					padding: 7px 25px 6px;
 					text-transform: uppercase;
 
 					&:hover {
@@ -172,15 +216,35 @@
 		}
 	}
 
+	.modify-pages .delete-tab {
+		background: #555;
+		border: 2px solid #FFF;
+		color: #FFF;
+		font-size: 16px;
+		padding: 4px;
+		right: -10px;
+		top: 0;
+		z-index: 300;
+
+		&:hover {
+			@include box-shadow(0 1px 1px -1px #000)
+		}
+	}
 
 	/* -------- Content -------- */
 
-	#content #main-content {
-		background: #FFF;
-		margin: 0 auto;
-		min-height: 100%;
-		padding: 10px 10px 0;
-		width: 940px;
+	#content {
+		#main-content {
+			background: #FFF;
+			margin: 0 auto;
+			min-height: 100%;
+			padding: 10px 10px 0;
+			width: 940px;
+		}
+
+		#hrefFm {
+			margin: 0;
+		}
 	}
 
 	.portlet {
@@ -191,9 +255,8 @@
 
 			.portlet-title {
 				display: block;
-				font-size: 1.5em;
+				font-size: 1.4em;
 				margin-top: 0;
-				padding: 10px;
 				text-align: center;
 				text-transform: uppercase;
 
@@ -284,6 +347,18 @@
 
 	.button:hover {
 		@include box-shadow(rgba(0, 0, 0, 0.5) 1px 1px 15px);
+	}
+
+	.dockbar-split .dockbar {
+		.navbar-inner {
+			.nav li.dropdown.open > .dropdown-toggle {
+				@include background-image(linear-gradient($dockbarOpenGradientStart, $dockbarOpenGradientEnd));
+			}
+
+			.nav-account-controls {
+				@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 10%, $dockbarGradientEnd 100%));
+			}
+		}
 	}
 
 	#heading #sign-in:hover {
