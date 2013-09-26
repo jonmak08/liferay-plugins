@@ -22,7 +22,7 @@ MailManager mailManager = MailManager.getInstance(request);
 long accountId = ParamUtil.getLong(request, "accountId");
 %>
 
-<c:if test="<%= mailManager != null %>">
+<c:if test="<%= Validator.isNotNull(mailManager) %>">
 	<div class="add-folder-container">
 		<aui:input name="displayName" value="" />
 
@@ -57,7 +57,7 @@ long accountId = ParamUtil.getLong(request, "accountId");
 
 	</table>
 
-	<aui:script use="aui-io">
+	<aui:script use="aui-io-deprecated">
 		var <portlet:namespace />onIOFailure = function(event, id, obj) {
 			Liferay.Mail.setStatus('error', '<liferay-ui:message key="unable-to-connect-with-mail-server" />');
 		}
@@ -83,10 +83,13 @@ long accountId = ParamUtil.getLong(request, "accountId");
 				A.io.request(
 					themeDisplay.getLayoutURL() + '/-/mail/add_folder',
 					{
-						data: {
-							accountId: <%= accountId %>,
-							displayName: displayName
-						},
+						data: Liferay.Util.ns(
+							'<portlet:namespace />',
+							{
+								accountId: <%= accountId %>,
+								displayName: displayName
+							}
+						),
 						dataType: 'json',
 						method: 'POST',
 						on: {
@@ -107,12 +110,17 @@ long accountId = ParamUtil.getLong(request, "accountId");
 
 				Liferay.Mail.setStatus('info', '<liferay-ui:message key="deleting-folder" />', true);
 
-				var folderId = event.currentTarget.getAttribute('data-folderId');
+				var folderId = event.currentTarget.getData('folderId');
 
 				A.io.request(
 					themeDisplay.getLayoutURL() + '/-/mail/delete_folder',
 					{
-						data: {folderId: folderId},
+						data: Liferay.Util.ns(
+							'<portlet:namespace />',
+							{
+								folderId: folderId
+							}
+						),
 						dataType: 'json',
 						method: 'POST',
 						on: {
@@ -127,7 +135,7 @@ long accountId = ParamUtil.getLong(request, "accountId");
 		A.all('.mail-portlet .rename-folder').on(
 			'click',
 			function(event) {
-				var folderId = event.currentTarget.getAttribute('data-folderId');
+				var folderId = event.currentTarget.getData('folderId');
 
 				new A.Dialog(
 					{
@@ -141,7 +149,12 @@ long accountId = ParamUtil.getLong(request, "accountId");
 				).plug(
 					A.Plugin.IO,
 					{
-						data: {folderId: folderId},
+						data: Liferay.Util.ns(
+							'<portlet:namespace />',
+							{
+								folderId: folderId
+							}
+						),
 						uri: themeDisplay.getLayoutURL() + '/-/mail/edit_folder'
 					}
 				).render();

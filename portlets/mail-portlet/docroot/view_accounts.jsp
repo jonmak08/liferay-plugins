@@ -22,40 +22,39 @@ long accountId = ParamUtil.getLong(request, "accountId");
 MailManager mailManager = MailManager.getInstance(request);
 %>
 
-<c:if test="<%= mailManager != null %>">
-	<aui:layout>
+<c:if test="<%= Validator.isNotNull(mailManager) %>">
+	<div class="row-fluid">
+		<div class="span10">
+			<%
+			List<Account> mailAccounts = mailManager.getAccounts();
+			%>
 
-		<%
-		List<Account> mailAccounts = mailManager.getAccounts();
-		%>
+			<c:choose>
+				<c:when test="<%= !mailAccounts.isEmpty() %>">
+					<ul class="nav nav-pills">
 
-		<c:if test="<%= !mailAccounts.isEmpty() %>">
-			<aui:column>
+						<%
+						for (Account mailAccount : mailAccounts) {
+						%>
 
-				<ul class="aui-tabview-list">
+							<li class="tab <%= (mailAccount.getAccountId() == accountId) ? "active" : "" %>">
+								<aui:a cssClass="folders-link" data-accountId="<%= mailAccount.getAccountId() %>" data-inboxFolderId="<%= mailAccount.getInboxFolderId() %>" href="javascript:;" label="<%= mailAccount.getAddress() %>" />
+							</li>
 
-					<%
-					for (Account mailAccount : mailAccounts) {
-					%>
+						<%
+						}
+						%>
 
-						<li class="aui-tab <%= (mailAccount.getAccountId() == accountId) ? "aui-tab-active" : "" %>">
-							<span class="aui-tab-content">
-								<span class="aui-tab-label">
-									<aui:a cssClass="folders-link" data-accountId="<%= mailAccount.getAccountId() %>" data-inboxFolderId="<%= mailAccount.getInboxFolderId() %>" href="javascript:;" label="<%= mailAccount.getAddress() %>" />
-								</span>
-							</span>
-						</li>
+					</ul>
+				</c:when>
+				<c:otherwise>
 
-					<%
-					}
-					%>
+				</c:otherwise>
+			</c:choose>
+		</div>
 
-				</ul>
-			</aui:column>
-		</c:if>
-
-		<aui:column>
+		<div class="span2">
 			<aui:button onClick="Liferay.Mail.addAccount();" value="add-mail-account" />
-		</aui:column>
-	</aui:layout>
+		</div>
+	</div>
 </c:if>
