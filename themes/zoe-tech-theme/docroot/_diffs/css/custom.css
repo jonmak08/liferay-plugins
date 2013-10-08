@@ -18,8 +18,8 @@ $default-box-shadow-v-offset: 1px;
 
 	body {
 		background: url(../images/custom/background.png) 0 0;
-		border-top: 10px solid #142933;
 		font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		padding: 0;
 
 		&.html-editor {
 			background: #FFF;
@@ -48,13 +48,14 @@ $default-box-shadow-v-offset: 1px;
 	}
 
 	#wrapper {
+		padding-top: 0;
 		position: relative;
 		font-size: 12px;
 	}
 
 	#banner, #content {
 		margin: 0 auto;
-		width: 960px;
+		max-width: 960px;
 	}
 
 	#banner {
@@ -107,9 +108,7 @@ $default-box-shadow-v-offset: 1px;
 		}
 
 		&.main-content-image {
-			height: 320px;
 			margin-bottom: 1em;
-			width: 673px;
 		}
 	}
 
@@ -125,26 +124,8 @@ $default-box-shadow-v-offset: 1px;
 
 	/* -------- Dockbar -------- */
 
-	.dockbar .navbar-inner {
-		.dropdown-menu {
-			> .active > a {
-				background:	#5B5B5B;
-			}
-
-			> li > a {
-				&:hover {
-					background:	#5B5B5B;
-				}
-
-				&:focus {
-					background:	#5B5B5B;
-				}
-			}
-		}
-
-		.site-administration-menu li a:hover {
-			background:	#5B5B5B;
-		}
+	.dockbar-split .dockbar .navbar-inner .nav-add-controls > li {
+		background: none;
 	}
 
 	/* -------- Global-Layout -------- */
@@ -181,13 +162,13 @@ $default-box-shadow-v-offset: 1px;
 		position: relative;
 
 		.site-title {
-			margin-top: 0;
-			padding-top: 2em;
+			margin: 0 0 25px;
+			padding-top: 1.5em;
 
 			#pageSearch {
 				position: absolute;
 				right: 0;
-				top: 42px;
+				top: 65px;
 			}
 		}
 	}
@@ -248,7 +229,7 @@ $default-box-shadow-v-offset: 1px;
 		}
 
 		#search {
-			padding: 5px 12px 14px 10px;
+			padding: 0 12px 14px 10px;
 		}
 	}
 
@@ -301,23 +282,23 @@ $default-box-shadow-v-offset: 1px;
 				color: #333;
 			}
 		}
+
+		&.modify-pages .delete-tab {
+			background: #555;
+			border: 2px solid #FFF;
+			color: #FFF;
+			font-size: 16px;
+			padding: 4px;
+			right: -4px;
+			top: 7px;
+			z-index: 300;
+		}
 	}
 
 	#content #main-content {
 		margin-top: 20px;
 		min-height: 200px;
 		padding-bottom: 20px;
-	}
-
-	.modify-pages .delete-tab {
-		background: #555;
-		border: 2px solid #FFF;
-		color: #FFF;
-		font-size: 16px;
-		padding: 4px;
-		right: 0;
-		top: 0;
-		z-index: 300;
 	}
 
 	/* -------- Carousel ------- */
@@ -365,7 +346,7 @@ $default-box-shadow-v-offset: 1px;
 					margin-bottom: 5px;
 				}
 
-				.aui-carousel-menu-index .aui-carousel-menu-active {
+				.carousel-menu-index .carousel-menu-active {
 					color: #EBEBEB;
 				}
 
@@ -391,7 +372,7 @@ $default-box-shadow-v-offset: 1px;
 		}
 	}
 
-	.aui-carousel-menu-active {
+	.carousel-menu-active {
 		background: url(../images/custom/tabwarrow.png) no-repeat 0 0;
 		color: #C2C2C2;
 	}
@@ -399,7 +380,7 @@ $default-box-shadow-v-offset: 1px;
 	/* -------- Pod -------- */
 
 	.pod {
-		width: 305px;
+		max-width: 305px;
 
 		h5 {
 			color: #252525;
@@ -419,7 +400,7 @@ $default-box-shadow-v-offset: 1px;
 	}
 
 	.column-text {
-		width: 305px;
+		max-width: 305px;
 
 		.more {
 			color: #C58E4C;
@@ -539,7 +520,7 @@ $default-box-shadow-v-offset: 1px;
 		#footerContent {
 			margin: 0 auto;
 			padding: 25px 0;
-			width: 960px;
+			max-width: 960px;
 		}
 	}
 
@@ -634,16 +615,8 @@ $default-box-shadow-v-offset: 1px;
 		@include box-shadow(1px 2px 3px 0px #999);
 	}
 
-	.carousel-container #carousel .carousel-item {
-		@include border-right-radius(5px);
-	}
-
-	#banner .site-name, .carousel-container, .carousel-container #tabs .tab-item {
-		@include border-radius(5px);
-	}
-
-	.carousel-container, .column-text img, .pod .pod-image {
-		@include single-box-shadow;
+	#pageSearch #keywords {
+		@include box-shadow(none);
 	}
 
 	.modify-pages .delete-tab {
@@ -654,6 +627,18 @@ $default-box-shadow-v-offset: 1px;
 		&:hover {
 			@include box-shadow(0 1px 1px -1px #000);
 		}
+	}
+
+	.carousel-container #carousel .carousel-item {
+		@include border-right-radius(5px);
+	}
+
+	#banner .site-name, .carousel-container, .carousel-container #tabs .tab-item {
+		@include border-radius(5px);
+	}
+
+	.carousel-container, .column-text img, .pod .pod-image {
+		@include single-box-shadow;
 	}
 
 	#quoteBox h3 {
