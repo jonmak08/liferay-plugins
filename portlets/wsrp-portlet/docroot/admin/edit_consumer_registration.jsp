@@ -176,11 +176,15 @@ if (supportsInbandRegistration) {
 </tbody>
 </table>
 
-<br />
+<div class="btn-toolbar">
+	<button class="btn btn-primary" type="submit">
+		<liferay-ui:message key="save" />
+	</button>
 
-<input type="submit" value="<liferay-ui:message key="save" />" />
-
-<input onClick="location.href = '<%= HtmlUtil.escape(PortalUtil.escapeRedirect(redirect)) %>';" type="button" value="<liferay-ui:message key="cancel" />" />
+	<button class="btn" onClick="location.href = '<%= HtmlUtil.escape(PortalUtil.escapeRedirect(redirect)) %>';" type="button">
+		<liferay-ui:message key="cancel" />
+	</button>
+</div>
 
 </form>
 
