@@ -7,8 +7,70 @@ body {
 	font: 13px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.so-strata-theme #dockbar {
-	margin-top: -32px;
+#wrapper {
+	padding: 0;
+}
+
+.aui .dockbar-split .dockbar .navbar-inner {
+	.nav-add-controls {
+		background: $btnBackgroundDefault;
+		border-right: 1px solid $defaultBorderColor;
+		bottom: 0;
+		margin-left: -63px;
+		top: 44px;
+
+		@include transition-duration(0.2s);
+		@include transition-property(margin-left);
+	}
+
+	.info-items, .info-link-container {
+		a {
+			background: transparent none;
+		}
+	}
+
+	.info-button .diamond {
+		border-bottom-color: transparent;
+		border-left-color: rgba(0, 0, 0, 0.5);
+		right: -12px;
+		top: 0;
+
+		&:after {
+			border-top-color: transparent;
+		}
+	}
+
+	.hide + .info-link-container .info-button .diamond {
+		border-bottom-color: rgba(0, 0, 0, 0.5);
+		border-left-color: transparent;
+		right: 0;
+		top: -12px;
+
+		&:after {
+			border-top-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+.aui .dockbar-split.show-dockbar {
+	#wrapper {
+		padding-left: 63px;
+
+		@include transition-duration(0.2s);
+		@include transition-property(padding-left);
+	}
+
+	.dockbar .navbar-inner .nav-add-controls {
+		margin-left: 0;
+	}
+}
+
+.aui-helper-hidden {
+	clip: rect(0, 0, 0, 0);
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
 }
 
 a {
@@ -32,7 +94,7 @@ a {
 	@include clear-both;
 }
 
-/* ---------- Forms Custom ---------- */
+/* ---------- Forms custom ---------- */
 
 .aui-panel-hd .aui-toolbar-content {
 	padding: 0.125em;
@@ -133,138 +195,117 @@ a {
 	}
 }
 
-/* --------- Calendar --------- */
-
-.aui-calendar-content .aui-calendar-day {
-	&, &.aui-state-default {
-		background: transparent none;
-		border-width: 0;
-		padding: 0;
-		width: 13.2%;
-
-		@include box-shadow(none);
-		@include border-radius(0);
-	}
-
-	&:hover, &.aui-state-active, &.aui-state-hover {
-		background: $btnBackgroundDefault;
-		padding: 0;
-		text-decoration: none;
-	}
-}
-
-.aui-search-bar, .lfr-search-combobox {
-	.aui-field-content, .aui-button-content {
-		display: inline;
-		vertical-align: top;
-	}
-
-	.aui-button-input {
-		padding: 0.37em 0.70em 0.38em;
-	}
-}
-
 .hidden-accessible, #navigation h1 {
 	@include hidden-accessible;
 }
 
 /* --------- Forms --------- */
 
-fieldset {
-	@include default-border;
-
-	padding: 8px;
-}
-
-.aui-legend {
-	border-bottom-color: $defaultBorderColor;
-}
-
-input[type="text"], input[type="password"], input[type="file"], input[type="submit"], input[type="button"], input[type="reset"], select, textarea, .textarea, button, .aui-field-input-text {
-	@include input-field-default;
-}
-
-a.aui-button, input[type="submit"], input[type="button"], input[type="reset"], button {
-	&, &:active, &.active, &:hover, &:focus {
-		@include button-default;
+.aui {
+	form#hrefFm {
+		margin: 0;
 	}
 
-	&:active, &.active {
-		@include button-active;
+	fieldset {
+		@include default-border;
+
+		padding: 8px;
 	}
 
-	&:hover, &:focus {
-		@include button-hover;
-	}
-}
-
-input, textarea {
-	&.focus {
-		@include input-field-focus;
-	}
-}
-
-.aui-buttonitem-content.aui-buttonitem-icon-only {
-	padding: 4px;
-}
-
-.lfr-actions {
-	&, &.lfr-extended, ul {
-		@include button-default;
-
-		padding: 0;
-	}
-
-	&:focus {
-		&, ul {
-			@include button-focus;
-		}
-	}
-
-	&.disabled, &.disabled:hover {
-		&, ul {
-			@include button-disabled;
-		}
-	}
-
-	&:hover, &.lfr-extended:hover {
-		&, ul {
-			@include button-hover;
-		}
-	}
-}
-
-.rtl .lfr-header-row .lfr-actions.show-arrow.direction-down .lfr-trigger strong a {
-	padding: 0 20px 0 4px;
-}
-
-.aui-menu-content, .lfr-menu-list ul {
-	@include menu-style;
-
-	li {
-		border-top-width: 0;
+	.aui-legend {
 		border-bottom-color: $defaultBorderColor;
 	}
-}
 
-.aui-menu-content li a.aui-focus, .lfr-menu-list ul .taglib-icon.aui-focus, .lfr-menu-expanded li a:focus {
-	background-color: #1D87EB;
-}
+	input[type="text"], input[type="password"], input[type="file"], input[type="submit"], input[type="button"], input[type="reset"], select, textarea, .textarea, button, .aui-field-input-text {
+		@include input-field-default;
+	}
 
-.aui-button-disabled {
-	input[type], button {
-		&, &:hover, &:focus {
-			@include button-disabled;
+	.btn, a.aui-button, input[type="submit"], input[type="button"], input[type="reset"], button {
+		&, &:active, &.active, &:hover, &:focus {
+			@include button-default;
+		}
+
+		&:active, &.active {
+			@include button-active;
+		}
+
+		&:hover, &:focus {
+			@include button-hover;
+		}
+
+		&.btn-primary {
+			@include button-primary-gradient;
 		}
 	}
-}
 
-.aui-buttonitem-disabled {
-	@include button-disabled;
-}
+	input, textarea {
+		&.focus {
+			@include input-field-focus;
+		}
+	}
 
-input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-form-validator-error {
-	border-color: $red;
+	.aui-buttonitem-content.aui-buttonitem-icon-only {
+		padding: 4px;
+	}
+
+	.lfr-actions {
+		&, &.lfr-extended, ul {
+			@include button-default;
+
+			padding: 0;
+		}
+
+		&:focus {
+			&, ul {
+				@include button-focus;
+			}
+		}
+
+		&.disabled, &.disabled:hover {
+			&, ul {
+				@include button-disabled;
+			}
+		}
+
+		&:hover, &.lfr-extended:hover {
+			&, ul {
+				@include button-hover;
+			}
+		}
+	}
+
+	.rtl .lfr-header-row .lfr-actions.show-arrow.direction-down .lfr-trigger strong a {
+		padding: 0 20px 0 4px;
+	}
+
+	.aui-menu-content, .lfr-menu-list ul {
+		@include menu-style;
+
+		li {
+			border-top-width: 0;
+			border-bottom-color: $defaultBorderColor;
+		}
+	}
+
+	.aui-menu-content li a.aui-focus, .lfr-menu-list ul .taglib-icon.aui-focus, .lfr-menu-expanded li a:focus {
+		background-color: #1D87EB;
+	}
+
+	.aui-button-disabled {
+		input[type], button {
+			&, &:hover, &:focus {
+				@include button-disabled;
+			}
+		}
+	}
+
+	.aui-buttonitem-disabled {
+		@include button-disabled;
+	}
+
+	input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-form-validator-error {
+		border-color: $red;
+	}
 }
 
 .ie6 {
@@ -307,6 +348,10 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
 
 .portlet-column-last .portlet-column {
 	border-left-width: 0;
+}
+
+.aui .row-fluid [class*="span"] {
+	margin-left: 0;
 }
 
 /* ---------- Breadcrumbs ---------- */
@@ -360,7 +405,7 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
 	}
 }
 
-/* ---------- Site Breadcrumbs ---------- */
+/* ---------- Site breadcrumbs ---------- */
 
 .site-breadcrumbs .breadcrumbs-horizontal {
 	border-top: 1px solid $defaultBorderColor;
@@ -373,7 +418,7 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
 	@include header;
 
 	border-width: 1px 0;
-	padding: 1em 1.5em;
+	padding: 0.86em 1.5em;
 
 	h1, h2 {
 		font-size: 1.8em;
@@ -399,7 +444,8 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
 		img {
 			display: inline;
 			height: 32px;
-			margin: -0.25em 0 -0.25em -0.45em;
+			left: -0.45em;
+			margin: -0.25em 0;
 			position: relative;
 			top: -0.125em;
 			vertical-align: middle;
@@ -415,6 +461,15 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
 		&, img {
 			height: 55px;
 			width: 55px;
+		}
+	}
+
+	#toggleDockbar {
+		float: right;
+
+		img {
+			height: 16px;
+			width: 16px;
 		}
 	}
 }
@@ -445,7 +500,10 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
 
 	input[type="text"] {
 		color: $defaultBorderColor;
+	}
 
+	form, input[type="text"] {
+		margin: 0;
 	}
 
 	input[type="text"]:focus, &.focus input[type="text"] {
@@ -483,7 +541,6 @@ input.aui-form-validator-error, textarea.aui-form-validator-error, select.aui-fo
 
 div#navigation {
 	background: $navigationBgColor;
-	border-right: 1px solid $defaultBorderColor;
 	float: left;
 	margin-left: -156px;
 	width: 155px;
@@ -586,36 +643,14 @@ div#navigation {
 	@include box-shadow(-4px 0 15px -7px rgba(0,0,0, 0.6));
 }
 
-.aui-tabview-list {
-	@include default-border;
+.aui-dialog-iframe-popup, .portal-popup {
+	#main-content {
+		background: transparent;
 
-	padding: 0 0.45em;
+		@include box-shadow(none);
 
-	@include normal-gradient;
-
-	.aui-tab, .aui-tab:first-child, .last, .first, .aui-tab-content {
-		border-width: 0;
-		padding: 0;
-	}
-
-	.aui-tab-content {
-		margin: -1px -1px 0 0;
-	}
-
-	.aui-tab-label {
-		font-weight: 200;
-		text-decoration: none;
-		margin-bottom: -1px;
-
-		&:hover, &:focus {
-			@include button-hover;
-
-			text-shadow: none;
-		}
-	}
-
-	.aui-tab-active .aui-tab-label, .aui-tab-label:active {
-		@include button-active;
+		float: none;
+		min-height: auto;
 	}
 }
 
@@ -634,8 +669,6 @@ div#navigation {
 .aui-state-active {
 	@include button-focus;
 }
-
-
 
 .results-row {
 	td {
@@ -771,8 +804,10 @@ div#navigation {
 	.portlet-title {
 		font-size: 1.5em;
 		font-weight: 200;
+		line-height: 1.25em;
+		margin: 0;
 
-		.icon {
+		.icon, img {
 			display: none;
 		}
 	}
@@ -807,7 +842,7 @@ div#navigation {
 	display: block;
 }
 
-/* ---------- Top Links Component ---------- */
+/* ---------- Top links component ---------- */
 
 .top-links {
 	background: $controlBgColor;
@@ -873,11 +908,25 @@ div#navigation {
 	}
 }
 
-.taglib-header .header-back-to a {
-	padding: 0 0.2em;
+.taglib-header {
+	margin: 1em 0;
+
+	.header-back-to, .header-title {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.header-back-to a {
+		padding-left: 0.25em;
+		padding-right: 0.25em;
+	}
+
+	.header-title {
+		font-weight: 200;
+	}
 }
 
-/* ---------- LFR Header Row ---------- */
+/* ---------- LFR header row ---------- */
 
 .lfr-header-row {
 	.lfr-actions {
@@ -910,7 +959,7 @@ div#navigation {
 	}
 }
 
-/* ---------- Document Library ---------- */
+/* ---------- Document library ---------- */
 
 .portlet-document-library {
 	.lfr-app-column-view {
@@ -1076,7 +1125,6 @@ div#navigation {
 
 	.taglib-header {
 		border-bottom-width: 0;
-		margin-bottom: 0;
 		position: relative;
 	}
 
@@ -1175,7 +1223,7 @@ div#navigation {
 	}
 }
 
-/* ---------- Microblogs Portlet ---------- */
+/* ---------- Microblogs portlet ---------- */
 
 .microblogs-portlet {
 	.aui-tabview-list {
@@ -1188,10 +1236,6 @@ div#navigation {
 
 	.autocomplete {
 		background-color: transparent;
-	}
-
-	.highlighter-content {
-		padding: 5px 0;
 	}
 
 	.microblogs-countdown {
@@ -1237,7 +1281,7 @@ div#navigation {
 	top: 0;
 }
 
-/* ---------- Activities Portlet ---------- */
+/* ---------- Activities portlet ---------- */
 
 .so-portlet-activities {
 	h3 {
@@ -1294,14 +1338,6 @@ div#navigation {
 		font-size: 1em;
 		margin: 0.5em 0 1em;
 		width: 110px;
-	}
-
-	.user-portrait {
-		left: 65px;
-	}
-
-	.activity-data {
-		margin-left: 110px;
 	}
 }
 
@@ -1457,7 +1493,7 @@ div#navigation {
 	}
 }
 
-/* ---------- Blogs Aggregator ---------- */
+/* ---------- Blogs aggregator ---------- */
 
 .portlet-blogs-aggregator {
 	.entry-author, .entry-date {
@@ -1594,7 +1630,7 @@ div#navigation {
 	padding: 10px;
 }
 
-/* ---------- Contacts Portlet ---------- */
+/* ---------- Contacts ---------- */
 
 .contacts-portlet {
 	.contacts-profile {
@@ -1605,7 +1641,7 @@ div#navigation {
 		}
 	}
 
-	.toolbar, .contact-group-filter {
+	.toolbar, .contacts-search, .lfr-button-column {
 		background-color: $controlBgColor;
 	}
 
@@ -1743,8 +1779,6 @@ div#navigation {
 
 .private-messaging-portlet {
 	.controls {
-		background-color: $controlBgColor;
-
 		@include border-radius(0);
 
 		border-width: 0 0 1px;
@@ -1772,11 +1806,6 @@ div#navigation {
 		text-decoration: none;
 	}
 
-	.user-profile-image {
-		position: relative;
-		z-index: 2;
-	}
-
 	.taglib-search-iterator-page-iterator-bottom {
 		padding: 10px;
 	}
@@ -1785,17 +1814,15 @@ div#navigation {
 		min-height: 400px;
 	}
 
-	.message-link {
-		padding-bottom: 20px;
-	}
-
 	.user-profile-image {
-		overflow: hidden;
-		height: 50px;
+		height: 60px;
+		margin-right: 10px;
+		position: relative;
+		z-index: 2;
 	}
 }
 
-/* ---------- Message Boards ---------- */
+/* ---------- Message boards ---------- */
 
 .portlet-message-boards {
 	.category-current {
@@ -1824,7 +1851,7 @@ div#navigation {
 		border-color: $defaultBorderColor;
 		border-width: 0 0 1px 1px;
 		margin: 0;
-		padding: 0 5px;
+		padding: 8px 5px;
 
 		&.reply {
 			border: 1px solid $defaultBorderColor;
@@ -1860,7 +1887,7 @@ div#navigation {
 
 		.thread-top {
 			border-bottom-width: 0;
-			padding: 1.75em 0 0;
+			padding: 1.75em 0.5em 0;
 			position: relative;
 
 			.edit-controls {
@@ -1936,11 +1963,33 @@ div#navigation {
 		@include border-radius(4px);
 		@include default-border;
 
-		padding: 5px 6px;
+		padding: 0 6px;
+
+		.thread-actions {
+			padding: 5px 0 0;
+		}
+
+		ul {
+			margin-bottom: 0;
+
+			li {
+				margin-bottom: 6px;
+				margin-right: 0.5em;
+
+				img {
+					display: none;
+				}
+			}
+		}
 	}
 
 	.thread-navigation {
-		padding: 0 5px;
+		border: 1px solid $defaultBorderColor;
+		border-width: 0px 1px 1px;
+		bottom: -1px;
+		margin: -2px 0 0;
+		padding: 6px 11px;
+		position: relative;
 	}
 
 	.edit-controls {
@@ -1954,7 +2003,11 @@ div#navigation {
 		z-index: 2;
 
 		li {
-			margin: 0 5px;
+			margin: 0 5px 0 0;
+		}
+
+		a img {
+			display: none;
 		}
 	}
 
@@ -2047,11 +2100,6 @@ div#navigation {
 .portlet-message-boards, .portlet-wiki {
 	.taglib-header {
 		border-bottom-width: 0;
-
-		.header-title {
-			font-weight: normal;
-			margin: 0.5em 0;
-		}
 	}
 
 	.top-links-container {
@@ -2115,12 +2163,19 @@ div#navigation {
 		@include button-focus;
 	}
 
-	img.icon {
+	img {
 		vertical-align: top;
 	}
 }
 
-/* ---------- Tasks Portlet ---------- */
+.portlet-asset-publisher, .portlet-message-boards, .portlet-trash {
+	.thread-view-controls {
+		margin: 0.5em;
+		text-align: left;
+	}
+}
+
+/* ---------- Tasks portlet ---------- */
 
 .tasks-portlet {
 	.aui-tabview-list, .control-wrapper, .filter-wrapper, .list-wrapper, .tasks-options {
@@ -2145,7 +2200,7 @@ div#navigation {
 	}
 }
 
-/* ---------- Invite Members ---------- */
+/* ---------- Invite members ---------- */
 
 .so-portlet-invite-members {
 	background-color: $controlBgColor;
@@ -2155,7 +2210,7 @@ div#navigation {
 	padding: 0.8em 1em;
 }
 
-/* ---------- SO Portlet Sites ---------- */
+/* ---------- SO portlet sites ---------- */
 
 .aui-dialog-bd .so-sites-directory {
 	.taglib-header {
@@ -2163,7 +2218,7 @@ div#navigation {
 	}
 }
 
-/* ---------- Wiki Portlet ---------- */
+/* ---------- Wiki portlet ---------- */
 
 .portlet-wiki {
 	.page-actions {
@@ -2198,7 +2253,7 @@ div#navigation {
 	}
 }
 
-/* ---------- Portlet Typography ---------- */
+/* ---------- Portlet typography ---------- */
 
 .portlet-message-boards .thread-body, .portlet-wiki .wiki-body, .portlet-blogs .entry-body {
 	line-height: 1.5em;

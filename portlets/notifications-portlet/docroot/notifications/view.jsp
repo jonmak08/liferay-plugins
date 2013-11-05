@@ -29,9 +29,16 @@
 				<span class="count"><%= unreadUserNotificationsCount %></span>
 			</a>
 		</div>
+
 		<div class="nav">
 			<a class="all-notifications clearfix" href="javascript:;">
 				<span class="title"><liferay-ui:message key="all-notifications" /></span>
+			</a>
+		</div>
+
+		<div class="nav">
+			<a class="manage clearfix" href="javascript:;">
+				<span class="title"><liferay-ui:message key="notification-delivery" /></span>
 			</a>
 		</div>
 	</div>
@@ -61,8 +68,6 @@
 
 			userNotificationsList.io.set('uri', uri);
 			userNotificationsList.io.start();
-
-			A.io.request('<liferay-portlet:actionURL name="setDelivered" />');
 		}
 	}
 
@@ -83,11 +88,13 @@
 			function(event) {
 				renderUserNotificationsList('<%= unreadURL %>');
 
+				A.io.request('<liferay-portlet:actionURL name="setDelivered" />');
+
 				userNotificationsSidebar.all('.nav a').removeClass('selected');
 
 				unreadNav.addClass('selected');
 			}
-		)
+		);
 	}
 
 	var allNotificationsNav = userNotificationsSidebar.one('.all-notifications');
@@ -102,11 +109,32 @@
 
 				renderUserNotificationsList('<%= allNotificationsURL %>');
 
+				A.io.request('<liferay-portlet:actionURL name="setDelivered" />');
+
 				userNotificationsSidebar.all('.nav a').removeClass('selected');
 
 				allNotificationsNav.addClass('selected');
 			}
-		)
+		);
+	}
+
+	var manageNav = userNotificationsSidebar.one('.manage');
+
+	if (manageNav) {
+		manageNav.on(
+			'click',
+			function(event) {
+				<portlet:renderURL var="configurationURL" windowState="<%= LiferayWindowState.EXCLUSIVE.toString() %>">
+					<portlet:param name="mvcPath" value="/notifications/configuration.jsp" />
+				</portlet:renderURL>
+
+				renderUserNotificationsList('<%= configurationURL %>');
+
+				userNotificationsSidebar.all('.nav a').removeClass('selected');
+
+				manageNav.addClass('selected');
+			}
+		);
 	}
 
 	userNotificationsList.delegate(

@@ -63,12 +63,8 @@ to = sb.toString() + to;
 
 <div id="<portlet:namespace />messageContainer"></div>
 
-<liferay-portlet:actionURL name="sendMessage" var="sendMessageURL">
-	<portlet:param name="redirect" value="<%= redirect %>" />
-</liferay-portlet:actionURL>
-
 <aui:layout cssClass="message-body-container">
-	<aui:form action="<%= sendMessageURL %>" enctype="multipart/form-data" method="post" name="fm" onSubmit="event.preventDefault();">
+	<aui:form enctype="multipart/form-data" method="post" name="fm" onSubmit="event.preventDefault();">
 		<aui:input name="userId" type="hidden" value="<%= user.getUserId() %>" />
 		<aui:input name="mbThreadId" type="hidden" value="<%= mbThreadId %>" />
 
@@ -88,6 +84,24 @@ to = sb.toString() + to;
 			<liferay-ui:message key="attachments" />
 		</label>
 
+		<%
+		long fileMaxSize = PrefsPropsUtil.getLong(PropsKeys.DL_FILE_MAX_SIZE);
+
+		if (fileMaxSize == 0) {
+			fileMaxSize = PrefsPropsUtil.getLong(PropsKeys.UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE);
+		}
+
+		fileMaxSize /= 1024;
+		%>
+
+		<aui:field-wrapper>
+			<c:if test="<%= fileMaxSize != 0 %>">
+				<div class="portlet-msg-info">
+					<%= LanguageUtil.format(pageContext, "upload-documents-no-larger-than-x-k", String.valueOf(fileMaxSize), false) %>
+				</div>
+			</c:if>
+		</aui:field-wrapper>
+
 		<aui:input label="" name="msgFile1" type="file" />
 
 		<aui:input label="" name="msgFile2" type="file" />
@@ -95,7 +109,7 @@ to = sb.toString() + to;
 		<aui:input label="" name="msgFile3" type="file" />
 
 		<aui:button-row>
-			<input type="submit" value="<liferay-ui:message key="send" />" />
+			<aui:button primary="<%= true %>" type="submit" value="send" />
 		</aui:button-row>
 	</aui:form>
 </aui:layout>
@@ -112,7 +126,7 @@ to = sb.toString() + to;
 	}
 </aui:script>
 
-<aui:script use="aui-io-request,aui-loading-mask,autocomplete,json-parse,io-upload-iframe">
+<aui:script use="aui-io-request-deprecated,aui-loading-mask-deprecated,autocomplete,io-upload-iframe,json-parse">
 	var form = A.one('#<portlet:namespace />fm');
 
 	form.on(
@@ -148,30 +162,34 @@ to = sb.toString() + to;
 			loadingMask.show();
 
 			A.io.request(
-				'<liferay-portlet:resourceURL id="checkData"><liferay-portlet:param name="redirect" value="<%= PortalUtil.getLayoutURL(themeDisplay) %>" /></liferay-portlet:resourceURL>',
+				'<liferay-portlet:actionURL name="sendMessage"></liferay-portlet:actionURL>',
 				{
-					after: {
-						success: function(event, id, obj) {
-							var responseData = this.get('responseData');
+					dataType: 'json',
+					form: {
+						id: form,
+						upload: true
+					},
+					on: {
+						complete: function(event, id, obj) {
+							var responseText = obj.responseText;
+
+							var responseData = A.JSON.parse(responseText);
 
 							if (responseData.success) {
-								submitForm(document.<portlet:namespace />fm);
+								if (<%= Validator.isNotNull(redirect) %>) {
+									var topWindow = Liferay.Util.getTop();
+
+									topWindow.location.href = '<liferay-portlet:renderURL windowState="<%= LiferayWindowState.NORMAL.toString() %>"><portlet:param name="mvcPath" value="/view.jsp" /></liferay-portlet:renderURL>';
+								}
+
+								Liferay.Util.getWindow('<portlet:namespace />Dialog').hide();
 							}
 							else {
 								<portlet:namespace />showMessage('<span class="portlet-msg-error">' + responseData.message + '</span>');
 
 								loadingMask.hide();
 							}
-						},
-						failure: function(event, id, obj) {
-							<portlet:namespace />showMessage('<span class="portlet-msg-error"><%= UnicodeLanguageUtil.get(pageContext, "your-request-failed-to-complete") %></span>');
-
-							loadingMask.hide();
 						}
-					},
-					dataType: 'json',
-					form: {
-						id: form.getDOM()
 					}
 				}
 			);

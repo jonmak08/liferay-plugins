@@ -32,7 +32,6 @@ import com.liferay.portal.kernel.util.StringBundler;
 import com.liferay.portal.kernel.util.StringPool;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Time;
-import com.liferay.portal.kernel.uuid.PortalUUIDUtil;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.liferay.portal.model.ModelHintsUtil;
 import com.liferay.portal.model.User;
@@ -398,14 +397,6 @@ public class CalendarICalDataHandler implements CalendarDataHandler {
 			calendarBooking =
 				CalendarBookingLocalServiceUtil.fetchCalendarBooking(
 					uuid, calendar.getGroupId());
-
-			if (calendarBooking == null) {
-				uuid = PortalUUIDUtil.generate(uuid.getBytes());
-
-				calendarBooking =
-					CalendarBookingLocalServiceUtil.fetchCalendarBooking(
-						uuid, calendar.getGroupId());
-			}
 		}
 
 		ServiceContext serviceContext = new ServiceContext();
@@ -610,6 +601,15 @@ public class CalendarICalDataHandler implements CalendarDataHandler {
 				new Date(calendarBooking.getStartTime()));
 
 			propertyList.add(dtStart);
+
+			java.util.Calendar endJCalendar = JCalendarUtil.getJCalendar(
+				calendarBooking.getEndTime());
+
+			endJCalendar.add(java.util.Calendar.DAY_OF_MONTH, 1);
+
+			DtEnd dtEnd = new DtEnd(new Date(endJCalendar.getTime()));
+
+			propertyList.add(dtEnd);
 		}
 		else {
 			DtStart dtStart = new DtStart(

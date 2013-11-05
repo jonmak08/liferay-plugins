@@ -1105,6 +1105,60 @@ public class CalendarBookingWrapper implements CalendarBooking,
 	}
 
 	/**
+	* Returns the trash entry created when this calendar booking was moved to the Recycle Bin. The trash entry may belong to one of the ancestors of this calendar booking.
+	*
+	* @return the trash entry created when this calendar booking was moved to the Recycle Bin
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public com.liferay.portlet.trash.model.TrashEntry getTrashEntry()
+		throws com.liferay.portal.kernel.exception.PortalException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _calendarBooking.getTrashEntry();
+	}
+
+	/**
+	* Returns the class primary key of the trash entry for this calendar booking.
+	*
+	* @return the class primary key of the trash entry for this calendar booking
+	*/
+	@Override
+	public long getTrashEntryClassPK() {
+		return _calendarBooking.getTrashEntryClassPK();
+	}
+
+	/**
+	* Returns the trash handler for this calendar booking.
+	*
+	* @return the trash handler for this calendar booking
+	*/
+	@Override
+	public com.liferay.portal.kernel.trash.TrashHandler getTrashHandler() {
+		return _calendarBooking.getTrashHandler();
+	}
+
+	/**
+	* Returns <code>true</code> if this calendar booking is in the Recycle Bin.
+	*
+	* @return <code>true</code> if this calendar booking is in the Recycle Bin; <code>false</code> otherwise
+	*/
+	@Override
+	public boolean isInTrash() {
+		return _calendarBooking.isInTrash();
+	}
+
+	/**
+	* Returns <code>true</code> if the parent of this calendar booking is in the Recycle Bin.
+	*
+	* @return <code>true</code> if the parent of this calendar booking is in the Recycle Bin; <code>false</code> otherwise
+	* @throws SystemException if a system exception occurred
+	*/
+	@Override
+	public boolean isInTrashContainer() {
+		return _calendarBooking.isInTrashContainer();
+	}
+
+	/**
 	* @deprecated As of 6.1.0, replaced by {@link #isApproved()}
 	*/
 	@Override
@@ -1170,16 +1224,6 @@ public class CalendarBookingWrapper implements CalendarBooking,
 	@Override
 	public boolean isIncomplete() {
 		return _calendarBooking.isIncomplete();
-	}
-
-	/**
-	* Returns <code>true</code> if this calendar booking is in the Recycle Bin.
-	*
-	* @return <code>true</code> if this calendar booking is in the Recycle Bin; <code>false</code> otherwise
-	*/
-	@Override
-	public boolean isInTrash() {
-		return _calendarBooking.isInTrash();
 	}
 
 	/**
