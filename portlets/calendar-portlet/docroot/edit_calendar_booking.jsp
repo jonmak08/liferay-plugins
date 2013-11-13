@@ -41,10 +41,6 @@ long endTime = BeanPropertiesUtil.getLong(calendarBooking, "endTime", ParamUtil.
 
 java.util.Calendar endTimeJCalendar = JCalendarUtil.getJCalendar(endTime, userTimeZone);
 
-if (com.liferay.portal.kernel.util.CalendarUtil.equalsByDay(startTimeJCalendar.getTime(), endTimeJCalendar.getTime())) {
-	activeView = "day";
-}
-
 boolean allDay = BeanParamUtil.getBoolean(calendarBooking, request, "allDay");
 
 long firstReminder = BeanParamUtil.getLong(calendarBooking, request, "firstReminder");
@@ -131,6 +127,8 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 
 			<a class="calendar-portlet-recurrence-summary" href="javascript:;" id="<portlet:namespace />summary"></a>
 		</aui:field-wrapper>
+
+		<aui:input name="description" />
 	</aui:fieldset>
 
 	<aui:fieldset>
@@ -145,15 +143,13 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 						}
 					%>
 
-						<aui:option selected="<%= curCalendar.getCalendarId() == calendarId %>" value="<%= curCalendar.getCalendarId() %>"><%= curCalendar.getName(locale) %></aui:option>
+						<aui:option selected="<%= curCalendar.getCalendarId() == calendarId %>" value="<%= curCalendar.getCalendarId() %>"><%= HtmlUtil.escape(curCalendar.getName(locale)) %></aui:option>
 
 					<%
 					}
 					%>
 
 				</aui:select>
-
-				<aui:input name="description" />
 
 				<aui:input name="location" />
 
@@ -228,7 +224,7 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 
 								<liferay-util:include page="/scheduler.jsp" servletContext="<%= application %>">
 									<liferay-util:param name="activeView" value="<%= activeView %>" />
-									<liferay-util:param name="date" value="<%= String.valueOf(date) %>" />
+									<liferay-util:param name="date" value="<%= String.valueOf(startTime) %>" />
 									<liferay-util:param name="filterCalendarBookings" value='<%= "window." + renderResponse.getNamespace() + "filterCalendarBookings" %>' />
 									<liferay-util:param name="hideAgendaView" value="<%= Boolean.TRUE.toString() %>" />
 									<liferay-util:param name="hideMonthView" value="<%= Boolean.TRUE.toString() %>" />
@@ -284,6 +280,10 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 		return <%= calendarBookingId %> !== calendarBooking.calendarBookingId;
 	}
 
+	function <portlet:namespace />getSuggestionsContent() {
+		return document.<portlet:namespace />fm.<portlet:namespace />title.value + ' ' + window.<portlet:namespace />description.getHTML();
+	}
+
 	Liferay.provide(
 		window,
 		'<portlet:namespace />updateCalendarBooking',
@@ -333,7 +333,7 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 							'<p class="calendar-portlet-confirmation-text">',
 							A.Lang.sub(
 								Liferay.Language.get('you-are-about-to-make-changes-that-will-only-effect-your-calendar-x'),
-								['<%= calendar.getName(locale) %>']
+								['<%= HtmlUtil.escapeJS(calendar.getName(locale)) %>']
 							),
 							'</p>'
 						].join('');
@@ -345,10 +345,10 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 							function() {
 								submitForm(document.<portlet:namespace />fm);
 
-								this.close();
+								this.hide();
 							},
 							function() {
-								this.close();
+								this.hide();
 							}
 						);
 					</c:otherwise>
@@ -684,11 +684,11 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 			values: [
 				{
 					interval: <%= firstReminder %>,
-					type: '<%= HtmlUtil.escape(firstReminderType) %>'
+					type: '<%= HtmlUtil.escapeJS(firstReminderType) %>'
 				},
 				{
 					interval: <%= secondReminder %>,
-					type: '<%= HtmlUtil.escape(secondReminderType) %>'
+					type: '<%= HtmlUtil.escapeJS(secondReminderType) %>'
 				}
 			]
 		}

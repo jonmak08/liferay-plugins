@@ -73,8 +73,9 @@ public class CalendarNotificationTemplateStagedModelDataHandler
 		Calendar calendar = CalendarLocalServiceUtil.getCalendar(
 			calendarNotificationTemplate.getCalendarId());
 
-		StagedModelDataHandlerUtil.exportStagedModel(
-			portletDataContext, calendar);
+		StagedModelDataHandlerUtil.exportReferenceStagedModel(
+			portletDataContext, calendarNotificationTemplate, calendar,
+			PortletDataContext.REFERENCE_TYPE_STRONG);
 
 		Element calendarNotificationTemplateElement =
 			portletDataContext.getExportDataElement(
@@ -92,7 +93,7 @@ public class CalendarNotificationTemplateStagedModelDataHandler
 		portletDataContext.addClassedModel(
 			calendarNotificationTemplateElement,
 			ExportImportPathUtil.getModelPath(calendarNotificationTemplate),
-			calendarNotificationTemplate, CalendarPortletDataHandler.NAMESPACE);
+			calendarNotificationTemplate);
 	}
 
 	@Override
@@ -104,15 +105,8 @@ public class CalendarNotificationTemplateStagedModelDataHandler
 		long userId = portletDataContext.getUserId(
 			calendarNotificationTemplate.getUserUuid());
 
-		String calendarPath = ExportImportPathUtil.getModelPath(
-			portletDataContext, Calendar.class.getName(),
-			calendarNotificationTemplate.getCalendarId());
-
-		Calendar calendar = (Calendar)portletDataContext.getZipEntryAsObject(
-			calendarPath);
-
-		StagedModelDataHandlerUtil.importStagedModel(
-			portletDataContext, calendar);
+		StagedModelDataHandlerUtil.importReferenceStagedModels(
+			portletDataContext, calendarNotificationTemplate, Calendar.class);
 
 		Map<Long, Long> calendarIds =
 			(Map<Long, Long>)portletDataContext.getNewPrimaryKeysMap(
@@ -129,7 +123,7 @@ public class CalendarNotificationTemplateStagedModelDataHandler
 				calendarNotificationTemplate.getNotificationTemplateType());
 
 		ServiceContext serviceContext = portletDataContext.createServiceContext(
-			calendarNotificationTemplate, CalendarPortletDataHandler.NAMESPACE);
+			calendarNotificationTemplate);
 
 		CalendarNotificationTemplate importedCalendarNotificationTemplate =
 			null;
@@ -181,8 +175,7 @@ public class CalendarNotificationTemplateStagedModelDataHandler
 		}
 
 		portletDataContext.importClassedModel(
-			calendarNotificationTemplate, importedCalendarNotificationTemplate,
-			CalendarPortletDataHandler.NAMESPACE);
+			calendarNotificationTemplate, importedCalendarNotificationTemplate);
 	}
 
 }
