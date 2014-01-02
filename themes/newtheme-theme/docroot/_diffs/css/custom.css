@@ -1,26 +1,20 @@
 @import "compass";
 
 @font-face {
-	font: normal 400 "Lora", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	src: local("Lora"), url("http://themes.googleusercontent.com/static/fonts/lora/v5/5-AYViExptypIdFoLKAxTA.woff") format("woff");
+	font-family: 'Lora';
+	font-style: normal;
+	font-weight: 400;
+	src: local("Lora"), local("Lora-Regular"), url("http://themes.googleusercontent.com/static/fonts/lora/v6/5-AYViExptypIdFoLKAxTA.woff") format("woff");
 }
 
 .aui {
 	background-color: #0F0F0F;
 
-	h1 {
-		> a, a:active, a:hover {
-			color: #000;
-			font-weight: normal;
-			text-decoration: none;
-		}
-	}
-
 	a {
 		color: #E65A1E;
 		text-decoration: none;
 
-		&:hover {
+		&:hover, &:focus, &:active {
 			color: #B73856;
 			text-decoration: none;
 		}
@@ -28,8 +22,8 @@
 
 	body {
 		background-color: #E9E6E0;
-		font-family: Lora, serif;
-		font-size: 1.2em;
+		font-family: 'Lora', serif;
+		font-size: 1.15em;
 		font-weight: 100;
 		line-height: 150%;
 
@@ -38,19 +32,31 @@
 			color: #E65A1E;
 			text-decoration: none;
 			
-			&:hover {
+			&:active, &:focus, &:hover {
 				color: #B73856;
 				text-decoration: none;
 			}
 		}
 
+	table {
+		margin: auto;
+	}
+
 		.portlet-dockbar {
 			margin-bottom: -70px;
 		}
 	}
-	
+
 	input[title="Search"] {
 		border-radius: 50px;
+	}
+
+	h1 {
+		> a, a:active, a:focus, a:hover {
+			color: #000;
+			font-weight: normal;
+			text-decoration: none;
+		}
 	}
 
 	#wrapper {
@@ -70,7 +76,7 @@
 				list-style: none;
 				padding: 10px 18px;
 
-				a, a:hover {
+				a, a:focus, a:active, a:hover {
 					color: #BCB9B3;
 					text-decoration: none;
 				}
@@ -87,7 +93,7 @@
 
 		#content {
 			border: 1px solid #E5E3E1;
-			color: #000000;
+			color: #282828;
 			padding: 20px;
 		
 			hr {
@@ -146,6 +152,7 @@
 		}
 
 		li {
+			background: #FFF;
 			display: inline-block;
 			list-style: none;
 			padding: 0 10px 10px 10px;
@@ -169,15 +176,17 @@
 				border-color: #EEE;
 				border-style: none solid;
 				border-width: 0.5px;
+				bottom: 0;
 				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 				display: none;
-				left: 80%;
+				left: 100%;
+				margin-left: 0;
 				position: absolute;
-				top: 0;
 				width: 100%;
 			}
 
 			ul li {
+				background: #FFF;
 				border-color: #EEE;
 				border-style: solid solid none;
 				border-width: 0.5px;
@@ -212,9 +221,20 @@
 	.span4 .portlet .portlet-topper {
 		background-color: #757266;
 		color: #FFF;
+		margin-bottom: 15px;
 
 		.portlet-title img {
 			display: none;
+		}
+
+		&:after {
+			border: medium solid rgba(0, 0, 0, 0);
+			border-color: #6E6B60 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+			border-width: 8px;
+			content: "";
+			left: 7%;
+			position: absolute;
+			top: 100%;
 		}
 	}
 
@@ -237,12 +257,12 @@
 		}
 	}
 
+	/*-- specifict to Asset Publisher --*/
 	.asset-abstract {
 		background-color: #FFFFFF;
 		border-bottom: 1px solid #E5E3E1;
 		position: relative;
 		margin-bottom: 37px;
-		width: 95%;
 		padding: 0 0 37px;
 
 		&:after {
@@ -258,15 +278,15 @@
 	}
 
 	.asset-title {
-		font-weight: 100;
 		border-bottom: none;
+		font-weight: 100;
 		margin-left: 20%;
 
 		a {
 			color: #000000;
 			text-decoration: none;
 
-			&:hover {
+			&:hover, &:active, &:focus {
 				color: #E65A1E;
 				text-decoration: none;
 				transition: all 0.3s ease 0s;
@@ -328,15 +348,14 @@
 		}
 	}
 
-	/* move date section to middle area of content */
 	.asset-metadata {
+		border-bottom: none;
 		height: 50px;
 		left: 8.2%;
 		letter-spacing: 0.1em;
 		margin-left: -2%;
 		position: absolute;
 		top: 60px;
-		border-bottom: none;
 
 		/* remove calendar icon */
 		span {
@@ -396,6 +415,10 @@
 				border-radius: 100em;
 			}
 
+			.subscribefield {
+				width: 90%;
+			}
+
 			p {
 				color: #A0A0A0;
 			}
@@ -437,11 +460,13 @@
 			@include opaque;
 		}
 	}
+
 	#heading {
 		> h2 {
 			@include opacity(0.6);
 		}
 	}
+
 	.asset-title {
 		img {
 			&:hover {
@@ -450,10 +475,11 @@
 			}
 		}
 	}
+
 	.asset-metadata {
 		span {
 			@include opacity(0.5);
-				
+
 			&:hover {
 				@include opaque;
 				transition: all 0.3s ease 0s;

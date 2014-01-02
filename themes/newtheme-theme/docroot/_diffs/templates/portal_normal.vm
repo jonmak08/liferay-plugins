@@ -87,12 +87,12 @@
 				<div id="column-2" class="span4">
 					<div class="footer-block">
 						<h4>ABOUT LIFERAY'S ISCA THEME</h4>
-						<p>This is a simple theme for Liferay.</p>
+						<p>This is a simple theme for Liferay designed after <a href="http://iscademo.wordpress.com">Isca on Wordpress</a>.</p>
 					</div>
 
 					<div class="footer-block">
-						<h4>BLOG STATS</h4>
-						<p>You are the first (and only) person to view this "blog".</p>
+						<h4>STATS</h4>
+						<p>You are the first person to view this page.</p>
 					</div>
 
 					<div class="footer-block">
@@ -111,6 +111,11 @@
 
 					<div class="footer-block">
 						<h4>FOLLOW BLOG VIA EMAIL</h4>
+						<p>Enter your email in the form below to subscribe to all of our updates. We respect your privacy and promise not share your information with anyone else.</p>
+						<form action="http://localhost:8080//" class="subscribeform" method="get">
+						<input type="text" placeholder="Email address here..." class="subscribefield" name="s" value=""><input width="100%" type="image" height="14" class="subscribesubmit">
+						</form>
+						<input type="submit" value="Follow">
 					</div>
 				</div>
 
