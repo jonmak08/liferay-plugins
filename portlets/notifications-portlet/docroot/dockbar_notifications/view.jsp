@@ -30,7 +30,7 @@
 
 		<ul class="dropdown-menu pull-right user-notifications-list"></ul>
 
-		<aui:script use="aui-base,aui-io-plugin-deprecated,liferay-poller">
+		<aui:script use="aui-base,aui-io-plugin-deprecated,liferay-menu-toggle,liferay-poller">
 			var userNotifications = A.one('#<portlet:namespace />userNotifications');
 
 			var userNotificationsCount = userNotifications.one('#<portlet:namespace />userNotificationsCount');
@@ -62,57 +62,30 @@
 				);
 			}
 
-			userNotifications.on(
-				'click',
-				function(event) {
-					var currentTarget = event.currentTarget;
+			var toggleMenu = new Liferay.MenuToggle(
+				{
+					after: {
+						openChange: function(event) {
+							if (event.newVal) {
+								<portlet:renderURL var="unreadURL" windowState="<%= LiferayWindowState.EXCLUSIVE.toString() %>">
+									<portlet:param name="mvcPath" value="/notifications/view_entries.jsp" />
+									<portlet:param name="filter" value="unread" />
+									<portlet:param name="fullView" value="false" />
+								</portlet:renderURL>
 
-					var target = event.target;
+								userNotificationsList.io.set('uri', '<%= unreadURL %>');
 
-					var handle = Liferay.Data['<portlet:namespace />userNotificationsHandle'];
+								userNotificationsList.io.start();
 
-					if (!target.hasClass('user-notification') && !target.ancestor('.user-notification')) {
-						currentTarget.toggleClass('open');
+								A.io.request('<liferay-portlet:actionURL name="setDelivered" />');
 
-						var menuOpen = currentTarget.hasClass('open');
-
-						if (menuOpen && !handle) {
-							handle = currentTarget.on(
-								'clickoutside',
-								function(event) {
-									Liferay.Data['<portlet:namespace />userNotificationsHandle'] = null;
-
-									handle.detach();
-
-									currentTarget.removeClass('open');
-								}
-							);
+								userNotificationsCount.removeClass('alert');
+							}
 						}
-						else if (handle) {
-							handle.detach();
-
-							handle = null;
-						}
-
-						Liferay.Data['<portlet:namespace />userNotificationsHandle'] = handle;
-
-						if (menuOpen) {
-							<portlet:renderURL var="unreadURL" windowState="<%= LiferayWindowState.EXCLUSIVE.toString() %>">
-								<portlet:param name="mvcPath" value="/notifications/view_entries.jsp" />
-								<portlet:param name="filter" value="unread" />
-								<portlet:param name="fullView" value="false" />
-							</portlet:renderURL>
-
-							userNotificationsList.io.set('uri', '<%= unreadURL %>');
-
-							userNotificationsList.io.start();
-
-							A.io.request('<liferay-portlet:actionURL name="setDelivered" />');
-
-							userNotificationsCount.removeClass('alert');
-						}
-
-					}
+					},
+					content: userNotifications,
+					toggleTouch: true,
+					trigger: '#<portlet:namespace />userNotifications .dropdown-toggle'
 				}
 			);
 
