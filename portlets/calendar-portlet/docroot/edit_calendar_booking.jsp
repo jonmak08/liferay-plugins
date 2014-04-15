@@ -663,9 +663,9 @@ List<Calendar> manageableCalendars = CalendarServiceUtil.search(themeDisplay.get
 			}
 		);
 
-		<liferay-portlet:resourceURL copyCurrentRenderParameters="<%= false %>" id="calendarResources" var="calendarResourcesURL"></liferay-portlet:resourceURL>
-
 		var inviteResourcesInput = A.one('#<portlet:namespace />inviteResource');
+
+		<liferay-portlet:resourceURL copyCurrentRenderParameters="<%= false %>" id="calendarResources" var="calendarResourcesURL"></liferay-portlet:resourceURL>
 
 		Liferay.CalendarUtil.createCalendarsAutoComplete(
 			'<%= calendarResourcesURL %>',
