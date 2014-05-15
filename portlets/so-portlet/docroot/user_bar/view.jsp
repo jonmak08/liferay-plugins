@@ -56,7 +56,7 @@ catch (NoSuchRoleException nsre) {
 			</liferay-portlet:actionURL>
 
 			<a class="so-logo" href="<%= dashboardURL %>">
-				<img alt="<liferay-ui:message key="social-office" /> <liferay-ui:message key="logo" />" height="32" src="<%= PortalUtil.getPathContext(request) + "/user_bar/images/so_logo.png" %>" width="32" />
+				<img alt="<%= HtmlUtil.escapeAttribute(LanguageUtil.get(social-office)) %> <liferay-ui:message key="logo" />" height="32" src="<%= PortalUtil.getPathContext(request) + "/user_bar/images/so_logo.png" %>" width="32" />
 			</a>
 
 			<nav>
@@ -164,7 +164,7 @@ catch (NoSuchRoleException nsre) {
 					else {
 						var navAccountControls = A.one('.nav-account-controls');
 
-						var dividerVertical  = navAccountControls.one('.divider-vertical ');
+						var dividerVertical = navAccountControls.one('.divider-vertical ');
 
 						if (dividerVertical) {
 							navAccountControls.insertBefore(sitesDirectoryString, dividerVertical);
