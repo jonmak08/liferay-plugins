@@ -214,7 +214,7 @@ iteratorURL.setParameter("mbThreadId", String.valueOf(mbThreadId));
 
 								<div class="image-thumbnail">
 									<a href="<%= imageURL %>" title="<%= fileEntry.getTitle() %>">
-										<img alt="<liferay-ui:message key="attachment" />" src="<%= imageURL %>" />
+										<img alt="<%= HtmlUtil.escapeAttribute(LanguageUtil.get(attachment)) %>" src="<%= imageURL %>" />
 									</a>
 								</div>
 
