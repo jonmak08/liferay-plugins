@@ -12,9 +12,6 @@
 	<!-- Nav bar on top -->
 	$theme.include($top_head_include)
 
-	<!-- For the middle-circle -->
-<!-- 	<link rel='stylesheet' id='theme_stylesheet-css'  href='http://wp-themes.com/wp-content/themes/ward/style.css?ver=4.0-alpha-20140630' type='text/css' media='all' /> -->
-
 	<link rel='stylesheet' id='google_fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:300' type='text/css' media='all' />
 	<script type='text/javascript' src='$javascript_folder/jquery-1.11.1.js'></script>
 	<script type='text/javascript' src='$javascript_folder/jquery-migrate-1.2.1.min.js'></script>
