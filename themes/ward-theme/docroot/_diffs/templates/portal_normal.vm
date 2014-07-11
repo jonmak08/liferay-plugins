@@ -19,7 +19,7 @@
 	<script type='text/javascript' src='$javascript_folder/jquery-1.11.1.js'></script>
 	<script type='text/javascript' src='$javascript_folder/jquery-migrate-1.2.1.min.js'></script>
 
-	<style>	.container { max-width: 1200px; } </style>	
+	<style>	.container { max-width: 2000px; } </style>	
 
 </head>
 
@@ -28,134 +28,137 @@
 $theme.include($body_top_include)
 
 <!-- Remove white space -->
+#if ($is_signed_in)
 	<BR><BR>
+#end
 
 
+<div class="">
 
+	<div class="home blog basic custom-body" id="page">
 
-<div class="home blog basic custom-body" id="page">
+		<div id="page">
 
-	<div id="page">
+			<header class="navbar-inverse navbar navbar-fixed-top" role="navigation">
+				#if (!$is_signed_in)
+					<div class="container">
 
-		<header class="navbar-inverse navbar navbar-fixed-top" role="navigation">
-			#if (!$is_signed_in)
-				<div class="container">
-
-					<h1 class="site-title">
-						#if (!$is_signed_in)
-							<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
-						#end 	
-					</h1>
-			
-				</div>			
-			#else
-				#dockbar()
-			#end		
-		</header>
-
-
-		<div class="home-top">
-			<div class="container">
-				<div class="row">
-					<div class="home-jumbotron custom-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">
-						<h1>
-							<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
-								<img alt="$logo_description" height="85" src="$site_logo" width="85" />
-								#if ($show_site_name)
-									<span class="site-name" title="#language_format ("go-to-x", [$site_name])" style="text-decoration:none">
-										$site_name
-									</span>
-								#end	
-							</a>
+						<h1 class="site-title">
+							#if (!$is_signed_in)
+								<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+							#end 	
 						</h1>
+				
+					</div>			
+				#else
+					#dockbar()
+				#end		
+			</header>
 
 
-						<p class="lead">Liferay Portal is a free and open source enterprise portal project written in Java and distributed under the GNU Lesser General Public License and optional commercial license</p>
-						
-						<p class="entry-title">$the_title - $company_name</p>
+			<div class="home-top">
+				<div class="pic-banner">
+					<div class="row">
+						<div class="home-jumbotron custom-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">
+
+							<h1>
+								<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+									<img alt="$logo_description" height="85" src="$site_logo" width="85" />
+									#if ($show_site_name)
+										<span class="site-name" title="#language_format ("go-to-x", [$site_name])" style="text-decoration:none">
+											$site_name
+										</span>
+									#end	
+								</a>
+							</h1>
 
 
-						#if (!$is_signed_in)
-							<a href="$sign_in_url" id="btn-sign-in-off" rel="nofollow">
-								<i class="middle-circle icon-off" style="text-decoration:none; color:#2a556a"></i>
-							</a>
-						#else
-							<a href="$sign_out_url" id="btn-sign-in-on" rel="nofollow"><i class="middle-circle icon-off" style="text-decoration:none;"></i></a>
-						#end
+							<p class="lead">Liferay Portal is a free and open source enterprise portal project written in Java and distributed under the GNU Lesser General Public License and optional commercial license</p>
+							
+							<p class="entry-title">$the_title - $company_name</p>
+
+
+							#if (!$is_signed_in)
+								<a href="$sign_in_url" id="btn-sign-in-off" rel="nofollow">
+									<i class="middle-circle icon-off" style="text-decoration:none; color:#2a556a"></i>
+								</a>
+							#else
+								<a href="$sign_out_url" id="btn-sign-in-on" rel="nofollow"><i class="middle-circle icon-off" style="text-decoration:none;"></i></a>
+							#end
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class = "custom-navigation">
-			#if ($has_navigation || $is_signed_in)
-				#parse ("$full_templates_path/navigation.vm")
-			#end		
-		</div>
-		
+			<div class = "custom-navigation">
+				#if ($has_navigation || $is_signed_in)
+					#parse ("$full_templates_path/navigation.vm")
+				#end		
+			</div>
+			
 
-		<div id="main">
-			<div id="primary" class="body-border">	    
-
-
-				<!-- Portlets -->
-		 		#if ($selectable)
-					$theme.include($content_include)
-				#else
-					$portletDisplay.recycle()
-
-					$portletDisplay.setTitle($the_title)
-
-					$theme.wrapPortlet("portlet.vm", $content_include)
-				#end  
+			<div id="main">
+				<div id="primary" class="body-border">	    
 
 
-				<!-- Web Content utilizing your choice of modules from AlloyUI  -->
-				<article id="datepicker">
-					<div class="container">
-						<div class="row">
+					<!-- Portlets -->
+			 		#if ($selectable)
+						$theme.include($content_include)
+					#else
+						$portletDisplay.recycle()
+
+						$portletDisplay.setTitle($the_title)
+
+						$theme.wrapPortlet("portlet.vm", $content_include)
+					#end  
+
+
+					<!-- Web Content utilizing your choice of modules from AlloyUI  -->
+					<article id="datepicker">
+						<div class="container">
 							
-							<h2 class="entry-title"> AUI: Datepicker              
+							<h1> AUI: Datepicker              
 								<button id="picker-btn" class="btn btn-primary"><i class="icon-calendar icon-white"></i> Select the date</button>	
-							</h2>	
-						
-						</div>
-					</div>
-				</article><!-- datepicker -->
-
-				<article id ="imagecropper">
-					<div class="container">
-
-							<h2 class="entry-title"> AUI: Image cropper              
-								<button id="cropLink" class="btn btn-primary">
-									Crop Image to x: 45, y: 5, width: 390, height: 125
-								</button>	
-							</h2>							
-
-							<div class="layout image-cropper">
-							  <div class="column w50">
-							    <div class="column-content">
-							      <img id="image" src="http://alloyui.com/image-cropper/img/crop-image.jpg" />
-							    </div>
-							  </div>
-							  <div id="cropped-view" class="column w50">
-							    <div class="column-content cropped-output">
-							      <div class="cropped-image helper-hidden" id="croppedImage"></div>
-							      <div class="status helper-hidden" id="status"></div>
-							    </div>
-							  </div>
-							</div>												
-								
+							</h1>	
 							
-					</div>
-				</article>	<!-- image-cropper -->
+						</div>
+					</article><!-- datepicker -->
+
+					<article id ="imagecropper">
+						<div class="container">
+
+								<h1> AUI: Image cropper              
+									<button id="cropLink" class="btn btn-primary">
+										Crop Image to x: 45, y: 5, width: 390, height: 125
+									</button>	
+								</h1>							
+
+								<div class="layout image-cropper">
+								  <div class="column w50">
+								    <div class="column-content">
+								      <img id="image" src="http://alloyui.com/image-cropper/img/crop-image.jpg" />
+								    </div>
+								  </div>
+								  <div id="cropped-view" class="column w50">
+								    <div class="column-content cropped-output">
+								      <div class="cropped-image" id="croppedImage">
+								      	<h1> asdas </h1>
+								      </div>
+								      <div class="status helper-hidden" id="status"></div>
+								    </div>
+								  </div>
+								</div>												
+									
+								
+						</div>
+					</article>	<!-- image-cropper -->
 
 
 
-			</div><!-- #primary -->
-		</div> <!-- end #main -->		
-	</div>	<!-- end #page -->
-	
+				</div><!-- #primary -->
+			</div> <!-- end #main -->		
+		</div>	<!-- end #container -->
+	</div> <!-- end #page -->
 </div>	
 <!-- container-fluid -->
 
