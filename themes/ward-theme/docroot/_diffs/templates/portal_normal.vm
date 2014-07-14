@@ -95,7 +95,88 @@ $theme.include($body_top_include)
 			
 
 			<div id="main">
-				<div id="primary" class="body-border">	    
+				<div id="primary" class="body-border">	 
+
+
+
+				<article id="post-19" class="post-19 post type-post status-publish format-standard hentry category-uncategorized tag-boat tag-lake no-featured-image">
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-md-8 col-sm-12 col-md-offset-2">
+
+						    	<h1 class="entry-title">
+						    		<a href="#" title="Elements" rel="bookmark">Worth A Thousand Words</a>
+								</h1>
+
+								<div class="entry-meta">
+									by <a href="#" title="Posts by Theme Admin" rel="author">Lam Nguyen</a>&nbsp;on&nbsp;<a href="#" class="time"><time class="published updated" datetime="2008-10-17">3 July, 2014</time></a>	
+								</div>
+
+						    	<div class="entry-content">
+						    		<p class="lead">Boat.</p>
+									<p class="more-link-p"><a class="btn btn-danger" href="#">Read more &rarr;</a></p>
+						    	</div><!-- .entry-content -->
+
+						    	<footer class="entry">
+			    				</footer><!-- .entry -->
+							</div>
+						</div>
+					</div>				
+				</article><!-- #post-19 -->
+		
+
+				<article id="post-36" class="post-36 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
+					<div class="container">
+						<div class="row">
+							
+							<div class="col-md-8 col-sm-12 col-md-offset-2">
+
+					    		<h1 class="entry-title">
+									<a href="#" title="Elements" rel="bookmark">Elements</a>
+								</h1>
+
+								<div class="entry-meta">
+									by <a href="#" title="Posts by Theme Admin" rel="author">Theme Admin</a>&nbsp;on&nbsp;<a href="#" class="time"><time class="published updated" datetime="2008-09-05">5 September, 2008</time></a>	
+								</div>
+
+					    		<div class="entry-content">
+						    		<p class="lead">The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site. Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 [top] Paragraph Lorem ipsum dolor sit amet...</p>
+									<p class="more-link-p"><a class="btn btn-danger" href="#">Read more &rarr;</a></p>
+					    		</div><!-- .entry-content -->
+					    		<footer class="entry">
+		    					</footer><!-- .entry -->
+							</div>
+						</div>
+					</div>
+				</article><!-- #post-36 -->
+
+
+				<article id="post-14" class="post-14 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
+					<div class="container">
+						<div class="row">
+									
+							<div class="col-md-8 col-sm-12 col-md-offset-2">
+
+						    	<h1 class="entry-title">
+									<a href="#" title="More Tags" rel="bookmark">More Tags</a>
+								</h1>
+
+								<div class="entry-meta">
+									by <a href="#" title="Posts by Theme Admin" rel="author">Theme Admin</a>&nbsp;on&nbsp;<a href="#" class="time"><time class="published updated" datetime="2008-06-21">21 June, 2008</time></a>&nbsp;&bull;&nbsp;<a href="#" title="Comment on More Tags">0 Comments</a>	
+								</div>
+
+								<div class="entry-content">
+									<p class="lead">More of these posts need tags.</p>
+									<p class="more-link-p"><a class="btn btn-danger" href="#">Read more &rarr;</a></p>
+								</div><!-- .entry-content -->
+
+								<footer class="entry">
+					    		</footer><!-- .entry -->
+							</div>
+						</div>
+					</div>
+				</article><!-- #post-14 -->
 
 
 					<!-- Portlets -->
@@ -111,46 +192,43 @@ $theme.include($body_top_include)
 
 
 					<!-- Web Content utilizing your choice of modules from AlloyUI  -->
-					<article id="datepicker">
+					<article id="date-picker">
 						<div class="container">
 							
-							<h1> AUI: Datepicker              
-								<button id="picker-btn" class="btn btn-primary"><i class="icon-calendar icon-white"></i> Select the date</button>	
-							</h1>	
-							
+							<h1> AUI: Datepicker     
+<!-- 								<button id="picker-btn" class="btn btn-primary"><i class="icon-calendar icon-white"></i> Select the date</button>  --> 
+								<input id='input-datepicker' class="btn-danger" type="button" placeholder="Day, Mon dd, yyyy" value="Select the date">								
+							</h1>	 
+
 						</div>
 					</article><!-- datepicker -->
 
 					<article id ="imagecropper">
 						<div class="container">
 
-								<h1> AUI: Image cropper              
-									<button id="cropLink" class="btn btn-primary">
-										Crop Image to x: 45, y: 5, width: 390, height: 125
-									</button>	
-								</h1>							
+							<h1> AUI: Image cropper              
+								<button id="cropLink" class="btn btn-primary">
+									Crop Image to x: 45, y: 5, width: 390, height: 125
+								</button>	
+							</h1>							
 
-								<div class="layout image-cropper">
-								  <div class="column w50">
-								    <div class="column-content">
-								      <img id="image" src="http://alloyui.com/image-cropper/img/crop-image.jpg" />
-								    </div>
-								  </div>
-								  <div id="cropped-view" class="column w50">
-								    <div class="column-content cropped-output">
-								      <div class="cropped-image" id="croppedImage">
-								      	<h1> asdas </h1>
-								      </div>
-								      <div class="status helper-hidden" id="status"></div>
-								    </div>
-								  </div>
-								</div>												
-									
-								
+							<div class="layout image-cropper">
+
+							  <div class="column w50">
+							    <div class="column-content"><img id="image" src="$images_folder/crop-image.jpg" /></div>
+							  </div>
+
+							  <div id="cropped-view" class="column w50">
+							    <div class="column-content cropped-output">
+							      <div class="cropped-image" id="croppedImage"></div>
+							      <div class="status helper-hidden" id="status"></div>
+							    </div> <!-- end #column-content -->
+							  </div> <!-- end #column w50 -->
+
+							</div>	<!-- end layout image-cropper -->
+
 						</div>
 					</article>	<!-- image-cropper -->
-
-
 
 				</div><!-- #primary -->
 			</div> <!-- end #main -->		

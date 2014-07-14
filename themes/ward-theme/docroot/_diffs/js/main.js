@@ -1,40 +1,60 @@
 AUI().ready(
-	'liferay-hudcrumbs', 'liferay-navigation-interaction', 'liferay-sign-in-modal',
-	function(A) {
-		var navigation = A.one('#navigation');
+  'liferay-hudcrumbs', 'liferay-navigation-interaction', 'liferay-sign-in-modal',
+  function(A) {
+    var navigation = A.one('#navigation');
 
-		if (navigation) {
-			navigation.plug(Liferay.NavigationInteraction);
-		}
+    if (navigation) {
+      navigation.plug(Liferay.NavigationInteraction);
+    }
 
-		var siteBreadcrumbs = A.one('#breadcrumbs');
+    var siteBreadcrumbs = A.one('#breadcrumbs');
 
-		if (siteBreadcrumbs) {
-			siteBreadcrumbs.plug(A.Hudcrumbs);
-		}
+    if (siteBreadcrumbs) {
+      siteBreadcrumbs.plug(A.Hudcrumbs);
+    }
 
-		var signIn = A.one('li.sign-in a');
+    var signIn = A.one('li.sign-in a');
 
-		if (signIn && signIn.getData('redirect') !== 'true') {
-			signIn.plug(Liferay.SignInModal);
-		}
-	}
+    if (signIn && signIn.getData('redirect') !== 'true') {
+      signIn.plug(Liferay.SignInModal);
+    }
+  }
 );
 
 // Date picker
-YUI().use(
+YUI({ lang: 'en' }).use(
   'aui-datepicker',
   function(Y) {
-    new Y.DatePicker(
+    var datepicker = new Y.DatePicker(
       {
-        trigger: '#picker-btn',
+        trigger: '#input-datepicker',
+        // trigger: '#picker-btn',
+        mask: '%a, %b %d, %Y',
         popover: {
+          toolbars: {
+            header: [[
+              {
+                icon:'icon-trash',
+                label: 'Clear',
+                on: {
+                  click: function() {
+                    datepicker.clearSelection();
+                  }
+                }
+              },
+              {
+                icon:'icon-globe',
+                label: 'Travel date',
+                on: {
+                  click: function() {
+                    datepicker.clearSelection();
+                    datepicker.selectDates(new Date());
+                  }
+                }
+              }
+            ]]
+          },
           zIndex: 1
-        },
-        on: {
-          selectionChange: function(event) {
-            console.log(event.newSelection)
-          }
         }
       }
     );

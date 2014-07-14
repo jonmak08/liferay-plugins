@@ -7513,11 +7513,12 @@ body.page .entry-title {
 }
 .basic .entry-title, .basic .entry-title a {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 50px;
 }
 
 .entry-meta {
   font-size: 14px;
-  line-height: 1;
+  line-height: 3;
   margin: 10px 0 30px;
 }
 .single .entry-meta {
@@ -8456,7 +8457,7 @@ a img.aligncenter {
 }
 
 #image {
-  width: 500px;
+/*  width: 500px;*/
 }
 
 .image-cropper {
@@ -8528,4 +8529,8 @@ a img.aligncenter {
 .height {
   top: 100%;
   left: 100%;
+}
+
+.custom-prg {
+  padding-left: 600px;
 }
