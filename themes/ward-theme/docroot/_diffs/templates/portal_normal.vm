@@ -23,12 +23,12 @@
 <body class="$css_class">
 
 $theme.include($body_top_include)
-
-<!-- Remove white space -->
-#if ($is_signed_in)
-	<BR><BR>
-#end
-
+<div class="navbar-inverse navbar navbar-fixed-top dockbar" role="navigation">
+	#if (!$is_signed_in)		
+	#else
+		#dockbar()
+	#end	
+</div>
 
 <div class="">
 
@@ -36,147 +36,59 @@ $theme.include($body_top_include)
 
 		<div id="page">
 
-			<header class="navbar-inverse navbar navbar-fixed-top" role="navigation">
-				#if (!$is_signed_in)
-					<div class="container">
+			<header id="banner">
 
-						<h1 class="site-title">
-							#if (!$is_signed_in)
-								<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
-							#end 	
-						</h1>
-				
-					</div>			
-				#else
-					#dockbar()
-				#end		
+				<div class = "custom-navigation">
+					<h1 class="site-title" id="custom-site-logo">
+						<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+							<img alt="$logo_description" height="65" src="$site_logo" width="65" />
+							#if ($show_site_name)
+								<span class="site-name" title="#language_format ("go-to-x", [$site_name])" style="text-decoration:none">
+									$site_name
+								</span>
+							#end	
+						</a>
+					</h1>
+					<h4>
+						#if ($has_navigation || $is_signed_in)
+							#parse ("$full_templates_path/navigation.vm")
+						#end
+					</h4>
+				</div>
+
 			</header>
 
 
 			<div class="home-top">
 				<div class="pic-banner">
 					<div class="row">
-						<div class="home-jumbotron custom-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">
 
-							<h1>
-								<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
-									<img alt="$logo_description" height="85" src="$site_logo" width="85" />
-									#if ($show_site_name)
-										<span class="site-name" title="#language_format ("go-to-x", [$site_name])" style="text-decoration:none">
-											$site_name
-										</span>
-									#end	
-								</a>
-							</h1>
+						<div class="home-jumbotron custom-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">		
+
+							<div class="container ">
+								<h1>$company_name - $the_title</h1>
+								<p class="lead">Got something important to say? Then make it stand out by using the jumbo headline option and get your visitor's attention right away.</p>
+								
+								<!-- <p class="entry-title">$the_title - $company_name</p> -->
 
 
-							<p class="lead">Liferay Portal is a free and open source enterprise portal project written in Java and distributed under the GNU Lesser General Public License and optional commercial license</p>
-							
-							<p class="entry-title">$the_title - $company_name</p>
+								#if (!$is_signed_in)
+									<a href="$sign_in_url" id="btn-sign-in-off" rel="nofollow">
+										<i class="middle-circle icon-off" style="text-decoration:none; color:#2a556a"></i>
+									</a>
+								#else
+									<a href="$sign_out_url" id="btn-sign-in-on" rel="nofollow"><i class="middle-circle icon-off" style="text-decoration:none;"></i></a>
+								#end
+							</div> <!-- end container -->
 
-
-							#if (!$is_signed_in)
-								<a href="$sign_in_url" id="btn-sign-in-off" rel="nofollow">
-									<i class="middle-circle icon-off" style="text-decoration:none; color:#2a556a"></i>
-								</a>
-							#else
-								<a href="$sign_out_url" id="btn-sign-in-on" rel="nofollow"><i class="middle-circle icon-off" style="text-decoration:none;"></i></a>
-							#end
 						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class = "custom-navigation">
-				#if ($has_navigation || $is_signed_in)
-					#parse ("$full_templates_path/navigation.vm")
-				#end		
-			</div>
-			
+			</div>			
 
 			<div id="main">
 				<div id="primary" class="body-border">	 
 
-
-
-				<article id="post-19" class="post-19 post type-post status-publish format-standard hentry category-uncategorized tag-boat tag-lake no-featured-image">
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-md-8 col-sm-12 col-md-offset-2">
-
-						    	<h1 class="entry-title">
-						    		<a href="#" title="Elements" rel="bookmark">Worth A Thousand Words</a>
-								</h1>
-
-								<div class="entry-meta">
-									by <a href="#" title="Posts by Theme Admin" rel="author">Lam Nguyen</a>&nbsp;on&nbsp;<a href="#" class="time"><time class="published updated" datetime="2008-10-17">3 July, 2014</time></a>	
-								</div>
-
-						    	<div class="entry-content">
-						    		<p class="lead">Boat.</p>
-									<p class="more-link-p"><a class="btn btn-danger" href="#">Read more &rarr;</a></p>
-						    	</div><!-- .entry-content -->
-
-						    	<footer class="entry">
-			    				</footer><!-- .entry -->
-							</div>
-						</div>
-					</div>				
-				</article><!-- #post-19 -->
-		
-
-				<article id="post-36" class="post-36 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
-					<div class="container">
-						<div class="row">
-							
-							<div class="col-md-8 col-sm-12 col-md-offset-2">
-
-					    		<h1 class="entry-title">
-									<a href="#" title="Elements" rel="bookmark">Elements</a>
-								</h1>
-
-								<div class="entry-meta">
-									by <a href="#" title="Posts by Theme Admin" rel="author">Theme Admin</a>&nbsp;on&nbsp;<a href="#" class="time"><time class="published updated" datetime="2008-09-05">5 September, 2008</time></a>	
-								</div>
-
-					    		<div class="entry-content">
-						    		<p class="lead">The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site. Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 [top] Paragraph Lorem ipsum dolor sit amet...</p>
-									<p class="more-link-p"><a class="btn btn-danger" href="#">Read more &rarr;</a></p>
-					    		</div><!-- .entry-content -->
-					    		<footer class="entry">
-		    					</footer><!-- .entry -->
-							</div>
-						</div>
-					</div>
-				</article><!-- #post-36 -->
-
-
-				<article id="post-14" class="post-14 post type-post status-publish format-standard hentry category-uncategorized no-featured-image">
-					<div class="container">
-						<div class="row">
-									
-							<div class="col-md-8 col-sm-12 col-md-offset-2">
-
-						    	<h1 class="entry-title">
-									<a href="#" title="More Tags" rel="bookmark">More Tags</a>
-								</h1>
-
-								<div class="entry-meta">
-									by <a href="#" title="Posts by Theme Admin" rel="author">Theme Admin</a>&nbsp;on&nbsp;<a href="#" class="time"><time class="published updated" datetime="2008-06-21">21 June, 2008</time></a>&nbsp;&bull;&nbsp;<a href="#" title="Comment on More Tags">0 Comments</a>	
-								</div>
-
-								<div class="entry-content">
-									<p class="lead">More of these posts need tags.</p>
-									<p class="more-link-p"><a class="btn btn-danger" href="#">Read more &rarr;</a></p>
-								</div><!-- .entry-content -->
-
-								<footer class="entry">
-					    		</footer><!-- .entry -->
-							</div>
-						</div>
-					</div>
-				</article><!-- #post-14 -->
 
 
 					<!-- Portlets -->
@@ -190,45 +102,6 @@ $theme.include($body_top_include)
 						$theme.wrapPortlet("portlet.vm", $content_include)
 					#end  
 
-
-					<!-- Web Content utilizing your choice of modules from AlloyUI  -->
-					<article id="date-picker">
-						<div class="container">
-							
-							<h1> AUI: Datepicker     
-<!-- 								<button id="picker-btn" class="btn btn-primary"><i class="icon-calendar icon-white"></i> Select the date</button>  --> 
-								<input id='input-datepicker' class="btn-danger" type="button" placeholder="Day, Mon dd, yyyy" value="Select the date">								
-							</h1>	 
-
-						</div>
-					</article><!-- datepicker -->
-
-					<article id ="imagecropper">
-						<div class="container">
-
-							<h1> AUI: Image cropper              
-								<button id="cropLink" class="btn btn-primary">
-									Crop Image to x: 45, y: 5, width: 390, height: 125
-								</button>	
-							</h1>							
-
-							<div class="layout image-cropper">
-
-							  <div class="column w50">
-							    <div class="column-content"><img id="image" src="$images_folder/crop-image.jpg" /></div>
-							  </div>
-
-							  <div id="cropped-view" class="column w50">
-							    <div class="column-content cropped-output">
-							      <div class="cropped-image" id="croppedImage"></div>
-							      <div class="status helper-hidden" id="status"></div>
-							    </div> <!-- end #column-content -->
-							  </div> <!-- end #column w50 -->
-
-							</div>	<!-- end layout image-cropper -->
-
-						</div>
-					</article>	<!-- image-cropper -->
 
 				</div><!-- #primary -->
 			</div> <!-- end #main -->		
@@ -250,9 +123,23 @@ $theme.include($body_top_include)
 				<span class="pull-left">Copyright &copy; 2014  <a href="http://liferay.com">Liferay Inc.</a>. All Rights Reserved.</span>
 				<span class="credit-link pull-right"><i class="icon-leaf"></i>Ward-Theme-Project by Lam Nguyen.</span>
 			</div><!-- .col-lg-12 -->
+
+			<p class="site-title">
+				#if (!$is_signed_in)
+					<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+				#end 	
+			</p>
+
 		</div><!-- .row -->
 	</div><!-- #footer-content.container -->
 </footer><!-- #footer -->
+
+
+<div class="scroll-top-wrapper ">
+    <span class="scroll-top-inner">
+		<p><large><i class="icon-circle-arrow-up"></i></large></p>
+    </span>
+</div>
 
 
 $theme.include($body_bottom_include)
