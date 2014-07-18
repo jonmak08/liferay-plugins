@@ -38,6 +38,8 @@ $theme.include($body_top_include)
 
 			<header id="banner">
 
+
+
 				<div class = "custom-navigation">
 					<h1 class="site-title" id="custom-site-logo">
 						<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
@@ -54,6 +56,7 @@ $theme.include($body_top_include)
 							#parse ("$full_templates_path/navigation.vm")
 						#end
 					</h4>
+
 				</div>
 
 			</header>
@@ -68,8 +71,17 @@ $theme.include($body_top_include)
 							<div class="container ">
 								<h1>$company_name - $the_title</h1>
 								<p class="lead">Got something important to say? Then make it stand out by using the jumbo headline option and get your visitor's attention right away.</p>
+
 								
-								<!-- <p class="entry-title">$the_title - $company_name</p> -->
+								<div id="myCarousel">
+								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/1.jpg);"></div>
+								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/2.jpg);"></div>
+								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/3.jpg);"></div>
+								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/4.jpg);"></div>
+								</div>
+
+
+								<div id="myTab"></div>
 
 
 								#if (!$is_signed_in)

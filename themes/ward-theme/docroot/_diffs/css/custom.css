@@ -16,6 +16,13 @@ $default-box-shadow-v-offset: 1px;
     position: absolute;
   }
 
+  table {
+    max-width: 1200px;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+
   body {
     background: url(../images/custom/background.png) 0 0;
     font: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -28,6 +35,9 @@ $default-box-shadow-v-offset: 1px;
     &.portal-popup {
       background-image: none;
       border-top-width: 0;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
 
       #content #main-content {
         margin-top: 0;
@@ -288,81 +298,7 @@ $default-box-shadow-v-offset: 1px;
     padding-bottom: 20px;
   }
 
-  /* ---------- Carousel ---------- */
 
-  .carousel-container {
-    background: #1D1D1B;
-    margin-bottom: 25px;
-
-    #carousel {
-      margin-left: 287px;
-
-      .carousel-item {
-        text-indent: -9999px;
-      }
-    }
-
-    #tabs {
-      display: inline-block;
-      float: left;
-      left: 0;
-      list-style: none;
-      margin: 0;
-      position: absolute;
-      top: 0;
-      width: 287px;
-      z-index: 4;
-
-      .tab-item {
-        background-color: none;
-        color: #C2C2C2;
-        cursor: pointer;
-        height: 30px;
-        margin: 0 5px;
-        padding: 20px 0 20px 15px;
-        position: relative;
-        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-        width: 277px;
-        z-index: 2;
-
-        &.first {
-          margin-top: 5px;
-        }
-
-        &.last {
-          margin-bottom: 5px;
-        }
-
-        .carousel-menu-index .carousel-menu-active {
-          color: #EBEBEB;
-        }
-
-        .icon {
-          float: left;
-          margin: 4px 15px 0 0;
-        }
-
-        h4 {
-          margin: 0;
-          padding: 0;
-          text-transform: uppercase;
-        }
-      }
-
-      .divider {
-        background: url(../images/custom/separator.png) repeat-x 0 0;
-        display: block;
-        height: 2px;
-        margin: 5px 10px 3px;
-        width: 268px;
-      }
-    }
-  }
-
-  .carousel-menu-active {
-    background: url(../images/custom/tabwarrow.png) no-repeat 0 0;
-    color: #C2C2C2;
-  }
 
   /* ---------- Pod ---------- */
 
@@ -964,6 +900,18 @@ table {
     border: 1px solid #ddd !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+/*
 *,
 *:before,
 *:after {
@@ -1003,7 +951,7 @@ a:hover,
 a:focus {
   color: #2a6496;
   text-decoration: underline;
-}
+}*/
 
 a:focus {
   outline: thin dotted #333;
@@ -1041,6 +989,11 @@ img {
 .img-circle {
   border-radius: 50%;
 }
+
+
+
+
+
 
 hr {
   margin-top: 20px;
@@ -1483,30 +1436,6 @@ pre code {
   clear: both;
 }
 
-.row {
-/*  margin-right: -15px;
-  margin-left: -15px;*/
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
-}
-
-.row:before,
-.row:after {
-  display: table;
-  content: " ";
-}
-
-.row:after {
-  clear: both;
-}
 
 .col-xs-1,
 .col-sm-1,
@@ -6386,181 +6315,6 @@ button.close {
   content: " ";
 }
 
-.carousel {
-  position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-inner > .item {
-  position: relative;
-  display: none;
-  -webkit-transition: 0.6s ease-in-out left;
-  transition: 0.6s ease-in-out left;
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-  line-height: 1;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  display: block;
-}
-
-.carousel-inner > .active {
-  left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.carousel-inner > .next {
-  left: 100%;
-}
-
-.carousel-inner > .prev {
-  left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-  left: 0;
-}
-
-.carousel-inner > .active.left {
-  left: -100%;
-}
-
-.carousel-inner > .active.right {
-  left: 100%;
-}
-
-.carousel-control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 5%;
-  font-size: 40px;
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-
-.carousel-control.right {
-  left: auto;
-  right: 0;
-}
-
-.carousel-control span {
-  position: absolute;
-  top: 50%;
-  margin-top: -20px;
-  z-index: 5;
-  display: inline-block;
-}
-
-.carousel-control:hover {
-  color: #fff;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-}
-
-.carousel-control.left span {
-  left: 50%;
-}
-
-.carousel-control.right span {
-  right: 50%;
-}
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  padding-left: 0;
-  margin-left: -30%;
-  text-align: center;
-  list-style: none;
-}
-
-.carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #000 \9;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-}
-
-.carousel-indicators .active {
-  width: 12px;
-  height: 12px;
-  margin: 0;
-  background-color: #ffffff;
-}
-
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-
-.carousel-caption .btn {
-  text-shadow: none;
-}
-
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicons-chevron-left,
-  .carousel-control .glyphicons-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    margin-left: -15px;
-    font-size: 30px;
-  }
-
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
-  }
-
-  .carousel-indicators {
-    bottom: 20px;
-  }
-}
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -8627,7 +8381,6 @@ By: Lam Nguyen*/
 
 #custom-site-logo {
   padding-top: 4px;
-  padding-bottom: 12px;
   position: absolute;
   background-color: #204377;
   height: 75px;
@@ -8646,3 +8399,13 @@ nav > ul > li > a {
 nav > ul > li:hover {
   background-color: #282c2f;
 /*  -webkit-border-radius: 5px; */}
+
+.input-localized .input-localized-content {
+  margin-left: 6px;
+  max-width: 100px;
+}
+
+#myCarousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
