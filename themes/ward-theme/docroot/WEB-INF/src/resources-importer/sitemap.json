@@ -1,22 +1,23 @@
 {
-	"layoutTemplateId": "1_3_1_columns",
+	"layoutTemplateId": "1_2_1_columns",
 	"privatePages": [
 		{
 			"columns": [
 				[
 					"Home Carousel.xml"
+				],			
+				[					
+					"Home Tabview.xml"				
 				],
-				[
-					"How Do We Do It.xml"
+				[		
+					{			
+						"portletId": "47"					
+					}
 				],
-				[
-					"Our Strategy.xml"
-				],
-				[
-					"Our Achievements.xml"
-				],
-				[
-					"Banner 1.xml"
+				[		
+					{			
+						"portletId": "73"					
+					}
 				]
 			],
 			"friendlyURL": "/home",
@@ -25,35 +26,59 @@
 		},
 		{
 			"columns": [
-				[
-					"Who We Are.xml"
+				[		
+					{			
+						"portletId": "2"					
+					}
 				],
-				[
-					"Download Pod.xml"
+				[		
+					{			
+						"portletId": "16"					
+					}
 				],
-				[
-					"Innovating For Over 30 Years.xml"
-				]
+				[		
+					{			
+						"portletId": "82"					
+					}
+				],
+				[		
+					{			
+						"portletId": "70"					
+					}
+				],
+				[		
+					{			
+						"portletId": "85"					
+					}
+				]					
 			],
-			"friendlyURL": "/about",
+			"friendlyURL": "/pagetwo",
 			"layoutTemplateId": "2_1_2_columns",
-			"name": "About",
-			"title": "About"
+			"name": "pageTwo",
+			"title": "pageTwo"
 		},
 		{
-			"friendlyURL": "/pricing",
-			"name": "Pricing",
-			"title": "Pricing"
-		},
-		{
-			"friendlyURL": "/support",
-			"name": "Support",
-			"title": "Support"
-		},
-		{
-			"friendlyURL": "/contact",
-			"name": "Contact",
-			"title": "Contact"
-		}
+			"columns": [
+				[					
+					{
+						"portletId": "58"	
+					}				
+				],
+				[		
+					{			
+						"portletId": "47"					
+					}
+				],
+				[		
+					{			
+						"portletId": "73"					
+					}
+				]
+			],			
+			"friendlyURL": "/pagethree",
+			"layoutTemplateId": "1_columns",
+			"name": "pageThree",
+			"title": "pageThree"
+		}		
 	]
 }

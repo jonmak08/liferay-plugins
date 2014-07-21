@@ -1,0 +1,56 @@
+<style type="text/css">
+    .nav-stacked > li {
+        width: 90%; 
+    }
+    
+    .tab-label {
+        text-align: center;
+    }
+    
+    .tab-content {
+        padding: 15px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-top: 1;
+    }
+    
+</style>
+
+<div id="myTab">
+#if (!$label.getSiblings().isEmpty())    
+    <ul class="nav nav-tabs">
+        #foreach ($cur_label in $label.getSiblings())
+            <li><a href="#tab-2">$cur_label.getData()</a></li>
+        #end
+    </ul>
+
+    <div class="tab-content">
+        #foreach ($cur_label in $label.getSiblings())
+            <div id="tab-2">
+              <p>$cur_label.getChild('content').getData()</p>
+            </div>
+        #end
+    </div>
+#end
+</div>
+
+<script type="text/javascript">
+    YUI().use(
+      'aui-tabview',
+      function(Y) {
+           
+            var ifStacked = false;
+            if ('$stackedTabs.getData()' == 'true') {
+              var ifStacked = true;
+            }
+            
+            new Y.TabView(
+              { 
+                srcNode: '#myTab',
+                type: $type.getData()[0],
+                stacked: ifStacked
+              }
+            ).render();
+      }
+    );
+</script>

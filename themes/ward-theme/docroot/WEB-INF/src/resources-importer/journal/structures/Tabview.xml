@@ -1,0 +1,69 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" name="type" readOnly="false" repeatable="false" required="false" showLabel="true" type="radio" width="">
+		<dynamic-element name="option14942" type="option" value="default">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Default style]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option14943" type="option" value="pills">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Pills style]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Tab Type]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["default"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Type of tabview]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="keyword" name="stackedTabs" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Stacked Tabview format]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[true]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Stacked tabview]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="label" readOnly="false" repeatable="true" required="true" showLabel="true" type="text" width="small">
+		<dynamic-element dataType="string" indexType="keyword" name="content" readOnly="false" repeatable="false" required="true" showLabel="true" type="textarea" width="large">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Content]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[This is the message for the current tab]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Message for the tab]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Label]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[Tab #1]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[ex: Tab#1]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
