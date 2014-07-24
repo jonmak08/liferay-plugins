@@ -31,8 +31,17 @@ var z = 0;
   colDatas[z++] = "${i}";
 #end
 
+
+// look for columns has the most items
+var lengthArr = [];
+for (var i=0; i<columns.length; i++) {
+    lengthArr[i] = colDatas[i].split(',').length;
+}
+lengthArr.sort(function(a, b){return b-a}); // find largest value
+var rowCount = lengthArr[0]; // set number of rows
+
+// write data to table
 var data = [];
-var rowCount = colDatas[0].split(',').length;
 for (var i = 0; i < rowCount; ++i) { // rows 
     var tempObj = {};
     for (var j = 0; j < columns.length; ++j) { // columns
