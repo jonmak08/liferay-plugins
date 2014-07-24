@@ -3,15 +3,19 @@
         width: 90%; 
     }
     
-    .tab-label {
-        text-align: center;
-    }
+    .nav {margin-bottom: 0px;}    
+    
+    .tab-label {text-align: center;}
+    
+    .nav-tabs > li > a {background-color: inherit;}
+    
+    .nav-tabs:not(.nav-pills) > li.active > a {
+      background-color: #f7f7f7;
+    }    
     
     .tab-content {
-        padding: 15px;
-        background: #fff;
-        border: 1px solid #ddd;
-        border-top: 1;
+        background: inherit;
+        border-top: 0;
     }
     
 </style>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="col_attr" index="0" type="text" index-type="keyword">
+		<dynamic-element name="values" index="0" type="text_box" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[1236 Some Street,3271 Another Ave,9996 Random Road,1623 Some Street,9899 Random Road]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[address]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="col_attr" index="1" type="text" index-type="keyword">
+		<dynamic-element name="values" index="0" type="text_box" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[San Francisco,New York,Los Angeles,San Francisco,Los Angeles]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[city]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="col_attr" index="2" type="text" index-type="keyword">
+		<dynamic-element name="values" index="0" type="text_box" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[John A. Smith,Joan B. Jones,Bob C. Uncle,John D. Smith,Bob F. Uncle]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[name]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="col_attr" index="3" type="text" index-type="keyword">
+		<dynamic-element name="values" index="0" type="text_box" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[CA,NY,AZ,NV,CA]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[state]]></dynamic-content>
+	</dynamic-element>
+</root>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.0+</version>
+	</compatibility>
+	<theme id="ward" name="Ward">
+
+		<settings>
+
+			<!-- Settings for Jumbo Header texts -->
+			<setting configurable="true"
+		             key="Jumbo Headline"
+		             type="textarea"
+		             value="Jumbo Headline"
+		    />
+		    <setting configurable="true"
+		             key="display-jumboheadline"
+		             type="checkbox"
+		             value="true"
+		    />
+		    <setting configurable="true"
+		             key="Sub Headline"
+		             type="textarea"
+		             value="Got something important to say? Then make it stand out by using the jumbo headline option and get your visitor's attention right away."
+		    />
+		    <setting configurable="true"
+		             key="display-sub-headline"
+		             type="checkbox"
+		             value="true"
+		    />
+
+
+		    <!-- Settings for footer texts -->
+			<setting configurable="true"
+		             key="Left footer text"
+		             type="textarea"
+		             value="Copyright &amp;copy; 2014  &lt;a href=&quot;http://liferay.com&quot;&gt;Liferay Inc.&lt;/a&gt; All Rights Reserved."
+		    />
+		    <setting configurable="true"
+		             key="display-left-footer-text"
+		             type="checkbox"
+		             value="true"
+		    />
+		    <setting configurable="true"
+		             key="Right footer text"
+		             type="textarea"
+		             value="Ward-Theme-Project by Lam Nguyen."
+		    />
+		    <setting configurable="true"
+		             key="display-right-footer-text"
+		             type="checkbox"
+		             value="true"
+		    />
+
+
+		    <!-- Toggle for turning on/off portlet borders and id -->
+			<setting configurable="true"
+			         key="portlet-setup-show-borders-default"
+			         type="checkbox"
+			         value="true"
+    		/>
+
+		</settings>
+
+    </theme>
+</look-and-feel>

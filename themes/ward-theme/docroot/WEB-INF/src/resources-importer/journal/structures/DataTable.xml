@@ -1,0 +1,29 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" name="col_attr" readOnly="false" repeatable="true" required="true" showLabel="true" type="text" width="small">
+		<dynamic-element dataType="string" indexType="keyword" name="values" readOnly="false" repeatable="false" required="false" showLabel="true" type="textarea" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Values]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[CA,NY,AZ,NV]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Separate items by commas without space. Ex: item_1,item_2,item_3]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Column Attributes]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[state]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[ex: Name,Address,City]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

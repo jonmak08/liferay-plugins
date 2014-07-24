@@ -1,0 +1,58 @@
+<div id="myDataTable">
+
+#set($col = [])         
+#set($colData = [])     
+
+#if (!$col_attr.getSiblings().isEmpty())
+  #foreach ($item in $col_attr.getSiblings())
+  
+      <$col.add($item.getData())>  ## get columns array
+      <$colData.add($item.getChild('values').getData())> ## get column datas array
+  
+  #end
+#end
+
+</div>
+
+
+<script type="text/javascript">
+
+// get columns
+var columns = new Array();
+var k = 0;
+#foreach($i in $col)
+  columns[k++] = "${i}";
+#end
+
+// get datas
+var colDatas = new Array();
+var z = 0;
+#foreach($i in $colData)
+  colDatas[z++] = "${i}";
+#end
+
+var data = [];
+var rowCount = colDatas[0].split(',').length;
+for (var i = 0; i < rowCount; ++i) { // rows 
+    var tempObj = {};
+    for (var j = 0; j < columns.length; ++j) { // columns
+        tempObj[columns[j]] = colDatas[j].split(',')[i];
+    }
+    data.push(tempObj);
+}
+
+YUI().use(
+  'aui-datatable',
+  
+  function(Y) {
+
+    new Y.DataTable.Base(
+      {
+        columnset: columns,
+        recordset: data
+      }
+    ).render('#myDataTable');
+  }
+);
+        
+</script>

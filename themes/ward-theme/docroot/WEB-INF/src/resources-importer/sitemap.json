@@ -7,12 +7,10 @@
 					"Home Carousel.xml"
 				],			
 				[					
-					"Home Tabview.xml"				
+					"Home DataTable.xml"				
 				],
-				[		
-					{			
-						"portletId": "47"					
-					}
+				[					
+					"Home Tabview.xml"				
 				],
 				[		
 					{			

@@ -30,98 +30,74 @@ $theme.include($body_top_include)
 	#end	
 </div>
 
-<div class="">
+<div class="home blog basic custom-body" id="page">
+	<header id="banner">
+		<div class = "custom-navigation">
+			<h1 class="site-title" id="custom-site-logo">
+				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+					<img alt="$logo_description" height="65" src="$site_logo" width="65" />
+					#if ($show_site_name)
+						<span class="site-name" title="#language_format ("go-to-x", [$site_name])" style="text-decoration:none">
+							$site_name
+						</span>
+					#end	
+				</a>
+			</h1>
+			<h4>
+				#if ($has_navigation || $is_signed_in)
+					#parse ("$full_templates_path/navigation.vm")
+				#end
+			</h4>
+		</div> <!-- end #custom-navigation -->
+	</header>
 
-	<div class="home blog basic custom-body" id="page">
 
-		<div id="page">
+	<div class="home-top">
+		<div class="row">
 
-			<header id="banner">
+			<div class="home-jumbotron custom-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">		
 
+				<div class="container ">
 
+					#if($theme.getSetting("display-jumboheadline") == true)
+						<h1>$theme.getSetting("Jumbo Headline")</h1>
+					#end	
 
-				<div class = "custom-navigation">
-					<h1 class="site-title" id="custom-site-logo">
-						<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
-							<img alt="$logo_description" height="65" src="$site_logo" width="65" />
-							#if ($show_site_name)
-								<span class="site-name" title="#language_format ("go-to-x", [$site_name])" style="text-decoration:none">
-									$site_name
-								</span>
-							#end	
+					#if($theme.getSetting("display-sub-headline") == true)
+						<p class="lead">$theme.getSetting("Sub Headline")</p>
+					#end
+					
+					#if (!$is_signed_in)
+						<a href="$sign_in_url" id="btn-sign-in-off" rel="nofollow">
+							<i class="middle-circle icon-off" style="text-decoration:none; color:#2a556a"></i>
 						</a>
-					</h1>
-					<h4>
-						#if ($has_navigation || $is_signed_in)
-							#parse ("$full_templates_path/navigation.vm")
-						#end
-					</h4>
-
-				</div>
-
-			</header>
-
-
-			<div class="home-top">
-				<div class="pic-banner">
-					<div class="row">
-
-						<div class="home-jumbotron custom-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">		
-
-							<div class="container ">
-								<h1>$company_name - $the_title</h1>
-								<p class="lead">Got something important to say? Then make it stand out by using the jumbo headline option and get your visitor's attention right away.</p>
-
-								
-								<div id="myCarousel">
-								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/1.jpg);"></div>
-								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/2.jpg);"></div>
-								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/3.jpg);"></div>
-								  <div class="carousel-item" style="background: url(http://alloyui.com/carousel/img/4.jpg);"></div>
-								</div>
-
-
-								<div id="myTab"></div>
-
-
-								#if (!$is_signed_in)
-									<a href="$sign_in_url" id="btn-sign-in-off" rel="nofollow">
-										<i class="middle-circle icon-off" style="text-decoration:none; color:#2a556a"></i>
-									</a>
-								#else
-									<a href="$sign_out_url" id="btn-sign-in-on" rel="nofollow"><i class="middle-circle icon-off" style="text-decoration:none;"></i></a>
-								#end
-							</div> <!-- end container -->
-
-						</div>
-					</div>
-				</div>
-			</div>			
-
-			<div id="main">
-				<div id="primary" class="body-border">	 
-
-
-
-					<!-- Portlets -->
-			 		#if ($selectable)
-						$theme.include($content_include)
 					#else
-						$portletDisplay.recycle()
+						<a href="$sign_out_url" id="btn-sign-in-on" rel="nofollow"><i class="middle-circle icon-off" style="text-decoration:none;"></i></a>
+					#end
 
-						$portletDisplay.setTitle($the_title)
+				</div> <!-- end #container -->
 
-						$theme.wrapPortlet("portlet.vm", $content_include)
-					#end  
+			</div>
+		</div>
+	</div>			
 
+	<div id="main">
+		<div id="primary" class="body-border">	 
 
-				</div><!-- #primary -->
-			</div> <!-- end #main -->		
-		</div>	<!-- end #container -->
-	</div> <!-- end #page -->
-</div>	
-<!-- container-fluid -->
+			<!-- Portlets -->
+	 		#if ($selectable)
+				$theme.include($content_include)
+			#else
+				$portletDisplay.recycle()
 
+				$portletDisplay.setTitle($the_title)
+
+				$theme.wrapPortlet("portlet.vm", $content_include)
+			#end  
+
+		</div><!-- #primary -->
+	</div> <!-- end #main -->		
+</div> <!-- end #home -->
 
 
 <footer id="footer" role="contentinfo">
@@ -131,9 +107,15 @@ $theme.include($body_top_include)
 
 		<div class="row">
 			<div class="col-lg-12">
-				<span class="line"></span>
-				<span class="pull-left">Copyright &copy; 2014  <a href="http://liferay.com">Liferay Inc.</a>. All Rights Reserved.</span>
-				<span class="credit-link pull-right"><i class="icon-leaf"></i>Ward-Theme-Project by Lam Nguyen.</span>
+
+				#if($theme.getSetting("display-left-footer-text") == true)				
+					<span class="pull-left">$theme.getSetting("Left footer text")</span>
+				#end
+
+				#if($theme.getSetting("display-right-footer-text") == true)	
+					<span class="credit-link pull-right"><i class="icon-leaf"></i>$theme.getSetting("Right footer text")</span>
+				#end	
+				
 			</div><!-- .col-lg-12 -->
 
 			<p class="site-title">
@@ -147,12 +129,11 @@ $theme.include($body_top_include)
 </footer><!-- #footer -->
 
 
-<div class="scroll-top-wrapper ">
+<div class="scroll-top-wrapper"> 
     <span class="scroll-top-inner">
 		<p><large><i class="icon-circle-arrow-up"></i></large></p>
     </span>
-</div>
-
+</div> <!-- end #scroll-top-wrapper -->
 
 $theme.include($body_bottom_include)
 
