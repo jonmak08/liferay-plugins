@@ -12,10 +12,8 @@
 				[					
 					"Home Tabview.xml"				
 				],
-				[		
-					{			
-						"portletId": "73"					
-					}
+				[					
+					"Home Calendar.xml"				
 				]
 			],
 			"friendlyURL": "/home",
