@@ -1,0 +1,52 @@
+<MBMessage>
+  <__cachedModel>true</__cachedModel>
+  <__new>false</__new>
+  <__uuid>a8dedaa4-6369-4015-a21d-d33503448e02</__uuid>
+  <__originalUuid>a8dedaa4-6369-4015-a21d-d33503448e02</__originalUuid>
+  <__messageId>14601</__messageId>
+  <__groupId>10184</__groupId>
+  <__originalGroupId>10184</__originalGroupId>
+  <__setOriginalGroupId>false</__setOriginalGroupId>
+  <__companyId>10157</__companyId>
+  <__originalCompanyId>10157</__originalCompanyId>
+  <__setOriginalCompanyId>false</__setOriginalCompanyId>
+  <__userId>11233</__userId>
+  <__originalUserId>11233</__originalUserId>
+  <__setOriginalUserId>false</__setOriginalUserId>
+  <__userName>Test Test</__userName>
+  <__createDate>2014-07-03 22:17:27.708 UTC</__createDate>
+  <__modifiedDate>2014-07-03 22:17:27.708 UTC</__modifiedDate>
+  <__classNameId>10007</__classNameId>
+  <__originalClassNameId>10007</__originalClassNameId>
+  <__setOriginalClassNameId>false</__setOriginalClassNameId>
+  <__classPK>14474</__classPK>
+  <__originalClassPK>14474</__originalClassPK>
+  <__setOriginalClassPK>false</__setOriginalClassPK>
+  <__categoryId>-1</__categoryId>
+  <__originalCategoryId>-1</__originalCategoryId>
+  <__setOriginalCategoryId>false</__setOriginalCategoryId>
+  <__threadId>14478</__threadId>
+  <__originalThreadId>14478</__originalThreadId>
+  <__setOriginalThreadId>false</__setOriginalThreadId>
+  <__rootMessageId>14477</__rootMessageId>
+  <__parentMessageId>14477</__parentMessageId>
+  <__originalParentMessageId>14477</__originalParentMessageId>
+  <__setOriginalParentMessageId>false</__setOriginalParentMessageId>
+  <__subject>Lorem ipsum dolor sit amet, consectetur adipisicin...</__subject>
+  <__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</__body>
+  <__format>bbcode</__format>
+  <__anonymous>false</__anonymous>
+  <__priority>0.0</__priority>
+  <__allowPingbacks>false</__allowPingbacks>
+  <__answer>false</__answer>
+  <__originalAnswer>false</__originalAnswer>
+  <__setOriginalAnswer>false</__setOriginalAnswer>
+  <__status>0</__status>
+  <__originalStatus>0</__originalStatus>
+  <__setOriginalStatus>false</__setOriginalStatus>
+  <__statusByUserId>11233</__statusByUserId>
+  <__statusByUserName>Test Test</__statusByUserName>
+  <__statusDate>2014-07-03 22:17:27.773 UTC</__statusDate>
+  <__columnBitmask>0</__columnBitmask>
+  <__attachmentsFolderId>0</__attachmentsFolderId>
+</MBMessage>

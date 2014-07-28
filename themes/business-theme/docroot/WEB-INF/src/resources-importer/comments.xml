@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<comments>
+	<asset path="/group/10184/comments/10007/14474/" class-name="com.liferay.portlet.blogs.model.BlogsEntry" class-pk="14474">
+		<references>
+			<reference class-name="com.liferay.portal.model.User" class-pk="11233" type="weak" uuid="aa08a748-7b1c-43e3-99a6-c116c80fdb1d" company-id="10157"/>
+			<reference class-name="com.liferay.portal.model.User" class-pk="11233" type="weak" uuid="aa08a748-7b1c-43e3-99a6-c116c80fdb1d" company-id="10157"/>
+		</references>
+	</asset>
+</comments>

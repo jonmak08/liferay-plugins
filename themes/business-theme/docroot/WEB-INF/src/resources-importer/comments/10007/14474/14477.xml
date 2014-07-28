@@ -1,0 +1,52 @@
+<MBMessage>
+  <__cachedModel>true</__cachedModel>
+  <__new>false</__new>
+  <__uuid>e75836c9-7281-4b9e-be8c-db0988d9e895</__uuid>
+  <__originalUuid>e75836c9-7281-4b9e-be8c-db0988d9e895</__originalUuid>
+  <__messageId>14477</__messageId>
+  <__groupId>10184</__groupId>
+  <__originalGroupId>10184</__originalGroupId>
+  <__setOriginalGroupId>false</__setOriginalGroupId>
+  <__companyId>10157</__companyId>
+  <__originalCompanyId>10157</__originalCompanyId>
+  <__setOriginalCompanyId>false</__setOriginalCompanyId>
+  <__userId>11233</__userId>
+  <__originalUserId>11233</__originalUserId>
+  <__setOriginalUserId>false</__setOriginalUserId>
+  <__userName>Test Test</__userName>
+  <__createDate>2014-07-03 18:53:41.476 UTC</__createDate>
+  <__modifiedDate>2014-07-03 18:53:41.476 UTC</__modifiedDate>
+  <__classNameId>10007</__classNameId>
+  <__originalClassNameId>10007</__originalClassNameId>
+  <__setOriginalClassNameId>false</__setOriginalClassNameId>
+  <__classPK>14474</__classPK>
+  <__originalClassPK>14474</__originalClassPK>
+  <__setOriginalClassPK>false</__setOriginalClassPK>
+  <__categoryId>-1</__categoryId>
+  <__originalCategoryId>-1</__originalCategoryId>
+  <__setOriginalCategoryId>false</__setOriginalCategoryId>
+  <__threadId>14478</__threadId>
+  <__originalThreadId>14478</__originalThreadId>
+  <__setOriginalThreadId>false</__setOriginalThreadId>
+  <__rootMessageId>14477</__rootMessageId>
+  <__parentMessageId>0</__parentMessageId>
+  <__originalParentMessageId>0</__originalParentMessageId>
+  <__setOriginalParentMessageId>false</__setOriginalParentMessageId>
+  <__subject>14474</__subject>
+  <__body>14474</__body>
+  <__format>bbcode</__format>
+  <__anonymous>false</__anonymous>
+  <__priority>0.0</__priority>
+  <__allowPingbacks>false</__allowPingbacks>
+  <__answer>false</__answer>
+  <__originalAnswer>false</__originalAnswer>
+  <__setOriginalAnswer>false</__setOriginalAnswer>
+  <__status>0</__status>
+  <__originalStatus>0</__originalStatus>
+  <__setOriginalStatus>false</__setOriginalStatus>
+  <__statusByUserId>11233</__statusByUserId>
+  <__statusByUserName>Test Test</__statusByUserName>
+  <__statusDate>2014-07-03 18:53:41.483 UTC</__statusDate>
+  <__columnBitmask>0</__columnBitmask>
+  <__attachmentsFolderId>0</__attachmentsFolderId>
+</MBMessage>

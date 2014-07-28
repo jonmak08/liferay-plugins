@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<tags>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMStructure" class-pk="14268" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14412" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="14076" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="14215" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="14508" tags=""/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="13831" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="14802" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14282" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14143" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="14070" tags=""/>
+	<asset class-name="com.liferay.portlet.blogs.model.BlogsEntry" class-pk="46903" tags="bacon,delicious,hungry"/>
+	<tag path="/group/10184/tags/46912.xml"/>
+	<tag path="/group/10184/tags/46913.xml"/>
+	<tag path="/group/10184/tags/46914.xml"/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14640" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="14486" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14665" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="14108" tags=""/>
+	<asset class-name="com.liferay.portlet.blogs.model.BlogsEntry" class-pk="47092" tags="feline,fee lyin,cat"/>
+	<tag path="/group/10184/tags/47099.xml"/>
+	<tag path="/group/10184/tags/47100.xml"/>
+	<tag path="/group/10184/tags/47101.xml"/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMTemplate" class-pk="14270" tags=""/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="14214" tags=""/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="14069" tags=""/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMTemplate" class-pk="13770" tags=""/>
+	<asset class-name="com.liferay.portlet.blogs.model.BlogsEntry" class-pk="46922" tags="ironic,90s kid,i mustache u a question"/>
+	<tag path="/group/10184/tags/46930.xml"/>
+	<tag path="/group/10184/tags/46931.xml"/>
+	<tag path="/group/10184/tags/46932.xml"/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="13698" tags=""/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="14801" tags=""/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMStructure" class-pk="14451" tags=""/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMStructure" class-pk="14406" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="13717" tags=""/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMTemplate" class-pk="13713" tags=""/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="14507" tags=""/>
+	<asset class-name="com.liferay.portlet.wiki.model.WikiPage" class-pk="13044" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14304" tags="lorem,ipsum"/>
+	<tag path="/group/10184/tags/14307.xml"/>
+	<tag path="/group/10184/tags/14308.xml"/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMStructure" class-pk="13768" tags=""/>
+	<asset class-name="com.liferay.portlet.documentlibrary.model.DLFileEntry" class-pk="20980" tags=""/>
+	<asset class-name="com.liferay.portal.model.LayoutFriendlyURL" class-pk="13832" tags=""/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="14075" tags=""/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMTemplate" class-pk="14408" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14652" tags=""/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="14107" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14676" tags=""/>
+	<asset class-name="com.liferay.portlet.dynamicdatamapping.model.DDMStructure" class-pk="13711" tags=""/>
+	<asset class-name="com.liferay.portlet.journal.model.JournalArticle" class-pk="14258" tags=""/>
+	<asset class-name="com.liferay.portlet.wiki.model.WikiNode" class-pk="13042" tags=""/>
+	<asset class-name="com.liferay.portlet.blogs.model.BlogsEntry" class-pk="14474" tags="lorem,ipsum,original"/>
+	<tag path="/group/10184/tags/46920.xml"/>
+	<asset class-name="com.liferay.portal.model.Layout" class-pk="14485" tags=""/>
+</tags>

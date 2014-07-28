@@ -1,0 +1,18 @@
+<com.liferay.portlet.asset.model.impl.AssetTagImpl>
+  <__cachedModel>true</__cachedModel>
+  <__new>false</__new>
+  <__tagId>46912</__tagId>
+  <__groupId>10184</__groupId>
+  <__originalGroupId>10184</__originalGroupId>
+  <__setOriginalGroupId>false</__setOriginalGroupId>
+  <__companyId>10157</__companyId>
+  <__userId>11233</__userId>
+  <__userUuid>aa08a748-7b1c-43e3-99a6-c116c80fdb1d</__userUuid>
+  <__userName>Test Test</__userName>
+  <__createDate>2014-07-11 19:11:23.470 UTC</__createDate>
+  <__modifiedDate>2014-07-11 19:11:23.470 UTC</__modifiedDate>
+  <__name>bacon</__name>
+  <__originalName>bacon</__originalName>
+  <__assetCount>13</__assetCount>
+  <__columnBitmask>0</__columnBitmask>
+</com.liferay.portlet.asset.model.impl.AssetTagImpl>

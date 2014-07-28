@@ -1,0 +1,72 @@
+<JournalArticle>
+  <__cachedModel>false</__cachedModel>
+  <__new>false</__new>
+  <__uuid>c7d824c4-210e-4f01-b467-20dd4e38db8e</__uuid>
+  <__originalUuid>c7d824c4-210e-4f01-b467-20dd4e38db8e</__originalUuid>
+  <__id>46048</__id>
+  <__resourcePrimKey>46049</__resourcePrimKey>
+  <__originalResourcePrimKey>46049</__originalResourcePrimKey>
+  <__setOriginalResourcePrimKey>false</__setOriginalResourcePrimKey>
+  <__groupId>10184</__groupId>
+  <__originalGroupId>10184</__originalGroupId>
+  <__setOriginalGroupId>false</__setOriginalGroupId>
+  <__companyId>10157</__companyId>
+  <__originalCompanyId>10157</__originalCompanyId>
+  <__setOriginalCompanyId>false</__setOriginalCompanyId>
+  <__userId>10201</__userId>
+  <__userUuid>2964b382-b49b-4f1b-8e87-6d6b3bd29277</__userUuid>
+  <__originalUserId>10201</__originalUserId>
+  <__setOriginalUserId>false</__setOriginalUserId>
+  <__userName>Test Test</__userName>
+  <__createDate class="sql-timestamp">2014-07-22 18:33:50.356</__createDate>
+  <__modifiedDate class="sql-timestamp">2014-07-22 18:33:50.44</__modifiedDate>
+  <__folderId>0</__folderId>
+  <__originalFolderId>0</__originalFolderId>
+  <__setOriginalFolderId>false</__setOriginalFolderId>
+  <__classNameId>0</__classNameId>
+  <__originalClassNameId>0</__originalClassNameId>
+  <__setOriginalClassNameId>false</__setOriginalClassNameId>
+  <__classPK>0</__classPK>
+  <__originalClassPK>0</__originalClassPK>
+  <__setOriginalClassPK>false</__setOriginalClassPK>
+  <__treePath>/0/</__treePath>
+  <__articleId>46047</__articleId>
+  <__originalArticleId>46047</__originalArticleId>
+  <__version>1.0</__version>
+  <__originalVersion>1.0</__originalVersion>
+  <__setOriginalVersion>false</__setOriginalVersion>
+  <__title>&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;&lt;root available-locales=&quot;en_US&quot; default-locale=&quot;en_US&quot;&gt;&lt;Title language-id=&quot;en_US&quot;&gt;Asd&lt;/Title&gt;&lt;/root&gt;</__title>
+  <__urlTitle>asd</__urlTitle>
+  <__originalUrlTitle>asd</__originalUrlTitle>
+  <__description></__description>
+  <__content>&lt;?xml version=&quot;1.0&quot;?&gt;
+
+&lt;root available-locales=&quot;en_US&quot; default-locale=&quot;en_US&quot;&gt;
+	&lt;static-content language-id=&quot;en_US&quot;&gt;&lt;![CDATA[This is a test, please work.]]&gt;&lt;/static-content&gt;
+&lt;/root&gt;</__content>
+  <__type>general</__type>
+  <__structureId></__structureId>
+  <__originalStructureId></__originalStructureId>
+  <__templateId></__templateId>
+  <__originalTemplateId></__originalTemplateId>
+  <__layoutUuid></__layoutUuid>
+  <__originalLayoutUuid></__originalLayoutUuid>
+  <__displayDate class="sql-timestamp">2014-07-22 18:33:00.0</__displayDate>
+  <__originalDisplayDate class="sql-timestamp" reference="../__displayDate"/>
+  <__indexable>false</__indexable>
+  <__originalIndexable>false</__originalIndexable>
+  <__setOriginalIndexable>false</__setOriginalIndexable>
+  <__smallImage>false</__smallImage>
+  <__smallImageId>46050</__smallImageId>
+  <__originalSmallImageId>46050</__originalSmallImageId>
+  <__setOriginalSmallImageId>false</__setOriginalSmallImageId>
+  <__smallImageURL></__smallImageURL>
+  <__status>0</__status>
+  <__originalStatus>0</__originalStatus>
+  <__setOriginalStatus>false</__setOriginalStatus>
+  <__statusByUserId>10201</__statusByUserId>
+  <__statusByUserUuid>2964b382-b49b-4f1b-8e87-6d6b3bd29277</__statusByUserUuid>
+  <__statusByUserName>Test Test</__statusByUserName>
+  <__statusDate class="sql-timestamp">2014-07-22 18:33:50.44</__statusDate>
+  <__columnBitmask>0</__columnBitmask>
+</JournalArticle>
