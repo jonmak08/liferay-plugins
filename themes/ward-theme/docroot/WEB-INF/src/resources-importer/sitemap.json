@@ -4,77 +4,72 @@
 		{
 			"columns": [
 				[
-					"Home Carousel.xml"
-				],			
-				[					
-					"Home DataTable.xml"				
-				],
-				[					
-					"Home Tabview.xml"				
-				],
-				[					
-					"Home Calendar.xml"				
+					"Worth A Thoudsand Words.xml",
+					"Elements.xml",
+					"More Tags.xml",
+					"HTML.xml",
+					"Links.xml",
+					"Category Hierarchy.xml",
+					"Hello world.xml"
 				]
 			],
 			"friendlyURL": "/home",
+			"layoutTemplateId": "1_column",
 			"name": "Home",
 			"title": "Home"
 		},
 		{
 			"columns": [
-				[		
-					{			
-						"portletId": "2"					
-					}
+				[
+					"Home Carousel.xml"
 				],
-				[		
-					{			
-						"portletId": "16"					
-					}
+				[
+					"Home DataTable.xml"
 				],
-				[		
-					{			
-						"portletId": "82"					
-					}
+				[
+					"Home Tabview.xml"
 				],
-				[		
-					{			
-						"portletId": "70"					
-					}
-				],
-				[		
-					{			
-						"portletId": "85"					
-					}
-				]					
+				[
+					"Home Calendar.xml"
+				]
 			],
-			"friendlyURL": "/pagetwo",
-			"layoutTemplateId": "2_1_2_columns",
-			"name": "pageTwo",
-			"title": "pageTwo"
+			"friendlyURL": "/strutures",
+			"layoutTemplateId": "1_2_1_columns",
+			"name": "Strutures",
+			"title": "Strutures"
 		},
 		{
 			"columns": [
-				[					
+				[
 					{
-						"portletId": "58"	
-					}				
-				],
-				[		
-					{			
-						"portletId": "47"					
+						"portletId": "2"
 					}
 				],
-				[		
-					{			
-						"portletId": "73"					
+				[
+					{
+						"portletId": "16"
+					}
+				],
+				[
+					{
+						"portletId": "82"
+					}
+				],
+				[
+					{
+						"portletId": "70"
+					}
+				],
+				[
+					{
+						"portletId": "85"
 					}
 				]
-			],			
-			"friendlyURL": "/pagethree",
-			"layoutTemplateId": "1_columns",
-			"name": "pageThree",
-			"title": "pageThree"
-		}		
+			],
+			"friendlyURL": "/portlets",
+			"layoutTemplateId": "2_1_3_columns",
+			"name": "Portlets",
+			"title": "Porlets"
+		}
 	]
 }

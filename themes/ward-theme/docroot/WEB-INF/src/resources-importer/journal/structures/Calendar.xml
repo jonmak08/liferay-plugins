@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 
 <root available-locales="en_US" default-locale="en_US">
 	<dynamic-element dataType="integer" fieldNamespace="ddm" indexType="keyword" name="width" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-integer" width="small">

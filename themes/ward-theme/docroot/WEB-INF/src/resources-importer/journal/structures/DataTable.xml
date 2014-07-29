@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 
 <root available-locales="en_US" default-locale="en_US">
 	<dynamic-element dataType="string" indexType="keyword" name="col_attr" readOnly="false" repeatable="true" required="true" showLabel="true" type="text" width="small">

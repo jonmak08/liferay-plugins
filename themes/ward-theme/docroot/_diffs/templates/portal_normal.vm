@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 #parse ($init)
-#set ($css_class = "${css_class} dockbar-split")
 
 <html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
 
@@ -10,83 +9,66 @@
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
-	<!-- Nav bar on top -->
 	$theme.include($top_head_include)
 
-	<link rel='stylesheet' id='google_fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:300' type='text/css' media='all' />
-	<script type='text/javascript' src='$javascript_folder/jquery-1.11.1.js'></script>
-	<script type='text/javascript' src='$javascript_folder/jquery-migrate-1.2.1.min.js'></script>
-
-	<style>	.container { max-width: 2000px; } </style>	
-
+	<style>	.container { max-width: 2000px; } </style>
 </head>
 
 <body class="$css_class">
 
 $theme.include($body_top_include)
+
 <div class="navbar-inverse navbar navbar-fixed-top dockbar" role="navigation">
-	#if (!$is_signed_in)		
-	#else
+	#if ($is_signed_in)
 		#dockbar()
-	#end	
+	#end
 </div>
 
-<div class="home blog basic custom-body" id="page">
+<div class="home blog custom-body" id="page">
+	<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
+
 	<header id="banner">
 		<div class = "custom-navigation">
 			<h1 class="site-title" id="custom-site-logo">
 				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
-					<img alt="$logo_description" height="65" src="$site_logo" width="65" />
+					<img alt="$logo_description" height="$site_logo_height" src="$site_logo" width="$site_logo_width" />
 					#if ($show_site_name)
 						<span class="site-name" title="#language_format ("go-to-x", [$site_name])" style="text-decoration:none">
 							$site_name
 						</span>
-					#end	
+					#end
 				</a>
 			</h1>
-			<h4>
-				#if ($has_navigation || $is_signed_in)
-					#parse ("$full_templates_path/navigation.vm")
-				#end
-			</h4>
+
+			#if ($has_navigation || $is_signed_in)
+				#parse ("$full_templates_path/navigation.vm")
+			#end
+
 		</div> <!-- end #custom-navigation -->
 	</header>
 
-
 	<div class="home-top">
 		<div class="row">
-
-			<div class="home-jumbotron custom-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">		
-
-				<div class="container ">
-
+			<div class="home-jumbotron col-lg-10 col-lg-offset-1 col-sm-12">
+				<div class="container" id="banner-container">
 					#if($theme.getSetting("display-jumboheadline") == true)
 						<h1>$theme.getSetting("Jumbo Headline")</h1>
-					#end	
+					#end
 
 					#if($theme.getSetting("display-sub-headline") == true)
 						<p class="lead">$theme.getSetting("Sub Headline")</p>
 					#end
-					
-					#if (!$is_signed_in)
-						<a href="$sign_in_url" id="btn-sign-in-off" rel="nofollow">
-							<i class="middle-circle icon-off" style="text-decoration:none; color:#2a556a"></i>
-						</a>
-					#else
-						<a href="$sign_out_url" id="btn-sign-in-on" rel="nofollow"><i class="middle-circle icon-off" style="text-decoration:none;"></i></a>
-					#end
 
-				</div> <!-- end #container -->
+					<i class="middle-circle icon-off" style="text-decoration:none;"></i>
 
+				</div>
 			</div>
 		</div>
-	</div>			
+	</div>
 
 	<div id="main">
-		<div id="primary" class="body-border">	 
-
-			<!-- Portlets -->
-	 		#if ($selectable)
+		<div id="primary" class="body-border">
+			#if ($selectable)
 				$theme.include($content_include)
 			#else
 				$portletDisplay.recycle()
@@ -94,12 +76,10 @@ $theme.include($body_top_include)
 				$portletDisplay.setTitle($the_title)
 
 				$theme.wrapPortlet("portlet.vm", $content_include)
-			#end  
-
-		</div><!-- #primary -->
-	</div> <!-- end #main -->		
-</div> <!-- end #home -->
-
+			#end
+		</div>
+	</div>
+</div>
 
 <footer id="footer" role="contentinfo">
 	<div id="footer-content" class="container">
@@ -109,39 +89,34 @@ $theme.include($body_top_include)
 		<div class="row">
 			<div class="col-lg-12">
 
-				#if($theme.getSetting("display-left-footer-text") == true)				
-					<span class="pull-left">$theme.getSetting("Left footer text")</span>
+				#if($theme.getSetting("display-left-footer-text") == true)
+					<span class="pull-left">$theme.getSetting("left-footer-text")</span>
 				#end
 
-				#if($theme.getSetting("display-right-footer-text") == true)	
-					<span class="credit-link pull-right"><i class="icon-leaf"></i>$theme.getSetting("Right footer text")</span>
-				#end	
-				
+				#if($theme.getSetting("display-right-footer-text") == true)
+					<span class="credit-link pull-right"><i class="icon-leaf"></i>$theme.getSetting("right-footer-text")</span>
+				#end
+
 			</div><!-- .col-lg-12 -->
 
-			<p class="site-title">
-				#if (!$is_signed_in)
-					<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
-				#end 	
-			</p>
+			#if (!$is_signed_in)
+				<a href="$sign_in_url" id="sign-in" rel="nofollow">$sign_in_text</a>
+			#end
 
 		</div><!-- .row -->
 	</div><!-- #footer-content.container -->
 </footer><!-- #footer -->
 
 
-<div class="scroll-top-wrapper"> 
-    <span class="scroll-top-inner">
-		<p><large><i class="icon-circle-arrow-up"></i></large></p>
-    </span>
+<div class="scroll-top-wrapper">
+	<span class="scroll-top-inner">
+		<i class="icon-circle-arrow-up"></i>
+	</span>
 </div> <!-- end #scroll-top-wrapper -->
 
 $theme.include($body_bottom_include)
 
 $theme.include($bottom_include)
-
-<script type='text/javascript' src='$javascript_folder/bootstrap.min.js?ver=2.2.2'></script>
-<script type='text/javascript' src='$javascript_folder/theme.js?ver=4.0-alpha-20140630'></script>
 
 </body>
 

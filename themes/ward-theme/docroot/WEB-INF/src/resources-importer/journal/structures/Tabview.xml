@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 
 <root available-locales="en_US" default-locale="en_US">
 	<dynamic-element dataType="string" indexType="keyword" name="type" readOnly="false" repeatable="false" required="false" showLabel="true" type="radio" width="">

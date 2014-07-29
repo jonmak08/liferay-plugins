@@ -1,60 +1,65 @@
 <style type="text/css">
-    .nav-stacked > li {
-        width: 90%; 
-    }
-    
-    .nav {margin-bottom: 0px;}    
-    
-    .tab-label {text-align: center;}
-    
-    .nav-tabs > li > a {background-color: inherit;}
-    
-    .nav-tabs:not(.nav-pills) > li.active > a {
-      background-color: #f7f7f7;
-    }    
-    
-    .tab-content {
-        background: inherit;
-        border-top: 0;
-    }
-    
+	.nav-stacked > li {
+		width: 90%;
+	}
+
+	.nav {
+		margin-bottom: 0px;
+	}
+
+	.tab-label {
+		text-align: center;
+	}
+
+	.nav-tabs > li > a {
+		background-color: inherit;
+	}
+
+	.nav-tabs:not(.nav-pills) > li.active > a {
+		background-color: #f7f7f7;
+	}
+
+	.tab-content {
+		background: inherit;
+		border-top: 0;
+	}
 </style>
 
 <div id="myTab">
-#if (!$label.getSiblings().isEmpty())    
-    <ul class="nav nav-tabs">
-        #foreach ($cur_label in $label.getSiblings())
-            <li><a href="#tab-2">$cur_label.getData()</a></li>
-        #end
-    </ul>
+	#if (!$label.getSiblings().isEmpty())
+		<ul class="nav nav-tabs">
+			#foreach ($cur_label in $label.getSiblings())
+				<li><a href="#tab-s">$cur_label.getData()</a></li>
+			#end
+		</ul>
 
-    <div class="tab-content">
-        #foreach ($cur_label in $label.getSiblings())
-            <div id="tab-2">
-              <p>$cur_label.getChild('content').getData()</p>
-            </div>
-        #end
-    </div>
-#end
+		<div class="tab-content">
+			#foreach ($cur_label in $label.getSiblings())
+				<div id="tab-s">
+					<p>$cur_label.getChild('content').getData()</p>
+				</div>
+			#end
+		</div>
+	#end
 </div>
 
 <script type="text/javascript">
-    YUI().use(
-      'aui-tabview',
-      function(Y) {
-           
-            var ifStacked = false;
-            if ('$stackedTabs.getData()' == 'true') {
-              var ifStacked = true;
-            }
-            
-            new Y.TabView(
-              { 
-                srcNode: '#myTab',
-                type: $type.getData()[0],
-                stacked: ifStacked
-              }
-            ).render();
-      }
-    );
+	AUI().use(
+		'aui-tabview',
+		function(A) {
+			var ifStacked = false;
+
+			if ('$stackedTabs.getData()' === 'true') {
+				ifStacked = true;
+			}
+
+			new A.TabView(
+				{
+				srcNode: '#myTab',
+				type: $type.getData()[0],
+				stacked: ifStacked
+				}
+			).render();
+		}
+	);
 </script>

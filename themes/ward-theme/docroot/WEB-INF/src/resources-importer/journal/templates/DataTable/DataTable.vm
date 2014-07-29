@@ -1,67 +1,75 @@
+<style type="text/css">
+    Table {
+      width: 100%;
+      background: #fff;
+    }
+</style>
+
 <div id="myDataTable">
+	#set($col = [])
+	#set($colData = [])
 
-#set($col = [])         
-#set($colData = [])     
+	#if (!$col_attr.getSiblings().isEmpty())
+		#foreach ($item in $col_attr.getSiblings())
+			<$col.add($item.getData())>
 
-#if (!$col_attr.getSiblings().isEmpty())
-  #foreach ($item in $col_attr.getSiblings())
-  
-      <$col.add($item.getData())>  ## get columns array
-      <$colData.add($item.getChild('values').getData())> ## get column datas array
-  
-  #end
-#end
-
+			<$colData.add($item.getChild('values').getData())>
+		#end
+	#end
 </div>
 
-
 <script type="text/javascript">
+	var columns = new Array();
 
-// get columns
-var columns = new Array();
-var k = 0;
-#foreach($i in $col)
-  columns[k++] = "${i}";
-#end
+	var k = 0;
 
-// get datas
-var colDatas = new Array();
-var z = 0;
-#foreach($i in $colData)
-  colDatas[z++] = "${i}";
-#end
+	#foreach($i in $col)
+		columns[k++] = '${i}';
+	#end
 
+	var colDatas = new Array();
 
-// look for columns has the most items
-var lengthArr = [];
-for (var i=0; i<columns.length; i++) {
-    lengthArr[i] = colDatas[i].split(',').length;
-}
-lengthArr.sort(function(a, b){return b-a}); // find largest value
-var rowCount = lengthArr[0]; // set number of rows
+	var z = 0;
 
-// write data to table
-var data = [];
-for (var i = 0; i < rowCount; ++i) { // rows 
-    var tempObj = {};
-    for (var j = 0; j < columns.length; ++j) { // columns
-        tempObj[columns[j]] = colDatas[j].split(',')[i];
-    }
-    data.push(tempObj);
-}
+	#foreach($i in $colData)
+		colDatas[z++] = '${i}';
+	#end
 
-YUI().use(
-  'aui-datatable',
-  
-  function(Y) {
+	var lengthArr = [];
 
-    new Y.DataTable.Base(
-      {
-        columnset: columns,
-        recordset: data
-      }
-    ).render('#myDataTable');
-  }
-);
-        
+	for (var i=0; i<columns.length; i++) {
+		lengthArr[i] = colDatas[i].split(',').length;
+	}
+
+	lengthArr.sort(
+		function(a, b){
+			return b-a;
+		}
+	);
+
+	var rowCount = lengthArr[0];
+
+	var data = [];
+
+	for (var i = 0; i < rowCount; ++i) {
+		var tempObj = {};
+
+		for (var j = 0; j < columns.length; ++j) {
+			tempObj[columns[j]] = colDatas[j].split(',')[i];
+		}
+
+		data.push(tempObj);
+	}
+
+	AUI().use(
+		'aui-datatable',
+		function(A) {
+			new A.DataTable.Base(
+				{
+					columnset: columns,
+					recordset: data
+				}
+			).render('#myDataTable');
+		}
+	);
 </script>
