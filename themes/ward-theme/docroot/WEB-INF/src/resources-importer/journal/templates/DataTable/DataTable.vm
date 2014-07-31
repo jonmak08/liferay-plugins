@@ -1,14 +1,13 @@
 <style type="text/css">
-    Table {
-      width: 100%;
-      background: #fff;
-    }
+	#myDataTable table {
+		background: #FFF;
+		width: 100%;
+	}
 </style>
 
 <div id="myDataTable">
 	#set($col = [])
 	#set($colData = [])
-
 	#if (!$col_attr.getSiblings().isEmpty())
 		#foreach ($item in $col_attr.getSiblings())
 			<$col.add($item.getData())>
@@ -20,23 +19,18 @@
 
 <script type="text/javascript">
 	var columns = new Array();
-
 	var k = 0;
-
 	#foreach($i in $col)
 		columns[k++] = '${i}';
 	#end
 
 	var colDatas = new Array();
-
 	var z = 0;
-
 	#foreach($i in $colData)
 		colDatas[z++] = '${i}';
 	#end
 
 	var lengthArr = [];
-
 	for (var i=0; i<columns.length; i++) {
 		lengthArr[i] = colDatas[i].split(',').length;
 	}
@@ -48,24 +42,20 @@
 	);
 
 	var rowCount = lengthArr[0];
-
 	var data = [];
 
 	for (var i = 0; i < rowCount; ++i) {
 		var tempObj = {};
-
 		for (var j = 0; j < columns.length; ++j) {
 			tempObj[columns[j]] = colDatas[j].split(',')[i];
 		}
-
 		data.push(tempObj);
 	}
 
 	AUI().use(
 		'aui-datatable',
 		function(A) {
-			new A.DataTable.Base(
-				{
+			new A.DataTable.Base({
 					columnset: columns,
 					recordset: data
 				}

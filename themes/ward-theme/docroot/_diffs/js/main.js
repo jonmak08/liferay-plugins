@@ -23,37 +23,6 @@ AUI().ready(
 	}
 );
 
-
 // Scroll to top button
 
-$(function() {
-	$(document).on(
-		'scroll',
-		function() {
-			if ($(window).scrollTop() > 100) {
-					$('.scroll-top-wrapper').addClass('show');
-			}
-			else {
-					$('.scroll-top-wrapper').removeClass('show');
-			}
-		}
-	);
-
-	$('.scroll-top-wrapper').on('click', scrollToTop);
-});
-
-function scrollToTop() {
-	element = $('body');
-
-	offset = element.offset();
-	offsetTop = offset.top;
-
-	verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
-
-	$('html, body').animate(
-		{scrollTop: offsetTop},
-		500,
-		'linear'
-	);
-}
-
+// Don't use jQuery. The is such simple code, use AUI instead.

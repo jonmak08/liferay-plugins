@@ -21,15 +21,9 @@
 		{
 			"columns": [
 				[
-					"Home Carousel.xml"
-				],
-				[
-					"Home DataTable.xml"
-				],
-				[
-					"Home Tabview.xml"
-				],
-				[
+					"Home Carousel.xml",
+					"Home DataTable.xml",
+					"Home Tabview.xml",
 					"Home Calendar.xml"
 				]
 			],

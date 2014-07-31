@@ -1,35 +1,42 @@
-<div id="mycalendar">
-    <body class="yui3-skin-sam"> <!-- You need this skin class -->
-</div>
+<div id="mycalendar"></div>
 
 <script type="text/javascript">
-
-var w;// = ('$width.getData()'!='') ? '$width.getData()'.concat('px') : 'auto';
-var h;// = ('$height.getData()'!='') ? '$height.getData()'.concat('px') : 'auto'; 
-
-if ('$width.getData()'!='') { 
-    if (parseInt($width.getData())>=300 && parseInt($width.getData())<1200)
-        w = '$width.getData()'.concat('px');
-}
-else w = 'auto';
-
-if ('$height.getData()'!='') { 
-    if (parseInt($height.getData())>=300 && parseInt($height.getData())<1200)
-        h = '$height.getData()'.concat('px');
-}
-else h = 'auto';
-
-
-YUI().use('calendar', function (Y) {
-
-    var calendar = new Y.Calendar({
-          contentBox: "#mycalendar",
-          height: h,
-          width: w,
-          showPrevMonth: $getterUtil.getBoolean($showPrevMonth.getData()),
-          showNextMonth: $getterUtil.getBoolean($showNextMonth.getData())
-    }).render();
-
-});
-    
+	var height;
+	var width;
+	if ('$width.getData()'!='') {
+		if ($width.getData() >= 300 && $width.getData() < 1200) {
+			width = '$width.getData()'.concat('px');
+		}
+		else {
+			width = 'auto';
+		}
+	}
+	else {
+		width = 'auto';
+	}
+	if ('$height.getData()'!='') {
+		if ($height.getData() >= 300 && $height.getData() < 1200) {
+			height = '$height.getData()'.concat('px');
+		}
+		else {
+			height = 'auto';
+		}
+	}
+	else {
+		height = 'auto';
+	}
+	AUI().use(
+		'calendar',
+		function (A) {
+			var calendar = new A.Calendar(
+				{
+					contentBox: "#mycalendar",
+					height: height,
+					width: width,
+					showPrevMonth: $getterUtil.getBoolean($showPrevMonth.getData()),
+					showNextMonth: $getterUtil.getBoolean($showNextMonth.getData())
+				}
+			).render();
+		}
+	);
 </script>

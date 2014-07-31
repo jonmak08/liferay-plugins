@@ -7,7 +7,6 @@
 		position: relative;
 		width: ${width.getData()}px;
 	}
-
 	#${content_class} .carousel-item {
 		height: ${height.getData()}px;
 		overflow: hidden;
@@ -15,7 +14,6 @@
 		top: 0;
 		width: ${width.getData()}px;
 	}
-
 	#if ($controls.data)
 		#${content_class} menu {
 			display: none;
@@ -30,9 +28,7 @@
 				#if ($item.link.url-location.data != "")
 					<a href="$item.link.url-location.data">
 				#end
-
 				<img alt="$item.link.data" src="$item.getData()" title="$item.link.data" />
-
 				#if ($item.link.url-location.data != "")
 					</a>
 				#end
@@ -45,8 +41,7 @@
 	AUI().ready(
 		'aui-carousel',
 		function(A) {
-			new A.Carousel(
-				{
+			new A.Carousel({
 					activeIndex: 'rand',
 					contentBox: '#${content_class}',
 					height: $height.getData(),

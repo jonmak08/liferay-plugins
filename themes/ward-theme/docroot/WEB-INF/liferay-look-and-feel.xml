@@ -7,24 +7,16 @@
 	</compatibility>
 	<theme id="ward" name="Ward">
 		<settings>
-
 			<setting configurable="true" key="display-jumboheadline" type="checkbox" value="true"/>
-			<setting configurable="true" key="Jumbo Headline" type="textarea" value="Jumbo Headline"/>
-
+			<setting configurable="true" key="jumbo-headline" type="textarea" value="Jumbo Headline"/>
 			<setting configurable="true" key="display-sub-headline" type="checkbox" value="true"/>
-			<setting configurable="true" key="Sub Headline" type="textarea" value="Got something important to say? Then make it stand out by using the jumbo headline option and get your visitor's attention right away."/>
-
+			<setting configurable="true" key="sub-headline" type="textarea" value="Got something important to say? Then make it stand out by using the jumbo headline option and get your visitor's attention right away."/>
 			<setting configurable="true" key="display-left-footer-text" type="checkbox" value="true"/>
 			<setting configurable="true" key="left-footer-text" type="textarea" value="Copyright &amp;copy; 2014  &lt;a href=&quot;http://liferay.com&quot;&gt;Liferay Inc.&lt;/a&gt; All Rights Reserved."/>
-
 			<setting configurable="true" key="display-right-footer-text" type="checkbox" value="true"/>
 			<setting configurable="true" key="right-footer-text" type="textarea" value="Ward-Theme-Project by Lam Nguyen."/>
-
-			<!-- Toggle for turning on/off portlet borders and id -->
 			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="true"/>
-
 		</settings>
-
 		<layout-templates>
 			<custom>
 				<layout-template id="2_1_3_columns" name="2-1-3 Columns Layout">
@@ -34,6 +26,5 @@
 				</layout-template>
 			</custom>
 		</layout-templates>
-
 	</theme>
 </look-and-feel>
