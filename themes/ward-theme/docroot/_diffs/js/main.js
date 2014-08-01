@@ -22,7 +22,3 @@ AUI().ready(
 		}
 	}
 );
-
-// Scroll to top button
-
-// Don't use jQuery. The is such simple code, use AUI instead.

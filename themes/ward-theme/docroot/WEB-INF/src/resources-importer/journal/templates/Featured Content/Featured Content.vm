@@ -1,37 +1,23 @@
 <style type="text/css">
-	#feature-contents .entry-title {
-		color: #555;
-		font-family: Lato, sans-serif;
-		font-size: 30px;
-		margin-bottom: 20px;
-	}
 	#feature-contents .entry-title a {
 		color: #555;
 	}
-	#feature-contents .entry-title a:link {
-		color: #555;
-		font-family: "Helvetica Neue", Helvetica, sans-serif;
-		font-size: 50px;
-		font-weight: lighter;
-	}
-	#feature-contents .entry-title a:hover {
+
+    #feature-contents .entry-title a:hover {
 		color: #000;
 		text-decoration: none;
 	}
-	#feature-contents .entry-title a:hover .text-muted {
-		color: #777;
-	}
-	#feature-contents .entry-title, .basic .entry-title a {
-		font-family: "Helvetica Neue", Helvetica, sans-serif;
-	}
+
 	#feature-contents .lead-custom {
 		color: #666;
 		margin-bottom: 35px;
 	}
+
 	.web-section {
 		margin-left: 16.666666666666664%;
 		width: 66.66666666666666%;
 	}
+
 	#feature-contents .btn-custom {
 		-moz-user-select: none;
 		-ms-user-select: none;
@@ -52,11 +38,13 @@
 		vertical-align: middle;
 		white-space: nowrap;
 	}
+
 	.btn-danger-custom {
 		background-color: #d9534f;
 		border-color: #d43f3a;
 		color: #ffffff;
 	}
+
 	#custom-a-tag {
 		color: white;
 	}
@@ -64,29 +52,37 @@
 
 
 ## ---------- Date ---------- ##
+
 #set ($date = $dateUtil)
 #set ($day = $date.getCurrentDate("dd", $locale))
 #set ($month = $date.getCurrentDate("MMMM", $locale))
 #set ($year = $date.getCurrentDate("yyyy", $locale))
 
 ## ----------- User ---------- ##
+
 #set($user = $permissionChecker.getUser())
 
 <div class="web-section" id="feature-contents">
+
 	#if ($title.data != "")
 		<h1 class="entry-title">
 			<a href="$hyperlink.getData()" rel="bookmark" >$title.data</a>
 		</h1>
 	#end
+
 	<div class="entry-meta">by <a href="#" rel="author">$user.firstName $user.lastName</a>&nbsp;on&nbsp;
 		<time class="published updated">$day $month, $year</time>
 	</div>
+
 	<div class="entry-content">
+
 		#if ($body_text.data != "")
 			<p class="lead lead-custom">$body_text.data</p>
 		#end
+
 		#if ($body_text.data != "")
 			<p class="more-link-p"><a id="custom-a-tag" class="btn-custom btn-danger-custom" href="$hyperlink.data">$button_label.data</a></p>
 		#end
+
 	</div>
 </div>

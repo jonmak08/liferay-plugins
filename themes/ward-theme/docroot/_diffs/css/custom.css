@@ -5,7 +5,12 @@
 /* ---------- Global ---------- */
 
 .aui {
-	#breadcrumbs, #navigation .child-menu, #navigation h1, #skip-to-content, .portlet-journal-content-search .lfr-search-button, .portlet-journal-content-search .lfr-search-keywords {
+	#breadcrumbs,
+	#navigation .child-menu,
+	#navigation h1,
+	#skip-to-content,
+	.portlet-journal-content-search .lfr-search-button,
+	.portlet-journal-content-search .lfr-search-keywords {
 		clip: rect(0 0 0 0);
 		position: absolute;
 	}
@@ -14,9 +19,10 @@
 		background: #E2E2E2;
 	}
 
-	.portlet-content, .portlet-minimized .portlet-content-container {
-		border-top-width: 0;
+	.portlet-content,
+	.portlet-minimized .portlet-content-container {
 		border: 1px solid #EAEAEA;
+		border-top-width: 0;
 		padding: 12px 10px 10px;
 	}
 
@@ -61,7 +67,8 @@
 		position: relative;
 	}
 
-	#banner, #content {
+	#banner,
+	#content {
 		margin: 0 auto;
 		max-width: 1200px;
 	}
@@ -166,22 +173,24 @@
 		margin-top: 15px;
 
 		a {
-			&:link, &:visited {
+			&:link,
+			&:visited {
+				font: bold 0.9em/49px Lato, sans-serif;
 				color: #775A5A;
-				font-family: Lato, sans-serif;
-				font-size: 0.9em;
-				font-weight: bold;
+				display: block;
+				padding: 0 20px;
 				text-decoration: none;
 				text-transform: capitalize;
 			}
 
 			&:hover {
-				color: white;
+				background-color: #282C2F;
 			}
 		}
 
 		li {
 			float: left;
+
 			&.first {
 				padding-left: 5px;
 			}
@@ -246,7 +255,8 @@
 		}
 	}
 
-	.carousel-container, .carousel-container #tabs .tab-item {
+	.carousel-container,
+	.carousel-container #tabs .tab-item {
 		font-family: Lato, sans-serif;
 	}
 
@@ -256,11 +266,15 @@
 		@include border-right-radius(5px);
 	}
 
-	#banner .site-name, .carousel-container, .carousel-container #tabs .tab-item {
+	#banner .site-name,
+	.carousel-container,
+	.carousel-container #tabs .tab-item {
 		@include border-radius(5px);
 	}
 
-	.carousel-container, .column-text img, .pod .pod-image {
+	.carousel-container,
+	.column-text img,
+	.pod .pod-image {
 		@include single-box-shadow;
 	}
 
@@ -296,11 +310,8 @@
 	}
 
 	.home-jumbotron h1 {
+		font: normal 96px/0.7 Lato, sans-serif;
 		color: #555;
-		font-family: Lato, sans-serif;
-		font-size: 96px;
-		font-weight: normal;
-		line-height: 0.7;
 	}
 
 	.home-jumbotron .middle-circle {
@@ -326,12 +337,14 @@
 
 	/* ---------- Portlet-boundaries ---------- */
 
-	.breadcrumb, .portlet-boundary:not(.portlet-dockbar) {
+	.breadcrumb,
+	.portlet-boundary:not(.portlet-dockbar) {
 		margin: 0;
 		padding: 70px 0 60px;
 	}
 
-	.breadcrumb, .portlet-boundary {
+	.breadcrumb,
+	.portlet-boundary {
 		padding-bottom: 20px;
 	}
 
@@ -364,24 +377,14 @@
 		font-size: 30px;
 	}
 
-	.entry-title {
-		font-size: 20px;
-		margin-bottom: 10px;
-		margin: 0;
-	}
-
-	.entry-title {
-		margin-bottom: 20px;
-	}
-
 	.entry-title a:hover {
 		color: #000;
 		text-decoration: none;
 	}
 
-	.entry-title, .entry-title a {
-		font-family: "Helvetica Neue", Helvetica, sans-serif;
-		font-size: 50px;
+	.entry-title,
+	.entry-title a {
+		font: 50px "Helvetica Neue", Helvetica, sans-serif;
 	}
 
 	.entry-meta {
@@ -394,7 +397,8 @@
 		margin-bottom: 20px;
 	}
 
-	.entry-meta, .entry-meta a {
+	.entry-meta,
+	.entry-meta a {
 		font-family: "Helvetica Neue", Helvetica, sans-serif;
 	}
 
@@ -411,7 +415,8 @@
 		opacity: 0.9;
 	}
 
-	.post-category, .post-category a,
+	.post-category,
+	.post-category a,
 	.post-format,
 	.post-format a {
 		font-family: Lato, sans-serif;
@@ -439,27 +444,27 @@
 		position: relative;
 		z-index: 100;
 
-		& .row {
+		.row {
 			margin-bottom: 0;
 		}
 
-		& a {
+		a {
 			color: #7B7B7B;
 		}
 
-		& .credit-link {
+		.credit-link {
 			position: relative;
 		}
 
-		& .icon-leaf {
+		.icon-leaf {
 			-moz-transform: rotate(-5deg);
 			-ms-transform: rotate(-5deg);
 			-webkit-transform: rotate(-5deg);
+			transform: rotate(-5deg);
 			font-size: 28px;
 			left: -35px;
 			position: absolute;
 			top: -4px;
-			transform: rotate(-5deg);
 		}
 	}
 
@@ -476,10 +481,10 @@
 
 	.custom-navigation {
 		height: 170px;
+		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 60px;
-		width: 1200px;
 	}
 
 	#custom-site-logo {
@@ -487,21 +492,8 @@
 		background-color: #282C2F;
 		box-shadow: -6px 6px 6px #888888;
 		height: 75px;
-		padding-left: 13px;
-		padding-right: 10px;
-		padding-top: 4px;
+		padding: 10px 10px 0 13px;
 		position: absolute;
-	}
-
-	nav > ul > li > a {
-		display: block;
-		line-height: 49px;
-		padding: 0 20px;
-		text-decoration: none;
-	}
-
-	nav > ul > li:hover {
-		background-color: #282C2F;
 	}
 
 	.input-localized .input-localized-content {

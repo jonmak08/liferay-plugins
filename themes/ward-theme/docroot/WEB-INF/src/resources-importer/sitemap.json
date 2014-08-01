@@ -13,6 +13,7 @@
 					"Hello world.xml"
 				]
 			],
+
 			"friendlyURL": "/home",
 			"layoutTemplateId": "1_column",
 			"name": "Home",
@@ -27,6 +28,7 @@
 					"Home Calendar.xml"
 				]
 			],
+
 			"friendlyURL": "/strutures",
 			"layoutTemplateId": "1_2_1_columns",
 			"name": "Strutures",
