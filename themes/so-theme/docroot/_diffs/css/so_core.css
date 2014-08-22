@@ -22,7 +22,6 @@
 
 	.site-title {
 		display: inline-block;
-		float: left;
 
 		&, a {
 			color: $red;
@@ -43,6 +42,10 @@
 			vertical-align: middle;
 			width: auto;
 		}
+	}
+
+	.member-link {
+		margin: 0 1em;
 	}
 
 	.avatar {
@@ -868,17 +871,15 @@ html.aui {
 		padding: 0;
 	}
 
-	.abstract, .entry-categories, .entry-tags {
-		display: none;
+	.abstract img {
+		margin-right: 10px;
 	}
 
-	.comments {
-		display: inline;
-		margin: 0.5em 0;
-	}
-
-	.comments a {
-		white-space: nowrap;
+	.entry-tags {
+		border-left-width: 0;
+		margin-bottom: 0.5em;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
@@ -966,17 +967,7 @@ html.aui {
 			}
 
 			a {
-				background-color: #EEE;
-
-				@include border-radius(4px);
-
-				display: inline-block;
-				padding: 4px 6px;
-
-				&:hover {
-					background-color: #DDD;
-					text-decoration: none;
-				}
+				@include tag(true);
 			}
 		}
 	}
@@ -1279,22 +1270,12 @@ html.aui {
 
 	.tags {
 		margin-bottom: 0.5em;
-
-		.tag {
-			background-color: #EEE;
-			background-position-x: 7px;
-
-			@include border-radius(4px);
-
-			color: #2571AD;
-			display: inline-block;
-			padding: 7px 7px 7px 27px;
-		}
 	}
 
 	/* ---------- Thread ---------- */
 
 	.edit-controls li, .thread-actions li, .thread-navigation {
+		height: 2em;
 		line-height: 2em;
 	}
 
@@ -1317,6 +1298,7 @@ html.aui {
 	}
 
 	.message-container {
+		clear: both;
 		overflow: visible;
 
 		.thread-message-view {
@@ -1391,6 +1373,7 @@ html.aui {
 		.user-profile-image {
 			height: 55px;
 			max-width: 55px;
+			overflow: hidden;
 
 			.avatar {
 				width: 55px;
@@ -1875,6 +1858,10 @@ html.aui {
 	}
 }
 
+.taglib-asset-tags-summary .tag {
+	@include tag(false);
+}
+
 /* ---------- Top links component ---------- */
 
 .taglib-header {
@@ -1944,6 +1931,12 @@ html.aui {
 		.portlet-layout, .portlet-column {
 			display: block;
 			width: auto;
+		}
+
+		/* ---------- Icon menu ---------- */
+
+		.lfr-menu-list.dropdown-menu > li > a {
+			white-space: normal;
 		}
 
 		/* ---------- Portlet: message boards ---------- */
@@ -2179,8 +2172,12 @@ html.aui {
 		/* ---------- Portlet: message boards ---------- */
 
 		.portlet-asset-publisher, .portlet-message-boards {
-			#toggle_id_message_boards_view_message_thread, #toggle_id_message_boards_view_message_thread_image, .thread-view-controls {
+			#toggle_id_message_boards_view_message_thread_image, .thread-view-controls {
 				display: none;
+			}
+
+			#toggle_id_message_boards_view_message_thread {
+				display: none !important;
 			}
 
 			.accordion-inner {

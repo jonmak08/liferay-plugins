@@ -15,33 +15,18 @@
 package com.liferay.notifications.hook.service.impl;
 
 import com.liferay.compat.portal.kernel.notifications.UserNotificationDefinition;
+import com.liferay.notifications.util.NotificationsUtil;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
-import com.liferay.portal.kernel.json.JSONFactoryUtil;
-import com.liferay.portal.kernel.json.JSONObject;
-import com.liferay.portal.kernel.messaging.DestinationNames;
-import com.liferay.portal.kernel.messaging.MessageBusUtil;
-import com.liferay.portal.kernel.notifications.NotificationEvent;
-import com.liferay.portal.kernel.notifications.NotificationEventFactoryUtil;
-import com.liferay.portal.kernel.notifications.UserNotificationManagerUtil;
-import com.liferay.portal.kernel.process.ProcessCallable;
-import com.liferay.portal.kernel.process.ProcessException;
-import com.liferay.portal.kernel.util.StringBundler;
-import com.liferay.portal.kernel.util.StringPool;
-import com.liferay.portal.model.Subscription;
-import com.liferay.portal.model.UserNotificationDeliveryConstants;
+import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.service.ServiceContext;
-import com.liferay.portal.service.SubscriptionLocalServiceUtil;
-import com.liferay.portal.service.UserNotificationEventLocalServiceUtil;
-import com.liferay.portal.util.Portal;
 import com.liferay.portal.util.PortletKeys;
+import com.liferay.portlet.asset.AssetRendererFactoryRegistryUtil;
+import com.liferay.portlet.asset.model.AssetRenderer;
+import com.liferay.portlet.asset.model.AssetRendererFactory;
 import com.liferay.portlet.blogs.model.BlogsEntry;
 import com.liferay.portlet.blogs.service.BlogsEntryLocalService;
 import com.liferay.portlet.blogs.service.BlogsEntryLocalServiceWrapper;
-
-import java.io.Serializable;
-
-import java.util.List;
 
 /**
  * @author Lin Cui
@@ -71,99 +56,29 @@ public class BlogsEntryLocalServiceImpl extends BlogsEntryLocalServiceWrapper {
 				UserNotificationDefinition.NOTIFICATION_TYPE_UPDATE_ENTRY;
 		}
 
-		StringBundler sb = new StringBundler(5);
+		AssetRenderer assetRenderer = _assetRendererFactory.getAssetRenderer(
+			blogsEntry.getEntryId());
 
-		sb.append(serviceContext.getLayoutFullURL());
-		sb.append(Portal.FRIENDLY_URL_SEPARATOR);
-		sb.append("blogs");
-		sb.append(StringPool.SLASH);
-		sb.append(blogsEntry.getEntryId());
+		String entryURL = NotificationsUtil.getEntryURL(
+			assetRenderer, PortletKeys.BLOGS, serviceContext);
 
-		sendNotificationEvent(blogsEntry, sb.toString(), notificationType);
+		if (Validator.isNotNull(entryURL)) {
+			NotificationsUtil.sendNotificationEvent(
+				blogsEntry.getCompanyId(), _BLOGS_ENTRY_CLASS_NAME,
+				blogsEntry.getGroupId(), _BLOGS_ENTRY_CLASS_NAME,
+				PortletKeys.BLOGS, blogsEntry.getEntryId(),
+				assetRenderer.getTitle(serviceContext.getLocale()), entryURL,
+				notificationType, userId);
+		}
 
 		return blogsEntry;
 	}
 
-	protected void sendNotificationEvent(
-			BlogsEntry blogsEntry, String entryURL, int notificationType)
-		throws PortalException, SystemException {
+	protected AssetRendererFactory _assetRendererFactory =
+		AssetRendererFactoryRegistryUtil.getAssetRendererFactoryByClassName(
+			_BLOGS_ENTRY_CLASS_NAME);
 
-		JSONObject notificationEventJSONObject =
-			JSONFactoryUtil.createJSONObject();
-
-		notificationEventJSONObject.put(
-			"className", blogsEntry.getModelClassName());
-		notificationEventJSONObject.put("classPK", blogsEntry.getEntryId());
-		notificationEventJSONObject.put("entryTitle", blogsEntry.getTitle());
-		notificationEventJSONObject.put("entryURL", entryURL);
-		notificationEventJSONObject.put("notificationType", notificationType);
-		notificationEventJSONObject.put(
-			"userId", blogsEntry.getStatusByUserId());
-
-		MessageBusUtil.sendMessage(
-			DestinationNames.ASYNC_SERVICE,
-			new NotificationProcessCallable(
-				blogsEntry, notificationEventJSONObject));
-	}
-
-	private static class NotificationProcessCallable
-		implements ProcessCallable<Serializable> {
-
-		public NotificationProcessCallable(
-			BlogsEntry blogsEntry, JSONObject notificationEventJSONObject) {
-
-			_blogsEntry = blogsEntry;
-			_notificationEventJSONObject = notificationEventJSONObject;
-		}
-
-		@Override
-		public Serializable call() throws ProcessException {
-			try {
-				sendUserNotifications(
-					_blogsEntry, _notificationEventJSONObject);
-			}
-			catch (Exception e) {
-				throw new ProcessException(e);
-			}
-
-			return null;
-		}
-
-		protected void sendUserNotifications(
-				BlogsEntry blogsEntry, JSONObject notificationEventJSONObject)
-			throws PortalException, SystemException {
-
-			int notificationType = notificationEventJSONObject.getInt(
-				"notificationType");
-
-			List<Subscription> subscriptions =
-				SubscriptionLocalServiceUtil.getSubscriptions(
-					blogsEntry.getCompanyId(), blogsEntry.getModelClassName(),
-					blogsEntry.getGroupId());
-
-			for (Subscription subscription : subscriptions) {
-				long userId = subscription.getUserId();
-
-				if (UserNotificationManagerUtil.isDeliver(
-						userId, PortletKeys.BLOGS, 0, notificationType,
-						UserNotificationDeliveryConstants.TYPE_WEBSITE)) {
-
-					NotificationEvent notificationEvent =
-						NotificationEventFactoryUtil.createNotificationEvent(
-							System.currentTimeMillis(), PortletKeys.BLOGS,
-							notificationEventJSONObject);
-
-					UserNotificationEventLocalServiceUtil.
-						addUserNotificationEvent(userId, notificationEvent);
-				}
-			}
-		}
-
-		private static final long serialVersionUID = 1L;
-
-		private BlogsEntry _blogsEntry;
-		private JSONObject _notificationEventJSONObject;
-
-	}
+	private static final String _BLOGS_ENTRY_CLASS_NAME =
+		BlogsEntry.class.getName();
 
 }
