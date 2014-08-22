@@ -24,12 +24,9 @@
 </style>
 
 <div id="$content_class">
-
 	#foreach ($item in $image.getSiblings())
-		<div class="carousel-item">
-
-			#if ($item.getData())
-
+		#if ($item.getData())
+			<div class="carousel-item">
 				#if ($item.link.url-location.data != "")
 					<a href="$item.link.url-location.data">
 				#end
@@ -39,12 +36,9 @@
 				#if ($item.link.url-location.data != "")
 					</a>
 				#end
-
-			#end
-
-		</div>
+			</div>
+		#end
 	#end
-
 </div>
 
 <script type="text/javascript">
@@ -57,8 +51,8 @@
 						activeIndex: 'rand',
 						contentBox: '#${content_class}',
 						height: $height.getData(),
-						width: $width.getData(),
-						intervalTime: $duration.getData()
+						intervalTime: $duration.getData(),
+						width: $width.getData()
 					}
 				).render();
 			}

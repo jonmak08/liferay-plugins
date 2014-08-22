@@ -5,28 +5,24 @@
 	var width;
 
 	if ('$width.getData()'!='') {
-
 		if ($width.getData() >= 300 && $width.getData() < 1200) {
 			width = '$width.getData()'.concat('px');
 		}
 		else {
 			width = 'auto';
 		}
-
 	}
 	else {
 		width = 'auto';
 	}
 
 	if ('$height.getData()'!='') {
-
 		if ($height.getData() >= 300 && $height.getData() < 1200) {
 			height = '$height.getData()'.concat('px');
 		}
 		else {
 			height = 'auto';
 		}
-
 	}
 	else {
 		height = 'auto';
@@ -34,17 +30,16 @@
 
 	AUI().use(
 		'calendar',
-		function (A)
-			{
-				var calendar = new A.Calendar(
-					{
-						contentBox: "#mycalendar",
-						height: height,
-						width: width,
-						showPrevMonth: $getterUtil.getBoolean($showPrevMonth.getData()),
-						showNextMonth: $getterUtil.getBoolean($showNextMonth.getData())
-					}
-				).render();
-			}
+		function(A) {
+			var calendar = new A.Calendar(
+				{
+					contentBox: '#mycalendar',
+					height: height,
+					showNextMonth: $getterUtil.getBoolean($showNextMonth.getData()),
+					showPrevMonth: $getterUtil.getBoolean($showPrevMonth.getData()),
+					width: width
+				}
+			).render();
+		}
 	);
 </script>

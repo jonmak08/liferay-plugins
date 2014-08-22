@@ -10,51 +10,54 @@
 	#set($colData = [])
 
 	#if (!$col_attr.getSiblings().isEmpty())
-
+		## Original loop
 		#foreach ($item in $col_attr.getSiblings())
-			<$col.add($item.getData())>
-
-			<$colData.add($item.getChild('values').getData())>
+			#set($colAdd = $col.add($item.getData()))
+			#set($colDataAdd = $colData.add($item.getChild('values').getData()))
 		#end
-
 	#end
 </div>
 
 <script type="text/javascript">
+	var columns = [];
+	var columnsIndex = 0;
 
-	var columns = new Array();
-	var k = 0;
+	## Redundant loop #1
+	#foreach($colItem in $col)
+		columns[columnsIndex] = '${colItem}';
 
-	#foreach($i in $col)
-		columns[k++] = '${i}';
+		columnsIndex++;
 	#end
 
-	var colDatas = new Array();
-	var z = 0;
+	var colDatas = [];
+	var colDatasIndex = 0;
 
-	#foreach($i in $colData)
-		colDatas[z++] = '${i}';
+	## Redundant loop #2
+	#foreach($colDataItem in $colData)
+		colDatas[colDatasIndex] = '${colDataItem}';
+
+		colDatasIndex++;
 	#end
 
 	var lengthArr = [];
 
-	for (var i=0; i<columns.length; i++) {
+	for (var i = 0; i < columns.length; i++) {
 		lengthArr[i] = colDatas[i].split(',').length;
 	}
 
 	lengthArr.sort(
-		function(a, b)
-			{
-				return b-a;
-			}
+		function(a, b) {
+			return b - a;
+		}
 	);
 
 	var rowCount = lengthArr[0];
 	var data = [];
 
-	for (var i = 0; i < rowCount; ++i) {
+	for (var i = 0; i < rowCount; i++) {
 		var tempObj = {};
-		for (var j = 0; j < columns.length; ++j) {
+
+		for (var j = 0; j < columns.length; j++) {
 			tempObj[columns[j]] = colDatas[j].split(',')[i];
 		}
 		data.push(tempObj);
@@ -62,14 +65,13 @@
 
 	AUI().use(
 		'aui-datatable',
-		function(A)
-			{
-				new A.DataTable.Base(
-					{
-						columnset: columns,
-						recordset: data
-					}
-				).render('#myDataTable');
-			}
+		function(A) {
+			new A.DataTable.Base(
+				{
+					columnset: columns,
+					recordset: data
+				}
+			).render('#myDataTable');
+		}
 	);
 </script>

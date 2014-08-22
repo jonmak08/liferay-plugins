@@ -5,12 +5,7 @@
 /* ---------- Global ---------- */
 
 .aui {
-	#breadcrumbs,
-	#navigation .child-menu,
-	#navigation h1,
-	#skip-to-content,
-	.portlet-journal-content-search .lfr-search-button,
-	.portlet-journal-content-search .lfr-search-keywords {
+	#breadcrumbs, #navigation .child-menu, #navigation h1, #skip-to-content, .portlet-journal-content-search .lfr-search-button, .portlet-journal-content-search .lfr-search-keywords {
 		clip: rect(0 0 0 0);
 		position: absolute;
 	}
@@ -19,8 +14,7 @@
 		background: #E2E2E2;
 	}
 
-	.portlet-content,
-	.portlet-minimized .portlet-content-container {
+	.portlet-content, .portlet-minimized .portlet-content-container {
 		border: 1px solid #EAEAEA;
 		border-top-width: 0;
 		padding: 12px 10px 10px;
@@ -67,8 +61,7 @@
 		position: relative;
 	}
 
-	#banner,
-	#content {
+	#banner, #content {
 		margin: 0 auto;
 		max-width: 1200px;
 	}
@@ -89,18 +82,6 @@
 		&:hover {
 			color: #EE9F44;
 		}
-	}
-
-	.left {
-		float: left;
-	}
-
-	.right {
-		float: right;
-	}
-
-	.clear {
-		clear: both;
 	}
 
 	img {
@@ -149,6 +130,7 @@
 		font-weight: 300;
 		margin: 0 10px;
 		position: relative;
+		text-decoration: none;
 		vertical-align: middle;
 	}
 
@@ -173,11 +155,10 @@
 		margin-top: 15px;
 
 		a {
-			&:link,
-			&:visited {
-				font: bold 0.9em/49px Lato, sans-serif;
+			&:link, &:visited {
 				color: #775A5A;
 				display: block;
+				font: bold 0.9em/49px Lato, sans-serif;
 				padding: 0 20px;
 				text-decoration: none;
 				text-transform: capitalize;
@@ -200,7 +181,7 @@
 			}
 
 			&.selected a {
-				background-color: #282c2f;
+				background-color: #282C2F;
 				color: white;
 			}
 		}
@@ -255,31 +236,8 @@
 		}
 	}
 
-	.carousel-container,
-	.carousel-container #tabs .tab-item {
+	.carousel-container, .carousel-container #tabs .tab-item {
 		font-family: Lato, sans-serif;
-	}
-
-	/* ---------- Extras ---------- */
-
-	.carousel-container #carousel .carousel-item {
-		@include border-right-radius(5px);
-	}
-
-	#banner .site-name,
-	.carousel-container,
-	.carousel-container #tabs .tab-item {
-		@include border-radius(5px);
-	}
-
-	.carousel-container,
-	.column-text img,
-	.pod .pod-image {
-		@include single-box-shadow;
-	}
-
-	.home-jumbotron .middle-circle {
-		@include border-radius(80px);
 	}
 
 	/* ---------- Main elements ---------- */
@@ -307,120 +265,109 @@
 		padding: 50px 15px;
 		position: relative;
 		text-align: center;
-	}
 
-	.home-jumbotron h1 {
-		font: normal 96px/0.7 Lato, sans-serif;
-		color: #555;
-	}
+		h1 {
+			color: #555;
+			font: normal 96px/0.7 Lato, sans-serif;
+		}
 
-	.home-jumbotron .middle-circle {
-		background: #FFF;
-		bottom: -90px;
-		font-size: 65px;
-		height: 120px;
-		left: 50%;
-		line-height: 140px;
-		margin-left: -60px;
-		position: absolute;
-		width: 120px;
-		z-index: 10;
-	}
+		.middle-circle {
+			background: #FFF;
+			bottom: -90px;
+			font-size: 65px;
+			height: 120px;
+			left: 50%;
+			line-height: 140px;
+			margin-left: -60px;
+			position: absolute;
+			width: 120px;
+			z-index: 10;
+		}
 
-	.home-jumbotron .middle-circle {
-		color: #D9534f;
-	}
+		.middle-circle {
+			color: #D9534F;
+		}
 
-	.jumbotron a{
-		text-decoration: none;
+		a {
+			text-decoration: none;
+		}
 	}
 
 	/* ---------- Portlet-boundaries ---------- */
 
-	.breadcrumb,
-	.portlet-boundary:not(.portlet-dockbar) {
+	.breadcrumb, .portlet-boundary:not(.portlet-dockbar) {
 		margin: 0;
 		padding: 70px 0 60px;
 	}
 
-	.breadcrumb,
-	.portlet-boundary {
+	.breadcrumb, .portlet-boundary {
 		padding-bottom: 20px;
 	}
 
-	.breadcrumb:nth-child(even),
-	.columns-1 .portlet-boundary:nth-child(even) {
+	.breadcrumb:nth-child(even), .columns-1 .portlet-boundary:nth-child(even) {
 		background: white;
 	}
 
-	.breadcrumb.time,
-	.portlet-boundary.time {
+	.breadcrumb.time, .portlet-boundary.time {
 		color: inherit;
 	}
 
-	.columns-1 .portlet-borderless-container,
-	.columns-1 .portlet{
+	.columns-1 .portlet-borderless-container, .columns-1 .portlet {
 		margin-left: 25%;
 		margin-right: 25%;
 	}
 
-	#primary #main-content:not(.columns-1){
+	#primary #main-content:not(.columns-1) {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 1200px;
 	}
 
-	.portlet-title-editable,
-	.portlet-title-text {
+	.portlet-title-editable, .portlet-title-text {
 		color: #555;
 		font-family: Lato, sans-serif;
 		font-size: 30px;
 	}
 
-	.entry-title a:hover {
-		color: #000;
-		text-decoration: none;
-	}
+	.entry-title {
+		&, a {
+			font: 50px "Helvetica Neue", Helvetica, sans-serif;
+		}
 
-	.entry-title,
-	.entry-title a {
-		font: 50px "Helvetica Neue", Helvetica, sans-serif;
+		a:hover {
+			color: #000;
+			text-decoration: none;
+		}
 	}
 
 	.entry-meta {
 		font-size: 14px;
 		line-height: 3;
 		margin: 10px 0 30px;
+
+		&, a {
+			font-family: "Helvetica Neue", Helvetica, sans-serif;
+		}
 	}
 
 	.single .entry-meta {
 		margin-bottom: 20px;
 	}
 
-	.entry-meta,
-	.entry-meta a {
-		font-family: "Helvetica Neue", Helvetica, sans-serif;
-	}
-
-	.post-category,
-	.post-format {
+	.post-category, .post-format {
 		font-size: 14px;
 		margin: 0 0 3px;
 		text-transform: uppercase;
-	}
 
-	.post-category i,
-	.post-format i {
-		margin-right: 5px;
-		opacity: 0.9;
-	}
+		i {
+			margin-right: 5px;
+			opacity: 0.9;
+		}
 
-	.post-category,
-	.post-category a,
-	.post-format,
-	.post-format a {
-		font-family: Lato, sans-serif;
-		font-weight: 300;
+		&, a {
+			font-family: Lato, sans-serif;
+			font-weight: 300;
+		}
 	}
 
 	.post-format {
@@ -457,10 +404,6 @@
 		}
 
 		.icon-leaf {
-			-moz-transform: rotate(-5deg);
-			-ms-transform: rotate(-5deg);
-			-webkit-transform: rotate(-5deg);
-			transform: rotate(-5deg);
 			font-size: 28px;
 			left: -35px;
 			position: absolute;
@@ -481,16 +424,14 @@
 
 	.custom-navigation {
 		height: 170px;
-		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 60px;
+		width: 1200px;
 	}
 
 	#custom-site-logo {
-		-webkit-border-radius: 10px;
 		background-color: #282C2F;
-		box-shadow: -6px 6px 6px #888888;
 		height: 75px;
 		padding: 10px 10px 0 13px;
 		position: absolute;
@@ -504,5 +445,32 @@
 	#sub-headline-text {
 		font-size: 24px;
 		margin-top: 22px;
+	}
+
+	/* ---------- Extras ---------- */
+
+	.carousel-container #carousel .carousel-item {
+		@include border-right-radius(5px);
+	}
+
+	#banner .site-name, .carousel-container, .carousel-container #tabs .tab-item {
+		@include border-radius(5px);
+	}
+
+	.carousel-container, .column-text img, .pod .pod-image {
+		@include single-box-shadow;
+	}
+
+	.home-jumbotron .middle-circle {
+		@include border-radius(80px);
+	}
+
+	#custom-site-logo {
+		@include border-radius(10px);
+		@include box-shadow(#888 -6px 6px 6px);
+	}
+
+	#footer .icon-leaf {
+		@include transform(rotate(-5deg));
 	}
 }

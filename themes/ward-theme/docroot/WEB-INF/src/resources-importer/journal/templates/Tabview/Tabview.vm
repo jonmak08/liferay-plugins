@@ -1,76 +1,65 @@
 <style type="text/css">
-	#myTab {
-		.nav-stacked > li {
-			width: 90%;
-		}
+	#myTabc.nav-stacked > li {
+		width: 90%;
+	}
 
-		.nav {
-			margin-bottom: 0px;
-		}
+	#myTab .nav {
+		margin-bottom: 0px;
+	}
 
-		.tab-label {
-			text-align: center;
-		}
+	#myTab .tab-label {
+		text-align: center;
+	}
 
-		.nav-tabs > li > a {
-			background-color: inherit;
-		}
+	#myTab .nav-tabs > li > a {
+		background-color: inherit;
+	}
 
-		.nav-tabs:not(.nav-pills) > li.active > a {
-			background-color: #F7F7F7;
-		}
+	#myTab .nav-tabs:not(.nav-pills) > li.active > a {
+		background-color: #F7F7F7;
+	}
 
-		.tab-content {
-			background: inherit;
-			border-top: 0;
-		}
+	#myTab .tab-content {
+		background: inherit;
+		border-top: 0;
 	}
 </style>
 
 <div id="myTab">
-
 	#if (!$label.getSiblings().isEmpty())
-
 		<ul class="nav nav-tabs">
-
 			#foreach ($cur_label in $label.getSiblings())
-				<li><a href="#tab-s">$cur_label.getData()</a></li>
+				<li><a href="#tab-s${velocityCount}">$cur_label.getData()</a></li>
 			#end
-
 		</ul>
 
 		<div class="tab-content">
-
 			#foreach ($cur_label in $label.getSiblings())
-				<div id="tab-s">
+				<div id="tab-s${velocityCount}">
 					<p>$cur_label.getChild('content').getData()</p>
 				</div>
 			#end
-
 		</div>
-
 	#end
-
 </div>
 
 <script type="text/javascript">
 	AUI().use(
 		'aui-tabview',
-		function(A)
-			{
-				var stacked = false;
+		function(A) {
+			var stacked = false;
 
-				if ('$stackedTabs.getData()' === 'true') {
-					stacked = true;
-				}
-
-				new A.TabView(
-					{
-						srcNode: '#myTab',
-						type: $type.getData()[0],
-						stacked: stacked
-					}
-				).render();
+			if ('$stackedTabs.getData()' === 'true') {
+				stacked = true;
 			}
+
+			new A.TabView(
+				{
+					srcNode: '#myTab',
+					stacked: stacked,
+					type: $type.getData()[0]
+				}
+			).render();
+		}
 	);
 </script>
