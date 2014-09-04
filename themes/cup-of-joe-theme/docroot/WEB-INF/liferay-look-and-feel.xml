@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN"
+"http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+    <compatibility>
+        <version>6.2.0+</version>
+    </compatibility>
+    <theme id="cup-of-joe" name="Cup of Joe">
+        <settings>
+            <setting key="header-type" value="detailed" />
+           
+           <!-- footer links -->
+            <setting configurable="true"
+                key="display-footer-link-1"
+                type="link"
+                value=""
+            />
+           
+            <setting configurable="true"
+                key="display-footer-link-2"
+                type="link"
+                value="true"
+            />
+           
+            <setting configurable="true"
+                key="display-footer-link-3"
+                type="link"
+                value="true"
+            />
+            
+            <!-- footer social icons -->
+            <setting configurable="true"
+                key="display-social-media-icon_facebook"
+                type="text"
+                value="true"
+            />
+           
+            <setting configurable="true"
+                key="display-social-media-icon_googlePlus"
+                type="text"
+                value="true"
+            />
+          
+            <setting configurable="true"
+                key="display-social-media-icon_linkedIn"
+                type="text"
+                value="true"
+            />
+          
+            <setting configurable="true"
+                key="display-social-media-icon_tumblr"
+                type="text"
+                value="true"
+            />
+            <setting configurable="true"
+                key="display-social-media-icon_twitter"
+                type="text"
+                value="true"
+            />
+        </settings>
+    </theme>
+</look-and-feel>
