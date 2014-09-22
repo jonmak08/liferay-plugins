@@ -1,0 +1,476 @@
+@import "compass";
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+
+/* ---------- Global ---------- */
+
+.aui {
+	#breadcrumbs, #navigation .child-menu, #navigation h1, #skip-to-content, .portlet-journal-content-search .lfr-search-button, .portlet-journal-content-search .lfr-search-keywords {
+		clip: rect(0 0 0 0);
+		position: absolute;
+	}
+
+	.portlet-topper {
+		background: #E2E2E2;
+	}
+
+	.portlet-content, .portlet-minimized .portlet-content-container {
+		border: 1px solid #EAEAEA;
+		border-top-width: 0;
+		padding: 12px 10px 10px;
+	}
+
+	.dockbar-split .dockbar .navbar-inner .nav-account-controls {
+		right: 3em;
+	}
+
+	body {
+		background: url(../images/custom/background.png) 0 0;
+		font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		height: auto;
+		padding: 0;
+
+		&.html-editor {
+			background: #FFF;
+		}
+
+		&.portal-popup {
+			background-image: none;
+			border-top-width: 0;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1200px;
+
+			#content #main-content {
+				margin-top: 0;
+			}
+		}
+
+		&.show-footer {
+			background: #142933;
+
+			&.dialog-iframe-popup {
+				background: #FFF;
+			}
+		}
+	}
+
+	#wrapper {
+		font-size: 12px;
+		padding-top: 0;
+		position: relative;
+	}
+
+	#banner, #content {
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+
+	#sign-in {
+		background: #142933;
+		color: #FFF;
+		display: block;
+		font-size: 1em;
+		font-weight: bold;
+		left: 0;
+		padding: 15px 15px 20px;
+		position: absolute;
+		text-decoration: none;
+		text-transform: uppercase;
+		top: 0;
+
+		&:hover {
+			color: #EE9F44;
+		}
+	}
+
+	img {
+		border-width: 0;
+
+		&.right {
+			margin: 18px 0 18px 18px;
+		}
+
+		&.left {
+			margin: 18px 18px 18px 0;
+		}
+	}
+
+	hr {
+		background: #DDD;
+		border-width: 0;
+		clear: both;
+		float: none;
+		height: 1px;
+		margin: 0 0 1.45em;
+		width: 100%;
+	}
+
+	/* ---------- Dockbar ---------- */
+
+	.dockbar-split .dockbar .navbar-inner .nav-add-controls > li {
+		background: transparent;
+	}
+
+	/* ---------- Heading ---------- */
+
+	#banner {
+		position: relative;
+	}
+
+	#banner-container {
+		width: 900px;
+	}
+
+	#banner .site-name {
+		color: white;
+		display: inline-block;
+		font-family: Lato, sans-serif;
+		font-size: 1em;
+		font-weight: 300;
+		margin: 0 10px;
+		position: relative;
+		text-decoration: none;
+		vertical-align: middle;
+	}
+
+	#heading {
+		padding: 20px 0 10px;
+
+		h1.company-title {
+			clear: both;
+			float: left;
+			margin: 0;
+		}
+	}
+
+	/* ---------- Navigation ---------- */
+
+	#navigation {
+		background: url(../images/custom/nav_bg.png) repeat-x 0 10px;
+		clear: both;
+		display: block;
+		font-size: 1.2em;
+		height: 75px;
+		margin-top: 15px;
+
+		a {
+			&:link, &:visited {
+				color: #775A5A;
+				display: block;
+				font: bold 0.9em/49px Lato, sans-serif;
+				padding: 0 20px;
+				text-decoration: none;
+				text-transform: capitalize;
+			}
+
+			&:hover {
+				background-color: #282C2F;
+			}
+		}
+
+		li {
+			float: left;
+
+			&.first {
+				padding-left: 5px;
+			}
+
+			&.last {
+				padding-right: 5px;
+			}
+
+			&.selected a {
+				background-color: #282C2F;
+				color: white;
+			}
+		}
+
+		ul {
+			display: inline-block;
+			float: right;
+			list-style: none;
+			margin: 6px 0;
+			padding: 5px;
+
+			.lfr-nav-hover a {
+				color: white;
+			}
+		}
+
+		&.modify-pages .delete-tab {
+			background: #555;
+			border: 2px solid #FFF;
+			color: #FFF;
+			font-size: 16px;
+			padding: 4px;
+			right: -4px;
+			top: 7px;
+			z-index: 300;
+		}
+	}
+
+	#content #main-content {
+		margin-top: 20px;
+		min-height: 200px;
+		padding-bottom: 20px;
+	}
+
+	.column-text {
+		max-width: 305px;
+
+		.more {
+			color: #C58E4C;
+			margin: 10px 0;
+		}
+
+		p {
+			line-height: 15px;
+			margin: 15px 0;
+			text-indent: 0;
+		}
+
+		img {
+			margin-bottom: 1em;
+			margin-top: 25px;
+		}
+	}
+
+	.carousel-container, .carousel-container #tabs .tab-item {
+		font-family: Lato, sans-serif;
+	}
+
+	/* ---------- Main elements ---------- */
+
+	#page {
+		background: #F7F7F7;
+		height: 100%;
+	}
+
+	#primary.centered {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.home-top {
+		background: #FFF;
+	}
+
+	/* ---------- Jumbotron ---------- */
+
+	.home-jumbotron {
+		background-color: transparent;
+		margin-bottom: 40px;
+		padding: 50px 15px;
+		position: relative;
+		text-align: center;
+
+		h1 {
+			color: #555;
+			font: normal 96px/0.7 Lato, sans-serif;
+		}
+
+		.middle-circle {
+			background: #FFF;
+			bottom: -90px;
+			font-size: 65px;
+			height: 120px;
+			left: 50%;
+			line-height: 140px;
+			margin-left: -60px;
+			position: absolute;
+			width: 120px;
+			z-index: 10;
+		}
+
+		.middle-circle {
+			color: #D9534F;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	/* ---------- Portlet-boundaries ---------- */
+
+	.breadcrumb, .portlet-boundary:not(.portlet-dockbar) {
+		margin: 0;
+		padding: 70px 0 60px;
+	}
+
+	.breadcrumb, .portlet-boundary {
+		padding-bottom: 20px;
+	}
+
+	.breadcrumb:nth-child(even), .columns-1 .portlet-boundary:nth-child(even) {
+		background: white;
+	}
+
+	.breadcrumb.time, .portlet-boundary.time {
+		color: inherit;
+	}
+
+	.columns-1 .portlet-borderless-container, .columns-1 .portlet {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+
+	#primary #main-content:not(.columns-1) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1200px;
+	}
+
+	.portlet-title-editable, .portlet-title-text {
+		color: #555;
+		font-family: Lato, sans-serif;
+		font-size: 30px;
+	}
+
+	.entry-title {
+		&, a {
+			font: 50px "Helvetica Neue", Helvetica, sans-serif;
+		}
+
+		a:hover {
+			color: #000;
+			text-decoration: none;
+		}
+	}
+
+	.entry-meta {
+		font-size: 14px;
+		line-height: 3;
+		margin: 10px 0 30px;
+
+		&, a {
+			font-family: "Helvetica Neue", Helvetica, sans-serif;
+		}
+	}
+
+	.single .entry-meta {
+		margin-bottom: 20px;
+	}
+
+	.post-category, .post-format {
+		font-size: 14px;
+		margin: 0 0 3px;
+		text-transform: uppercase;
+
+		i {
+			margin-right: 5px;
+			opacity: 0.9;
+		}
+
+		&, a {
+			font-family: Lato, sans-serif;
+			font-weight: 300;
+		}
+	}
+
+	.post-format {
+		text-align: left;
+	}
+
+	.entry-content {
+		font-size: 16px;
+		line-height: 1.5;
+		position: relative;
+	}
+
+	/* ---------- Footer ---------- */
+
+	#footer {
+		background: #222;
+		border-top: 1px solid #000;
+		clear: both;
+		color: #7B7B7B;
+		font-size: 13px;
+		position: relative;
+		z-index: 100;
+
+		.row {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: #7B7B7B;
+		}
+
+		.credit-link {
+			position: relative;
+		}
+
+		.icon-leaf {
+			font-size: 28px;
+			left: -35px;
+			position: absolute;
+			top: -4px;
+		}
+	}
+
+	#footer-content {
+		padding: 15px 15px 20px;
+	}
+
+	/* ---------- Custom modifications for ward theme ---------- */
+
+	.taglib-form-navigator .form-navigator-content[class*="span"] {
+		background-color: inherit;
+		margin-left: 0;
+	}
+
+	.custom-navigation {
+		height: 170px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 60px;
+		width: 1200px;
+	}
+
+	#custom-site-logo {
+		background-color: #282C2F;
+		height: 75px;
+		padding: 10px 10px 0 13px;
+		position: absolute;
+	}
+
+	.input-localized .input-localized-content {
+		margin-left: 6px;
+		max-width: 100px;
+	}
+
+	#sub-headline-text {
+		font-size: 24px;
+		margin-top: 22px;
+	}
+
+	/* ---------- Extras ---------- */
+
+	.carousel-container #carousel .carousel-item {
+		@include border-right-radius(5px);
+	}
+
+	#banner .site-name, .carousel-container, .carousel-container #tabs .tab-item {
+		@include border-radius(5px);
+	}
+
+	.carousel-container, .column-text img, .pod .pod-image {
+		@include single-box-shadow;
+	}
+
+	.home-jumbotron .middle-circle {
+		@include border-radius(80px);
+	}
+
+	#custom-site-logo {
+		@include border-radius(10px);
+		@include box-shadow(#888 -6px 6px 6px);
+	}
+
+	#footer .icon-leaf {
+		@include transform(rotate(-5deg));
+	}
+}

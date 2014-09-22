@@ -1,0 +1,71 @@
+{
+	"layoutTemplateId": "1_2_1_columns",
+	"privatePages": [
+		{
+			"columns": [
+				[
+					"Worth A Thoudsand Words.xml",
+					"Elements.xml",
+					"More Tags.xml",
+					"HTML.xml",
+					"Links.xml",
+					"Category Hierarchy.xml",
+					"Hello world.xml"
+				]
+			],
+
+			"friendlyURL": "/home",
+			"layoutTemplateId": "1_column",
+			"name": "Home",
+			"title": "Home"
+		},
+		{
+			"columns": [
+				[
+					"Home Carousel.xml",
+					"Home DataTable.xml",
+					"Home Tabview.xml",
+					"Home Calendar.xml"
+				]
+			],
+
+			"friendlyURL": "/strutures",
+			"layoutTemplateId": "1_2_1_columns",
+			"name": "Strutures",
+			"title": "Strutures"
+		},
+		{
+			"columns": [
+				[
+					{
+						"portletId": "2"
+					}
+				],
+				[
+					{
+						"portletId": "16"
+					}
+				],
+				[
+					{
+						"portletId": "82"
+					}
+				],
+				[
+					{
+						"portletId": "70"
+					}
+				],
+				[
+					{
+						"portletId": "85"
+					}
+				]
+			],
+			"friendlyURL": "/portlets",
+			"layoutTemplateId": "2_1_3_columns",
+			"name": "Portlets",
+			"title": "Porlets"
+		}
+	]
+}

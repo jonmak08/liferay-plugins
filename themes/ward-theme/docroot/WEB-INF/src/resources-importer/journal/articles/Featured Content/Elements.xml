@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="title" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Elements]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="hyperlink" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA["#"]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="body_text" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site. Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 [top] Paragraph Lorem ipsum dolor sit amet,…]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="button_label" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Read more →]]></dynamic-content>
+	</dynamic-element>
+</root>

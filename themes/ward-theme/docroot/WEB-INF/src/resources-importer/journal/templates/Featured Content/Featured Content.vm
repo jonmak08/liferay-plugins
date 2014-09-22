@@ -1,0 +1,87 @@
+<style type="text/css">
+	#feature-contents .entry-title a {
+		color: #555;
+	}
+
+	#feature-contents .entry-title a:hover {
+		color: #000;
+		text-decoration: none;
+	}
+
+	#feature-contents .lead-custom {
+		color: #666;
+		margin-bottom: 35px;
+	}
+
+	.web-section {
+		margin-left: 16.666666666666664%;
+		width: 66.66666666666666%;
+	}
+
+	#feature-contents .btn-custom {
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 1.428571429;
+		margin-bottom: 0;
+		padding: 6px 12px;
+		text-align: center;
+
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+
+	.btn-danger-custom {
+		background-color: #D9534F;
+		border-color: #D43F3A;
+		color: #FFF;
+	}
+
+	#custom-a-tag {
+		color: white;
+	}
+</style>
+
+## ---------- Get Data ---------- ##
+
+#set ($date = $dateUtil)
+
+#set ($day = $date.getCurrentDate("dd", $locale))
+#set ($month = $date.getCurrentDate("MMMM", $locale))
+#set ($year = $date.getCurrentDate("yyyy", $locale))
+
+#set($user = $permissionChecker.getUser())
+
+<div class="web-section" id="feature-contents">
+	#if ($title.data != "")
+		<h1 class="entry-title">
+			<a href="$hyperlink.getData()" rel="bookmark" >$title.data</a>
+		</h1>
+	#end
+
+	<div class="entry-meta">by <a href="#" rel="author">$user.firstName $user.lastName</a>&nbsp;on&nbsp;
+		<time class="published updated">$day $month, $year</time>
+	</div>
+
+	<div class="entry-content">
+		#if ($body_text.data != "")
+			<p class="lead lead-custom">$body_text.data</p>
+		#end
+
+		#if ($body_text.data != "")
+			<p>
+				<a class="btn-custom btn-danger-custom" href="$hyperlink.data" id="custom-a-tag">$button_label.data</a>
+			</p>
+		#end
+	</div>
+</div>

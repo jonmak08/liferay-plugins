@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="title" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Worth A Thoudsand Words!]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="hyperlink" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA["#"]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="body_text" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Boat.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="button_label" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Read more →]]></dynamic-content>
+	</dynamic-element>
+</root>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="title" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[HTML]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="hyperlink" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA["#"]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="body_text" index="0" type="text_box" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[What HTML tags would you like to see? Let’s start with an unordered list: One Two Three Four And then move on to a more interesting ordered list: one, two buckle my shoe three, four knock at the door Five, six pick up sticks Seven, eight, lay them straight Nine, ten, a big fat hen Eleven, twelve, dig and delve...]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="button_label" index="0" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[Read more →]]></dynamic-content>
+	</dynamic-element>
+</root>

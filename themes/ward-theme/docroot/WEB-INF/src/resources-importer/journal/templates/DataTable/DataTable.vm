@@ -1,0 +1,77 @@
+<style type="text/css">
+	#myDataTable table {
+		background: #FFF;
+		width: 100%;
+	}
+</style>
+
+<div id="myDataTable">
+	#set($col = [])
+	#set($colData = [])
+
+	#if (!$col_attr.getSiblings().isEmpty())
+		## Original loop
+		#foreach ($item in $col_attr.getSiblings())
+			#set($colAdd = $col.add($item.getData()))
+			#set($colDataAdd = $colData.add($item.getChild('values').getData()))
+		#end
+	#end
+</div>
+
+<script type="text/javascript">
+	var columns = [];
+	var columnsIndex = 0;
+
+	## Redundant loop #1
+	#foreach($colItem in $col)
+		columns[columnsIndex] = '${colItem}';
+
+		columnsIndex++;
+	#end
+
+	var colDatas = [];
+	var colDatasIndex = 0;
+
+	## Redundant loop #2
+	#foreach($colDataItem in $colData)
+		colDatas[colDatasIndex] = '${colDataItem}';
+
+		colDatasIndex++;
+	#end
+
+	var lengthArr = [];
+
+	for (var i = 0; i < columns.length; i++) {
+		lengthArr[i] = colDatas[i].split(',').length;
+	}
+
+	lengthArr.sort(
+		function(a, b) {
+			return b - a;
+		}
+	);
+
+	var rowCount = lengthArr[0];
+	var data = [];
+
+	for (var i = 0; i < rowCount; i++) {
+		var tempObj = {};
+
+		for (var j = 0; j < columns.length; j++) {
+			tempObj[columns[j]] = colDatas[j].split(',')[i];
+		}
+		data.push(tempObj);
+	}
+
+	AUI().use(
+		'aui-datatable',
+		function(A) {
+			new A.DataTable.Base(
+				{
+					columnset: columns,
+					recordset: data
+				}
+			).render('#myDataTable');
+		}
+	);
+</script>

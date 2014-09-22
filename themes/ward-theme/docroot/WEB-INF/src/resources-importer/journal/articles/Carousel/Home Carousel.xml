@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" name="width" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="small">
+		<dynamic-content><![CDATA[1200]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" name="height" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="small">
+		<dynamic-content><![CDATA[300]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" multiple="false" name="duration" readOnly="false" repeatable="false" required="true" showLabel="true" type="select" width="">
+		<dynamic-content><![CDATA[6]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="" name="controls" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<dynamic-content><![CDATA[]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="" name="image" readOnly="false" repeatable="true" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+		<dynamic-content><![CDATA[[$FILE=image1.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="" name="image" readOnly="false" repeatable="true" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+		<dynamic-content><![CDATA[[$FILE=image2.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="" name="image" readOnly="false" repeatable="true" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+		<dynamic-content><![CDATA[[$FILE=image3.png$]]]></dynamic-content>
+	</dynamic-element>
+</root>
