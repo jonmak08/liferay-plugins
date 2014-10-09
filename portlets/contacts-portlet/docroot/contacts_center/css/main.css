@@ -44,6 +44,16 @@ $section-header-bg: #CCE6F7;
 
 		.contact-group-filter-content {
 			padding: 5px;
+
+			input[type="checkbox"] {
+				position: relative;
+				top: 2px;
+			}
+
+			.input-select-wrapper {
+				margin-bottom: 0;
+				vertical-align: middle;
+			}
 		}
 
 		input[type="checkbox"] {
@@ -60,6 +70,7 @@ $section-header-bg: #CCE6F7;
 
 		.lfr-contact-checkbox {
 			float: left;
+			margin-top: 10px;
 			padding: 5px;
 		}
 	}
@@ -147,7 +158,7 @@ $section-header-bg: #CCE6F7;
 	.contacts-result, .my-contacts {
 		.lfr-contact-grid-item {
 			cursor: pointer;
-			height: 35px;
+			height: auto;
 			padding: 5px;
 
 			.lfr-contact-thumb {
@@ -294,19 +305,23 @@ $section-header-bg: #CCE6F7;
 
 			.contacts-search {
 				border-bottom: 1px solid $border-color;
-				height: 31px;
-				padding: 4px 5px;
+				height: auto;
+				padding: 3px 5px 2px;
+
+				.form-group, .search-input {
+					margin-bottom: 0;
+				}
 
 				.search-input {
-					padding-right: 25px;
-					width: 208px;
+					padding-right: 30px;
+					width: 100%;
 				}
 
 				.icon-search {
 					color: $border-color;
 					position: absolute;
-					right: 11px;
-					top: 11px;
+					right: 15px;
+					top: 13px;
 				}
 			}
 		}
