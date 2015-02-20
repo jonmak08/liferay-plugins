@@ -1,0 +1,252 @@
+
+@font-face {
+  font-family: 'fontawesome-alloy';
+  src: url('../font/aui/alloy-font-awesome/fontawesome-alloy.eot');
+  src: url('../font/aui/alloy-font-awesome/fontawesome-alloy.eot?#iefix') format('embedded-opentype'), url('../font/fontawesome-alloy.woff') format('woff'), url('../font/fontawesome-alloy.ttf') format('truetype'), url('../font/fontawesome-alloy.svg#fontawesome-alloy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#wrapper {
+	padding: 0 0 0 0;
+	perspective: 1px;
+  	height: 100vh;
+  	overflow-x: hidden;
+}
+
+html {
+	overflow-y: hidden;
+}
+
+#banner {
+	width: 1080px;
+	height: 85px;
+	margin: 0 auto;
+	text-align: left;
+	overflow: visible;
+}
+
+#navigation {
+	float: right;
+	height: 85px;
+}
+
+#navigation li {
+	display: inline-block;
+	font-size: 14px;
+	padding: 32px 22px 30px 0;
+	position: relative;
+	overflow: visible;
+}
+
+#navigation li a {
+	color: #333333;
+}
+
+#navigation li a:hover {
+	color: #ff6c4c;
+	text-decoration-color: #ff6c4c;
+}
+
+#navigation ul li.selected a {
+	color: #ff6c4c;
+}
+
+#heading {
+	float: left;
+	margin-top: 8px;
+}
+
+#main-content {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.aui a:hover {
+	color: #ff6c4c;
+	text-decoration-color: #ff6c4c;
+}
+
+.logo.default-logo img {
+	display: none;
+}
+
+.site-name {
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: 300;
+	color: #ff6c4c;
+}
+
+#navigation li .child-menu {
+	display: none;
+	background: white;
+  	border-top-color: #ff6c4c;
+  	border-top-style: solid;
+  	border-top-width: 1px;
+  	margin: 0;
+  	padding: 20px;
+  	position: absolute;
+  	left: -23px;
+  	top: 85px;
+  	width: 200px;
+  	z-index: 4;
+  	-webkit-box-shadow:rgba(0, 0, 0, 0.2980392) 0 2px 5px;
+  	box-shadow:rgba(0, 0, 0, 0.2980392) 0 2px 5px;
+}
+
+#navigation li .child-menu li {
+	padding: 15px;
+	width: 170px;
+	background: transparent;
+	transition: background 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+#navigation li .child-menu li:hover {
+	background: #fff0ed;
+}
+
+#navigation li:hover ul.child-menu, #navigation li ul.child-menu:hover {
+	display: block;
+}
+
+
+#navigation [aria-haspopup="true"]:after {
+	font-family: 'fontawesome-alloy';
+	content: "\f078";
+	position: absolute;
+	font-size: 4.8px;
+	color: #333333;
+	right: -9px;
+	top: -2px;
+	margin: 0 9px 0 0;
+	position: relative
+}
+
+.aui a, .aui h1, .aui h2, .aui h3, .aui h4, .aui h5, .aui h6 {
+	font-family: 'Lato', Calibri, sans-serif;
+  	font-style: normal;
+}
+
+.aui a {
+	color: #ff6c4c;
+	font-weight: 300;
+}
+
+ .aui h1, .aui h2, .aui h3, .aui h4, .aui h5, .aui h6 {
+ 	color: #333333;
+	font-size: 35px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+div {
+	font-family: 'Lato', Calibri, sans-serif;
+	font-weight: 300;
+}
+
+
+.portlet-title img {
+	display: none;
+}
+
+/*
+.portlet-content {
+	padding: 0;
+}
+
+.portlet-topper {
+	width: 1080px;
+	margin: 0 auto;
+}*/
+
+
+
+.page-title {
+	display: none;
+}
+
+#breadcrumbs {
+	display: none;
+}
+
+#myCarousel {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	overflow: hidden;
+	height: 600px;
+	width: 100%;
+}
+
+#item1 {
+    background-image: url("../images/background/BGMainP1.jpg");
+}
+
+#item2 {
+    background-image: url("../images/background/BGMainP2.jpg");
+}
+
+#item3 {
+    background-image: url("http://i.imgur.com/bkczSNR.jpg");
+}
+
+#item4 {
+    background-image: url("http://i.imgur.com/ySlTiSZ.jpg");
+}
+
+#myCarousel .carousel-item {
+    width:100%;
+    height: 1100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% -72px;
+    transform: translateZ(-1px) scale(2);
+    -webkit-transform: translateZ(-2px) scale(3);
+    box-shadow:rgba(0, 0, 0, 0.298039) 0 0 10px inset;
+    -webkit-box-shadow:rgba(0, 0, 0, 0.298039) 0 0 10px inset;
+}
+
+/*#myCarousel .image-viewer-base-image img {
+	width: 100%;
+	height: 600px;
+}*/
+
+#myCarousel menu {
+    border-radius: 0;
+    background: transparent;
+    width: 100%;
+    float: left;
+    position: relative;
+    top: 550px;
+    right: 28px;
+    margin: 0 50%;
+}
+
+#myCarousel menu li a {
+    height: 12px;
+    width: 8px;
+    border-radius: 20%;
+    background: white;
+    background-image: none;
+    opacity: 0.3;
+    padding-left: 5px;
+}
+
+#myCarousel .carousel-menu-prev, #myCarousel .carousel-menu-next, #myCarousel .carousel-menu-pause {
+    display: none;
+    opacity: 0.0;
+}
+
+#myCarousel menu li a.carousel-menu-active  {
+    opacity: 1.0;
+    background: white;
+} 
+
+.carousel {
+	overflow: hidden;
+	height: 600px;
+}
+
+
