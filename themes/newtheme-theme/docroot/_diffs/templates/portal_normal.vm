@@ -56,13 +56,6 @@ $theme.include($body_top_include)
 	<div id="content">
 		<nav id="breadcrumbs">#breadcrumbs()</nav>
 
-		<div id="myCarousel">
-  			<div class="image-viewer-base-image" id="item1"></div>
-  			<div class="image-viewer-base-image" id="item2"></div>
-  			<div class="image-viewer-base-image" id="item3"></div>
- 			<div class="image-viewer-base-image" id="item4"></div>
-		</div>
-
 		#if ($selectable)
 			$theme.include($content_include)
 		#else

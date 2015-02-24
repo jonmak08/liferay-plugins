@@ -9,19 +9,6 @@ AUI().ready(
 	}
 );
 
-YUI().use(
-  'aui-carousel',
-  function(Y) {
-    new Y.Carousel(
-      {
-        contentBox: '#myCarousel',
-        intervalTime: 5,
-        pauseOnHover: true
-      }
-    ).render();
-  }
-);
-
 Liferay.Portlet.ready(
 
 	/*
