@@ -16,99 +16,103 @@
 
 <%@ include file="/init.jsp" %>
 
-<div class="manage-notifications">
-	<div class="title">
-		<div class="receive-notification">
-			<c:choose>
-				<c:when test="<%= UserNotificationDeliveryLocalServiceUtil.getUserNotificationDeliveriesCount() > 0 %>">
-					<span><liferay-ui:message key="receive-a-notification-when-someone" /></span>
-				</c:when>
-				<c:otherwise>
-					<span><liferay-ui:message key="there-are-no-available-options-to-configure" /></span>
-				</c:otherwise>
-			</c:choose>
-		</div>
-	</div>
-
-	<%
-	Map<String, List<UserNotificationDefinition>> userNotificationDefinitionsMap = new TreeMap<String, List<UserNotificationDefinition>>(new PortletIdComparator(locale));
-
-	userNotificationDefinitionsMap.putAll(UserNotificationManagerUtil.getUserNotificationDefinitions());
-
-	for (Map.Entry<String, List<UserNotificationDefinition>> entry : userNotificationDefinitionsMap.entrySet()) {
-	%>
-
-		<table class="notification-deliveries table table-condensed">
-			<caption><%= PortalUtil.getPortletTitle(entry.getKey(), locale) %></caption>
-			<tbody>
+<div class="manage-notifications-ajax-root">
+	<div id="manage-notifications-wrapper">
+		<div class="manage-notifications">
+			<div class="title">
+				<div class="receive-notification">
+					<c:choose>
+						<c:when test="<%= UserNotificationDeliveryLocalServiceUtil.getUserNotificationDeliveriesCount() > 0 %>">
+							<span><liferay-ui:message key="receive-a-notification-when-someone" /></span>
+						</c:when>
+						<c:otherwise>
+							<span><liferay-ui:message key="there-are-no-available-options-to-configure" /></span>
+						</c:otherwise>
+					</c:choose>
+				</div>
+			</div>
 
 			<%
-			List<UserNotificationDefinition> userNotificationDefinitions = entry.getValue();
+			Map<String, List<UserNotificationDefinition>> userNotificationDefinitionsMap = new TreeMap<String, List<UserNotificationDefinition>>(new PortletIdComparator(locale));
 
-			for (UserNotificationDefinition userNotificationDefinition : userNotificationDefinitions) {
+			userNotificationDefinitionsMap.putAll(UserNotificationManagerUtil.getUserNotificationDefinitions());
+
+			for (Map.Entry<String, List<UserNotificationDefinition>> entry : userNotificationDefinitionsMap.entrySet()) {
 			%>
 
-				<tr>
-					<td class="span8">
-						<liferay-ui:message key="<%= userNotificationDefinition.getDescription() %>" />
-					</td>
+				<table class="notification-deliveries table table-condensed">
+					<caption><%= PortalUtil.getPortletTitle(entry.getKey(), locale) %></caption>
+					<tbody>
 
 					<%
-					Map<Integer, UserNotificationDeliveryType> userNotificationDeliveryTypesMap = userNotificationDefinition.getUserNotificationDeliveryTypes();
+					List<UserNotificationDefinition> userNotificationDefinitions = entry.getValue();
 
-					for (Map.Entry<Integer, UserNotificationDeliveryType> userNotificationDeliveryTypeEntry : userNotificationDeliveryTypesMap.entrySet()) {
-						UserNotificationDeliveryType userNotificationDeliveryType = userNotificationDeliveryTypeEntry.getValue();
-
-						UserNotificationDelivery userNotificationDelivery = UserNotificationDeliveryLocalServiceUtil.getUserNotificationDelivery(themeDisplay.getUserId(), entry.getKey(), userNotificationDefinition.getClassNameId(), userNotificationDefinition.getNotificationType(), userNotificationDeliveryType.getType(), userNotificationDeliveryType.isDefault());
+					for (UserNotificationDefinition userNotificationDefinition : userNotificationDefinitions) {
 					%>
 
-						<td class="span1">
-							<aui:input cssClass="notification-delivery" data-userNotificationDeliveryId="<%= String.valueOf(userNotificationDelivery.getUserNotificationDeliveryId()) %>" disabled="<%= !userNotificationDeliveryType.isModifiable() %>" inlineLabel="true" label="<%= userNotificationDeliveryType.getName() %>" name="<%= String.valueOf(userNotificationDelivery.getUserNotificationDeliveryId()) %>" type="checkbox" value="<%= userNotificationDelivery.isDeliver() %>" />
-						</td>
+						<tr>
+							<td class="span8">
+								<liferay-ui:message key="<%= userNotificationDefinition.getDescription() %>" />
+							</td>
+
+							<%
+							Map<Integer, UserNotificationDeliveryType> userNotificationDeliveryTypesMap = userNotificationDefinition.getUserNotificationDeliveryTypes();
+
+							for (Map.Entry<Integer, UserNotificationDeliveryType> userNotificationDeliveryTypeEntry : userNotificationDeliveryTypesMap.entrySet()) {
+								UserNotificationDeliveryType userNotificationDeliveryType = userNotificationDeliveryTypeEntry.getValue();
+
+								UserNotificationDelivery userNotificationDelivery = UserNotificationDeliveryLocalServiceUtil.getUserNotificationDelivery(themeDisplay.getUserId(), entry.getKey(), userNotificationDefinition.getClassNameId(), userNotificationDefinition.getNotificationType(), userNotificationDeliveryType.getType(), userNotificationDeliveryType.isDefault());
+							%>
+
+								<td class="span1">
+									<aui:input cssClass="notification-delivery" data-userNotificationDeliveryId="<%= String.valueOf(userNotificationDelivery.getUserNotificationDeliveryId()) %>" disabled="<%= !userNotificationDeliveryType.isModifiable() %>" inlineLabel="true" label="<%= userNotificationDeliveryType.getName() %>" name="<%= String.valueOf(userNotificationDelivery.getUserNotificationDeliveryId()) %>" type="checkbox" value="<%= userNotificationDelivery.isDeliver() %>" />
+								</td>
+
+							<%
+							}
+							%>
+
+						</tr>
 
 					<%
 					}
 					%>
 
-				</tr>
+					</tbody>
+				</table>
 
 			<%
 			}
 			%>
 
-			</tbody>
-		</table>
+		</div>
 
-	<%
-	}
-	%>
+		<aui:script use="aui-base,aui-io-request">
+			var userNotifications = A.one('#portlet_<%= PortletKeys.NOTIFICATIONS %>');
 
-</div>
+			var notificationDelivery = userNotifications.one('.manage-notifications');
 
-<aui:script use="aui-base,aui-io-request">
-	var userNotifications = A.one('#portlet_<%= PortletKeys.NOTIFICATIONS %>');
+			if (notificationDelivery) {
+				notificationDelivery.delegate(
+					'change',
+					function(event) {
+						event.preventDefault();
 
-	var notificationDelivery = userNotifications.one('.manage-notifications');
+						var currentTarget = event.currentTarget;
 
-	if (notificationDelivery) {
-		notificationDelivery.delegate(
-			'change',
-			function(event) {
-				event.preventDefault();
-
-				var currentTarget = event.currentTarget;
-
-				A.io.request(
-					'<portlet:actionURL name="updateUserNotificationDelivery" />',
-					{
-						data: {
-							<portlet:namespace />deliver: currentTarget.attr('checked'),
-							<portlet:namespace />userNotificationDeliveryId: currentTarget.attr('data-userNotificationDeliveryId')
-						}
-					}
+						A.io.request(
+							'<portlet:actionURL name="updateUserNotificationDelivery" />',
+							{
+								data: {
+									<portlet:namespace />deliver: currentTarget.attr('checked'),
+									<portlet:namespace />userNotificationDeliveryId: currentTarget.attr('data-userNotificationDeliveryId')
+								}
+							}
+						);
+					},
+					'.notification-deliveries .notification-delivery'
 				);
-			},
-			'.notification-deliveries .notification-delivery'
-		);
-	}
-</aui:script>
+			}
+		</aui:script>
+	</div>
+</div>
