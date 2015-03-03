@@ -5,8 +5,8 @@
     font-family: 'fontawesome-alloy';
     font-style: normal;
     font-weight: normal;
-    src: url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.eot");
     src: url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.eot?#iefix") format("embedded-opentype"), url("../font/fontawesome-alloy.woff") format("woff"), url("../font/fontawesome-alloy.ttf") format("truetype"), url("../font/fontawesome-alloy.svg#fontawesome-alloy") format("svg");
+    src: url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.eot");
 }
 
 
@@ -47,14 +47,11 @@ html {
     }
 
     /* ---------- Wrapper ---------- */
-
     #wrapper {
         height: 100vh;
         overflow-x: hidden;
         padding: 0;
-        perspective: 300px;
         position: relative;
-        transform-style: preserve-3d;
     }
 
     #banner {
@@ -66,7 +63,6 @@ html {
     }
 
     /* ---------- Sign in ---------- */
-
     #sign-in {
         display: block;
         float: right;
@@ -81,13 +77,11 @@ html {
     }
 
     /* ---------- Heading ---------- */
-
     #heading {
         float: left;
         margin-top: 8px;
 
         /* ---------- Site Logo ---------- */
-
         .logo.default-logo img {
             display: none;
         }
@@ -106,7 +100,6 @@ html {
     }
 
     /* ---------- Navigation ---------- */
-
     #navigation {
         float: right;
         height: 85px;
@@ -183,7 +176,6 @@ html {
     }
 
     /* ---------- Content ---------- */
-
     #breadcrumbs {
         display: none;
     }
@@ -193,7 +185,6 @@ html {
         min-height: 70vh;
 
         /* ---------- Gutter Control ---------- */
-
         .no-gutter .portlet-column {
             margin: 0;
         }
@@ -207,7 +198,6 @@ html {
         }
 
         /* ---------- Portlet Styling ---------- */
-
         .portlet-boundary {
             .portlet-topper {
                 margin: 0 auto;
@@ -245,7 +235,6 @@ html {
     }
 
     /* ---------- Footer ---------- */
-
     #footer {
         border-top: 1px solid #FFB8A8;
         height: auto;
@@ -263,9 +252,7 @@ html {
         }
     }
     /* ---------- Specifics ---------- */
-
     /* ---------- BannerCarousel Portlet ---------- */
-
     .carousel-wrapper {
         margin: 0;
         padding: 0;
@@ -287,7 +274,6 @@ html {
         }
 
         /* ---------- BannerCarousel Menu ---------- */
-
         menu {
             background: transparent;
             border-radius: 0;
@@ -370,13 +356,17 @@ html {
     }
 
     /* ---------- Misc Details ---------- */
-
     .input-append {
         margin-bottom: 0;
     }
 
     /* ---------- Extras ---------- */
-    
+    #wrapper {
+        @include transform-style;
+        perspective: 300px;
+        transform: translateZ(300px);
+    }
+
     #navigation {
         li {
             .child-menu {
