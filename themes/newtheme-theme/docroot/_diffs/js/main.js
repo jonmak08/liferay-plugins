@@ -7,60 +7,78 @@ AUI().ready(
 
 	function() {
 
-		AUI().use('event', 'node', 'aui-node', 'dom', function(A) {
+		AUI().use(
+			'event',
+			'aui-node',
+			'dom',
+			function(A) {
 
-			var window = A.one('window');
-			var dom = A.DOM;
-			var latestScrollY = 0;
-			var ticking = false;
-			
-			A.Event.attach('scroll', onScroll, window);
+				var dom = A.DOM;
+				var latestScrollY = 0;
+				var ticking = false;
+				var window = A.getWin();						
+				
+				A.Event.attach('scroll', onScroll, window);
 
-			function setVendor (element, property, value) { //sets vendor prefixes
-					element.style["webkit" + property] = value;
-					element.style["Moz" + property] = value;
-					element.style["ms" + property] = value;
-					element.style["O" + property] = value;
-			}
+				function setVendorStyle(element, property, value) {
+					var styles = {};
 
-			function onScroll() {
-				latestScrollY = dom.docScrollY();
-				check();
-			}
+					styles['Moz' + property] = value;
+					styles['ms' + property] = value;
+					styles['o' + property] = value;
+					styles['webkit' + property] = value;
 
-			function check() { //checks if a request is in progress
-				if(!ticking) {
-					requestAnimationFrame(update);
+					element.setStyles(styles);
 				}
-				ticking = true;
-			}
 
-			function update() { 
+				function onScroll() { //stores scroll
+					latestScrollY = dom.docScrollY();
+					check();
+				}
 
-				ticking = false;
-				var currentScrollY = latestScrollY;
-				var elements = A.all('.carousel-item-active');
-
-				elements.each(function(element) {  //loops through images to be animated
-					if(dom.inViewportRegion(element.getDOMNode(), false, null)) {	
-						var image = element.getDOMNode().children.item(0);
-						var domHeight = dom.winHeight();
-						var imageHeight = image.offsetHeight;
-						var elementHeight = element.innerHeight();
-						var elementY = element.getY();
-						var offset = ((elementHeight - imageHeight) * (1 - ((elementHeight + elementY - currentScrollY)/(elementHeight + elementY)))); //calculates offset
-						
-						setVendor(image, "Transform", "translateY(" + offset + "px)");
-						
-						var nextElements = element.siblings('.carousel-item');
-						
-						nextElements.each(function(element) { 	//sets position of sibling images
-							setVendor(element.getDOMNode().children.item(0), "Transform", "translateY(" + offset + "px)"); 
-						});
+				function check() { //prevents parallel instances
+					if(!ticking) {
+						requestAnimationFrame(update);
 					}
-				});
+					ticking = true;
+				}
+
+				function update() { 
+
+					ticking = false;
+					var currentScrollY = latestScrollY;
+					var elements = A.all('.carousel-item-active');
+
+					elements.each(
+						function(element) {  //loops through images to be animated
+							var elementNode = element.getDOMNode();
+
+							if(dom.inViewportRegion(elementNode, false, null)) {	
+								var elementHeight = element.innerHeight(),
+								var elementY = element.getY(),
+								var image = element.one('.carousel-image'),
+								var imageHeight = image.height(),
+								var nextElements = element.siblings('.carousel-item'),
+									
+								var elementBottom = elementY + elementHeight,
+								var imageExcess = elementHeight - imageHeight,
+								var remainingY = (elementBottom - currentScrollY)/(elementBottom),
+									
+								var offset = (imageExcess * (1 - remainingY)); //calculates offset
+								
+								setVendorStyle(image, "Transform", "translateY(" + offset + "px)"); //positions current image
+
+								nextElements.each(
+									function(element) { 	//sets position of sibling images
+										setVendorStyle(element.one('.carousel-image'), "Transform", "translateY(" + offset + "px)"); 
+									}
+								);
+							}
+						}
+					);
+				}
 			}
-		});
+		);
 	}
 );
 
