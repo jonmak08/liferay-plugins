@@ -54,15 +54,15 @@ AUI().ready(
 							var elementNode = element.getDOMNode();
 
 							if(dom.inViewportRegion(elementNode, false, null)) {	
-								var elementHeight = element.innerHeight(),
-								var elementY = element.getY(),
-								var image = element.one('.carousel-image'),
-								var imageHeight = image.height(),
-								var nextElements = element.siblings('.carousel-item'),
+								var elementHeight = element.innerHeight();
+								var elementY = element.getY();
+								var image = element.one('.carousel-image');
+								var imageHeight = image.height();
+								var nextElements = element.siblings('.carousel-item');
 									
-								var elementBottom = elementY + elementHeight,
-								var imageExcess = elementHeight - imageHeight,
-								var remainingY = (elementBottom - currentScrollY)/(elementBottom),
+								var elementBottom = elementY + elementHeight;
+								var imageExcess = elementHeight - imageHeight;
+								var remainingY = (elementBottom - currentScrollY)/(elementBottom);
 									
 								var offset = (imageExcess * (1 - remainingY)); //calculates offset
 								
