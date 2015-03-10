@@ -26,6 +26,11 @@ $onDarkWhite: #FFF;
     body, input, button, select, textarea, label {
         color: $textColor;
         font: normal 300 14px 'Lato', Calibri, sans-serif;
+
+    }
+
+    body {
+    	-webkit-backface-visibility: hidden; //fix for chrome flash on transition
     }
 
     a {
@@ -44,6 +49,7 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Wrapper ---------- */
+
     #wrapper {
         padding: 0;
         position: relative;
@@ -60,6 +66,7 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Sign in ---------- */
+
     #sign-in {
         display: block;
         float: right;
@@ -75,11 +82,13 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Heading ---------- */
+
     #heading {
         float: left;
         margin-top: 8px;
 
         /* ---------- Site Logo ---------- */
+
         .logo.default-logo img {
             display: none;
         }
@@ -98,6 +107,7 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Navigation ---------- */
+
     #navigation {
         float: right;
         height: 85px;
@@ -174,6 +184,7 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Content ---------- */
+
     #breadcrumbs {
         display: none;
     }
@@ -187,6 +198,7 @@ $onDarkWhite: #FFF;
         min-height: 70vh;
 
         /* ---------- Gutter Control ---------- */
+
         .no-gutter .portlet-column {
             margin: 0;
         }
@@ -200,6 +212,7 @@ $onDarkWhite: #FFF;
         }
 
         /* ---------- Empty Column Spacing ---------- */
+
         .portlet-column {
             min-height: 0;
         }
@@ -209,6 +222,7 @@ $onDarkWhite: #FFF;
         }
 
         /* ---------- Portlet Styling ---------- */
+
         .portlet-boundary {
             div .span12 .portlet-topper {
                 margin: 0 auto;
@@ -248,6 +262,7 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Footer ---------- */
+
     #footer {
         border-top: 1px solid #FFB8A8;
         height: auto;
@@ -265,8 +280,11 @@ $onDarkWhite: #FFF;
             z-index: 50;
         }
     }
+
     /* ---------- Specifics ---------- */
+
     /* ---------- BannerCarousel Portlet ---------- */
+
     .carousel-wrapper {
         margin: 0;
         padding: 0;
@@ -295,6 +313,7 @@ $onDarkWhite: #FFF;
         }
 
         /* ---------- BannerCarousel Menu ---------- */
+
         menu {
             background: transparent;
             border-radius: 0;
@@ -366,6 +385,7 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Grid Gallery Portlet ---------- */
+
     .grid-wrapper {
         background: #000;
 
@@ -404,16 +424,19 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Misc Details ---------- */
+
     .input-append {
         margin-bottom: 0;
     }
 
     /* ---------- Extras ---------- */
+
     a {
         @include transition(color 0.2s);
     }
 
     /* --- Navigation --- */
+
     #navigation {
         li {
             .child-menu {
@@ -433,6 +456,7 @@ $onDarkWhite: #FFF;
     }
 
     /* --- Portlet --- */
+
     .portlet-boundary {
         .btn, .btn:hover {
             @include box-shadow(none);
@@ -440,6 +464,7 @@ $onDarkWhite: #FFF;
     }
 
     /* --- Carousel Banner Portlet --- */
+
     .carousel-wrapper {
         .carousel-item {
             .carousel-image {
@@ -448,6 +473,7 @@ $onDarkWhite: #FFF;
         }
 
         /* --- Carousel Banner Menu --- */
+
         menu {
             li {
                 a {
@@ -498,6 +524,7 @@ $onDarkWhite: #FFF;
     }
 
     /* --- Grid Gallery Portlet --- */
+
     .grid-wrapper {
         .grid-image-wrapper {
             .grid-image {
@@ -522,12 +549,15 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Media Query ---------- */
+
     @media (max-width: 768px) {
         #navigation {
             height: 100vh;        
             position: fixed;
             right: 0;
+
             @include transition(width 0.7s ease-in-out 0.4s);
+
             width: 20px;
             z-index: 999;
 
@@ -539,11 +569,15 @@ $onDarkWhite: #FFF;
                 height: 100vh;                
                 line-height: 100vh;
                 margin: 0 9px 0 0;
-                opacity: 0.5;
+
+                @include opacity(0.5);
+                
                 position: fixed;
                 right: 0;
                 text-align: center;
+                
                 @include transition(transform 0.7s ease-in-out 0.4s);
+                
                 width: 80px;
             }
 
@@ -555,6 +589,7 @@ $onDarkWhite: #FFF;
                 opacity: 0.2;
                 padding-left: 23px;
                 right: 0;
+
                 @include transition(opacity 0.7s ease-in-out);
             }
 
@@ -563,11 +598,13 @@ $onDarkWhite: #FFF;
 
                 &:before {                    
                     opacity: 1;
+
                     @include transform(translateX(-120px) rotate(180deg));
                 }
 
                 > ul {
                 	@include box-shadow(rgba(0, 0, 0, 0.29) 0 2px 5px);
+                    
                     display: block;                    
                     opacity: 1;
 

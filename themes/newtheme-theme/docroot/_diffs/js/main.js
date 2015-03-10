@@ -8,17 +8,19 @@ AUI().ready(
 	function() {
 
 		AUI().use(
-			'event',
 			'aui-node',
+			'event',
 			'dom',
 			function(A) {
 
-				var dom = A.DOM;
+				var ADOM = A.DOM;
+
+				var Win = A.getWin();
+
 				var latestScrollY = 0;
-				var ticking = false;
-				var window = A.getWin();						
+				var ticking = false;						
 				
-				A.Event.attach('scroll', onScroll, window);
+				A.Event.attach('scroll', onScroll, Win);
 
 				function setVendorStyle(element, property, value) {
 					var styles = {};
@@ -31,12 +33,12 @@ AUI().ready(
 					element.setStyles(styles);
 				}
 
-				function onScroll() { //stores scroll
-					latestScrollY = dom.docScrollY();
+				function onScroll() {
+					latestScrollY = ADOM.docScrollY();
 					check();
 				}
 
-				function check() { //prevents parallel instances
+				function check() {
 					if(!ticking) {
 						requestAnimationFrame(update);
 					}
@@ -46,30 +48,39 @@ AUI().ready(
 				function update() { 
 
 					ticking = false;
+
 					var currentScrollY = latestScrollY;
+
 					var elements = A.all('.carousel-item-active');
 
 					elements.each(
-						function(element) {  //loops through images to be animated
-							var elementNode = element.getDOMNode();
+						function(element) {
+							var elementDOMNode = element.getDOMNode();
 
-							if(dom.inViewportRegion(elementNode, false, null)) {	
+							if (ADOM.inViewportRegion(elementDOMNode, false, null)) {	
 								var elementHeight = element.innerHeight();
 								var elementY = element.getY();
+								
 								var image = element.one('.carousel-image');
-								var imageHeight = image.height();
+								var imageHeight = elementHeight;
+								
+								if (image) {
+									imageHeight = image.height();
+								}
+
 								var nextElements = element.siblings('.carousel-item');
 									
-								var elementBottom = elementY + elementHeight;
-								var imageExcess = elementHeight - imageHeight;
-								var remainingY = (elementBottom - currentScrollY)/(elementBottom);
+								var elementBottomY = (elementY + elementHeight);
+								var imageExcess = (elementHeight - imageHeight);
+								var remainingY = (elementBottomY - currentScrollY);
+								var remainderPercentage = (1 - remainingY/elementBottomY);
 									
-								var offset = (imageExcess * (1 - remainingY)); //calculates offset
+								var offset = (imageExcess * remainderPercentage);
 								
-								setVendorStyle(image, "Transform", "translateY(" + offset + "px)"); //positions current image
+								setVendorStyle(image, "Transform", "translateY(" + offset + "px)");
 
 								nextElements.each(
-									function(element) { 	//sets position of sibling images
+									function(element) {
 										setVendorStyle(element.one('.carousel-image'), "Transform", "translateY(" + offset + "px)"); 
 									}
 								);
