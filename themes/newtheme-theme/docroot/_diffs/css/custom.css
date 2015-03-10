@@ -6,7 +6,7 @@
     font-style: normal;
     font-weight: normal;
     src: url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.eot");
-    src: url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.eot?#iefix") format("embedded-opentype"), url("../font/fontawesome-alloy.woff") format("woff"), url("../font/fontawesome-alloy.ttf") format("truetype"), url("../font/fontawesome-alloy.svg#fontawesome-alloy") format("svg");
+    src: url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.eot?#iefix") format("embedded-opentype"), url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.woff") format("woff"), url("../css/aui/alloy-font-awesome/font/fontawesome-alloy.ttf") format("truetype"), url("../css/aui/alloy-font-awesome//fontawesome-alloy.svg#fontawesome-alloy") format("svg");
 }
 
 
@@ -27,10 +27,6 @@ $onDarkWhite: #FFF;
         color: $textColor;
         font: normal 300 14px 'Lato', Calibri, sans-serif;
 
-    }
-
-    body {
-    	-webkit-backface-visibility: hidden; //fix for chrome flash on transition
     }
 
     a {
@@ -430,6 +426,10 @@ $onDarkWhite: #FFF;
     }
 
     /* ---------- Extras ---------- */
+
+    body {
+    	-webkit-backface-visibility: hidden; //webkit fix for flash on carousel transition
+    }
 
     a {
         @include transition(color 0.2s);
