@@ -312,7 +312,7 @@ AUI.add(
 
 						var contactList = data.contactList;
 						var contactUserHTML = instance._renderResult(contactList, true, lastNameAnchor);
-						var contactResultContent = A.one('.contacts-portlet .contacts-result-content');
+						var contactResultContent = A.one('.contacts-portlet .contacts-result');
 
 						contactResultContent.html(contactUserHTML.join(''));
 
@@ -345,7 +345,7 @@ AUI.add(
 
 						var contactList = data.contactList;
 						var contactUserHTML = instance._renderResult(contactList, true, lastNameAnchor);
-						var contactResultContent = A.one('.contacts-portlet .contacts-result-content');
+						var contactResultContent = A.one('.contacts-portlet .contacts-result');
 
 						contactResultContent.html(contactUserHTML.join(''));
 
@@ -378,7 +378,7 @@ AUI.add(
 
 						var contactUserHTML = instance._renderResult(responseData, false, lastNameAnchor);
 
-						var contactResultContent = A.one('.contacts-portlet .contacts-result-content');
+						var contactResultContent = A.one('.contacts-portlet .contacts-result');
 						var moreResults = A.one('.contacts-portlet .more-results');
 
 						moreResults.remove();
@@ -427,7 +427,7 @@ AUI.add(
 						instance._buttonUnBlockUserIds.length = 0;
 						instance._buttonUnFollowUserIds.length = 0;
 
-						A.all('.contacts-container-content .toolbar-content button').hide();
+						A.all('.contacts-container .toolbar button').hide();
 
 						if (instance._sendMessageButton) {
 							instance._showButton(instance._sendMessageButton);
@@ -477,8 +477,6 @@ AUI.add(
 
 					_createContactList: function(config) {
 						var instance = this;
-
-						var contactsResultContainer = config.contactsResultContainer;
 
 						var contactsResult = config.contactsResult;
 						var contactsResultURL = config.contactsResultURL;
