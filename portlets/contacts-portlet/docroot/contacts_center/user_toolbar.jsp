@@ -221,7 +221,7 @@ else if (SocialRelationLocalServiceUtil.hasRelation(themeDisplay.getUserId(), us
 					{
 						on: {
 							success: function(event, id, obj) {
-								var contactProfile = A.one('.contacts-portlet .contacts-container-content');
+								var contactProfile = A.one('.contacts-portlet .contacts-container');
 
 								if (!contactProfile.io) {
 									contactProfile.plug(
