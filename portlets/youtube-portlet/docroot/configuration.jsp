@@ -196,26 +196,6 @@
 	);
 
 	A.on(
-		'change',
-		function(e) {
-			presetSizeNode.val('');
-
-			presetSizeNode.val(widthNode.val() + 'x' + heightNode.val());
-		},
-		heightNode
-	);
-
-	A.on(
-		'change',
-		function(e) {
-			presetSizeNode.val('');
-
-			presetSizeNode.val(widthNode.val() + 'x' + heightNode.val());
-		},
-		widthNode
-	);
-
-	A.on(
 		'click',
 		function(e) {
 			e.preventDefault();
