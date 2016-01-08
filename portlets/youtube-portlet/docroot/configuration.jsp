@@ -138,10 +138,14 @@
 
 	var presetChange = function(e) {
 		if (this.val().indexOf('x') < 0) {
-			A.one('#<portlet:namespace />height').ancestor('.control-group').removeClass('invisible');
-			A.one('#<portlet:namespace />width').ancestor('.control-group').removeClass('invisible');
+			A.one('#<portlet:namespace />height').ancestor().removeClass('invisible');
+			A.one('#<portlet:namespace />width').ancestor().removeClass('invisible');
 
 			return;
+		}
+		else {
+			A.one('#<portlet:namespace />height').ancestor().addClass('invisible');
+			A.one('#<portlet:namespace />width').ancestor().addClass('invisible');
 		}
 
 		var dimensions = this.val().split('x');
@@ -192,26 +196,6 @@
 	);
 
 	A.on(
-		'change',
-		function(e) {
-			presetSizeNode.val('');
-
-			presetSizeNode.val(widthNode.val() + 'x' + heightNode.val());
-		},
-		heightNode
-	);
-
-	A.on(
-		'change',
-		function(e) {
-			presetSizeNode.val('');
-
-			presetSizeNode.val(widthNode.val() + 'x' + heightNode.val());
-		},
-		widthNode
-	);
-
-	A.on(
 		'click',
 		function(e) {
 			e.preventDefault();
@@ -229,8 +213,12 @@
 	);
 
 	if (presetSizeNode.val() == 'custom') {
-		A.one('#<portlet:namespace />height').ancestor('.control-group').removeClass('invisible');
-		A.one('#<portlet:namespace />width').ancestor('.control-group').removeClass('invisible');
+		A.one('#<portlet:namespace />height').ancestor().removeClass('invisible');
+		A.one('#<portlet:namespace />width').ancestor().removeClass('invisible');
+	}
+	else {
+		A.one('#<portlet:namespace />height').ancestor().addClass('invisible');
+		A.one('#<portlet:namespace />width').ancestor().addClass('invisible');
 	}
 
 	createPlayer();
