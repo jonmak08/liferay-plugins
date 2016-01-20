@@ -1,0 +1,140 @@
+{
+	"layoutTemplateId": "1_2_columns_ii",
+	"publicPages": [
+		{
+			"columns": [
+				[
+					{
+						"portletId": "73"
+					}
+				],
+				[
+					"carousel.xml",
+					{
+						"portletId": "101",
+					}
+				],
+				[
+					{
+						"portletId": "58"
+					},
+					{
+						"portletId": "141"
+					}
+				],
+				[
+
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "Home",
+			"title": "Home"
+		},
+		{
+			"columns": [
+				[
+					{
+						"portletId": "73"
+					}
+				],
+				[
+					"about us.xml"
+				],
+				[
+					{
+						"portletId": "141"
+					}
+				],
+				[
+
+				]
+			],
+			"friendyURL": "/about",
+			"name": "About",
+			"title": "About",
+			"layouts": [
+			 {
+				 "columns": [
+					 [
+						 {
+							 "portletId": "73"
+						 }
+					 ],
+					 [
+						 "about david.xml"
+					 ],
+					 [
+						 {
+							 "portletId": "141"
+						 }
+					 ],
+					 [
+
+					 ]
+				 ],
+				 "friendlyURL": "/davidjohnson",
+				 "name": "David Johnson",
+				 "title": "David Johnson"
+			 	},
+				{
+					"columns": [
+						[
+							{
+								"portletId": "73"
+							}
+						],
+						[
+							"about amanda.xml"
+						],
+						[
+							{
+								"portletId": "141"
+							}
+						],
+						[
+
+						]
+					],
+					"friendlyURL": "/amandabecker",
+					"name": "Amanda Becker",
+					"title": "Amanda Becker"
+				}
+			]
+		},
+		{
+			"columns": [
+				[
+					{
+						"portletId": "73"
+					},
+					"image gallery.xml",
+				]
+			],
+			"friendyURL": "/portfolio",
+			"name": "Portfolio",
+			"title": "Portfolio",
+			"layoutTemplateId": "1_column"
+		},
+		{
+			"columns": [
+				[
+					{
+						"portletId": "73"
+					}
+				],
+				[
+					"contact form.xml"
+				],
+				[
+					"social media bar.xml"
+				],
+				[
+
+				]
+			],
+			"friendyURL": "/contact-us",
+			"name": "Contact Us",
+			"title": "Contact Us"
+		}
+	]
+}

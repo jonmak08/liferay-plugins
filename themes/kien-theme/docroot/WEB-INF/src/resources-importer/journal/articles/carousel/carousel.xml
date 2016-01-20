@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Carousel_Height" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[331]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Carousel_Width" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[625]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Carousel_Image" type="document_library" index-type="keyword" index="0">
+		<dynamic-element name="Carousel_Header" index="0" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Carousel Header]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Carousel_Description" index="0" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque viderer torquatos id sea.]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=slide_image_1.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Carousel_Image" type="document_library" index-type="keyword" index="1">
+		<dynamic-element name="Carousel_Header" index="1" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Carousel Header 1]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Carousel_Description" index="1" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque viderer torquatos id sea.]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=slide_image_2.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Carousel_Image" type="document_library" index-type="keyword" index="2">
+		<dynamic-element name="Carousel_Header" index="2" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Carousel Header 2]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Carousel_Description" index="2" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque viderer torquatos id sea.]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=slide_image_3.jpg$]]]></dynamic-content>
+	</dynamic-element>
+</root>

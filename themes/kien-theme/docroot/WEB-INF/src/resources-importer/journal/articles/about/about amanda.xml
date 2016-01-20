@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="About_Me_Title" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[About Amanda]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="About_Image" type="document_library" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=amanda_becker_portrait.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="About_Me_Description" type="text_box" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, ut ius eros inani periculis, perpetua vituperata vel in. Ei mel deserunt patrioque, ea justo nominati concludaturque nam. Ad iusto veritus eum, mea no propriae sapientem, has simul maiorum ocurreret in. Ad mundi sanctus omittantur vix, velit integre maiestatis te est. Cu unum ponderum vis. Ei saepe dictas aliquid cum, at quo doctus probatus. Vim melius temporibus ei.
+
+Nonumy impetus an mea. Te nec harum deserunt. Sea unum labores in, et volumus patrioque has. Pro aeterno eleifend ad, ut nostrum partiendo qualisque vel.
+
+Mutat deseruisse no mel, cum altera debitis ex. Case quodsi impetus pro ut, sed ad persecuti scripserit. Ad vel legere fierent repudiandae, esse evertitur ad vim. At vidit modus everti ius, odio percipit probatus an per.
+
+Ex hinc homero pertinacia ius. Summo suscipit adolescens eum in. Nullam platonem eam ne. Eu vis duis integre, at pri habeo solum, sea magna fugit fastidii eu.
+
+Ad possit numquam conclusionemque quo. Pri an sensibus electram. Ea vidisse recusabo sea. Enim democritum eos ex. Cum reque paulo scriptorem ne.]]></dynamic-content>
+	</dynamic-element>
+</root>

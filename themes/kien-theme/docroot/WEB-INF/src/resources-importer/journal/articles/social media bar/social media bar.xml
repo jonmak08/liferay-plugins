@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="0">
+		<dynamic-element name="Social_Media_Url" index="0" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=facebook.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="1">
+		<dynamic-element name="Social_Media_Url" index="1" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=linkedin.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="2">
+		<dynamic-element name="Social_Media_Url" index="2" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=instagram.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="3">
+		<dynamic-element name="Social_Media_Url" index="3" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=tumblr.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="4">
+		<dynamic-element name="Social_Media_Url" index="4" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=pinterest.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="5">
+		<dynamic-element name="Social_Media_Url" index="5" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=twitter.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="6">
+		<dynamic-element name="Social_Media_Url" index="6" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=flickr.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Social_Media_Icon" type="document_library" index-type="keyword" index="7">
+		<dynamic-element name="Social_Media_Url" index="7" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[#]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=youtube.png$]]]></dynamic-content>
+	</dynamic-element>
+</root>

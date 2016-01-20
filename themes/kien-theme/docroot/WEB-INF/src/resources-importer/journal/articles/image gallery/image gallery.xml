@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Image_Gallery_Title" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Sample Image Gallery]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image" type="document_library" index-type="keyword" index="0">
+		<dynamic-element name="Image_Title" index="0" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Image 1]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=image_gallery_1.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image" type="document_library" index-type="keyword" index="1">
+		<dynamic-element name="Image_Title" index="1" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Image 2]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=image_gallery_2.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image" type="document_library" index-type="keyword" index="2">
+		<dynamic-element name="Image_Title" index="2" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Image 3]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=image_gallery_3.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image" type="document_library" index-type="keyword" index="3">
+		<dynamic-element name="Image_Title" index="3" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Image 4]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=image_gallery_4.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image" type="document_library" index-type="keyword" index="4">
+		<dynamic-element name="Image_Title" index="4" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Image 5]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=image_gallery_5.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image" type="document_library" index-type="keyword" index="5">
+		<dynamic-element name="Image_Title" index="5" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Image 6]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=image_gallery_6.jpg$]]]></dynamic-content>
+	</dynamic-element>
+</root>
