@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Title_of_Form" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Contact Us]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Your_Name" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Your name]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Your_Email_Address" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Your email address]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Subject" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Subject]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Message" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Message]]></dynamic-content>
+	</dynamic-element>
+</root>

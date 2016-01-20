@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Footer_Content_Header" type="text" index-type="keyword" index="0">
+		<dynamic-element name="Footer_Content_Description" index="0" type="text_box" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque viderer torquatos id sea, ei postulant suavitate qui. Usu ne lorem velit quaeque, ne eam veniam possit senserit. Te viris postea epicuri nam, fabulas assueverit sed]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[Footer Left]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Footer_Content_Header" type="text" index-type="keyword" index="1">
+		<dynamic-element name="Footer_Content_Description" index="1" type="text_box" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque viderer torquatos id sea, ei postulant suavitate qui. Usu ne lorem velit quaeque, ne eam veniam possit senserit. Te viris postea epicuri nam, fabulas assueverit sed]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[Footer Mid]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Footer_Content_Header" type="text" index-type="keyword" index="2">
+		<dynamic-element name="Footer_Content_Description" index="2" type="text_box" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque viderer torquatos id sea, ei postulant suavitate qui. Usu ne lorem velit quaeque, ne eam veniam possit senserit. Te viris postea epicuri nam, fabulas assueverit sed]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[Footer Right]]></dynamic-content>
+	</dynamic-element>
+</root>
