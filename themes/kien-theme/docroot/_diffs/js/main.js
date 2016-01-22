@@ -9,27 +9,25 @@ AUI().ready(
 	'node-event-delegate',
 	'transition',
 
-	function(Y) {
-		Y.one('.child-menu').hide(true);
+	function(A) {
+		var childMenuExists = A.one('.child-menu');
+
+		var parentOfChildExists = A.one('.drop-menu');
+
+		if (childMenuExists && parentOfChildExists) {
+			A.one('.child-menu').hide(true);
+
+			A.one('.drop-menu').on('hover', over, out);
+		}
+
 		function over() {
 			this.one('.child-menu').show(true);
 		}
+
 		function out() {
 			this.one('.child-menu').hide(true);
 		}
-		Y.one('.dropMenu').on('hover', over, out);
 	}
-
-	//,
-	// function(Y) {
-	// 	var activeMenu = Y.one('li.selected');
-	// 	var menuWithChild = activeMenu.ancestor('li');
-	// 	if (menuWithChild.getAttribute('class') === 'dropdown') {
-	// 		var menuWithChildClass = menuWithChild.getAttribute('class');
-	// 		menuWithChildClass += ' selected';
-	// 		menuWithChild.setAttribute('class', menuWithChildClass);
-	// 	}
-	// }
 );
 
 

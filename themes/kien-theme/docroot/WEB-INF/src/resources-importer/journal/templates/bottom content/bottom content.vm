@@ -1,0 +1,22 @@
+<div class='container-fluid content-bottom'>
+  <div class='row-fluid'>
+    <div class='span4'>
+      <h1>$Text4423.getData()</h1>
+      <div class="content">
+        <p>$Text_Box4909.getData()</p>
+      </div>
+    </div>
+    <div class='span4'>
+      <h1>$Text10399.getData()</h1>
+      <div class="content">
+        <p>$Text_Box10643.getData()</p>
+      </div>
+    </div>
+    <div class='span4'>
+      <h1>$Text10885.getData()</h1>
+      <div class="content">
+        <p>$Text_Box11127.getData()</p>
+      </div>
+    </div>
+  </div>
+</div>

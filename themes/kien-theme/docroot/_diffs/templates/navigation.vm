@@ -12,7 +12,7 @@
 
 			#if ($nav_item.hasChildren())
 				#set ($nav_item_attr_has_popup="aria-haspopup='true'")
-				#set ($nav_item_class_child="dropMenu")
+				#set ($nav_item_class_child="drop-menu")
 			#end
 
 
