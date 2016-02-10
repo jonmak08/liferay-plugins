@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Content" type="text_area" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US">
+			<![CDATA[
+				Lorem ipsum dolor sit amet, ex vis lucilius recusabo intellegebat, sit ei dolor iisque placerat. Saepe patrioque theophrastus ne eum, pro ei putent contentiones delicatissimi. Nibh falli officiis eum eu, ius novum nostrum democritum te. Ex quo nulla vituperata, minimum imperdiet forensibus et quo. Per ad facer mentitum torquatos, id usu errem decore. Adipiscing temporibus sea et, partiendo intellegat ius ut. Ea blandit signiferumque pri, eros meis regione ut qui, vim ad habeo
+			]]>
+		</dynamic-content>
+	</dynamic-element>
+</root>

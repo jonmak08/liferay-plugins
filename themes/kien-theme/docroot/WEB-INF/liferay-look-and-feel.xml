@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN"
+"http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+    <compatibility>
+       <version>6.2.0+</version>
+    </compatibility>
+    <theme id="kien" name="Kien">
+      <settings>
+        <setting configurable="true" key="display-search-bar" type="checkbox" value="true" />
+        <setting configurable="true" key="display-footer" type="checkbox" value="true" />
+        <setting configurable="true" key="footer-article-id" type="text" value="FOOTER-CONTENT"/>
+      </settings>
+    </theme>
+</look-and-feel>

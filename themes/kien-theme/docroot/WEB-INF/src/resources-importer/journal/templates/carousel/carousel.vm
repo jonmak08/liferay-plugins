@@ -1,0 +1,32 @@
+<div id="myCarousel">
+  #if (!$Carousel_Image.getSiblings().isEmpty())
+  	#foreach ($cur_Carousel_Image in $Carousel_Image.getSiblings())
+	    <div class="image-viewer-base-image">
+            <img alt="$cur_Carousel_Image.getName()" src="$cur_Carousel_Image.getData()" />
+
+        <div class="carousel-description">
+          <h3>$cur_Carousel_Image.Carousel_Header.getData()</h3>
+
+          <p>$cur_Carousel_Image.Carousel_Description.getData()</p>
+        </div>
+      </div>
+  	#end
+  #end
+</div>
+
+<script>
+  AUI().use(
+    'aui-carousel',
+    function(A) {
+      new A.Carousel(
+        {
+          contentBox: '#myCarousel',
+          height: $Carousel_Height.getData(),
+          intervalTime: 2,
+          width: $Carousel_Width.getData(),
+          preloadAllImages: false
+        }
+      ).render();
+    }
+  );
+</script>

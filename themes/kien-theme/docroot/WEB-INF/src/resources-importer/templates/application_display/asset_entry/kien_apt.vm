@@ -1,0 +1,31 @@
+#if (!$entries.isEmpty())
+	#foreach ($entry in $entries)
+
+    #set ($readMoreUrl= $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry))
+
+  	<div class="asset-abstract">
+			<h3 class="asset-title">$entry.getTitle($locale)</h3>
+
+			<div class="asset-metadata-template">
+				#if (!$entry.getAssetRenderer().getUserName().isEmpty())
+		  		<span class="metadata-entry metadata-author">$entry.getAssetRenderer().getUserName() </span>
+				#end
+	  	  <span class="vertical-separator"></span>
+
+	  	  <span class="metadata-entry metadata-publish-date">$entry.getCreateDate()</span>
+		  </div>
+
+			<div class="asset-content">
+		    <div class="asset-summary">
+	        $entry.getAssetRenderer().getSummary($locale)
+		    </div>
+
+		    <div class="asset-more">
+	        <a href="$readMoreUrl">Read More
+	          <span class="hide-accessible">$entry.getTitle($locale)</span>
+	        </a>
+		    </div>
+	  	</div>
+    </div>
+	#end
+#end

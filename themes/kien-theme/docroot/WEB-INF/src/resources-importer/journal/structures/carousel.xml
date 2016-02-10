@@ -1,0 +1,68 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="Carousel_Height" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Carousel Height]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[In Pixels]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="Carousel_Width" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Carousel Width]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[In Pixels]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="Carousel_Image" readOnly="false" repeatable="true" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="Carousel_Header" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Carousel Header]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="Carousel_Description" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Carousel Description]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Carousel Image]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

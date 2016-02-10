@@ -1,0 +1,11 @@
+#if (!$Footer_Content_Header.getSiblings().isEmpty())
+	#foreach ($cur_Footer_Content_Header in $Footer_Content_Header.getSiblings())
+    <div class="footer-column">
+      <h1>$cur_Footer_Content_Header.getData()</h1>
+
+      <div class="content">
+        <p>$cur_Footer_Content_Header.Footer_Content_Description.getData()</p>
+      </div>
+    </div>
+	#end
+#end
