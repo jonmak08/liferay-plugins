@@ -1,0 +1,39 @@
+<form class="contact-form">
+  <fieldset>
+    <legend>$Title_of_Form.getData()</legend>
+
+    <label>
+      $Your_Name.getData()
+
+      <br />
+
+      <input class="input-field" name="name" placeholder="$Your_Name.getData()" required type="text">
+    </label>
+
+    <label>
+      $Your_Email_Address.getData()
+
+      <br />
+
+      <input class="input-field" name="email" placeholder="$Your_Email_Address.getData()" required type="text">
+    </label>
+
+    <label>
+      $Subject.getData()
+
+      <br />
+
+      <input class="input-field" name="subject" placeholder="$Subject.getData()" required type="text">
+    </label>
+
+    <label>
+      $Message.getData()
+
+      <br />
+
+      <textarea class="form-textarea" cols="50" name="message" required rows="10"></textarea>
+    </label>
+
+    <button class="btn" type="submit">Submit</button>
+  </fieldset>
+</form>

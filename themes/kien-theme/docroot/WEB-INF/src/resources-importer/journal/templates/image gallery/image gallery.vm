@@ -1,0 +1,44 @@
+<div class="image-gallery" id="imageGallery">
+  <h2>$Image_Gallery_Title.getData()</h2>
+
+  #if (!$Image.getSiblings().isEmpty())
+    #set ($imageCount = 0)
+    #set ($rowLimit = 3)
+
+    <div class="row-fluid">
+      #foreach ($cur_Image in $Image.getSiblings())
+        #if ($imageCount == $rowLimit)
+          #set ($rowLimit = $rowLimit + 3)
+          </div>
+
+          <div class="row-fluid">
+        #end
+
+        <div class="span4">
+          <a href="$cur_Image.getData()" title="$cur_Image.Image_Title.getData()">
+            <img alt="$cur_Image.getName()" src="$cur_Image.getData()" />
+
+            <div class="image-description">
+              <p>$cur_Image.Image_Title.getData()</p>
+            </div>
+          </a>
+        </div>
+        #set ($imageCount = $imageCount + 1)
+      #end
+    </div>
+  #end
+</div>
+
+<script>
+  AUI().use(
+    'aui-image-viewer',
+    function(A) {
+      new A.ImageViewer(
+        {
+          links: '#imageGallery a',
+          zIndex: 1
+        }
+      ).render();
+    }
+  );
+</script>

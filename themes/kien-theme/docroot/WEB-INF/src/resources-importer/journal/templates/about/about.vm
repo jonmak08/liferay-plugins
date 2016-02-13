@@ -1,0 +1,11 @@
+<div class="about-me">
+  <h2>$About_Me_Title.getData()</h2>
+
+  <br />
+
+  #if ($About_Image.getData() != "")
+    <img alt="$About_Image.getName()" src="$About_Image.getData()" />
+  #end
+
+  <p>$About_Me_Description.getData()</p>
+</div>

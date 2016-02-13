@@ -1,0 +1,25 @@
+<div class="social-media-bar">
+  #if (!$Social_Media_Icon.getSiblings().isEmpty())
+    #set ($counter = 0)
+    #set ($limit = 2)
+
+    <div class="social-media-url">
+      #foreach ($cur_Social_Media_Icon in $Social_Media_Icon.getSiblings())
+        #if ($counter == $limit)
+          #set ($limit = $limit + 2)
+          </div>
+
+          <div class="social-media-url">
+        #end
+
+        <div class="social-media-icon">
+          <a href="$cur_Social_Media_Icon.Social_Media_Url.getData()">
+            <img alt="$cur_Social_Media_Icon.getName()" src="$cur_Social_Media_Icon.getData()" />
+          </a>
+        </div>
+
+        #set ($counter = $counter + 1)
+      #end
+    </div>
+  #end
+</div>
