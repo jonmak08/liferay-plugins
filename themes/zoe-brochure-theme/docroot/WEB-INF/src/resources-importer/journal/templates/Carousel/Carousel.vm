@@ -41,7 +41,7 @@
 	#end
 </div>
 
-<script type="text/javascript">
+<script>
 	AUI().ready(
 		'aui-carousel',
 		function(A) {

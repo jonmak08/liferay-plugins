@@ -26,7 +26,7 @@
 <div id="<portlet:namespace />json"></div>
 
 <liferay-util:html-bottom>
-	<script src="<%= PortalUtil.getPathContext(request) %>/servlet/do?id=<portlet:namespace />json&callback=<portlet:namespace />printJSON" type="text/javascript"></script>
+	<script src="<%= PortalUtil.getPathContext(request) %>/servlet/do?id=<portlet:namespace />json&callback=<portlet:namespace />printJSON"></script>
 </liferay-util:html-bottom>
 
 <aui:script position="inline">

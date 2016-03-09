@@ -18,7 +18,7 @@
 <%@ taglib uri="http://liferay.com/tld/util" prefix="liferay-util" %>
 
 <liferay-util:html-bottom>
-	<script src="http://bible.logos.com/jsapi/referencetagging.js" type="text/javascript"></script>
+	<script src="http://bible.logos.com/jsapi/referencetagging.js"></script>
 
 	<aui:script position="inline">
 		Logos.ReferenceTagging.lbsBibleVersion = 'ESV';

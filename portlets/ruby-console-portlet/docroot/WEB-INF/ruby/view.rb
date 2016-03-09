@@ -21,7 +21,7 @@ html = <<-EOF
 	}
 </style>
 
-<script type="text/javascript">
+<script>
 	// <![CDATA[
 		function #{namespace}execute() {
 			var content = $('textarea##{namespace}consoleInput').val();

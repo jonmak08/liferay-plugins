@@ -25,7 +25,7 @@ if (displayStyle.equals("simple")) {
 %>
 
 <liferay-util:html-bottom outputKey="taglib_ui_social_bookmark_tuenti">
-	<script src="<%= HttpUtil.getProtocol(request) %>://widgets.tuenti.com/widgets.js" type="text/javascript"></script>
+	<script src="<%= HttpUtil.getProtocol(request) %>://widgets.tuenti.com/widgets.js"></script>
 </liferay-util:html-bottom>
 
 <a class="tuenti-share-button" <%= tuentiDisplayStyle %> href="<%= HttpUtil.getProtocol(request) %>://www.tuenti.com/share" share-url="<%= url %>"></a>

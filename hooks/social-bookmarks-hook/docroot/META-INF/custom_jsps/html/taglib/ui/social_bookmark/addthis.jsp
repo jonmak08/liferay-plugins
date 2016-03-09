@@ -21,7 +21,7 @@
 </a>
 
 <liferay-util:html-bottom outputKey="addthis">
-	<script src="<%= HttpUtil.getProtocol(request) %>://s7.addthis.com/js/300/addthis_widget.js" type="text/javascript"></script>
+	<script src="<%= HttpUtil.getProtocol(request) %>://s7.addthis.com/js/300/addthis_widget.js"></script>
 </liferay-util:html-bottom>
 
 <aui:script>

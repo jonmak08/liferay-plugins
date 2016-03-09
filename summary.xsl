@@ -10,8 +10,8 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js" type="text/javascript"></script>
-				<script type="text/javascript">
+				<script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+				<script>
 					YUI().use(
 						'datatable',
 						function (Y) {

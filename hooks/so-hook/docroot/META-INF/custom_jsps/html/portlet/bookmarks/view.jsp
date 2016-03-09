@@ -132,7 +132,7 @@ request.setAttribute("view.jsp-viewFolder", Boolean.TRUE.toString());
 
 </form>
 
-<script type="text/javascript">
+<script>
 	function <portlet:namespace />addEntry() {
 		var url = '<portlet:renderURL windowState="<%= WindowState.MAXIMIZED.toString() %>"><portlet:param name="struts_action" value="/bookmarks/edit_entry" /><portlet:param name="redirect" value="<%= currentURL %>" /><portlet:param name="folderId" value="<%= String.valueOf(folderId) %>" /></portlet:renderURL>';
 

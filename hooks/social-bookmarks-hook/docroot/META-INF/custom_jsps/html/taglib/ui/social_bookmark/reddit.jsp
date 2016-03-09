@@ -35,6 +35,6 @@ if (displayStyle.equals("vertical")) {
 			reddit_url = '<%= url %>';
 		</aui:script>
 
-		<script src="<%= HttpUtil.getProtocol(request) %>://www.reddit.com/static/button/<%= redditDisplayStyle %>.js?styled=off" type="text/javascript"></script>
+		<script src="<%= HttpUtil.getProtocol(request) %>://www.reddit.com/static/button/<%= redditDisplayStyle %>.js?styled=off"></script>
 	</c:otherwise>
 </c:choose>

@@ -30,4 +30,4 @@ if (displayStyle.equals("vertical")) {
 	<%= slashdotDisplayStyle %>
 </aui:script>
 
-<script src="<%= HttpUtil.getProtocol(request) %>://slashdot.org/slashdot-it.js" type="text/javascript"></script>
+<script src="<%= HttpUtil.getProtocol(request) %>://slashdot.org/slashdot-it.js"></script>
