@@ -17,9 +17,6 @@
 			<default-portlet-decorator>true</default-portlet-decorator>
 			<portlet-decorator-css-class>portlet-decorate</portlet-decorator-css-class>
 		</portlet-decorator>
-		<portlet-decorator id="titleless" name="Titleless">
-			<portlet-decorator-css-class>portlet-titleless</portlet-decorator-css-class>
-		</portlet-decorator>
 		<portlet-decorator id="portlet-banner" name="Banner">
 			<portlet-decorator-css-class>portlet-banner</portlet-decorator-css-class>
 		</portlet-decorator>
