@@ -1,0 +1,27 @@
+{
+	"layoutTemplateId": "1_column",
+	"publicPages": [
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+						"portletPreferences": {
+							"articleId": "Full_Banner.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "portlet-banner"
+						}
+					}
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "Home",
+			"title": "Home"
+		},
+		{
+			"friendlyURL": "/about",
+			"name": "About Us",
+			"title": "About Us"
+		}
+	]
+}

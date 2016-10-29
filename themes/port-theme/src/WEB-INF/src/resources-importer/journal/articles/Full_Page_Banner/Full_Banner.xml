@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Heading" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[This is Port]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Subheading" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[This is the subheading]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="BackgroundImage" type="image" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[
+			{
+				"groupId":"",
+				"name":"notebook-computer-chill-relax",
+				"alt":"",
+				"title":"notebook-computer-chill-relax",
+				"type":"document",
+				"uuid":"66e75a30-3a0a-ed09-016f-84e446ee23c4",
+			}
+		]]></dynamic-content>
+	</dynamic-element>
+</root>

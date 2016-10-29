@@ -1,0 +1,184 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+@import 'fonts.scss';
+@import '_custom_vars.scss';
+@import '_custom_mixins.scss';
+@import './header/_header.scss';
+@import './portlet/_portlet_decorate.scss';
+@import './portlet/_portlet_banner.scss';
+
+/* Global styles */
+
+* {
+	border-radius: 0;
+	font-weight: lighter;
+}
+
+.row {
+	margin: 0;
+}
+
+.col-md-12 {
+	padding: 0;
+}
+
+#wrapper {
+	padding-top: 0;
+
+	a, a span {
+		font-weight: 600;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+.form-control {
+	height: 33px;
+}
+
+/* Content Styles */
+
+#content {
+	margin-top: 0;
+
+	&.content-under-header {
+		margin-top: 58px;
+	}
+
+	.btn, .btn-default {
+		background-color: transparent;
+		border: 1px solid $btn-default-color;
+		border-radius: 0;
+		color: $btn-default-color;
+		transition: 0.1s linear all;
+
+		a {
+			color: inherit;
+		}
+
+		&:hover {
+			border: 1px solid $btn-default-hover-color;
+			color: #FFF;
+
+			a, .lexicon-icon {
+				color: #FFF;
+			}
+		}
+	}
+
+	.alert a {
+		color: rgba(#000, 0.8);
+	}
+}
+
+.portlet {
+	margin-bottom: 0;
+
+	&:hover .portlet-topper {
+		@include transform(none);
+	}
+
+	.lexicon-icon {
+		color: #777;
+	}
+}
+
+.portlet-topper {
+	background-color: rgba(#000, 0.3);
+	border-radius: 0;
+	border-width: 0;
+	color: #FFF;
+	width: 50%;
+	z-index: 400;
+
+	.lexicon-icon {
+		color: #FFF;
+	}
+}
+
+.cards {
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include justify-content(flex-start);
+
+	list-style-type: none;
+	margin: 0 auto;
+	max-width: 1024px;
+	padding: 0 50px;
+
+	li {
+		min-width: 200px;
+		padding: 0 10px;
+		text-align: center;
+		width: 33.33%;
+
+		i {
+			font-size: 50px;
+		}
+
+		h4 {
+			font-size: 14px;
+		}
+
+		p {
+			font-size: 12px;
+			opacity: 0.6;
+		}
+
+		@media (max-width: 715px) {
+			width: 50%;
+		}
+
+		@media (max-width: 600px) {
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 600px) {
+		padding: 0;
+	}
+}
+
+/* Footer Styles */
+
+#footer {
+	background-color: #F1F0F0;
+	padding: 50px;
+
+	.powered-by a {
+		color: rgba(#000, 0.6);
+		font-weight: 600;
+		text-decoration: none;
+
+		@include transition(color 0.3s linear);
+
+		&:hover {
+			color: rgba(#000, 1);
+		}
+	}
+}
+
+/* Apply color themes */
+
+@include applyAccent('.blue-green-theme', $custom-color-blue-green);
+@include applyAccent('.blue-theme', $custom-color-blue);
+@include applyAccent('.gray-theme', $custom-color-gray);
+@include applyAccent('.green-theme', $custom-color-green);
+@include applyAccent('.purple-theme', $custom-color-purple);
+@include applyAccent('.red-theme', $custom-color-red);
