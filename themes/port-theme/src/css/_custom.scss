@@ -14,11 +14,6 @@
 	font-weight: lighter;
 }
 
-ul {
-	// list-style-type: none;
-	// padding-left: 0;
-}
-
 .row {
     margin: 0;
 }
@@ -226,15 +221,12 @@ a {
 	}
 
 	@media (max-width: 715px) {
-		// max-width: 500px;
-
 		li {
 			width: 50%;
 		}
 	}
 
 	@media (max-width: 600px) {
-		// max-width: 300px;
 		padding: 0;
 
 		li {
