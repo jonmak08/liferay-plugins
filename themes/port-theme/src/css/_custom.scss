@@ -1,29 +1,32 @@
 /* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
 
-
 /* inject:imports */
 /* endinject */
-
 
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 
 @import '_custom_vars.scss';
 
 /* Global styles */
+
 * {
 	font-weight: lighter;
 }
 
 .row {
-    margin: 0;
+	margin: 0;
+}
+
+.col-md-12 {
+	padding: 0;
 }
 
 #wrapper {
-    padding-top: 0;
+	padding-top: 0;
 }
 
 .container-fluid {
-    padding: 0;
+	padding: 0;
 }
 
 a {
@@ -35,8 +38,9 @@ a {
 @import './_header.scss';
 
 /* Content Styles */
+
 #content {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .portlet:hover > .portlet-topper {
@@ -45,25 +49,25 @@ a {
 }
 
 .portlet-topper {
-	z-index: 600;
-	width: 50%;
 	border-radius: 0 0 5px 0;
+	width: 50%;
+	z-index: 600;
 }
 
 .cards {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 1024px;
-	margin: 0 auto;
 	justify-content: flex-start;
-	padding: 0 50px;
 	list-style-type: none;
+	margin: 0 auto;
+	max-width: 1024px;
+	padding: 0 50px;
 
 	li {
-		width: 33.33%;
 		min-width: 200px;
-		text-align: center;
 		padding: 0 10px;
+		text-align: center;
+		width: 33.33%;
 
 		i {
 			font-size: 50px;
@@ -73,10 +77,10 @@ a {
 			font-size: 14px;
 		}
 
-		 p {
-		 	font-size: 12px;
-		 	opacity: 0.6;
-		 }
+		p {
+			font-size: 12px;
+			opacity: 0.6;
+		}
 	}
 
 	@media (max-width: 715px) {
@@ -89,8 +93,8 @@ a {
 		padding: 0;
 
 		li {
-			width: 100%;
 			margin: 0 auto;
+			width: 100%;
 		}
 	}
 }
@@ -105,17 +109,17 @@ a {
 /* Footer Styles */
 
 #footer {
-    background-color: #f1f0f0;
-    padding: 50px;
-	color: rgba(0,0,0,0.6);
+	background-color: #F1F0F0;
+	color: rgba(0, 0, 0, 0.6);
+	padding: 50px;
 
-    a {
-    	color: inherit;
-    	font-weight: 600;
-    	transition: color 0.3s linear;
+	a {
+		color: inherit;
+		font-weight: 600;
+		transition: color 0.3s linear;
 
-    	&:hover {
-    		color: rgba(0, 0, 0, 1);
-    	}
-    }
+		&:hover {
+			color: rgba(0, 0, 0, 1);
+		}
+	}
 }
