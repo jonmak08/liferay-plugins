@@ -6,15 +6,17 @@ AUI().ready(
 	*/
 
 	function() {
+		var $banner = $('#banner');
 		var $document = $(document);
 		var $firstPortlet = $('.portlet-boundary').first();
-		var $banner = $('#banner');
 
 		/* Gives the banner a solid background if the first portlet is not an image */
 		if (!portletIsBanner($firstPortlet)) {
 
 			$banner.addClass('filled');
-		} else {
+			$firstPortlet.addClass('first-portlet-margin');
+		}
+		else {
 			changeHeaderFillOnScroll();
 		}
 
@@ -26,7 +28,8 @@ AUI().ready(
 			$document.scroll(function() {
 				if ($document.scrollTop() > 150) {
 					$banner.addClass('filled');
-				} else {
+				}
+				else {
 					$banner.removeClass('filled');
 				};
 			});
