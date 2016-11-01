@@ -47,9 +47,10 @@ a {
 
 .portlet {
 	margin-bottom: 0;
+	padding: 3px;
 
 	&:hover {
-		box-shadow: inset 1px 1px 2px $custom-color-1;
+		box-shadow: inset 1px 1px 2px $custom-color-1, inset -1px -1px 2px $custom-color-1;
 
 		> .portlet-topper {
 		    -webkit-transform: none;
