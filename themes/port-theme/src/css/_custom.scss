@@ -45,9 +45,17 @@ a {
 	margin-top: 0;
 }
 
-.portlet:hover > .portlet-topper {
-	-webkit-transform: none;
-	transform: none;
+.portlet {
+	margin-bottom: 0;
+
+	&:hover {
+		border: 1px inset red;
+
+		> .portlet-topper {
+		    -webkit-transform: none;
+		    transform: none;
+		}
+	}
 }
 
 .portlet-topper {
@@ -99,10 +107,6 @@ a {
 			width: 100%;
 		}
 	}
-}
-
-.portlet {
-	margin-bottom: 0;
 }
 
 @import './portlet/_portlet_decorate.scss';

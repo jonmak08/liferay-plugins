@@ -3,8 +3,9 @@
     "appServerPath": "C:\\Users\\liferay\\liferay-portal\\bundles\\tomcat-8.0.32",
     "deployPath": "C:\\Users\\liferay\\liferay-portal\\bundles\\deploy",
     "url": "http://localhost:8080",
-    "appServerPathPlugin": "C:\\Users\\liferay\\port-theme\\.web_bundle_build",
+    "appServerPathPlugin": "C:\\Users\\liferay\\liferay-plugins\\themes\\port-theme\\.web_bundle_build",
     "deployed": true,
-    "pluginName": "port-theme"
+    "pluginName": "port-theme",
+    "webBundleDir": "watching"
   }
 }
