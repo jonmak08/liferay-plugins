@@ -22,11 +22,7 @@
         padding: 50px;
     }
 
-	.btn {
-	    background-color: transparent;
-	    border-radius: 0;
-	    border: 1px solid #000;
-	}
+
 
 	.overlay {
 		position: static;
@@ -80,15 +76,6 @@
 	.heading-row {
 		display: flex;
 		justify-content: space-between;
-	}
-
-	.btn {
-	    color: #000;
-	    transition: opacity 0.2s linear;
-
-	    &:hover {
-	        opacity: 1;
-	    }
 	}
 
 	.blog-cards {
@@ -160,5 +147,9 @@
 
 	&.first-portlet-margin {
 		margin-top: 48px;
+	}
+
+	.form-control {
+		border-radius: 0px;
 	}
 }

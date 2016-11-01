@@ -1,3 +1,13 @@
-.btn-default:hover {
-	color: $btn-default-hover-color;
+.btn, .btn-default {
+    background-color: transparent;
+    border-radius: 0;
+    border: 1px solid #000;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.2s linear;
+
+    &:hover {
+    	opacity: 1;
+    	background-color: transparent;
+    }
 }
