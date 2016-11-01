@@ -103,14 +103,15 @@
 	> ul {
 		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		padding-left: 0;
+		list-style-type: none;
 	}
 
 	li {
 		margin-bottom: 10px;
 
-		a {
-			font-weight: bold;
-		}
+		// a {
+		// 	font-weight: bold;
+		// }
 	}
 
 	.nav-trigger-close, a {
@@ -133,3 +134,43 @@
 	position: absolute;
 	transform: translateX(-250px);
 }
+
+.onscreen-nav #navigation {
+	background-color: transparent;
+	position: static;
+	height: auto;
+	padding: 0;
+
+	> ul {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		border-bottom-width: 0;
+		margin: 0;
+
+		li {
+			margin: 0 0 0 30px;
+
+			&.nav-has-children {
+			}
+		}
+	}
+
+	.delete-tab {
+		margin: -5px -18px 0 0;
+		padding: 3px;
+	}
+
+	.child-menu {
+		flex-direction: column;
+		padding-left: 0;
+		display: none;
+
+		li {
+			margin: 0;
+		}
+	}
+
+}
+
