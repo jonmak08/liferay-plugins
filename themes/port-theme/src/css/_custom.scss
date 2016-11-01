@@ -51,7 +51,7 @@ a {
 	&:hover {
 
 		.portlet-content-editable {
-			box-shadow: inset 1px 1px 5px $custom-color-1, inset -1px -1px 5px $custom-color-1;
+			box-shadow: inset 1px 1px 3px $custom-color-1, inset -1px -1px 3px $custom-color-1;
 		}
 
 		> .portlet-topper {
@@ -62,13 +62,16 @@ a {
 }
 
 .portlet-topper {
+	background-color: $custom-color-1;
 	border-radius: 0 0 5px 0;
+	border-width: 0;
+	color: #FFF;
 	width: 50%;
 	z-index: 600;
-}
 
-.first-portlet-margin {
-	margin-top: 48px;
+	.lexicon-icon {
+		color: #FFF;
+	}
 }
 
 .cards {
