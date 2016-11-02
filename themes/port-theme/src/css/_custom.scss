@@ -7,6 +7,7 @@
 
 @import '_custom_vars.scss';
 @import '_apply_accent_colors.scss';
+
 /* Global styles */
 
 * {
@@ -30,9 +31,30 @@
 	padding: 0;
 }
 
+.btn, .btn-default {
+	background-color: transparent;
+	border: 1px solid $btn-default-color;
+	border-radius: 0;
+	color: $btn-default-color;
+	transition: 0.2s linear all;
+
+	&:hover {
+		border: 1px solid $btn-default-hover-color;
+		color: $btn-default-hover-color;
+	}
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+.form-control {
+	height: 33px;
+}
+
 /* Header Styles */
 
-@import './_header.scss';
+@import './header/_header.scss';
 
 /* Content Styles */
 
