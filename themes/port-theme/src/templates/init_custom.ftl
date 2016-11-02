@@ -1,5 +1,5 @@
 <#assign
-	off_screen_navigation = getterUtil.getBoolean(themeDisplay.getThemeSetting("off-screen-navigation"))
+	off_screen_navigation = getterUtil.getBoolean(themeDisplay.getThemeSetting("off-screen-desktop-navigation"))
 	nav_wrapper_class = ""
 />
 
