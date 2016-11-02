@@ -8,8 +8,8 @@
 	<theme id="port" name="Port">
 		<template-extension>ftl</template-extension>
 		<settings>
-			<setting configurable="true" key="Off Screen Desktop Navigation" type="checkbox" value="true" />
-			<setting configurable="true" key="Navigation Color Scheme" type="select" options="light,dark" value="dark" />
+			<setting configurable="true" key="off-screen-desktop-navigation" type="checkbox" value="true" />
+			<setting configurable="true" key="navigation-color-scheme" type="select" options="light,dark" value="dark" />
 			<setting configurable="true" key="Accent Color" type="select" options="blue,blue-green,gray,green,purple,red" value="blue-green" />
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
