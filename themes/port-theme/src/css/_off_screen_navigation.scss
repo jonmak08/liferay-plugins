@@ -35,7 +35,7 @@
 		color: rgba(255, 255, 255, 0.5);
 		transition: color 0.2s linear;
 
-		&:hover {
+		&:hover, .selected a {
 			color: rgba(255, 255, 255, 1);
 			cursor: pointer;
 			text-decoration: none;
@@ -44,5 +44,19 @@
 
 	.selected a {
 		color: rgba(255, 255, 255, 1);
+	}
+}
+
+#navigation {
+	.nav-trigger-close, a {
+		color: papayawhip;
+
+		&:hover {
+			color: red;
+		}
+	}
+
+	.selected a {
+		color: red;
 	}
 }

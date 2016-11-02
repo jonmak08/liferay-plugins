@@ -8,7 +8,8 @@
 	<theme id="port" name="Port">
 		<template-extension>ftl</template-extension>
 		<settings>
-			<setting configurable="true" key="off-screen-desktop-navigation" type="checkbox" value="true" />
+			<setting configurable="true" key="Off Screen Desktop Navigation" type="checkbox" value="true" />
+			<setting configurable="true" key="Color Scheme" type="select" options="light,dark" value="dark" />
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>

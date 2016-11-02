@@ -5,6 +5,7 @@
     "url": "http://localhost:8080",
     "appServerPathPlugin": "C:\\Users\\liferay\\liferay-plugins\\themes\\port-theme\\.web_bundle_build",
     "deployed": true,
-    "pluginName": "port-theme"
+    "pluginName": "port-theme",
+    "webBundleDir": "watching"
   }
 }
