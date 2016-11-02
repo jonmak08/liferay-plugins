@@ -37,54 +37,6 @@
 	padding: 0;
 }
 
-#nav-trigger {
-	display: none;
-
-	&:checked {
-		+ .nav-trigger-btn {
-			opacity: 0.5;
-			transform: translateX(-250px);
-			z-index: 999;
-		}
-
-		~ .full-page-overlay {
-			background-color: rgba(0, 0, 0, 0.2);
-			height: 100vh;
-			left: 0;
-			position: fixed;
-			top: 0;
-			width: 100vw;
-			z-index: 888;
-		}
-
-		~ #navigation {
-			box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-			position: absolute;
-			transform: translateX(-250px);
-		}
-	}
-}
-
-.nav-trigger-btn {
-	color: #FFF;
-	font-size: 30px;
-	margin: 0;
-	position: absolute;
-	right: 20px;
-	top: 8px;
-	transform: translateX(0);
-	transition: 0.5s ease all;
-
-	&:hover {
-		cursor: pointer;
-		opacity: 0.5;
-	}
-}
-
-.full-page-overlay {
-	transition: background 0.2s linear;
-}
-
 @import './_off_screen_navigation.scss';
 
 @media (min-width: 450px) {
