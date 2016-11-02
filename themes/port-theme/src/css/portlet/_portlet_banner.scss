@@ -22,6 +22,10 @@
 		height: 100vh;
 		justify-content: space-between;
 
+		h1, h4 {
+			text-transform: uppercase;
+		}
+
 		h1 {
 			font-family: $nixie;
 			font-size: 36px;
