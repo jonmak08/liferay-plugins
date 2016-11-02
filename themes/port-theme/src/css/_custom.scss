@@ -6,7 +6,7 @@
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 
 @import '_custom_vars.scss';
-
+@import '_apply_accent_colors.scss';
 /* Global styles */
 
 * {
@@ -30,12 +30,6 @@
 	padding: 0;
 }
 
-a {
-	&:hover {
-		text-decoration: none;
-	}
-}
-
 /* Header Styles */
 
 @import './_header.scss';
@@ -43,7 +37,7 @@ a {
 /* Content Styles */
 
 #content {
-	margin-top: 0;
+	margin-top: 0
 }
 
 .portlet {
@@ -51,7 +45,7 @@ a {
 
 	&:hover {
 		.portlet-content-editable {
-			box-shadow: inset 1px 1px 3px $custom-color-1, inset -1px -1px 3px $custom-color-1;
+			// box-shadow: inset 1px 1px 3px $custom-color-1, inset -1px -1px 3px $custom-color-1;
 		}
 
 		> .portlet-topper {
@@ -59,10 +53,23 @@ a {
 			transform: none;
 		}
 	}
+
+	a {
+		// color: rgba($custom-color-1, 0.9);
+
+		&:hover {
+			// color: rgba($custom-color-1, 1);
+			text-decoration: none;
+		}
+
+		.lexicon-icon {
+			color: #777;
+		}
+	}
 }
 
 .portlet-topper {
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(#000, 0.3);
 	border-radius: 0 0 5px 0;
 	border-width: 0;
 	color: #FFF;
@@ -126,7 +133,7 @@ a {
 
 #footer {
 	background-color: #F1F0F0;
-	color: rgba(0, 0, 0, 0.6);
+	color: rgba(#000, 0.6);
 	padding: 50px;
 
 	a {
@@ -135,7 +142,9 @@ a {
 		transition: color 0.3s linear;
 
 		&:hover {
-			color: rgba(0, 0, 0, 1);
+			color: rgba(#000, 1);
 		}
 	}
 }
+
+@include applyAccent('.blue-theme', blue);

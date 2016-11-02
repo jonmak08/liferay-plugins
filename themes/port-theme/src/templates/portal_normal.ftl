@@ -23,7 +23,7 @@
 
 <@liferay.control_menu />
 
-<div class="${wrapper_class}" id="wrapper">
+<div class="${wrapper_class} blue-theme" id="wrapper">
 
 	<header id="banner" role="banner">
 		<div id="heading">
