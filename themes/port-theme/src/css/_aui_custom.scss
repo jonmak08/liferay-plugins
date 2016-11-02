@@ -1,3 +1,5 @@
+@import './_custom_vars.scss';
+
 .btn, .btn-default {
 	background-color: transparent;
 	border: 1px solid $btn-default-color;
@@ -6,8 +8,16 @@
 	transition: 0.2s linear all;
 
 	&:hover {
-		background-color: transparent;
+		background-color: rgba($custom-color-1, 0.5);
 		border: 1px solid $btn-default-hover-color;
 		color: $btn-default-hover-color;
 	}
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+.form-control {
+	height: 33px;
 }
