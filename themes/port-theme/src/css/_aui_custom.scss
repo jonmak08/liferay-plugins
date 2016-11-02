@@ -1,14 +1,13 @@
 .btn, .btn-default {
-    background-color: transparent;
-    border-radius: 0;
-    border: 1px solid #000;
-    border: 1px solid $btn-default-color;
-    color: $btn-default-color;
-    transition: 0.2s linear all;
+	background-color: transparent;
+	border: 1px solid $btn-default-color;
+	border-radius: 0;
+	color: $btn-default-color;
+	transition: 0.2s linear all;
 
-    &:hover {
-    	background-color: transparent;
-    	color: $btn-default-hover-color;
-    	border: 1px solid $btn-default-hover-color;
-    }
+	&:hover {
+		background-color: transparent;
+		border: 1px solid $btn-default-hover-color;
+		color: $btn-default-hover-color;
+	}
 }

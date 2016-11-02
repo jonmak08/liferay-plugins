@@ -50,14 +50,13 @@ a {
 	margin-bottom: 0;
 
 	&:hover {
-
 		.portlet-content-editable {
 			box-shadow: inset 1px 1px 3px $custom-color-1, inset -1px -1px 3px $custom-color-1;
 		}
 
 		> .portlet-topper {
-		    -webkit-transform: none;
-		    transform: none;
+			-webkit-transform: none;
+			transform: none;
 		}
 	}
 }
