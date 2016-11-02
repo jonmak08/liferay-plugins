@@ -10,7 +10,7 @@
 		<settings>
 			<setting configurable="true" key="Off Screen Desktop Navigation" type="checkbox" value="true" />
 			<setting configurable="true" key="Navigation Color Scheme" type="select" options="light,dark" value="dark" />
-			<setting configurable="true" key="Accent Color" type="select" options="blue,green,red,purple" value="blue" />
+			<setting configurable="true" key="Accent Color" type="select" options="blue,blue-green,gray,green,purple,red" value="blue-green" />
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
