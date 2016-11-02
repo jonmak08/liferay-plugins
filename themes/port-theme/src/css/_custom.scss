@@ -43,28 +43,17 @@
 .portlet {
 	margin-bottom: 0;
 
-	&:hover {
-		.portlet-content-editable {
-			// box-shadow: inset 1px 1px 3px $custom-color-1, inset -1px -1px 3px $custom-color-1;
-		}
-
-		> .portlet-topper {
-			-webkit-transform: none;
-			transform: none;
-		}
+	> .portlet-topper {
+		-webkit-transform: none;
+		transform: none;
 	}
 
-	a {
-		// color: rgba($custom-color-1, 0.9);
-
-		&:hover {
-			// color: rgba($custom-color-1, 1);
+	a:hover {
 			text-decoration: none;
-		}
+	}
 
-		.lexicon-icon {
-			color: #777;
-		}
+	.lexicon-icon {
+		color: #777;
 	}
 }
 

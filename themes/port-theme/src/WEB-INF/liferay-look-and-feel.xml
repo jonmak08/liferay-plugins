@@ -9,7 +9,8 @@
 		<template-extension>ftl</template-extension>
 		<settings>
 			<setting configurable="true" key="Off Screen Desktop Navigation" type="checkbox" value="true" />
-			<setting configurable="true" key="Color Scheme" type="select" options="light,dark" value="dark" />
+			<setting configurable="true" key="Navigation Color Scheme" type="select" options="light,dark" value="dark" />
+			<setting configurable="true" key="Accent Color" type="select" options="blue,green,red,purple" value="blue" />
 		</settings>
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
