@@ -45,18 +45,24 @@
 	.selected a {
 		color: rgba(255, 255, 255, 1);
 	}
+
+	.child-menu {
+		padding-left: 10px;
+	}
 }
 
-#navigation {
+.light-theme #navigation {
+	background-color: #FFF;
+
 	.nav-trigger-close, a {
-		color: papayawhip;
+		color: rgba(0, 0, 0, 0.6);
 
 		&:hover {
-			color: red;
+			color: #000;
 		}
 	}
 
 	.selected a {
-		color: red;
+		color: #000;
 	}
 }
