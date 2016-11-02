@@ -41,7 +41,6 @@
 /themes/*/docroot/js
 /themes/*/docroot/layouttpl
 /themes/*/docroot/templates
-/themes/*/node_modules
 /tmp
 /tools/*/*/*/lib
 /tools/node*
