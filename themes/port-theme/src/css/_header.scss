@@ -43,6 +43,30 @@
 
 #nav-trigger {
 	display: none;
+
+	&:checked {
+		+ .nav-trigger-btn {
+			opacity: 0.5;
+			transform: translateX(-250px);
+			z-index: 999;
+		}
+
+		~ .full-page-overlay {
+			background-color: rgba(0, 0, 0, 0.3);
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100vw;
+			z-index: 888;
+		}
+
+		~ #navigation {
+			position: absolute;
+			transform: translateX(-250px);
+			box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+		}
+	}
 }
 
 .nav-trigger-btn {
@@ -61,24 +85,8 @@
 	}
 }
 
-#nav-trigger:checked + .nav-trigger-btn {
-	opacity: 0.5;
-	transform: translateX(-250px);
-	z-index: 999;
-}
-
 .full-page-overlay {
 	transition: background 0.2s linear;
-}
-
-#nav-trigger:checked ~ .full-page-overlay {
-	background-color: rgba(0, 0, 0, 0.4);
-	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	z-index: 888;
 }
 
 .light-theme #nav-trigger:checked ~ .full-page-overlay {
@@ -87,14 +95,6 @@
 
 @import './_off_screen_navigation.scss';
 
-#nav-trigger:checked ~ #navigation {
-	position: absolute;
-	transform: translateX(-250px);
-}
-
-/*
-	TO DO -- allow a media query to revert menu back to off screen navigation
- */
 @media (min-width: 450px) {
 	@import './_on_screen_navigation.scss';
 }
