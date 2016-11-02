@@ -81,6 +81,10 @@
 	z-index: 888;
 }
 
+.light-theme #nav-trigger:checked ~ .full-page-overlay {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
 @import './_off_screen_navigation.scss';
 
 #nav-trigger:checked ~ #navigation {
