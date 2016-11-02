@@ -2,9 +2,9 @@
 	align-items: center;
 	background-color: transparent;
 	display: flex;
+	flex-wrap: wrap;
 	font-size: 24px;
 	justify-content: space-between;
-	flex-wrap: wrap;
 	padding: 10px 20px;
 	position: fixed;
 	transition: background 0.1s linear;
@@ -62,9 +62,9 @@
 		}
 
 		~ #navigation {
+			box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
 			position: absolute;
 			transform: translateX(-250px);
-			box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
 		}
 	}
 }
