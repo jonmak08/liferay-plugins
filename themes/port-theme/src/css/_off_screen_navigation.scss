@@ -1,0 +1,48 @@
+#navigation {
+	background-color: #333;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+	height: 100vh;
+	padding: 20px;
+	position: absolute;
+	right: -250px;
+	top: 0;
+	transform: translateX(0);
+	transition: 0.5s ease all;
+	width: 250px;
+	z-index: 999;
+
+	.nav-trigger-close {
+		align-self: flex-end;
+		font-size: 20px;
+	}
+
+	> ul {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		padding-left: 0;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	.nav-trigger-close, a {
+		color: rgba(255, 255, 255, 0.5);
+		transition: color 0.2s linear;
+
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+
+	.selected a {
+		color: rgba(255, 255, 255, 1);
+	}
+}

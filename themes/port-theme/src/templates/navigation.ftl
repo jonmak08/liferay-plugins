@@ -1,10 +1,8 @@
 <nav class="${nav_css_class}" id="navigation" role="navigation">
 	<h1 class="hide-accessible"><@liferay.language key="navigation" /></h1>
-	<#if off_screen_navigation>
-		<label for="nav-trigger" class="nav-trigger-close">
-			<i class="material-icons">close</i>
-		</label>
-	</#if>
+	<label for="nav-trigger" class="nav-trigger-close">
+		<i class="material-icons">close</i>
+	</label>
 
 	<ul aria-label="<@liferay.language key="site-pages" />" role="menubar">
 		<#list nav_items as nav_item>

@@ -38,26 +38,19 @@
 			</h1>
 		</div>
 
-		<#if off_screen_navigation>
-			<div id="nav-wrapper">
-				<input type="checkbox" id="nav-trigger">
-				<label for="nav-trigger" class="nav-trigger-btn">
-					<i class="material-icons">menu</i>
-				</label>
+		<div id="nav-wrapper" class="${nav_wrapper_class}">
+			<input type="checkbox" id="nav-trigger">
+			<label for="nav-trigger" class="nav-trigger-btn">
+				<i class="material-icons">menu</i>
+			</label>
 
-				<div class="full-page-overlay"></div>
-			</div>
+			<div class="full-page-overlay"></div>
 
 			<#if has_navigation && is_setup_complete>
 				<#include "${full_templates_path}/navigation.ftl" />
 			</#if>
-		<#else>
-			<div id="nav-wrapper" class="onscreen-nav">
-				<#if has_navigation && is_setup_complete>
-					<#include "${full_templates_path}/navigation.ftl" />
-				</#if>
-			</div>
-		</#if>
+
+		</div>
 	</header>
 
 	<main id="content">
