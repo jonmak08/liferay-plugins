@@ -43,8 +43,7 @@
 .portlet {
 	margin-bottom: 0;
 
-	> .portlet-topper {
-		-webkit-transform: none;
+	&:hover .portlet-topper {
 		transform: none;
 	}
 
@@ -136,4 +135,4 @@
 	}
 }
 
-@include applyAccent('.blue-theme', blue);
+@include applyAccent('.blue-theme', $custom-color-blue);

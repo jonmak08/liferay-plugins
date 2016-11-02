@@ -13,10 +13,6 @@
 		border-top: 2px solid #EEE;
 	}
 
-	blockquote {
-		// border-left: 5px solid $custom-color-1;
-	}
-
 	.portlet-content {
 		border-width: 0;
 		padding: 50px;
@@ -41,15 +37,9 @@
 				transition: 0.2s linear all;
 			}
 
-			&:hover {
-				.overlay {
-					// background-color: rgba($custom-color-1, 0.5);
-				}
-
-				button {
-					border-color: #FFF;
-					color: #FFF;
-				}
+			&:hover button {
+				border-color: #FFF;
+				color: #FFF;
 			}
 		}
 
@@ -111,7 +101,6 @@
 			}
 
 			a {
-				color: $custom-color-1;
 				font-size: 10px;
 			}
 		}
