@@ -69,9 +69,12 @@
 	width: $navigation-width;
 	z-index: 999;
 
-	.nav-trigger-close {
-		align-self: flex-end;
-		font-size: 20px;
+	li {
+		margin-bottom: 10px;
+	}
+
+	ul {
+		list-style-type: none;
 	}
 
 	> ul {
@@ -79,12 +82,13 @@
 		padding-left: 0;
 	}
 
-	ul {
-		list-style-type: none;
+	.child-menu {
+		padding-left: 10px;
 	}
 
-	li {
-		margin-bottom: 10px;
+	.nav-trigger-close {
+		align-self: flex-end;
+		font-size: 20px;
 	}
 
 	.nav-trigger-close, a {
@@ -100,10 +104,6 @@
 
 	.selected a {
 		color: rgba(255, 255, 255, 1);
-	}
-
-	.child-menu {
-		padding-left: 10px;
 	}
 
 	@media (max-width: 400px) {

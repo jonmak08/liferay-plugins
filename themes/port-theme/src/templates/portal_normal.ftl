@@ -38,9 +38,9 @@
 			</h1>
 		</div>
 
-		<div id="nav-wrapper" class="${nav_wrapper_class}">
-			<input type="checkbox" id="nav-trigger">
-			<label for="nav-trigger" class="nav-trigger-btn">
+		<div class="${nav_wrapper_class}" id="nav-wrapper">
+			<input id="nav-trigger" type="checkbox">
+			<label class="nav-trigger-btn" for="nav-trigger">
 				<i class="material-icons">menu</i>
 			</label>
 
