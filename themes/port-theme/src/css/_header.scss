@@ -52,7 +52,7 @@
 		}
 
 		~ .full-page-overlay {
-			background-color: rgba(0, 0, 0, 0.3);
+			background-color: rgba(0, 0, 0, 0.2);
 			height: 100vh;
 			left: 0;
 			position: fixed;
@@ -89,9 +89,9 @@
 	transition: background 0.2s linear;
 }
 
-.light-theme #nav-trigger:checked ~ .full-page-overlay {
+/* .light-theme #nav-trigger:checked ~ .full-page-overlay {
 	background-color: rgba(255, 255, 255, 0.2);
-}
+} */
 
 @import './_off_screen_navigation.scss';
 
