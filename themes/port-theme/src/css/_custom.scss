@@ -159,8 +159,8 @@
 
 /* Apply color themes */
 
-@include applyAccent('.blue-theme', $custom-color-blue);
 @include applyAccent('.blue-green-theme', $custom-color-blue-green);
+@include applyAccent('.blue-theme', $custom-color-blue);
 @include applyAccent('.gray-theme', $custom-color-gray);
 @include applyAccent('.green-theme', $custom-color-green);
 @include applyAccent('.purple-theme', $custom-color-purple);
