@@ -1,13 +1,13 @@
 #banner {
-	align-items: center;
+	@include align-items(center);
 	background-color: transparent;
-	display: flex;
-	flex-wrap: wrap;
+	@include display(flex);
+	@include flex-wrap(wrap);
 	font-size: 24px;
-	justify-content: space-between;
+	@include justify-content(space-between);
 	padding: 10px 20px;
 	position: fixed;
-	transition: background 0.1s linear;
+	@include transition(background 0.1s linear);
 	width: 100%;
 	z-index: 555;
 

@@ -1,7 +1,7 @@
 @import '../_custom_vars.scss';
 
 .full-page-overlay {
-	transition: background 0.2s linear;
+	@include transition(background 0.2s linear);
 }
 
 #nav-trigger {
@@ -20,19 +20,19 @@
 
 		+ .nav-trigger-btn {
 			opacity: 0.5;
-			transform: translateX(-$navigation-width);
+			@include transform(translateX(-$navigation-width));
 			z-index: 999;
 		}
 
 		~ #navigation {
 			box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
 			position: absolute;
-			transform: translateX(-$navigation-width);
+			@include transform(translateX(-$navigation-width));
 		}
 
 		@media (max-width: 400px) {
 			+ .nav-trigger-btn, ~ #navigation {
-				transform: translateX(-$navigation-mobile-width);
+				@include transform(translateX(-$navigation-mobile-width));
 			}
 		}
 	}
@@ -45,8 +45,8 @@
 	position: absolute;
 	right: 20px;
 	top: 8px;
-	transform: translateX(0);
-	transition: 0.5s ease all;
+	@include transform(translateX(0));
+	@include transition(0.5s ease all);
 
 	&:hover {
 		cursor: pointer;
@@ -56,16 +56,16 @@
 
 #navigation {
 	background-color: #333;
-	display: flex;
-	flex-direction: column;
+	@include display(flex);
+	@include flex-direction(column);
 	font-size: 14px;
 	height: 100vh;
 	padding: 15px 20px;
 	position: absolute;
 	right: -$navigation-width;
 	top: 0;
-	transform: translateX(0);
-	transition: 0.5s ease all;
+	@include transform(translateX(0));
+	@include transition(0.5s ease all);
 	width: $navigation-width;
 	z-index: 999;
 
@@ -88,13 +88,13 @@
 	}
 
 	.nav-trigger-close {
-		align-self: flex-end;
+		@include align-self(flex-end);
 		font-size: 20px;
 	}
 
 	.nav-trigger-close, a {
 		color: rgba(255, 255, 255, 0.5);
-		transition: color 0.2s linear;
+		@include transition(color 0.2s linear);
 
 		&:hover, .selected a {
 			color: rgba(255, 255, 255, 1);

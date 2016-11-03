@@ -21,7 +21,7 @@
 	.overlay {
 		height: 100%;
 		position: static;
-		transition: background 0.2s linear;
+		@include transition(background 0.2s linear);
 	}
 
 	.cards {
@@ -34,7 +34,7 @@
 				border-color: transparent;
 				color: transparent;
 				margin-top: 33%;
-				transition: 0.2s linear all;
+				@include transition(0.2s linear all);
 			}
 
 			&:hover button {
@@ -62,8 +62,8 @@
 	}
 
 	.heading-row {
-		display: flex;
-		justify-content: space-between;
+		@include display(flex);
+		@include justify-content(space-between);
 	}
 
 	.blog-cards {
@@ -75,7 +75,7 @@
 				font-family: $alegreyaSans;
 				font-size: 14px;
 				font-weight: bold;
-				transition: opacity 0.2s linear;
+				@include transition(opacity 0.2s linear);
 
 				a {
 					color: inherit;

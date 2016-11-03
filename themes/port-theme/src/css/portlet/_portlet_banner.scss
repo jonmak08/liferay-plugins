@@ -6,7 +6,7 @@
 	}
 
 	.portlet-content {
-		color: white;
+		color: #FFF;
 		padding: 0;
 	}
 
@@ -19,12 +19,12 @@
 	}
 
 	.full-page-banner {
-		align-items: center;
+		@include align-items(center);
 		border-radius: 0;
-		display: flex;
-		flex-direction: column;
+		@include display(flex);
+		@include flex-direction(column);
 		height: 100vh;
-		justify-content: space-between;
+		@include justify-content(space-between);
 
 		h1, h4 {
 			text-transform: uppercase;
@@ -94,7 +94,7 @@
 			background-color: #76DCC8;
 			color: rgba(255, 255, 255, 0.8);
 			margin-top: 30px;
-			transition: color 0.2s linear;
+			@include transition(color 0.2s linear);
 
 			&:hover {
 				color: rgba(255, 255, 255, 1);

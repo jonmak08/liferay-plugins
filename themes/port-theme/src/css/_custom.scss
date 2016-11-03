@@ -37,7 +37,7 @@
 	border: 1px solid $btn-default-color;
 	border-radius: 0;
 	color: $btn-default-color;
-	transition: 0.2s linear all;
+	@include transition(0.2s linear all);
 
 	&:hover {
 		border: 1px solid $btn-default-hover-color;
@@ -67,11 +67,11 @@
 	margin-bottom: 0;
 
 	&:hover .portlet-topper {
-		transform: none;
+		@include transform(none);
 	}
 
 	a:hover {
-			text-decoration: none;
+		text-decoration: none;
 	}
 
 	.lexicon-icon {
@@ -93,9 +93,9 @@
 }
 
 .cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+	@include display(flex);
+	@include flex-wrap(wrap);
+	@include justify-content(flex-start);
 	list-style-type: none;
 	margin: 0 auto;
 	max-width: 1024px;
@@ -119,21 +119,19 @@
 			font-size: 12px;
 			opacity: 0.6;
 		}
-	}
 
-	@media (max-width: 715px) {
-		li {
+		@media (max-width: 715px) {
 			width: 50%;
+		}
+
+		@media (max-width: 600px) {
+			margin: 0 auto;
+			width: 100%;
 		}
 	}
 
 	@media (max-width: 600px) {
 		padding: 0;
-
-		li {
-			margin: 0 auto;
-			width: 100%;
-		}
 	}
 }
 
@@ -150,7 +148,7 @@
 	a {
 		color: inherit;
 		font-weight: 600;
-		transition: color 0.3s linear;
+		@include transition(color 0.3s linear);
 
 		&:hover {
 			color: rgba(#000, 1);

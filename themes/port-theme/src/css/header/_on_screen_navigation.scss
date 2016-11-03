@@ -17,8 +17,8 @@
 	}
 
 	.child-menu {
-		display: flex;
-		flex-direction: column;
+		@include display(flex);
+		@include flex-direction(column);
 		padding: 10px;
 
 		li {
@@ -30,15 +30,15 @@
 
 	.child-menu, .child-menu:before, .child-menu:after, .child-menu li {
 		opacity: 0;
-		transition: 0.2s linear all;
+		@include transition(0.2s linear all);
 	}
 
 	> ul {
-		align-items: center;
+		@include align-items(center);
 		border-bottom-width: 0;
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-end);
 		margin: 0;
 
 		li {
