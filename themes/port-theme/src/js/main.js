@@ -6,12 +6,11 @@ AUI().ready(
 	*/
 
 	function() {
-		var $document = $(document);
-		var banner = $('#banner');
-		var firstPortlet = $('.portlet-boundary').first();
+		var banner = jQuery('#banner');
+		var firstPortlet = jQuery('.portlet-boundary').first();
 
 		function toggleBannerFill() {
-			banner.toggleClass('filled', $(document).scrollTop() > 150);
+			banner.toggleClass('filled', jQuery(document).scrollTop() > 150);
 		}
 
 		if (firstPortlet.hasClass('portlet-banner')) {
