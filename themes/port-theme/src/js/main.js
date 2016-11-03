@@ -10,6 +10,23 @@ AUI().ready(
 		var $document = $(document);
 		var $firstPortlet = $('.portlet-boundary').first();
 
+		function portletIsBanner(selector) {
+			return selector.hasClass('portlet-banner');
+		}
+
+		function changeHeaderFillOnScroll() {
+			$document.scroll(
+				function() {
+					if ($document.scrollTop() > 150) {
+						$banner.addClass('filled');
+					}
+					else {
+						$banner.removeClass('filled');
+					}
+				}
+			);
+		}
+
 		/* Gives the banner a solid background if the first portlet is not an image */
 		if (!portletIsBanner($firstPortlet)) {
 
@@ -18,21 +35,6 @@ AUI().ready(
 		}
 		else {
 			changeHeaderFillOnScroll();
-		}
-
-		function portletIsBanner(selector) {
-			return selector.hasClass('portlet-banner');
-		}
-
-		function changeHeaderFillOnScroll() {
-			$document.scroll(function() {
-				if ($document.scrollTop() > 150) {
-					$banner.addClass('filled');
-				}
-				else {
-					$banner.removeClass('filled');
-				};
-			});
 		}
 
 		/* Fills the banner if the document is loaded from the middle of the page */
