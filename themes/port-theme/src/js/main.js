@@ -9,21 +9,22 @@ AUI().ready(
 		var banner = document.getElementById('banner');
 		var firstPortlet = document.querySelector('.portlet-boundary');
 
-		if (firstPortlet.classList.contains('portlet-banner')) {
+		function toggleBannerFill() {
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 
-			function toggleBannerFill() {
-				scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-				banner.classList.toggle('filled', scrollTop > 150);
-			}
+			banner.classList.toggle('filled', scrollTop > 150);
+		}
+
+		if (firstPortlet.classList.contains('portlet-banner')) {
 
 			toggleBannerFill();
 			document.onscroll = function() {
 				toggleBannerFill();
-			}
+			};
 		}
 		else {
 			banner.classList.add('filled');
-			firstPortlet.classList.add('first-portlet-margin')
+			firstPortlet.classList.add('first-portlet-margin');
 		}
 	}
 );
