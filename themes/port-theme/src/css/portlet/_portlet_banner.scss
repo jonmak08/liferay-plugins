@@ -1,6 +1,10 @@
 /* Portlet Banner look and feel styles */
 
 .portlet-banner {
+	.portlet-title-text {
+		display: none;
+	}
+
 	.portlet-content {
 		color: white;
 		padding: 0;
