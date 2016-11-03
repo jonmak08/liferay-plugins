@@ -16,11 +16,9 @@
 	background-color: #FFF;
 
 	@include setHeaderColors(#000);
-
 }
 
 @media (min-width: 450px) {
-
 	.light-theme .onscreen-nav #navigation {
 		background-color: transparent;
 		@include setHeaderColors(#FFF);
