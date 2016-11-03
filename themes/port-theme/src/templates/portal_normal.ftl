@@ -78,7 +78,6 @@
 
 <@liferay_util["include"] page=body_bottom_include />
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <@liferay_util["include"] page=bottom_include />
 
 <!-- inject:js -->

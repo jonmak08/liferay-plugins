@@ -6,40 +6,25 @@ AUI().ready(
 	*/
 
 	function() {
-		var $banner = $('#banner');
-		var $document = $(document);
-		var $firstPortlet = $('.portlet-boundary').first();
+		var banner = document.getElementById('banner');
+		var firstPortlet = document.querySelector('.portlet-boundary');
 
-		function portletIsBanner(selector) {
-			return selector.hasClass('portlet-banner');
-		}
+		if (firstPortlet.classList.contains('portlet-banner')) {
 
-		function changeHeaderFillOnScroll() {
-			$document.scroll(
-				function() {
-					if ($document.scrollTop() > 150) {
-						$banner.addClass('filled');
-					}
-					else {
-						$banner.removeClass('filled');
-					}
-				}
-			);
-		}
+			function toggleBannerFill() {
+				scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				console.log(scrollTop)
+				banner.classList.toggle('filled', scrollTop > 150);
+			}
 
-		/* Gives the banner a solid background if the first portlet is not an image */
-		if (!portletIsBanner($firstPortlet)) {
-
-			$banner.addClass('filled');
-			$firstPortlet.addClass('first-portlet-margin');
+			toggleBannerFill();
+			document.onscroll = function() {
+				toggleBannerFill();
+			}
 		}
 		else {
-			changeHeaderFillOnScroll();
-		}
-
-		/* Fills the banner if the document is loaded from the middle of the page */
-		if ($(document).scrollTop() > 150) {
-			$banner.addClass('filled');
+			banner.classList.add('filled');
+			firstPortlet.classList.add('first-portlet-margin')
 		}
 	}
 );
