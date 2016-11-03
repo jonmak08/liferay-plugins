@@ -6,25 +6,25 @@ AUI().ready(
 	*/
 
 	function() {
-		var banner = document.getElementById('banner');
-		var firstPortlet = document.querySelector('.portlet-boundary');
+		var $document = $(document);
+		var banner = $('#banner');
+		var firstPortlet = $('.portlet-boundary').first();
 
 		function toggleBannerFill() {
-			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-			banner.classList.toggle('filled', scrollTop > 150);
+			banner.toggleClass('filled', $(document).scrollTop() > 150);
 		}
 
-		if (firstPortlet.classList.contains('portlet-banner')) {
+		if (firstPortlet.hasClass('portlet-banner')) {
 
 			toggleBannerFill();
+
 			document.onscroll = function() {
 				toggleBannerFill();
 			};
 		}
 		else {
-			banner.classList.add('filled');
-			firstPortlet.classList.add('first-portlet-margin');
+			banner.addClass('filled');
+			firstPortlet.addClass('first-portlet-margin');
 		}
 	}
 );
