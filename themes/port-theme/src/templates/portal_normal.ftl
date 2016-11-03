@@ -10,8 +10,6 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	<@liferay_util["include"] page=top_head_include />
-	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans|Nixie+One" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body class="${css_class}">

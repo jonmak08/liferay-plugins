@@ -13,7 +13,6 @@ AUI().ready(
 
 			function toggleBannerFill() {
 				scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-				console.log(scrollTop)
 				banner.classList.toggle('filled', scrollTop > 150);
 			}
 
