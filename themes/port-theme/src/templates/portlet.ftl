@@ -49,6 +49,10 @@
 			</a>
 		</#if>
 
+		<#if portlet_display.getPortletDecoratorId() != "barebone">
+			<h1 class="portlet-title-text">${portlet_title}</h1>
+		</#if>
+
 		${portlet_display.writeContent(writer)}
 	</div>
 </section>
