@@ -12,27 +12,6 @@
 		display: none;
 	}
 
-	.child-menu-wrapper {
-		padding: 0;
-	}
-
-	.child-menu {
-		@include display(flex);
-		@include flex-direction(column);
-		padding: 10px;
-
-		li {
-			margin: 0;
-			padding: 5px 0;
-			text-align: center;
-		}
-	}
-
-	.child-menu, .child-menu:before, .child-menu:after, .child-menu li {
-		opacity: 0;
-		@include transition(0.2s linear all);
-	}
-
 	> ul {
 		@include align-items(center);
 		border-bottom-width: 0;
@@ -42,17 +21,51 @@
 		margin: 0;
 
 		li {
-			margin: 0 0 0 30px;
-			min-width: 50px;
+			margin: 0 0 0 20px;
 			position: relative;
 			text-align: center;
+			padding: 10px;
 
 			.child-menu-wrapper {
+				padding: 11px 0 0;
 				position: absolute;
-				right: -10px;
+				right: -27px;
+			}
+
+			.child-menu {
+				background-color: #FFF;
+				border: 1px solid rgba(0, 0, 0, 0.5);
+				box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+				@include display(flex);
+				@include flex-direction(column);
+				margin-top: 0;
+				padding: 10px;
+				position: relative;
+				width: 80px;
+				z-index: 950;
+
+				li {
+					margin: 0;
+					padding: 5px 0;
+
+					a {
+						color: rgba(0, 0, 0, 0.7);
+					}
+
+					&:hover a {
+						color: #000;
+					}
+				}
+			}
+
+			.child-menu, .child-menu:before, .child-menu:after, .child-menu li {
+				opacity: 0;
+				@include transition(0.2s linear all);
 			}
 
 			&.nav-has-children:hover {
+				background-color: rgba(#000, 0.05);
+
 				.child-menu, .child-menu:before, .child-menu:after, .child-menu li {
 					opacity: 1;
 				}
@@ -63,54 +76,5 @@
 	.delete-tab {
 		margin: -5px -18px 0 0;
 		padding: 3px;
-	}
-}
-
-#banner.filled .onscreen-nav #navigation {
-	.child-menu-wrapper {
-		padding-top: 12px;
-	}
-
-	.child-menu {
-		background-color: #FFF;
-		border: 1px solid rgba(0, 0, 0, 0.5);
-		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-		margin-top: 0;
-		position: relative;
-		z-index: 950;
-
-		&:after {
-			border-color: #FFF transparent;
-			border-style: solid;
-			border-width: 0 10px 10px;
-			content: '';
-			display: block;
-			position: absolute;
-			right: 23px;
-			top: -9px;
-			width: 0;
-			z-index: 999;
-		}
-
-		&:before {
-			border-color: rgba(0, 0, 0, 0.5) transparent;
-			border-style: solid;
-			border-width: 0 10px 10px;
-			content: '';
-			display: block;
-			position: absolute;
-			right: 23px;
-			top: -10px;
-			width: 0;
-			z-index: 900;
-		}
-
-		a {
-			color: rgba(0, 0, 0, 0.7);
-		}
-
-		li:hover a {
-			color: #000;
-		}
 	}
 }
