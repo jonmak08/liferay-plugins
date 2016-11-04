@@ -8,7 +8,7 @@ AUI().ready(
 	function() {
 		var banner = jQuery('#banner');
 		var doc = jQuery(document);
-		var firstPortlet = jQuery('#content').children('.portlet-boundary').first();
+		var firstPortlet = jQuery('#content').find('.portlet-boundary').first();
 
 		function toggleBannerFill() {
 			banner.toggleClass('filled', doc.scrollTop() > 150);
