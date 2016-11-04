@@ -21,7 +21,8 @@
 <@liferay.control_menu />
 
 <div class="${wrapper_class}" id="wrapper">
-<!-- 	<h1>${themeDisplay}</h1> -->
+
+
 	<header id="banner" role="banner">
 		<div id="heading">
 			<h1 class="site-title">

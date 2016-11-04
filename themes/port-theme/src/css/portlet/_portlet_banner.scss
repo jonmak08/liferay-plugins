@@ -28,6 +28,10 @@
 
 		h1, h4 {
 			text-transform: uppercase;
+			max-width: 1024px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 		}
 
 		h1 {
