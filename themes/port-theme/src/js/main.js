@@ -6,27 +6,27 @@ AUI().ready(
 	*/
 
 	function() {
-		var banner = jQuery('#banner');
-		var doc = jQuery(document);
-		var firstPortlet = jQuery('#content').find('.portlet-boundary').first();
+		var $banner = jQuery('#banner');
+		var $document = jQuery(document);
+		var $firstPortlet = jQuery('#content').find('.portlet-boundary').first();
 
 		function toggleBannerFill() {
-			banner.toggleClass('filled', doc.scrollTop() > 150);
+			$banner.toggleClass('filled', $document.scrollTop() > 150);
 		}
 
-		if (firstPortlet.hasClass('portlet-banner')) {
+		if ($firstPortlet.hasClass('portlet-banner')) {
 
 			toggleBannerFill();
 
-			doc.scroll(
+			$document.scroll(
 				function() {
 					toggleBannerFill();
 				}
 			);
 		}
 		else {
-			banner.addClass('filled');
-			firstPortlet.addClass('first-portlet-margin');
+			$banner.addClass('filled');
+			$firstPortlet.addClass('first-portlet-margin');
 		}
 	}
 );
