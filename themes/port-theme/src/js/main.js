@@ -7,19 +7,22 @@ AUI().ready(
 
 	function() {
 		var banner = jQuery('#banner');
-		var firstPortlet = jQuery('.portlet-boundary').first();
+		var doc = jQuery(document);
+		var firstPortlet = jQuery('#content').children('.portlet-boundary').first();
 
 		function toggleBannerFill() {
-			banner.toggleClass('filled', jQuery(document).scrollTop() > 150);
+			banner.toggleClass('filled', doc.scrollTop() > 150);
 		}
 
 		if (firstPortlet.hasClass('portlet-banner')) {
 
 			toggleBannerFill();
 
-			document.onscroll = function() {
-				toggleBannerFill();
-			};
+			doc.scroll(
+				function() {
+					toggleBannerFill();
+				}
+			);
 		}
 		else {
 			banner.addClass('filled');

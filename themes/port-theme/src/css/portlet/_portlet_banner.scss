@@ -27,8 +27,8 @@
 		@include justify-content(space-between);
 
 		h1, h4 {
-			max-width: 1024px;
 			max-height: 100px;
+			max-width: 1024px;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			text-transform: uppercase;
