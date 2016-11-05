@@ -142,12 +142,12 @@
 
 #footer {
 	background-color: #F1F0F0;
-	color: rgba(#000, 0.6);
 	padding: 50px;
 
-	a {
-		color: inherit;
+	.powered-by a {
 		font-weight: 600;
+		color: rgba(#000, 0.6);
+		text-decoration: none;
 		@include transition(color 0.3s linear);
 
 		&:hover {
