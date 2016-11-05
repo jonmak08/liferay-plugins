@@ -6,16 +6,14 @@
 
 <head>
 	<title>${the_title} - ${company_name}</title>
-	<link rel="stylesheet" type="text/css"
-      href="https://fonts.googleapis.com/css?family=Italianno">
-	<link rel="stylesheet" type="text/css"
-      href="https://fonts.googleapis.com/css?family=Dosis">
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-	<script src="http://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
 
 
 	<@liferay_util["include"] page=top_head_include />
 </head>
+
+
+
 
 <body class="${css_class}">
 
@@ -28,20 +26,27 @@
 <div class="container-fluid" id="wrapper">
 	<header id="banner" role="banner">
 		<div id="heading">
-			<script src="https://use.fontawesome.com/ee0a122bbd.js"></script>
 			<section id="social-icons">
-			
-				
 				<div class="social-links">
+
 					<ul>
-						<!-- FACEBOOK -->
-						<li><a class="icon_facebook" title="Facebook" href="http://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<!-- LINKEDIN -->
-						<li><a class="icon_linkedin" title="Linkedin" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
-						<!-- INSTAGRAM -->
-						<li><a class="icon_instagram" title="Instagram" href="http://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
-						<!-- YOUTUBE -->
-						<li><a target="_blank" class="icon_youtube" title="Youtube" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+						<#if facebook>
+							<!-- FACEBOOK -->
+							<li><a class="icon_facebook" title="Facebook" href="http://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						</#if>
+
+						<#if linkedin>
+							<!-- LINKEDIN -->
+							<li><a class="icon_linkedin" title="Linkedin" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+						</#if>
+						<#if instagram>
+							<!-- INSTAGRAM -->
+							<li><a class="icon_instagram" title="Instagram" href="http://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+						</#if>
+						<#if youtube>
+							<!-- YOUTUBE -->
+							<li><a target="_blank" class="icon_youtube" title="Youtube" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+						</#if>
 					</ul>
 				</div> 	
 			</section>
@@ -49,6 +54,8 @@
 			<nav id="breadcrumbs">
 				<@liferay.breadcrumbs />
 			</nav>
+
+
 			<h1 class="site-title">
 				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
 					<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
@@ -66,7 +73,6 @@
 			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
 		</#if>
 
-
 		<h1 id="website-name">${site_name}</h1>
 		<div class="website-author">by ${user_name}</div><br>
 
@@ -74,14 +80,12 @@
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
 
+		
+
 	</header>
 
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
-		
-
-
-		
 
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
@@ -95,8 +99,6 @@
 			</@>
 		</#if>
 	</section>
-
-
 
 	<footer id="footer" role="contentinfo">
 		<p class="powered-by">
