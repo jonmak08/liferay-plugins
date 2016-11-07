@@ -7,13 +7,8 @@
 <head>
 	<title>${the_title} - ${company_name}</title>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
-
-
 	<@liferay_util["include"] page=top_head_include />
 </head>
-
-
-
 
 <body class="${css_class}">
 
@@ -32,30 +27,28 @@
 					<ul>
 						<#if facebook>
 							<!-- FACEBOOK -->
-							<li><a class="icon_facebook" title="Facebook" href="http://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a target="_blank" class="icon_facebook" title="Facebook" href="http://www.facebook.com"><i class="icon-facebook" aria-hidden="true"></i></a></li>
 						</#if>
 
 						<#if linkedin>
 							<!-- LINKEDIN -->
-							<li><a class="icon_linkedin" title="Linkedin" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+							<li><a target="_blank" class="icon_linkedin" title="Linkedin" href="http://www.linkedin.com"><i class="icon-linkedin"></i></a></li>
 						</#if>
 						<#if instagram>
 							<!-- INSTAGRAM -->
-							<li><a class="icon_instagram" title="Instagram" href="http://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+							<li><a target="_blank" class="icon_instagram" title="Instagram" href="http://www.instagram.com"><i class="icon-instagram"></i></a></li>
 						</#if>
 						<#if youtube>
 							<!-- YOUTUBE -->
-							<li><a target="_blank" class="icon_youtube" title="Youtube" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+							<li><a target="_blank" class="icon_youtube" title="Youtube" href="http://www.youtube.com"><i class="icon-youtube"></i></a></li>
 						</#if>
 					</ul>
-				</div> 	
+				</div>
 			</section>
 
 			<nav id="breadcrumbs">
 				<@liferay.breadcrumbs />
 			</nav>
-
-
 			<h1 class="site-title">
 				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
 					<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
@@ -79,8 +72,6 @@
 		<#if has_navigation && is_setup_complete>
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
-
-		
 
 	</header>
 
