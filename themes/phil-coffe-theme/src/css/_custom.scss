@@ -1,16 +1,12 @@
 body {
 	background-color: #FFF;
-
 	font-family: "PhilDosis", sans-serif;
-
 	margin: 0;
-
 	padding: 0;
 }
 
 #wrapper {
 	margin: 0;
-
 	padding: 0;
 }
 
@@ -24,51 +20,40 @@ body {
 	src: url(fonts/Dosis/dosis.woff);
 }
 
-/**************** Header section (begin) ***************/
+/************ Header section begin ************/
 
 .website-header {
 	background: #F3F3F3 url(images/bg-light-shadow.png) repeat-y;
-
 	clear: both;
-
 	position: relative;
 }
 
-/**************** Header section (end) ******************/
+/************ Header section end ************/
 
-/**************** Website Title Section (begin) *********/
+/************ Website title section begin ************/
 
 #website-name {
 	color: #A2A095;
-
 	font: italic 65px "PhilItaly", sans-serif;
-
 	text-align: center;
 }
 
 .website-author {
 	color: #829839;
-
 	font-size: 20px;
-
 	text-align: center;
 }
 
-/**************** Website Title Section (end) ************/
+/************ Website title section end ************/
 
-/**************** Social Icon Section (begin) ************/
+/************ Social icon section begin ************/
 
 #social-icons {
 	background: #EDEDED url(images/bg-light-shadow.png) 50% 0 repeat-y;
-
 	border-bottom: 1px solid #FFF;
-
 	box-shadow: 0 4px 2px 0 rgba(255, 255, 0, 0.08) inset;
-
 	min-height: 45px;
-
 	padding: 8px 14px 10px 14px;
-
 	position: relative;
 }
 
@@ -78,99 +63,66 @@ body {
 
 .social-links ul {
 	display: inline;
-
 	margin: 0;
-
 	padding: 0;
 }
 
 .social-links li {
 	display: inline-block;
-
 	*display: inline;
-
 	*zoom: 1;
-
 	list-style: none;
 }
 
 .social-links li a {
 	border-radius: 50%;
-
 	color: #555;
-
 	display: inline-block;
-
 	*display: inline;
-
 	font-size: 20px;
-
 	height: 32px;
-
 	line-height: 32px;
-
 	margin: 0 5px;
-
 	position: relative;
-
 	text-align: center;
-
 	transition: background 0.8s ease-in-out;
-
 	width: 32px;
-
 	*zoom: 1;
 }
 
 .social-links li a:after {
 	border: 2px solid #DDD;
-
 	border-radius: 50%;
-
 	content: "";
-
 	height: 32px;
-
 	left: -1px;
-
 	position: absolute;
-
 	top: -2px;
-
 	transition: all 0.5s ease-in-out;
-
 	width: 32px;
 }
 
 .social-links li a:hover:after {
 	height: 39px;
-
 	left: -3.5px;
-
 	top: -4px;
-
 	width: 39px;
 }
 
 .social-links li a img {
 	border-width: none;
-
 	vertical-align: middle;
-
 	width: 24px;
 }
 
 .social-links li a:hover {
 	background-color: #FC9D9A;
-
 	transition : background 0.1s ease-in-out;
 }
 
 .social-links li a:hover:after {
 	border: 0.5px solid #FC9D9A;
 }
-
-/*2ND BUTTON*/
 
 .social-links li + li a:hover {
 	background-color: #C8C8A9;
@@ -180,8 +132,6 @@ body {
 	border: 0.5px solid #C8C8A9;
 }
 
-/*3RD BUTTON*/
-
 .social-links li + li + li a:hover {
 	background-color: #69D2E7;
 }
@@ -189,8 +139,6 @@ body {
 .social-links li + li + li a:hover:after {
 	border: 0.5px solid #69D2E7;
 }
-
-/*4TH BUTTON*/
 
 .social-links li + li + li + li a:hover {
 	background-color: #CBE86B;
@@ -200,39 +148,31 @@ body {
 	border: 0.5px solid #CBE86B;
 }
 
-/*************** Social Icon Section (end) ******************/
+/************ Social icon section end ************/
 
-/*************** HEADER Navigation Bar Section (begin) *******/
+/************ Header navigation bar section begin ************/
 
 #navigation {
 	border-top: 1px solid #DDD;
-
 	text-align: center;
 }
 
 nav.affix {
 	background: white;
-
 	top: 0;
-
 	width: 100%;
-
 	z-index: 50;
 }
 
 #navigation a {
 	color: #888;
-
 	text-decoration: none;
 }
 
 #navigation li {
 	display: inline-block;
-
 	float: none;
-
 	margin-left: auto;
-
 	margin-right: auto;
 }
 
@@ -246,9 +186,7 @@ nav.affix {
 
 #navigation li a span {
 	color: #888;
-
 	font-size: 18px;
-
 	padding: 18px;
 }
 
@@ -258,25 +196,22 @@ nav.affix {
 
 #navigation span:hover {
 	background-color: white;
-
 	border-top: 1px solid #829839;
 }
 
-/*************** Navigation Bar Section (begin) **************/
+/************ Header navigation bar section end ************/
+
+/************ Navigation bar section begin ************/
 
 .navbar {
 	border-top: 1px solid #DDD;
-
 	margin-bottom: 0;
-
 	text-align: center;
 }
 
 #layout_1 span {
 	color: #829839;
-
 	display: inline-block;
-
 	font-size: 20px;
 }
 
@@ -286,11 +221,8 @@ nav.affix {
 
 .navbar li {
 	display: inline-block;
-
 	float: none;
-
 	margin-left: auto;
-
 	margin-right: auto;
 }
 
@@ -300,7 +232,6 @@ nav.affix {
 
 .navbar .navbar-nav {
     display: inline-block;
-
     float: none;
 }
 
@@ -310,19 +241,17 @@ nav.affix {
 
 .navbar li .dropdown-toggle:hover {
 	background-color: white;
-
 	border-top: 1px solid #829839;
 }
 
 #layout_1:hover {
-	background-color: white;
-
+	background-color: #FFF;
 	border-top: 1px solid #829839;
 }
 
-/*********** Navigation Bar Section (end) **********/
+/************ Navigation bar section end ************/
 
-/*********** Image Carousel (begin) ****************/
+/************ Image carousel begin ************/
 
 .carousel.fade {
 	opacity: 1;
@@ -330,23 +259,16 @@ nav.affix {
 
 .carousel.fade .item {
 	display: block;
-
 	opacity: 0;
-
 	position: absolute;
-
 	top: 0;
-
 	transition: opacity ease-out 0.4s;
-
 	width: 100%;
 }
 
 .carousel.fade .item:first-child {
 	opacity: 1;
-
 	position: relative;
-
 	top: auto;
 }
 
@@ -356,49 +278,37 @@ nav.affix {
 
 .portlet-decorate.portlet-journal-content .portlet-content.portlet-content-editable img {
 	margin-left: auto;
-
 	margin-right: auto;
 }
 
-/************ Image Carousel (end) *******************/
+/************ Image carousel end ************/
 
-/************ Slogan Section (begin) ******************/
+/************ Slogan section begin ************/
 
 .slogan-area {
 	background-image: url(images/bg-slogan.png);
-
 	padding: 0 0 35px 0;
 }
 
 .slogan {
 	color: #829839;
-
-	font-family: "PhilItaly";
-
-	font-size: 50px;
-
-	font-style: italic;
-
+	font: "PhilItaly", sans-serif 50px italic;
 	text-align: center;
 }
 
 .slogan-comment {
 	color: #A2A095;
-
 	font-size: 20px;
-
 	text-align: center;
 }
 
-/*********** Slogan Section (end) *********************/
+/*********** Slogan section end ************/
 
-/*********** Widget Section (begin) ********************/
+/*********** Widget section begin ************/
 
 #widgets123 {
 	padding-top: 30px;
-
 	text-align: center;
-
 	width: 100%;
 }
 
@@ -408,66 +318,42 @@ nav.affix {
 
 .widget-1 {
 	display: inline-block;
-
-	width: 25%;
-
 	margin-left: auto;
-
 	margin-right: auto;
-
 	padding: 1%;
-
 	vertical-align: top;
+	width: 25%;
 }
 
 .widget-2 {
 	display: inline-block;
-
 	margin-left: auto;
-
 	margin-right: auto;
-
 	padding: 1%;
-
 	vertical-align: top;
-
 	width: 25%;
 }
 
 .widget-3 {
 	display: inline-block;
-
 	margin-left: auto;
-
 	margin-right: auto;
-
 	padding: 1%;
-
 	vertical-align: top;
-
 	width: 25%;
 }
 
 .widget-title {
 	border-bottom: 7px solid #CCC;
-
 	color: #5B3D00;
-
 	display: inline;
-
 	font-size: 19px;
-
 	text-align: center;
-
 	vertical-align: bottom;
 }
 
 .w-content {
 	color: #818077;
-
-	font-family: 'Helvetica', sans-serif;
-
-	font-size: 14px;
-
+	font: 'Helvetica', sans-serif 14px;
 	padding: 10px;
 }

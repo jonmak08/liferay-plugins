@@ -14,6 +14,10 @@
 			<setting configurable="true" key="instagram" type="checkbox" value="true" />
 			<setting configurable="true" key="youtube" type="checkbox" value="true" />
 		</settings>
+
+
+
+
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
 		</portlet-decorator>

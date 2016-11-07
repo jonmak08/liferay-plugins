@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-
 <#include init />
-
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
-
 <head>
 	<title>${the_title} - ${company_name}</title>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<@liferay_util["include"] page=top_head_include />
 </head>
-
 <body class="${css_class}">
-
 <@liferay_ui["quick-access"] contentId="#main-content" />
-
 <@liferay_util["include"] page=body_top_include />
-
 <@liferay.control_menu />
-
 <div class="container-fluid" id="wrapper">
 	<header id="banner" role="banner">
 		<div id="heading">
@@ -27,20 +19,22 @@
 					<ul>
 						<#if facebook>
 							<!-- FACEBOOK -->
-							<li><a target="_blank" class="icon_facebook" title="Facebook" href="http://www.facebook.com"><i class="icon-facebook" aria-hidden="true"></i></a></li>
+							<li><a class="icon_facebook" href="http://www.facebook.com" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a></li>
 						</#if>
 
 						<#if linkedin>
 							<!-- LINKEDIN -->
-							<li><a target="_blank" class="icon_linkedin" title="Linkedin" href="http://www.linkedin.com"><i class="icon-linkedin"></i></a></li>
+							<li><a class="icon_linkedin" href="http://www.linkedin.com" target="_blank" title="Linkedin" ><i class="icon-linkedin"></i></a></li>
 						</#if>
+
 						<#if instagram>
 							<!-- INSTAGRAM -->
-							<li><a target="_blank" class="icon_instagram" title="Instagram" href="http://www.instagram.com"><i class="icon-instagram"></i></a></li>
+							<li><a class="icon_instagram" href="http://www.instagram.com" target="_blank" title="Instagram" ><i class="icon-instagram"></i></a></li>
 						</#if>
+
 						<#if youtube>
 							<!-- YOUTUBE -->
-							<li><a target="_blank" class="icon_youtube" title="Youtube" href="http://www.youtube.com"><i class="icon-youtube"></i></a></li>
+							<li><a class="icon_youtube" href="http://www.youtube.com" target="_blank" title="Youtube" ><i class="icon-youtube"></i></a></li>
 						</#if>
 					</ul>
 				</div>
@@ -55,7 +49,7 @@
 				</a>
 
 				<#if show_site_name>
-					<span class="site-name" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
+					<span class="site-name" key="go-to-x" title="<@liferay.language_format arguments="${site_name}" />">
 						${site_name}
 					</span>
 				</#if>
