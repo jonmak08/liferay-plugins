@@ -1,0 +1,15 @@
+{
+	"layoutTemplateId": "1_column",
+	"publicPages": [
+		{
+			"friendlyURL": "/home",
+			"name": "Home",
+			"title": "Home"
+		},
+		{
+			"friendlyURL": "/about",
+			"name": "About Us",
+			"title": "About Us"
+		}
+	]
+}
