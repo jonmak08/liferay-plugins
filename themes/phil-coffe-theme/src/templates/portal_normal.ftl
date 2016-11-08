@@ -40,20 +40,7 @@
 				</div>
 			</section>
 
-			<nav id="breadcrumbs">
-				<@liferay.breadcrumbs />
-			</nav>
-			<h1 class="site-title">
-				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-					<img alt="${logo_description}" height="${site_logo_height}" src="${site_logo}" width="${site_logo_width}" />
-				</a>
-
-				<#if show_site_name>
-					<span class="site-name" key="go-to-x" title="<@liferay.language_format arguments="${site_name}" />">
-						${site_name}
-					</span>
-				</#if>
-			</h1>
+			
 		</div>
 
 		<#if !is_signed_in>

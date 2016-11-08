@@ -69,7 +69,7 @@ body {
 
 .social-links li {
 	display: inline-block;
-	*display: inline;
+	/**display: inline;*/
 	*zoom: 1;
 	list-style: none;
 }
@@ -78,7 +78,7 @@ body {
 	border-radius: 50%;
 	color: #555;
 	display: inline-block;
-	*display: inline;
+	/**display: inline;*/
 	font-size: 20px;
 	height: 32px;
 	line-height: 32px;
@@ -292,7 +292,7 @@ nav.affix {
 
 .slogan {
 	color: #829839;
-	font: "PhilItaly", sans-serif 50px italic;
+	font: italic 50px "PhilItaly", sans-serif;
 	text-align: center;
 }
 

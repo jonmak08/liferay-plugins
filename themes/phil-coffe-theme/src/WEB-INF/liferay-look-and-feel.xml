@@ -9,10 +9,19 @@
 		<template-extension>ftl</template-extension>
 
 		<settings>
+			
 			<setting configurable="true" key="facebook" type="checkbox" value="true" />
 			<setting configurable="true" key="linkedin" type="checkbox" value="true" />
 			<setting configurable="true" key="instagram" type="checkbox" value="true" />
 			<setting configurable="true" key="youtube" type="checkbox" value="true" />
+
+			<!-- <setting configurable="true">
+				
+					<input type="radio" key="facebook_icon_choice" value="male" checked> <i class="icon-facebook"></i></input>
+					<input type="radio" key="facebook_icon_choice" value="female"> <i class="icon-facebook"></i></input>
+					<input type="radio" key="facebook_icon_choice" value="other"> <i class="icon-facebook"></i></input>
+			
+			</setting> -->
 		</settings>
 
 
