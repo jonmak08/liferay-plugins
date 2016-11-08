@@ -115,37 +115,43 @@ body {
 	width: 24px;
 }
 
-.social-links li a:hover {
-	background-color: #FC9D9A;
-	transition : background 0.1s ease-in-out;
-}
+.social-links li {
+	a:hover {
+		background-color: #FC9D9A;
+		transition: background 0.1s ease-in-out;
 
-.social-links li a:hover:after {
-	border: 0.5px solid #FC9D9A;
-}
+		&:after {
+			border: 0.5px solid #FC9D9A;
+		}
+	}
 
-.social-links li + li a:hover {
-	background-color: #C8C8A9;
-}
+	+ li {
+		a:hover {
+			background-color: #C8C8A9;
 
-.social-links li + li a:hover:after {
-	border: 0.5px solid #C8C8A9;
-}
+			&:after {
+				border: 0.5px solid #C8C8A9;
+			}
+		}
 
-.social-links li + li + li a:hover {
-	background-color: #69D2E7;
-}
+		+ li {
+			a:hover {
+				background-color: #69D2E7;
 
-.social-links li + li + li a:hover:after {
-	border: 0.5px solid #69D2E7;
-}
+				&:after {
+					border: 0.5px solid #69D2E7;
+				}
+			}
 
-.social-links li + li + li + li a:hover {
-	background-color: #CBE86B;
-}
+			+ li a:hover {
+				background-color: #CBE86B;
 
-.social-links li + li + li + li a:hover:after {
-	border: 0.5px solid #CBE86B;
+				&:after {
+					border: 0.5px solid #CBE86B;
+				}
+			}
+		}
+	}
 }
 
 /************ Social icon section end ************/

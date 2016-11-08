@@ -40,7 +40,6 @@
 				</div>
 			</section>
 
-			
 		</div>
 
 		<#if !is_signed_in>
@@ -50,15 +49,15 @@
 		<h1 id="website-name">${site_name}</h1>
 		<div class="website-author">by ${user_name}</div><br>
 
-		<#if has_navigation && is_setup_complete>
-			<#include "${full_templates_path}/navigation.ftl" />
-		</#if>
+		
 
 	</header>
 
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
-
+<#if has_navigation && is_setup_complete>
+			<#include "${full_templates_path}/navigation.ftl" />
+		</#if>
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>
