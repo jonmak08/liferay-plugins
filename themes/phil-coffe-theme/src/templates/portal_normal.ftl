@@ -18,19 +18,27 @@
 
 					<ul>
 						<#if facebook>
-							<li><a class="icon_facebook" href="${facebookUrl}" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a></li>
+							<li>
+								<a class="icon_facebook" href="${facebookUrl}" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a>
+							</li>
 						</#if>
 
 						<#if linkedin>
-							<li><a class="icon_linkedin" href="${linkedinUrl}" target="_blank" title="Linkedin" ><i class="icon-linkedin"></i></a></li>
+							<li>
+								<a class="icon_linkedin" href="${linkedinUrl}" target="_blank" title="Linkedin" ><i class="icon-linkedin"></i></a>
+							</li>
 						</#if>
 
 						<#if instagram>
-							<li><a class="icon_instagram" href="${instagramUrl}" target="_blank" title="Instagram" ><i class="icon-instagram"></i></a></li>
+							<li>
+								<a class="icon_instagram" href="${instagramUrl}" target="_blank" title="Instagram" ><i class="icon-instagram"></i></a>
+							</li>
 						</#if>
 
 						<#if youtube>
-							<li><a class="icon_youtube" href="${youtubeUrl}" target="_blank" title="Youtube" ><i class="icon-youtube"></i></a></li>
+							<li>
+								<a class="icon_youtube" href="${youtubeUrl}" target="_blank" title="Youtube" ><i class="icon-youtube"></i></a>
+							</li>
 						</#if>
 					</ul>
 				</div>
@@ -43,7 +51,7 @@
 		</#if>
 
 		<#if showTitle>
-			<h1 id="website-name">${siteTitle}</h1>
+			<h1 class="website-name">${siteTitle}</h1>
 		</#if>
 
 		<#if showCreator>

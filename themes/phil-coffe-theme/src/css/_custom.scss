@@ -20,6 +20,10 @@ body {
 	src: url(fonts/Dosis/dosis.woff);
 }
 
+.fa-select {
+	font-family: sans-serif, 'FontAwesome';
+}
+
 /************ Header section begin ************/
 
 .website-header {
@@ -32,7 +36,7 @@ body {
 
 /************ Website title section begin ************/
 
-#website-name {
+.website-name {
 	color: #A2A095;
 	font: italic 65px "PhilItaly", sans-serif;
 	text-align: center;
@@ -293,7 +297,7 @@ nav.affix {
 /************ Slogan section begin ************/
 
 .slogan-area {
-	background-image: url(images/bg-slogan.png);
+	background-image: url(images/bg_slogan.png);
 	padding: 0 0 35px 0;
 }
 
@@ -323,7 +327,7 @@ nav.affix {
 	border-bottom: 7px solid #E8E8E8;
 }
 
-.widget-1 {
+.widget-left {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
@@ -332,7 +336,7 @@ nav.affix {
 	width: 25%;
 }
 
-.widget-2 {
+.widget-center {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
@@ -341,7 +345,7 @@ nav.affix {
 	width: 25%;
 }
 
-.widget-3 {
+.widget-right {
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
