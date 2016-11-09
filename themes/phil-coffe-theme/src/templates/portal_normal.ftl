@@ -42,9 +42,13 @@
 			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
 		</#if>
 
-		<h1 id="website-name">${siteTitle}</h1>
-		<div class="website-author">by ${siteCreator}</div><br>
+		<#if showTitle>
+			<h1 id="website-name">${siteTitle}</h1>
+		</#if>
 
+		<#if showCreator>
+			<div class="website-author">by ${siteCreator}</div><br>
+		</#if>
 		
 
 	</header>

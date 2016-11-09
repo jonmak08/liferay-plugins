@@ -1,5 +1,7 @@
 <#assign
+	showTitle = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-title"))
 	siteTitle = themeDisplay.getThemeSetting("title")
+	showCreator = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-author"))
 	siteCreator = themeDisplay.getThemeSetting("creator")
 	facebook = getterUtil.getBoolean(themeDisplay.getThemeSetting("facebook"))
 	facebookUrl = themeDisplay.getThemeSetting("facebook-address")
