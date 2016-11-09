@@ -18,7 +18,7 @@
 
 					<ul>
 						<#if facebook>
-							<li><a class="icon_facebook" href= "${facebookUrl}" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a></li>
+							<li><a class="icon_facebook" href="${facebookUrl}" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a></li>
 						</#if>
 
 						<#if linkedin>
@@ -42,8 +42,8 @@
 			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
 		</#if>
 
-		<h1 id="website-name">${site_name}</h1>
-		<div class="website-author">by ${user_name}</div><br>
+		<h1 id="website-name">${siteTitle}</h1>
+		<div class="website-author">by ${siteCreator}</div><br>
 
 		
 

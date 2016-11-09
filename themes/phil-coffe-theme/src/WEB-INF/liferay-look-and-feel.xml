@@ -9,6 +9,8 @@
 		<template-extension>ftl</template-extension>
 
 		<settings>
+			<setting configurable="true" key="title" value="Coffe is Mispelled" />
+			<setting configurable="true" key="creator" value="Philip C. Lee" />
 			<setting configurable="true" key="facebook" type="checkbox" value="true" />
 			<setting configurable="true" key="facebook-address" value="http://www.facebook.com" />
 			<setting configurable="true" key="linkedin" type="checkbox" value="true" />
