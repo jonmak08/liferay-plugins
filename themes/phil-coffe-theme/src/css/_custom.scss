@@ -118,7 +118,7 @@ body {
 .social-links li {
 	a:hover {
 		background-color: #FC9D9A;
-		transition: background 0.1s ease-in-out;
+		transition: background 0.05s ease-in-out;
 
 		&:after {
 			border: 0.5px solid #FC9D9A;
@@ -196,13 +196,14 @@ nav.affix {
 	padding: 18px;
 }
 
-#navigation #layout_1 span {
+/*#navigation #layout_1 span {
 	color: #829839;
-}
+}*/
 
 #navigation span:hover {
 	background-color: white;
 	border-top: 1px solid #829839;
+	color: #829839;
 }
 
 /************ Header navigation bar section end ************/

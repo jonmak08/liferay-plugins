@@ -18,23 +18,19 @@
 
 					<ul>
 						<#if facebook>
-							<!-- FACEBOOK -->
-							<li><a class="icon_facebook" href="http://www.facebook.com" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a></li>
+							<li><a class="icon_facebook" href= "${facebookUrl}" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a></li>
 						</#if>
 
 						<#if linkedin>
-							<!-- LINKEDIN -->
-							<li><a class="icon_linkedin" href="http://www.linkedin.com" target="_blank" title="Linkedin" ><i class="icon-linkedin"></i></a></li>
+							<li><a class="icon_linkedin" href="${linkedinUrl}" target="_blank" title="Linkedin" ><i class="icon-linkedin"></i></a></li>
 						</#if>
 
 						<#if instagram>
-							<!-- INSTAGRAM -->
-							<li><a class="icon_instagram" href="http://www.instagram.com" target="_blank" title="Instagram" ><i class="icon-instagram"></i></a></li>
+							<li><a class="icon_instagram" href="${instagramUrl}" target="_blank" title="Instagram" ><i class="icon-instagram"></i></a></li>
 						</#if>
 
 						<#if youtube>
-							<!-- YOUTUBE -->
-							<li><a class="icon_youtube" href="http://www.youtube.com" target="_blank" title="Youtube" ><i class="icon-youtube"></i></a></li>
+							<li><a class="icon_youtube" href="${youtubeUrl}" target="_blank" title="Youtube" ><i class="icon-youtube"></i></a></li>
 						</#if>
 					</ul>
 				</div>
@@ -55,7 +51,7 @@
 
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
-<#if has_navigation && is_setup_complete>
+		<#if has_navigation && is_setup_complete>
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
 		<#if selectable>

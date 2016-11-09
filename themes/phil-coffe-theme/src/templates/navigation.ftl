@@ -1,4 +1,4 @@
-<nav class="${nav_css_class}" data-offset-top="470" data-spy="affix" id="navigation" role="navigation">
+<nav class="${nav_css_class}" data-offset-top="60" data-spy="affix" id="navigation" role="navigation">
 	<h1 class="hide-accessible"><@liferay.language key="navigation" /></h1>
 
 	<ul  aria-label="<@liferay.language key="site-pages" />" role="menubar">
@@ -39,7 +39,7 @@
 							</#if>
 
 							<li ${nav_child_attr_selected} class="${nav_child_css_class}" id="layout_${nav_child.getLayoutId()}" role="presentation">
-								<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="lfr-nav-child-toggle" href="${nav_child.getURL()}" ${nav_child.getTarget()} style="color: #888899;" role="menuitem">${nav_child.getName()}</a>
+								<a aria-labelledby="layout_${nav_child.getLayoutId()}" class="lfr-nav-child-toggle" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">${nav_child.getName()}</a>
 
 							</li>
 						</#list>

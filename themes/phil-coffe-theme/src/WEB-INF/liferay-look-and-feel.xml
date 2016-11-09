@@ -9,19 +9,14 @@
 		<template-extension>ftl</template-extension>
 
 		<settings>
-
 			<setting configurable="true" key="facebook" type="checkbox" value="true" />
-			<setting configurable="true" key="FBLogo" options="f, big f, off to side f, facebook, none" type="select" value="f" />
+			<setting configurable="true" key="facebook-address" value="http://www.facebook.com" />
 			<setting configurable="true" key="linkedin" type="checkbox" value="true" />
+			<setting configurable="true" key="linkedin-page" value="http://www.linkedin.com" />
 			<setting configurable="true" key="instagram" type="checkbox" value="true" />
+			<setting configurable="true" key="instagram-channel" value="http://www.instagram.com" />
 			<setting configurable="true" key="youtube" type="checkbox" value="true" />
-
-
-				
-			
-
-			
-	
+			<setting configurable="true" key="youtube-channel" value="http://www.youtube.com" />
 		</settings>
 
 
