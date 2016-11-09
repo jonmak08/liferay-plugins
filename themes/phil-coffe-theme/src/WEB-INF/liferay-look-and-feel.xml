@@ -19,9 +19,6 @@
 			<setting configurable="true" key="youtube-channel" value="http://www.youtube.com" />
 		</settings>
 
-
-
-
 		<portlet-decorator id="barebone" name="Barebone">
 			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
 		</portlet-decorator>
