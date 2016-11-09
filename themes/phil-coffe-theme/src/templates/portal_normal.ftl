@@ -49,7 +49,6 @@
 		<#if showCreator>
 			<div class="website-author">by ${siteCreator}</div><br>
 		</#if>
-		
 
 	</header>
 
