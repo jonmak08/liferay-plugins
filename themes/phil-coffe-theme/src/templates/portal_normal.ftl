@@ -15,9 +15,8 @@
 		<div id="heading">
 			<section class="social-icons">
 				<div class="social-links">
-	
 					<ul>
-					<label class="follow">follow us: </label>
+						<label class="follow">follow us: </label>
 						<#if facebook>
 							<li>
 								<a class="icon_facebook" href="${facebookUrl}" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a>
@@ -63,9 +62,7 @@
 
 	<section id="content">
 		<h1 class="hide-accessible">${the_title}</h1>
-		<#if has_navigation && is_setup_complete>
-			<#include "${full_templates_path}/navigation.ftl" />
-		</#if>
+
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>
@@ -89,9 +86,6 @@
 <@liferay_util["include"] page=body_bottom_include />
 
 <@liferay_util["include"] page=bottom_include />
-
-<!-- inject:js -->
-<!-- endinject -->
 
 </body>
 

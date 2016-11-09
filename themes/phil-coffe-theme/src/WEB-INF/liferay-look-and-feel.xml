@@ -15,10 +15,6 @@
 			<setting configurable="true" key="creator" value="Philip C. Lee" />
 			<setting configurable="true" key="facebook" type="checkbox" value="true" />
 			<setting configurable="true" key="facebook-address" value="http://www.facebook.com" />
-
-<!-- 			<setting type="select" class="fa-select" configurable="true" key="facebook-icon" value="&#xf05e" options="&#xf05e, &#xf102" /> -->
-
-
 			<setting configurable="true" key="linkedin" type="checkbox" value="true" />
 			<setting configurable="true" key="linkedin-page" value="http://www.linkedin.com" />
 			<setting configurable="true" key="instagram" type="checkbox" value="true" />
