@@ -2,7 +2,7 @@
 <#include init />
 <html class="${root_css_class}" dir="<@liferay.language key="lang.dir" />" lang="${w3c_language_id}">
 <head>
-	<title>${the_title} - ${company_name}</title>
+	<title>${siteTitle}</title>
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<@liferay_util["include"] page=top_head_include />
 </head>
@@ -13,10 +13,11 @@
 <div class="container-fluid" id="wrapper">
 	<header id="banner" role="banner">
 		<div id="heading">
-			<section id="social-icons">
+			<section class="social-icons">
 				<div class="social-links">
-
+	
 					<ul>
+					<label class="follow">follow us: </label>
 						<#if facebook>
 							<li>
 								<a class="icon_facebook" href="${facebookUrl}" target="_blank" title="Facebook" ><i class="icon-facebook"></i></a>
