@@ -61,7 +61,7 @@
 		<#if has_navigation && is_setup_complete>
 			<nav class="${nav_css_class}" data-offset-top="100" data-spy="affix" id="navigation" role="navigation">
 				<div class="${nav_css_class} site-navigation" id="navigation" role="navigation">
-				<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
+					<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
 				</div>
 			</nav>
 		</#if>
@@ -69,8 +69,7 @@
 	</header>
 
 	<section id="content">
-		<h1 class="hide-accessible">${the_title}</h1>	
-	
+		<h1 class="hide-accessible">${the_title}</h1>
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>
