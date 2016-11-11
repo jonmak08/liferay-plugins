@@ -23,19 +23,19 @@
 							</li>
 						</#if>
 
-						<#if linkedin>
+						<#if Linkedin>
 							<li>
 								<a class="icon_linkedin" href="${linkedinUrl}" target="_blank" title="Linkedin" ><i class="icon-linkedin"></i></a>
 							</li>
 						</#if>
 
-						<#if instagram>
+						<#if Instagram>
 							<li>
 								<a class="icon_instagram" href="${instagramUrl}" target="_blank" title="Instagram" ><i class="icon-instagram"></i></a>
 							</li>
 						</#if>
 
-						<#if youtube>
+						<#if Youtube>
 							<li>
 								<a class="icon_youtube" href="${youtubeUrl}" target="_blank" title="Youtube" ><i class="icon-youtube"></i></a>
 							</li>
@@ -58,11 +58,19 @@
 			<div class="website-author">by ${siteCreator}</div><br>
 		</#if>
 
+		<#if has_navigation && is_setup_complete>
+			<nav class="${nav_css_class}" data-offset-top="100" data-spy="affix" id="navigation" role="navigation">
+				<div class="${nav_css_class} site-navigation" id="navigation" role="navigation">
+				<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
+				</div>
+			</nav>
+		</#if>
+
 	</header>
 
 	<section id="content">
-		<h1 class="hide-accessible">${the_title}</h1>
-
+		<h1 class="hide-accessible">${the_title}</h1>	
+	
 		<#if selectable>
 			<@liferay_util["include"] page=content_include />
 		<#else>

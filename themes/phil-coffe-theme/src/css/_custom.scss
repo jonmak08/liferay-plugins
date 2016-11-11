@@ -167,14 +167,46 @@ body {
 
 /************ Navigation bar section begin ************/
 
+#navigation {
+	border-top: 1px solid #DDD;
+	text-align: center;
+}
+
+#navigation a {
+	text-decoration: none;
+}
+
+#navigation li {
+	display: inline-block;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#navigation .lexicon-icon {
+	display: none;
+}
+
 .navbar {
 	border-top: 0.5px solid #DDD;
 	margin-bottom: 0;
 	text-align: center;
 }
 
+nav.affix {
+	background: #FFF;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+}
+
 .navbar a {
 	color: #888;
+}
+
+.navbar a:hover {
+	background-color: #FFF;
+	color: #829839;
 }
 
 .navbar li {
@@ -203,9 +235,7 @@ body {
 	border-top: 2px solid #829839;
 }
 
-.navbar a:hover {
-	color: #829839;
-}
+
 
 /************ Navigation bar section end ************/
 

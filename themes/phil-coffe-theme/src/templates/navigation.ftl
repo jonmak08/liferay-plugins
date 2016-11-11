@@ -18,7 +18,7 @@
 				/>
 			</#if>
 
-			<li ${nav_item_attr_selected} class="lfr-nav-item dropdown" id="layout_${nav_item.getLayoutId()}" role="presentation">
+			<li ${nav_item_attr_selected} class="lfr-nav-item dropdown hover open" id="layout_${nav_item.getLayoutId()}" role="presentation">
 				<a aria-labelledby="layout_${nav_item.getLayoutId()}" ${nav_item_attr_has_popup} class="dropdown-toggle" href="${nav_item.getURL()}" ${nav_item.getTarget()} role="menuitem">
 					<span class="lfr-nav-child-toggle"><@liferay_theme["layout-icon"] layout=nav_item_layout /> ${nav_item.getName()}</span>
 				</a>
