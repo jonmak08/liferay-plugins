@@ -39,7 +39,7 @@ body {
 .website-name {
 	color: #A2A095;
 	font: italic 65px "PhilItaly", sans-serif;
-	padding-top: 40px;
+	padding-top: 10px;
 	text-align: center;
 }
 
@@ -235,33 +235,41 @@ nav.affix {
 
 /************ Image carousel begin ************/
 
+.my-carousel {
+
+}
+
+.carousel-indicators {
+	padding-bottom: 25px;
+}
+
+.carousel-inner {
+	background: #EDEDED url(images/bg_light_shadow.png) 50% 0 repeat-y;
+	padding: 0;
+}
+
 .carousel.fade {
 	opacity: 1;
 }
 
 .carousel.fade .item {
-	display: block;
 	opacity: 0;
-	position: absolute;
-	top: 0;
-	transition: opacity ease-out 0.4s;
-	width: 100%;
+	transition-property: opacity;
 }
 
 .carousel.fade .item:first-child {
 	opacity: 1;
-	position: relative;
-	top: auto;
+
 }
 
 .carousel.fade .item.active {
 	opacity: 1;
 }
 
-.portlet-decorate.portlet-journal-content .portlet-content.portlet-content-editable img {
-	height: 300px;
+.carousel-inner img {
 	margin-left: auto;
 	margin-right: auto;
+	vertical-align: top;
 }
 
 /************ Image carousel end ************/

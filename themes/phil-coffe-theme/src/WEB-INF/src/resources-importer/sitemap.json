@@ -1,0 +1,102 @@
+{
+
+	"layoutTemplateId": "1_column",
+	
+	"publicPages":[
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
+						"portletPreferences": {
+							"displayStyle": "[custom]",
+							"headerType": "root-layout",
+							"includedLayouts": "all",
+							"nestedChildren": "1",
+							"rootLayoutLevel": "3",
+							"rootLayoutType": "relative"
+							}
+					},
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
+					}
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "home",
+			"title": "home"
+		},
+
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
+						"portletPreferences": {
+							"displayStyle": "[custom]",
+							"headerType": "root-layout",
+							"includedLayouts": "all",
+							"nestedChildren": "1",
+							"rootLayoutLevel": "3",
+							"rootLayoutType": "relative"
+							}
+					},
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
+					}
+				]
+			],
+			"friendlyURL": "/two",
+			"name": "two",
+			"title": "two"
+		},
+
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
+						"portletPreferences": {
+							"displayStyle": "[custom]",
+							"headerType": "root-layout",
+							"includedLayouts": "all",
+							"nestedChildren": "1",
+							"rootLayoutLevel": "3",
+							"rootLayoutType": "relative"
+							}
+					},
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
+					}
+				]
+			],
+			"friendlyURL": "/three",
+			"name": "three",
+			"title": "three"
+		},
+
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
+						"portletPreferences": {
+							"displayStyle": "[custom]",
+							"headerType": "root-layout",
+							"includedLayouts": "all",
+							"nestedChildren": "1",
+							"rootLayoutLevel": "3",
+							"rootLayoutType": "relative"
+							}
+					},
+					{
+						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
+					}
+				]
+			],
+			"friendlyURL": "/four",
+			"name": "four",
+			"title": "four"
+		}
+	]
+}
