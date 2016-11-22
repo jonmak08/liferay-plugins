@@ -7,18 +7,28 @@
 			"columns": [
 				[
 					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
+						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
 						"portletPreferences": {
-							"displayStyle": "[custom]",
-							"headerType": "root-layout",
-							"includedLayouts": "all",
-							"nestedChildren": "1",
-							"rootLayoutLevel": "3",
-							"rootLayoutType": "relative"
-							}
+							"articleId": "carousel.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
 					},
 					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
+						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+						"portletPreferences": {
+							"articleId": "slogan.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
+					},
+					{
+						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+						"portletPreferences": {
+							"articleId": "widget.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
 					}
 				]
 			],
@@ -26,77 +36,21 @@
 			"name": "home",
 			"title": "home"
 		},
-
 		{
 			"columns": [
 				[
 					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
+						"portletId": "com_liferay_calendar_web_portlet_CalendarPortlet",
 						"portletPreferences": {
-							"displayStyle": "[custom]",
-							"headerType": "root-layout",
-							"includedLayouts": "all",
-							"nestedChildren": "1",
-							"rootLayoutLevel": "3",
-							"rootLayoutType": "relative"
-							}
-					},
-					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
 					}
 				]
 			],
-			"friendlyURL": "/two",
-			"name": "two",
-			"title": "two"
-		},
-
-		{
-			"columns": [
-				[
-					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
-						"portletPreferences": {
-							"displayStyle": "[custom]",
-							"headerType": "root-layout",
-							"includedLayouts": "all",
-							"nestedChildren": "1",
-							"rootLayoutLevel": "3",
-							"rootLayoutType": "relative"
-							}
-					},
-					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
-					}
-				]
-			],
-			"friendlyURL": "/three",
-			"name": "three",
-			"title": "three"
-		},
-
-		{
-			"columns": [
-				[
-					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet_INSTANCE_${groupId}",
-						"portletPreferences": {
-							"displayStyle": "[custom]",
-							"headerType": "root-layout",
-							"includedLayouts": "all",
-							"nestedChildren": "1",
-							"rootLayoutLevel": "3",
-							"rootLayoutType": "relative"
-							}
-					},
-					{
-						"portletId": "com_liferay_site_navigation_menu_web_internal_portlet_SiteNavigationMenuPortlet"
-					}
-				]
-			],
-			"friendlyURL": "/four",
-			"name": "four",
-			"title": "four"
+			"friendlyURL": "/events",
+			"name": "Events",
+			"title": "Events"
 		}
 	]
 }

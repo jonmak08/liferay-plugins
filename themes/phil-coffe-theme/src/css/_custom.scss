@@ -231,45 +231,60 @@ nav.affix {
 	border-top: 2px solid #829839;
 }
 
+.nav .open {
+	background-color: #FFF;
+}
+
 /************ Navigation bar section end ************/
 
 /************ Image carousel begin ************/
 
-.my-carousel {
-
-}
-
-.carousel-indicators {
-	padding-bottom: 25px;
-}
-
-.carousel-inner {
-	background: #EDEDED url(images/bg_light_shadow.png) 50% 0 repeat-y;
-	padding: 0;
-}
-
-.carousel.fade {
-	opacity: 1;
-}
-
-.carousel.fade .item {
-	opacity: 0;
-	transition-property: opacity;
-}
-
-.carousel.fade .item:first-child {
-	opacity: 1;
-
-}
-
-.carousel.fade .item.active {
-	opacity: 1;
-}
-
-.carousel-inner img {
+.item img {
+	height: auto;
 	margin-left: auto;
 	margin-right: auto;
-	vertical-align: top;
+	opacity: 0.9;
+	width: 70%;
+	z-index: -1;
+}
+
+.icon-chevron-left {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.carousel-control {
+	width: 10%;
+	z-index: 1;
+}
+
+.carousel-control.left {
+	background: transparent url(images/fade-left.png) repeat-y;
+	left: 11.9%;
+	z-index: 2;
+}
+
+.carousel-control.right {
+	background: transparent url(images/fade-left.png) repeat-y;
+	right: 7.5%;
+	z-index: 2;
+}
+
+.icon-circle-arrow-left {
+	display: inline-block;
+	left: 12%;
+    position: absolute;
+    text-align: left;
+    top: 53%;
+    z-index: 3;
+}
+
+.icon-circle-arrow-right {
+	display: inline-block;
+    position: absolute;
+    right: 46%;
+    top: 50%;
+    z-index: 3;
 }
 
 /************ Image carousel end ************/
@@ -278,7 +293,7 @@ nav.affix {
 
 .slogan-area {
 	background-image: url(images/bg_slogan.png);
-	padding: 0 0 35px 0;
+	padding: 0 0 12px 0;
 }
 
 .slogan {
@@ -298,7 +313,6 @@ nav.affix {
 /*********** Widget section begin ************/
 
 .widget-boxes {
-	padding-top: 30px;
 	text-align: center;
 	width: 100%;
 }

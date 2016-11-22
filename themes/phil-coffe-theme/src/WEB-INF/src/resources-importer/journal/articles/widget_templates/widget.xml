@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Textdt6w" type="text" index-type="keyword" instance-id="vsuv">
+		<dynamic-content language-id="en_US"><![CDATA[Widget Left]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="TextBoxfz33" type="text_box" index-type="text" instance-id="xbpm">
+		<dynamic-content language-id="en_US"><![CDATA[Once you’ve clicked Add → Basic Web Content, you’ll find a highly customizable form that, by default, has three fields: title, summary, and a powerful WYSIWYG editor. You’re also provided a boolean Searchable switch. You could customize this form to contain whatever fields your content needs but you’ll keep things simple for now. If web content structures have already been created in your currently selected scope, you can select one for your new web content article by clicking the Structure and Template dropdown. You’ll discuss web content structures and templates in detail in the next chapter.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text5dhf" type="text" index-type="keyword" instance-id="lwin">
+		<dynamic-content language-id="en_US"><![CDATA[Widget Center]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="TextBoxl6lv" type="text_box" index-type="text" instance-id="tmkl">
+		<dynamic-content language-id="en_US"><![CDATA[Once you’ve clicked Add → Basic Web Content, you’ll find a highly customizable form that, by default, has three fields: title, summary, and a powerful WYSIWYG editor. You’re also provided a boolean Searchable switch. You could customize this form to contain whatever fields your content needs but you’ll keep things simple for now. If web content structures have already been created in your currently selected scope, you can select one for your new web content article by clicking the Structure and Template dropdown. You’ll discuss web content structures and templates in detail in the next chapter.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Textgckv" type="text" index-type="keyword" instance-id="jctn">
+		<dynamic-content language-id="en_US"><![CDATA[Widget Right]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="TextBoxhc32" type="text_box" index-type="text" instance-id="ubmp">
+		<dynamic-content language-id="en_US"><![CDATA[Once you’ve clicked Add → Basic Web Content, you’ll find a highly customizable form that, by default, has three fields: title, summary, and a powerful WYSIWYG editor. You’re also provided a boolean Searchable switch. You could customize this form to contain whatever fields your content needs but you’ll keep things simple for now. If web content structures have already been created in your currently selected scope, you can select one for your new web content article by clicking the Structure and Template dropdown. You’ll discuss web content structures and templates in detail in the next chapter.]]></dynamic-content>
+	</dynamic-element>
+</root>
