@@ -1,0 +1,72 @@
+{
+
+	"layoutTemplateId": "1_column",
+	
+	"publicPages":[
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+						"portletPreferences": {
+							"articleId": "carousel.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
+					},
+					{
+						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+						"portletPreferences": {
+							"articleId": "slogan.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
+					},
+					{
+						"portletId": "com_liferay_journal_content_web_portlet_JournalContentPortlet",
+						"portletPreferences": {
+							"articleId": "widget.xml",
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
+					}
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "home",
+			"title": "home"
+		},
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_calendar_web_portlet_CalendarPortlet",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
+					}
+				]
+			],
+			"friendlyURL": "/events",
+			"name": "Events",
+			"title": "Events"
+		},
+		{
+			"columns": [
+				[
+					{
+						"portletId": "com_liferay_calendar_web_portlet_CalendarPortlet",
+						"portletPreferences": {
+							"groupId": "${groupId}",
+							"portletSetupPortletDecoratorId": "decorate"
+						}
+					}
+				]
+			],
+			"friendlyURL": "/blogs",
+			"name": "Blogs",
+			"title": "Blogs"
+		}
+	]
+}
