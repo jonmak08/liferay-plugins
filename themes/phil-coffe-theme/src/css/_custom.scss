@@ -27,8 +27,9 @@ body {
 /************ Header section begin ************/
 
 .website-header {
-	background: #F3F3F3 url(images/bg_light_shadow.png) repeat-y;
+	background: #F3F3F3 url(images/bg_light_shadow.png) 50% 0 repeat-y;
 	clear: both;
+	margin: 0;
 	position: relative;
 }
 
@@ -39,13 +40,20 @@ body {
 .website-name {
 	color: #A2A095;
 	font: italic 65px "PhilItaly", sans-serif;
-	padding-top: 10px;
+	margin: 0 0 0 0;
 	text-align: center;
 }
 
 .website-author {
 	color: #829839;
 	font-size: 20px;
+	text-align: center;
+}
+
+.page-name {
+	color: #829839;
+	font: 48px "PhilDosis", sans-serif;
+	padding-top: 10px;
 	text-align: center;
 }
 
@@ -126,11 +134,11 @@ body {
 
 .social-links li {
 	a:hover {
-		background-color: #FC9D9A;
+		background-color: #6699CC;
 		transition: background 0.05s ease-in-out;
 
 		&:after {
-			border: 1px solid #FC9D9A;
+			border: 1px solid #6699CC;
 		}
 	}
 
@@ -152,11 +160,31 @@ body {
 				}
 			}
 
-			+ li a:hover {
-				background-color: #CBE86B;
+			+ li {
+				a:hover {
+					background-color: #FC6;
 
-				&:after {
-					border: 1px solid #CBE86B;
+					&:after {
+						border: 1px solid #FC6;
+					}
+				}
+
+				+ li {
+					a:hover {
+						background-color: #FC9D9A;
+
+						&:after {
+							border: 1px solid #FC9D9A;
+						}
+					}
+
+					+ li a:hover {
+						background-color: #CBE86B;
+
+						&:after {
+							border: 1px solid #CBE86B;
+						}
+					}
 				}
 			}
 		}
@@ -239,12 +267,17 @@ nav.affix {
 
 /************ Image carousel begin ************/
 
-.item img {
-	height: auto;
+.image-wrapper {
+	height: 300px;
 	margin-left: auto;
 	margin-right: auto;
-	opacity: 0.9;
 	width: 70%;
+}
+
+.item img {
+	margin-left: auto;
+	margin-right: auto;
+	object-fit: cover;
 	z-index: -1;
 }
 
@@ -254,35 +287,37 @@ nav.affix {
 }
 
 .carousel-control {
-	width: 10%;
+	max-height: 100%;
+	opacity: 1.0;
+	width: 6%;
 	z-index: 1;
 }
 
 .carousel-control.left {
-	background: transparent url(images/fade-left.png) repeat-y;
+	background: url(images/fade-left.png) 50% 0 repeat-y;
 	left: 11.9%;
 	z-index: 2;
 }
 
 .carousel-control.right {
-	background: transparent url(images/fade-left.png) repeat-y;
-	right: 7.5%;
+	background: url(images/fade-left.png) 50% 0 repeat-y;
+	right: 11.9%;
 	z-index: 2;
 }
 
 .icon-circle-arrow-left {
 	display: inline-block;
-	left: 12%;
+	left: 7%;
     position: absolute;
     text-align: left;
-    top: 53%;
+    top: 50%;
     z-index: 3;
 }
 
 .icon-circle-arrow-right {
 	display: inline-block;
     position: absolute;
-    right: 46%;
+    right: 10%;
     top: 50%;
     z-index: 3;
 }
@@ -361,4 +396,29 @@ nav.affix {
 	color: #818077;
 	font: 'Helvetica', sans-serif 14px;
 	padding: 10px;
+}
+
+/*********** Widget section end ************/
+
+/*********** Blog section begin ************/
+
+.entry-body {
+	padding: 0 25px 0 25px;
+}
+
+.entry-title h1 {
+	color: #A2A095;
+	font: italic "PhilItaly", sans-serif;
+}
+
+/*********** Blog section end ************/
+
+/*********** Footer section begin ************/
+
+.website-footer {
+	background: #F0F0F0;
+	border-top: 6px solid #E9E9E9;
+	clear: both;
+	height: 150px;
+	position: relative;
 }

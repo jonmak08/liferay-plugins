@@ -1,13 +1,7 @@
 <?xml version="1.0"?>
 
 <root available-locales="en_US" default-locale="en_US">
-	<dynamic-element name="Image1kd4" type="image" index-type="keyword" instance-id="qzbh">
-		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20141","name":"lisanjack.png","alt":"","title":"lisanjack.png","type":"journal","uuid":"7cb54e94-fa44-b721-e381-7609fe74952f","resourcePrimKey":"33768"}]]></dynamic-content>
-	</dynamic-element>
 	<dynamic-element name="Image1kd4" type="image" index-type="keyword" instance-id="ylxh">
-		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20141","name":"coffee_1.jpg","alt":"","title":"coffee_1.jpg","type":"journal","uuid":"2fe54164-b6b7-4540-dd73-5340a692907e","resourcePrimKey":"33768"}]]></dynamic-content>
-	</dynamic-element>
-	<dynamic-element name="Image1kd4" type="image" index-type="keyword" instance-id="uwzw">
-		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20141","name":"coffee_2.jpg","alt":"","title":"coffee_2.jpg","type":"journal","uuid":"ab4407d4-339e-ca2d-35f3-901891b5091f","resourcePrimKey":"33768"}]]></dynamic-content>
+		<dynamic-content language-id="en_US"><![CDATA[]]></dynamic-content>
 	</dynamic-element>
 </root>

@@ -35,6 +35,18 @@
 							</li>
 						</#if>
 
+						<#if Twitter>
+							<li>
+								<a class="icon_twitter" href="${twitterUrl}" target="_blank" title="Twitter" ><i class="icon-twitter"></i></a>
+							</li>
+						</#if>
+
+						<#if Pinterest>
+							<li>
+								<a class="icon_pinterest" href="${pinterestUrl}" target="_blank" title="Pinterest" ><i class="icon-pinterest"></i></a>
+							</li>
+						</#if>
+
 						<#if Youtube>
 							<li>
 								<a class="icon_youtube" href="${youtubeUrl}" target="_blank" title="Youtube" ><i class="icon-youtube"></i></a>
@@ -45,26 +57,23 @@
 			</section>
 
 		</div>
+		<div class="website-header">
+			<#if showTitle>
+				<h1 class="website-name">${siteTitle}</h1>
+			</#if>
 
-		<#if !is_signed_in>
-			<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
-		</#if>
+			<#if showCreator>
+				<div class="website-author">by ${siteCreator}</div><br>
+			</#if>
 
-		<#if showTitle>
-			<h1 class="website-name">${siteTitle}</h1>
-		</#if>
-
-		<#if showCreator>
-			<div class="website-author">by ${siteCreator}</div><br>
-		</#if>
-
-		<#if has_navigation && is_setup_complete>
-			<nav class="${nav_css_class}" data-offset-top="100" data-spy="affix" id="navigation" role="navigation">
-				<div class="${nav_css_class} site-navigation" id="navigation" role="navigation">
-					<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
-				</div>
-			</nav>
-		</#if>
+			<#if has_navigation && is_setup_complete>
+				<nav class="${nav_css_class}" data-offset-top="100" data-spy="affix" id="navigation" role="navigation">
+					<div class="${nav_css_class} site-navigation" id="navigation" role="navigation">
+						<@liferay.navigation_menu default_preferences="${freeMarkerPortletPreferences}" />
+					</div>
+				</nav>
+			</#if>
+		</div>
 
 	</header>
 
@@ -83,10 +92,19 @@
 		</#if>
 	</section>
 
-	<footer id="footer" role="contentinfo">
+	<footer class="website-footer" id="footer" role="contentinfo">
 		<p class="powered-by">
 			<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
 		</p>
+		<#if !is_signed_in>
+			<div class="sign-in">
+				<a data-redirect="${is_login_redirect_required?string}" href="${sign_in_url}" id="sign-in" rel="nofollow">${sign_in_text}</a>
+			</div>
+		<#else>
+			<div class="sign-in">
+				<div class="website-author">Welcome ${siteCreator}, you are signed in</div><br>
+			</div>
+		</#if>
 	</footer>
 </div>
 

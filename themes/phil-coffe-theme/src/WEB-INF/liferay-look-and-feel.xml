@@ -19,6 +19,10 @@
 			<setting configurable="true" key="Linkedin-page" value="http://www.linkedin.com" />
 			<setting configurable="true" key="Instagram" type="checkbox" value="true" />
 			<setting configurable="true" key="Instagram-channel" value="http://www.instagram.com" />
+			<setting configurable="true" key="Pinterest" type="checkbox" value="true" />
+			<setting configurable="true" key="Pinterest-channel" value="http://www.pinterest.com" />
+			<setting configurable="true" key="Twitter" type="checkbox" value="true" />
+			<setting configurable="true" key="Twitter-channel" value="http://www.twitter.com" />
 			<setting configurable="true" key="Youtube" type="checkbox" value="true" />
 			<setting configurable="true" key="Youtube-channel" value="http://www.youtube.com" />
 		</settings>
