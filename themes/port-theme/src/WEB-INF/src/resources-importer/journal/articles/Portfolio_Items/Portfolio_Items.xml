@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="ptui">
+		<dynamic-content language-id="en_US"><![CDATA[Fun stuff]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="kwyp">
+		<dynamic-content language-id="en_US"><![CDATA[A jar]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="xtwp">
+		<dynamic-content language-id="en_US"><![CDATA[Rainy Mondays]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="xtwp">
+		<dynamic-content language-id="en_US"><![CDATA[More Stuff]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="xtwp">
+		<dynamic-content language-id="en_US"><![CDATA[Fun Items]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="xtwp">
+		<dynamic-content language-id="en_US"><![CDATA[Lots more]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="xtwp">
+		<dynamic-content language-id="en_US"><![CDATA[Yet Another]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="xtwp">
+		<dynamic-content language-id="en_US"><![CDATA[Stuff]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Thumbnail" type="text" index-type="keyword" instance-id="xtwp">
+		<dynamic-content language-id="en_US"><![CDATA[Stuff 2]]></dynamic-content>
+	</dynamic-element>
+
+</root>

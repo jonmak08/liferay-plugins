@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="HTML" type="text_area" index-type="text" instance-id="pmsk">
+		<dynamic-content language-id="en_US"><![CDATA[<h1>Heading 1</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium rem quam tenetur commodi illo totam similique delectus fuga voluptate fugit voluptas repudiandae libero veniam, cumque, maiores eveniet consequuntur rerum laborum. Obcaecati, sapiente ut maiores et esse mollitia eveniet. Libero vel repellat sit, praesentium consequuntur culpa commodi, sed deleniti quibusdam nam.</p>
+
+<img src="/o/port-theme/images/forest.jpg" />
+
+<h2>Heading 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id culpa harum, dolorem perferendis voluptatibus ad earum totam, rerum odio eos, quisquam dolore dolor, blanditiis minima natus reprehenderit veniam quos quidem. Explicabo ipsum, architecto hic odio voluptates delectus illo enim quas. Voluptatibus error quasi enim, quibusdam aut iusto et labore ex!</p>
+
+<ul>
+	<li>Lorem ipsum dolor sit amet.</li>
+	<li>Lorem ipsum dolor sit amet.</li>
+	<li>Lorem ipsum dolor sit amet.</li>
+</ul>
+
+<h3>Heading 3</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non eos natus, placeat. Ipsam repellat ullam reprehenderit nam voluptates deserunt laborum, eaque similique aut cupiditate vel, facilis veniam, odit commodi id corrupti sit. Nemo animi necessitatibus vel eveniet magni voluptatem laborum magnam molestias, iure harum! Nulla natus aspernatur placeat animi unde.</p>
+
+<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum vero incidunt officiis repellendus optio, vel fugit nam natus qui ipsum.</blockquote>
+
+<h4>Heading 4</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, reiciendis itaque aliquid cumque repudiandae consectetur voluptatem vero in aut amet, fuga autem molestiae illum ipsa quos voluptatum sit illo quibusdam id totam quis. Deleniti facilis quis temporibus quae reprehenderit repellat quasi voluptas delectus quibusdam? Corporis officiis soluta laudantium neque maiores.</p>]]></dynamic-content>
+	</dynamic-element>
+</root>

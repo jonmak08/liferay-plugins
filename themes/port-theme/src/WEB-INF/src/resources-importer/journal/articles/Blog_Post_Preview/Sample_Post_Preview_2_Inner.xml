@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Title" type="text" index-type="keyword" instance-id="xxcd">
+		<dynamic-content language-id="en_US"><![CDATA[Another Sample Blog Post]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Author" type="text" index-type="keyword" instance-id="yzwt">
+		<dynamic-content language-id="en_US"><![CDATA[Author Two]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Category" type="text" index-type="keyword" instance-id="fnqj">
+		<dynamic-content language-id="en_US"><![CDATA[Tests]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="DefaultURL" type="text" index-type="keyword" instance-id="fnqj">
+		<dynamic-content language-id="en_US"><![CDATA[./author-two/sample-post-2]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Date" type="ddm-date" index-type="keyword" instance-id="vsgq">
+		<dynamic-content language-id="en_US"><![CDATA[2016-10-20]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="PostContent" type="text_area" index-type="text" instance-id="cnro">
+		<dynamic-content language-id="en_US"><![CDATA[
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicin elit. Dolores, minima expedita fuga magni nam recusandae? Optio, eveniet, ipsum. Suscipit sunt, quod quasi voluptatem ex repellat, blanditiis earum neque ullam maxime officia veniam unde explicabo culpa optio laudantium quae. Eveniet delectus quae, sint, doloremque molestias perspiciatis sapiente suscipit voluptas ab similique provident ipsa. Delectus, accusantium perspiciatis eaque natus ex esse, nobis, consequatur deleniti vitae fuga dolorum? Veniam ut quam inventore hic, dolor omnis odio dicta tenetur fugit natus at temporibus porro, accusamus suscipit doloribus deserunt alias possimus voluptas? Unde animi, fugiat quis voluptatibus nulla. Nam dignissimos, quo voluptatum sapiente, molestias id.&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, minima expedita fuga magni nam recusandae? Optio, eveniet, ipsum. Suscipit sunt, quod quasi voluptatem ex repellat, blanditiis earum neque ullam maxime officia veniam unde explicabo culpa optio laudantium quae. Eveniet delectus quae, sint, doloremque molestias perspiciatis sapiente suscipit voluptas ab similique provident ipsa. Delectus, accusantium perspiciatis eaque natus ex esse, nobis, consequatur deleniti vitae fuga dolorum? Veniam ut quam inventore hic, dolor omnis odio dicta tenetur fugit natus at temporibus porro, accusamus suscipit doloribus deserunt alias possimus voluptas? Unde animi, fugiat quis voluptatibus nulla. Nam dignissimos, quo voluptatum sapiente, molestias id.</p>
+		]]></dynamic-content>
+	</dynamic-element>
+</root>

@@ -1,0 +1,80 @@
+@mixin setHeaderColors($color) {
+	.nav-trigger-close, a {
+		color: rgba($color, 0.7);
+
+		&:hover {
+			color: $color;
+		}
+	}
+
+	.selected {
+		> a {
+			color: $color;
+		}
+	}
+
+	#toggle-child-menu-btn {
+		.lexicon-icon {
+			color: rgba($color, 0.7);
+
+			&:hover {
+				color: $color;
+			}
+		}
+	}
+}
+
+@mixin setChildMenuColors($color) {
+	.child-menu li {
+		a, .lexicon-icon {
+			color: rgba($color, 0.8);
+		}
+
+		&:hover {
+			a, .lexicon-icon {
+				color: $color;
+			}
+		}
+	}
+
+	.selected {
+		.child-menu li {
+			a, .lexicon-icon {
+				color: rgba($color, 0.7);
+			}
+
+			&.selected {
+				a, .lexicon-icon {
+					color: $color;
+				}
+			}
+
+			&:hover {
+				a, .lexicon-icon {
+					color: $color;
+				}
+			}
+		}
+	}
+}
+
+#navigation {
+	@include setChildMenuColors(#FFF);
+	@include setHeaderColors(#FFF);
+}
+
+.light-theme #navigation {
+	background-color: #FFF;
+
+	@include setChildMenuColors(#000);
+	@include setHeaderColors(#000);
+}
+
+@media (min-width: 450px) {
+	.onscreen-nav #navigation {
+		background-color: transparent;
+
+		@include setChildMenuColors(#000);
+		@include setHeaderColors(#FFF);
+	}
+}

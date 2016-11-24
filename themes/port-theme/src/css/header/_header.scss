@@ -1,0 +1,70 @@
+@import './_off_screen_navigation';
+@import './_on_screen_navigation';
+@import './_header_color_scheme';
+
+#banner {
+	@include align-items(center);
+
+	background-color: transparent;
+
+	@include display(flex);
+	@include flex-wrap(wrap);
+
+	font-size: 24px;
+
+	@include justify-content(space-between);
+
+	padding: 10px 20px;
+	position: fixed;
+
+	@include transition(background 0.1s linear);
+
+	width: 100%;
+	z-index: 555;
+
+	.logo {
+		color: #FFF;
+		font-family: $nixie;
+		font-weight: 800;
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+
+	h1 {
+		font-size: inherit;
+	}
+}
+
+#heading .site-title {
+	margin: 0;
+}
+
+#nav-wrapper {
+	background-color: transparent;
+	border-width: 0;
+	padding: 0;
+
+	#toggle-child-menu-btn {
+		margin: 0;
+
+		.lexicon-icon {
+			height: 9px;
+			width: 9px;
+		}
+	}
+
+	.hide-child {
+		display: none;
+	}
+
+	.child-menu-trigger {
+		display: none;
+	}
+
+	.delete-tab {
+		display: none;
+	}
+}

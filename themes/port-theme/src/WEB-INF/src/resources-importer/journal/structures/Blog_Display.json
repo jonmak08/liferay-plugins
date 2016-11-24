@@ -1,0 +1,244 @@
+{
+	"availableLanguageIds": [
+		"en_US"
+	],
+	"defaultLanguageId": "en_US",
+	"fields": [
+		{
+			"label": {
+				"en_US": "Heading"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "string",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "Heading",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "text"
+		},
+		{
+			"label": {
+				"en_US": "Button text"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "string",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "ButtonText",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "text"
+		},
+		{
+			"label": {
+				"en_US": "Link to Blog Page"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "link-to-page",
+			"fieldNamespace": "ddm",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "LinkToBlogPage",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "ddm-link-to-page"
+		},
+		{
+			"label": {
+				"en_US": "Blog Title"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "string",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "BlogTitle",
+			"readOnly": false,
+			"repeatable": true,
+			"required": false,
+			"showLabel": true,
+			"type": "text",
+			"nestedFields": [
+				{
+					"label": {
+						"en_US": "Link to Blog Post"
+					},
+					"predefinedValue": {
+						"en_US": ""
+					},
+					"style": {
+						"en_US": ""
+					},
+					"tip": {
+						"en_US": ""
+					},
+					"dataType": "link-to-page",
+					"fieldNamespace": "ddm",
+					"indexType": "keyword",
+					"localizable": true,
+					"name": "LinkToBlogPost",
+					"readOnly": false,
+					"repeatable": false,
+					"required": false,
+					"showLabel": true,
+					"type": "ddm-link-to-page"
+				},
+				{
+					"label": {
+						"en_US": "Author"
+					},
+					"predefinedValue": {
+						"en_US": ""
+					},
+					"style": {
+						"en_US": ""
+					},
+					"tip": {
+						"en_US": ""
+					},
+					"dataType": "string",
+					"indexType": "keyword",
+					"localizable": true,
+					"name": "Author",
+					"readOnly": false,
+					"repeatable": false,
+					"required": false,
+					"showLabel": true,
+					"type": "text"
+				},
+				{
+					"label": {
+						"en_US": "Category"
+					},
+					"predefinedValue": {
+						"en_US": ""
+					},
+					"style": {
+						"en_US": ""
+					},
+					"tip": {
+						"en_US": ""
+					},
+					"dataType": "string",
+					"indexType": "keyword",
+					"localizable": true,
+					"name": "Category",
+					"readOnly": false,
+					"repeatable": false,
+					"required": false,
+					"showLabel": true,
+					"type": "text"
+				},
+				{
+					"label": {
+						"en_US": "Date"
+					},
+					"predefinedValue": {
+						"en_US": ""
+					},
+					"style": {
+						"en_US": ""
+					},
+					"tip": {
+						"en_US": ""
+					},
+					"dataType": "date",
+					"fieldNamespace": "ddm",
+					"indexType": "keyword",
+					"localizable": true,
+					"name": "Date",
+					"readOnly": false,
+					"repeatable": false,
+					"required": false,
+					"showLabel": true,
+					"type": "ddm-date"
+				},
+				{
+					"label": {
+						"en_US": "Preview "
+					},
+					"predefinedValue": {
+						"en_US": ""
+					},
+					"style": {
+						"en_US": ""
+					},
+					"tip": {
+						"en_US": ""
+					},
+					"dataType": "string",
+					"indexType": "keyword",
+					"localizable": true,
+					"name": "Preview",
+					"readOnly": false,
+					"repeatable": false,
+					"required": false,
+					"showLabel": true,
+					"type": "text"
+				},
+				{
+					"label": {
+						"en_US": "Image"
+					},
+					"predefinedValue": {
+						"en_US": ""
+					},
+					"style": {
+						"en_US": ""
+					},
+					"tip": {
+						"en_US": ""
+					},
+					"dataType": "image",
+					"fieldNamespace": "ddm",
+					"indexType": "keyword",
+					"localizable": true,
+					"name": "Image",
+					"readOnly": false,
+					"repeatable": false,
+					"required": false,
+					"showLabel": true,
+					"type": "ddm-image"
+				}
+			]
+		}
+	]
+}

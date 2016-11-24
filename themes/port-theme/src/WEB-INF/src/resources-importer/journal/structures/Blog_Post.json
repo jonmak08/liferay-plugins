@@ -1,0 +1,149 @@
+{
+	"availableLanguageIds": [
+		"en_US"
+	],
+	"defaultLanguageId": "en_US",
+	"fields": [
+		{
+			"label": {
+				"en_US": "Title"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "string",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "Title",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "text"
+		},
+		{
+			"label": {
+				"en_US": "Author"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "string",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "Author",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "text"
+		},
+		{
+			"label": {
+				"en_US": "Category"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "string",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "Category",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "text"
+		},
+		{
+			"label": {
+				"en_US": "Date"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "date",
+			"fieldNamespace": "ddm",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "Date",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "ddm-date"
+		},
+		{
+			"label": {
+				"en_US": "Post Content"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "html",
+			"fieldNamespace": "ddm",
+			"indexType": "text",
+			"localizable": true,
+			"name": "PostContent",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "ddm-text-html"
+		},
+		{
+			"label": {
+				"en_US": "Link to Post"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "link-to-page",
+			"fieldNamespace": "ddm",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "LinkToPost",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "ddm-link-to-page"
+		},
+	]
+}
