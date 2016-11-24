@@ -7,7 +7,6 @@
 	linkedinUrl = themeDisplay.getThemeSetting("Linkedin-page")
 	Pinterest = getterUtil.getBoolean(themeDisplay.getThemeSetting("Pinterest"))
 	pinterestUrl = themeDisplay.getThemeSetting("Pinterest-channel")
-
 	showTitle = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-title"))
 	showCreator = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-author"))
 	siteCreator = themeDisplay.getThemeSetting("creator")

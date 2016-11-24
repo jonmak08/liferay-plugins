@@ -134,11 +134,11 @@ body {
 
 .social-links li {
 	a:hover {
-		background-color: #6699CC;
+		background-color: #69C;
 		transition: background 0.05s ease-in-out;
 
 		&:after {
-			border: 1px solid #6699CC;
+			border: 1px solid #69C;
 		}
 	}
 
@@ -406,9 +406,14 @@ nav.affix {
 	padding: 0 25px 0 25px;
 }
 
-.entry-title h1 {
-	color: #A2A095;
+.entry-title h2 {
+	color: #829839;
 	font: italic "PhilItaly", sans-serif;
+}
+
+.portlet-blogs .entry-body .cover-image-container {
+	background-size: contain;
+	height: 350px;
 }
 
 /*********** Blog section end ************/
