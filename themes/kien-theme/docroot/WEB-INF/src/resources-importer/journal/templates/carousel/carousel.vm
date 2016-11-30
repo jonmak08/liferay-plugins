@@ -1,0 +1,38 @@
+<div id="myCarousel">
+  <div class="image-viewer-base-image">
+    <img alt="Image" src="$Image1806.getData()" />
+    <div class="carousel-description">
+      <h3>$Text2313.getData()</h3>
+      <p>$Text2554.getData()</p>
+    </div>
+  </div>
+  <div class="image-viewer-base-image">
+    <img alt="Image" src="$Image2048.getData()" />
+    <div class="carousel-description">
+      <h3>$Text2795.getData()</h3>
+      <p>$Text3036.getData()</p>
+    </div>
+  </div>
+  <div class="image-viewer-base-image">
+    <img alt="Image" src="$Image2290.getData()" />
+    <div class="carousel-description">
+      <h3>$Text3277.getData()</h3>
+      <p>$Text3521.getData()</p>
+    </div>
+  </div>
+</div>
+
+<script>AUI().use(
+  'aui-carousel',
+  function(A) {
+    new A.Carousel(
+      {
+        contentBox: '#myCarousel',
+        height: 350,
+        intervalTime: 4,
+        width: 660,
+        preloadAllImages: true
+      }
+    ).render();
+  }
+);</script>

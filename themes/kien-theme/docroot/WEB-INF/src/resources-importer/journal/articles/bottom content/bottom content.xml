@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Text4423" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[First Bottom]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text_Box4909" type="text_box" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text10399" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Second Bottom]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text_Box10643" type="text_box" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text10885" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Third Bottom]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text_Box11127" type="text_box" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque viderer torquatos id sea, ei postulant suavitate qui. Usu ne lorem velit quaeque, ne eam veniam possit senserit. Te viris postea epicuri nam, fabulas assueverit sed ad. No quis noluisse pri, his causae delicatissimi ut.]]></dynamic-content>
+	</dynamic-element>
+</root>

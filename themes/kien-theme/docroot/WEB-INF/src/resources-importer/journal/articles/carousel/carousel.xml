@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Image1806" type="image" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US" id="27162">/image/journal/article?img_id=27162&amp;t=1453490609190</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image2048" type="image" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US" id="27163">/image/journal/article?img_id=27163&amp;t=1453490609203</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image2290" type="image" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US" id="27164">/image/journal/article?img_id=27164&amp;t=1453490609214</dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text2313" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[slide heading 1]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text2554" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, cu eos sumo delenit, iisque.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text2795" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[slide heading 2]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text3036" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Usu ne lorem velit quaeque, ne eam veniam possit senserit.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text3277" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[slide heading 3]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text3521" type="text" index-type="keyword" index="0">
+		<dynamic-content language-id="en_US"><![CDATA[Te viris postea epicuri nam, fabulas assueverit sed ad.]]></dynamic-content>
+	</dynamic-element>
+</root>

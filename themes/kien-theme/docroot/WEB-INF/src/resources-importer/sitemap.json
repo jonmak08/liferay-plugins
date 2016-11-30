@@ -1,0 +1,36 @@
+{
+	"layoutTemplateId": "1_2_1_columns",
+	"privatePages": [
+		{
+			"columns": [
+				[
+					{
+						"portletId": "73"
+					}
+				],
+				[
+					"carousel.xml",
+					{
+						"portletId": "33"
+					}
+				],
+				[
+					{
+						"portletId": "26"
+					}
+				],
+				[
+				  "bottom content.xml"
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "Welcome",
+			"title": "Welcome"
+		},
+		{
+			"friendyURL": "/about",
+			"name": "About",
+			"title": "About"
+		}
+	]
+}
