@@ -1,0 +1,325 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+body {
+	background-color : #FFFFFF;
+	margin:0px;
+	padding:0px;
+	font-family:"Dosis", sans-serif;
+}
+
+#wrapper{
+	margin:0px;
+	padding:0px;
+}
+
+
+
+
+
+/********************     HEADER SECTION  *********************/
+/********************     HEADER SECTION  *********************/
+.website-header {
+	position:relative;
+	background: #f3f3f3 url(images/bg-light-shadow.png) 50% 0 repeat-y;
+	clear:both;
+}
+
+
+/************************   LOGO TITLE    ***********************/
+/************************   LOGO TITLE    ***********************/
+
+#logosect{
+	background-color: white;
+}
+
+#website-name{
+	color:#A2A095;
+	text-align:center;
+	font-family:'Italianno', sans-serif;
+	font-size: 65px;
+	font-style:italic;
+}
+
+.website-author{
+	text-align:center;
+	color:#829839;
+	font-size: 20px;
+	font-family:"Dosis", sans-serif;
+}
+
+/********************   SOCIAL ICON NAV*******************/
+/********************   SOCIAL ICON NAV*******************/
+
+#social-icons {
+	position:relative;
+	background: #ededed url(images/bg-light-shadow.png) 50% 0 repeat-y;
+	border-bottom:1px solid #fff;
+	box-shadow: 0 4px 2px 0 rgba(255, 255, 0, 0.08) inset;
+	padding:8px 14px 10px 14px;
+	min-height:30px;
+}
+
+/********************	social icONS ********************/
+/********************	social icONS ********************/
+
+.social-links {
+	float:right;
+}
+
+.social-links ul {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+.social-links li {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	list-style:none;
+}
+
+
+
+.social-links li a {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	font-size:20px;
+	color:#555;
+	height:32px;
+	line-height:32px;
+	width:32px;
+	position:relative;
+	margin:0 5px;
+	text-align:center;
+	-webkit-transition : background 0.8s ease-in-out;
+	-moz-transition : background 0.8s ease-in-out;
+	-ms-transition : background 0.8s ease-in-out;
+	-o-transition : background 0.8s ease-in-out;
+	transition : background 0.8s ease-in-out;
+	border-radius:50% ;
+}
+
+
+
+/*CIRCLES*/
+.social-links li a:after {
+	position: absolute;
+	left: -1px;
+	top: -2px;
+	content:"";
+	border-radius: 50%;
+	border:2px solid #ddd;
+	height: 32px;
+	width: 32px;
+	-webkit-transition : all 0.5s ease-in-out;
+	-moz-transition : all 0.5s ease-in-out;
+	-ms-transition : all 0.5s ease-in-out;
+	-o-transition : all 0.5s ease-in-out;
+	transition : all 0.5s ease-in-out;
+}
+
+.social-links li a:hover:after {
+	height:39px;
+	width:39px;
+	left:-3.5px;
+	top:-4px;
+}
+
+.social-links li a img {
+	width:24px;
+	border:none;
+	vertical-align:middle;
+}
+
+
+/*1ST BUTTON*/
+.social-links li a:hover {
+	-webkit-transition : background 0.1s ease-in-out;
+	-moz-transition : background 0.1s ease-in-out;
+	-ms-transition : background 0.1s ease-in-out;
+	-o-transition : background 0.1s ease-in-out;
+	transition : background 0.1s ease-in-out;
+	background-color:#FC9D9A;
+}
+.social-links li a:hover:after {
+	border:2px solid #FC9D9A;
+}
+
+/*2ND BUTTON*/
+.social-links li + li a:hover {
+	background-color:#C8C8A9;
+}
+.social-links li + li a:hover:after {
+	border:2px solid #C8C8A9;
+}
+
+/*3RD BUTTON*/
+.social-links li + li + li a:hover {
+	background-color:#69d2e7;
+}
+.social-links li + li + li a:hover:after {
+	border:2px solid #69d2e7;
+}
+
+/*4TH BUTTON*/
+.social-links li + li + li + li a:hover {
+	background-color:#CBE86B;
+}
+.social-links li + li + li + li a:hover:after {
+	border:2px solid #CBE86B;
+}
+
+
+
+
+
+
+/********************   MAIN NAV   *****************/
+/********************   MAIN NAV   *****************/
+.navbar{
+	border-top: 1px solid #DDDDDD;
+	text-align:center;
+
+}
+
+#layout_1 span{
+	font-size:20px;
+	color:#829839;
+	display:inline-block;
+}
+
+.navbar a{
+	color:#888888;
+}
+
+.navbar li{
+	display:inline-block;
+	float:none;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*********   get rid of arrow  ***************/
+.navbar .lexicon-icon{
+	display:none;
+}
+/*****************   center navbar contents ******************/
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+/*********************  HOVER EFFECTS ************************/
+.navbar li .dropdown-toggle:hover{
+	background-color:white;
+	border-top: 1px solid #829839;
+}
+
+#layout_1:hover{
+	background-color:white;
+	border-top: 1px solid #829839;
+}
+/*****************************************************************/
+/************************  END OF MAIN NAV  *********************/
+
+
+
+
+
+
+/********************   SLOGAN AREA  ***********************/
+/********************   SLOGAN AREA  ***********************/
+.slogan-area{
+	background-image: url("images/bg-slogan.png");
+	padding:40px;
+
+}
+
+.slogan{
+	text-align:center;
+	color:#829839;
+	font-size: 50px;
+	font-family:"italianno";
+	font-style:italic;
+}
+
+.slogan-comment{
+	text-align:center;
+	color:#A2A095;
+	font-size: 20px;
+	font-family:"Dosis", sans-serif;
+}
+
+
+
+/******************   CONTENT  ***********************/
+/******************   CONTENT  ***********************/
+
+
+#widgets123{
+	width:100%;	
+	text-align:center;
+	padding-top:30px;
+}
+
+.justborder{
+	border-bottom:7px solid #E8E8E8;
+}
+
+.widget-1{
+
+	display:inline-block;
+	width:25%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:1%;
+	vertical-align: top;
+}
+
+.widget-2{
+
+	display:inline-block;
+	width:25%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:1%;
+	vertical-align:top;
+}
+
+.widget-3{
+
+	display:inline-block;
+	width:25%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:1%;
+	vertical-align: top;
+}
+
+.widget-title{
+	font-size: 19px;
+	font-family: "Dosis";
+	text-align:center;
+	border-bottom: 7px solid #CCCCCC;
+	color:#5B3D00;
+	display:inline;
+	vertical-align: bottom;
+
+}
+
+.w-content{
+	font-family: 'Helvetica', sans-serif;
+	color:#818077;
+	font-size:14px;
+	padding:10px;
+
+}

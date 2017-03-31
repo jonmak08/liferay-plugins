@@ -1,0 +1,11 @@
+{
+  "LiferayTheme": {
+    "appServerPath": "c:\\Users\\liferay\\liferay-portal\\bundles\\tomcat-8.0.32",
+    "deployPath": "c:\\Users\\liferay\\liferay-portal\\bundles\\deploy",
+    "url": "http://localhost:8080",
+    "appServerPathPlugin": "C:\\Users\\liferay\\liferay-plugins\\themes\\my-first-theme\\.web_bundle_build",
+    "deployed": true,
+    "pluginName": "my-first-theme",
+    "webBundleDir": "watching"
+  }
+}

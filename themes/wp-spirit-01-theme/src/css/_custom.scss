@@ -1,0 +1,38 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+
+.topbarnav{
+	background-color:#EDEDED;
+	height:50px;
+
+
+}
+
+.icon-menu{
+	text-align: center;
+	float:right;
+}
+.topbarnav li{
+	float:right;
+	list-style: none;
+	display:inline-block;
+	margin:25px;
+}
+
+.website-main-title{
+	text-align:center;
+	font-family:"italianno";
+	color:#A2A095;
+	font-size:60px;
+}
+
+.website-author{
+	text-align:center;
+	color:#829839;
+	font-size: 20px;
+}
