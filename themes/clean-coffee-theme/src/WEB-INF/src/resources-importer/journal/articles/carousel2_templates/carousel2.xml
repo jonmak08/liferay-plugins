@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Image_1_URL" type="text" index-type="keyword" instance-id="iayu">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=lisanjack.png$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image_2_URL" type="text" index-type="keyword" instance-id="pgkp">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=coffee_1.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image_3_URL" type="text" index-type="keyword" instance-id="fgwz">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=coffee_2.jpg$]]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Image_4_URL" type="text" index-type="keyword" instance-id="dkqu">
+		<dynamic-content language-id="en_US"><![CDATA[[$FILE=coffee_3.jpg$]]]></dynamic-content>
+	</dynamic-element>
+</root>

@@ -1,0 +1,429 @@
+body {
+	background-color: #FFF;
+	font-family: "PhilDosis", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: "PhilItaly";
+	src: url(fonts/Italianno/italianno.woff);
+}
+
+@font-face {
+	font-family: "PhilDosis";
+	src: url(fonts/Dosis/dosis.woff);
+}
+
+.fa-select {
+	font-family: sans-serif, 'FontAwesome';
+}
+
+/************ Header section begin ************/
+
+.website-header {
+	background: #F3F3F3 url(images/bg_light_shadow.png) 50% 0 repeat-y;
+	clear: both;
+	margin: 0;
+	position: relative;
+}
+
+/************ Header section end ************/
+
+/************ Website title section begin ************/
+
+.website-name {
+	color: #A2A095;
+	font: italic 65px "PhilItaly", sans-serif;
+	margin: 0 0 0 0;
+	text-align: center;
+}
+
+.website-author {
+	color: #829839;
+	font-size: 20px;
+	text-align: center;
+}
+
+.page-name {
+	color: #829839;
+	font: 48px "PhilDosis", sans-serif;
+	padding-top: 10px;
+	text-align: center;
+}
+
+/************ Website title section end ************/
+
+/************ Social icon section begin ************/
+
+.social-icons {
+	background: #EDEDED url(images/bg_light_shadow.png) 50% 0 repeat-y;
+	border-bottom: 1px solid #FFF;
+	box-shadow: 0 4px 2px 0 rgba(255, 255, 0, 0.08) inset;
+	min-height: 55px;
+	padding: 8px 14px 10px 14px;
+	position: relative;
+}
+
+.follow {
+	color: #A2A095;
+	font-size: 14px;
+	padding: 0 12px 10px 0;
+	vertical-align: center;
+}
+
+.social-links {
+	float: right;
+}
+
+.social-links ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.social-links li {
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+}
+
+.social-links li a {
+	border-radius: 50%;
+	color: #555;
+	display: inline-block;
+	font-size: 20px;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	transition: background 0.8s ease-in-out;
+	width: 32px;
+}
+
+.social-links li a:after {
+	border: 2px solid #DDD;
+	border-radius: 50%;
+	content: "";
+	height: 32px;
+	left: -1px;
+	position: absolute;
+	top: -2px;
+	transition: all 0.5s ease-in-out;
+	width: 32px;
+}
+
+.social-links li a:hover:after {
+	height: 39px;
+	left: -3.5px;
+	top: -4px;
+	width: 39px;
+}
+
+.social-links li a img {
+	border-width: none;
+	vertical-align: middle;
+	width: 24px;
+}
+
+.social-links li {
+	a:hover {
+		background-color: #69C;
+		transition: background 0.05s ease-in-out;
+
+		&:after {
+			border: 1px solid #69C;
+		}
+	}
+
+	+ li {
+		a:hover {
+			background-color: #C8C8A9;
+
+			&:after {
+				border: 1px solid #C8C8A9;
+			}
+		}
+
+		+ li {
+			a:hover {
+				background-color: #69D2E7;
+
+				&:after {
+					border: 1px solid #69D2E7;
+				}
+			}
+
+			+ li {
+				a:hover {
+					background-color: #FC6;
+
+					&:after {
+						border: 1px solid #FC6;
+					}
+				}
+
+				+ li {
+					a:hover {
+						background-color: #FC9D9A;
+
+						&:after {
+							border: 1px solid #FC9D9A;
+						}
+					}
+
+					+ li a:hover {
+						background-color: #CBE86B;
+
+						&:after {
+							border: 1px solid #CBE86B;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/************ Social icon section end ************/
+
+/************ Navigation bar section begin ************/
+
+#navigation {
+	border-top: 1px solid #DDD;
+	text-align: center;
+}
+
+#navigation a {
+	text-decoration: none;
+}
+
+#navigation li {
+	display: inline-block;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#navigation .lexicon-icon {
+	display: none;
+}
+
+.navbar {
+	border-top: 0.5px solid #DDD;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+nav.affix {
+	background: #FFF;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+}
+
+.navbar a {
+	color: #888;
+}
+
+.navbar a:hover {
+	background-color: #FFF;
+	color: #829839;
+}
+
+.navbar li {
+	display: inline-block;
+	float: none;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navbar .lexicon-icon {
+	display: none;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.lfr-nav-item:hover {
+	background-color: #FFF;
+	border-top: 2px solid #829839;
+}
+
+.nav .open {
+	background-color: #FFF;
+}
+
+/************ Navigation bar section end ************/
+
+/************ Image carousel begin ************/
+
+.image-wrapper {
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+.item img {
+	margin-left: auto;
+	margin-right: auto;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.icon-chevron-left {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.carousel-control {
+	max-height: 100%;
+	opacity: 1.0;
+	width: 6%;
+	z-index: 1;
+}
+
+.carousel-control.left {
+	background: url(images/fade-left.png) 50% 0 repeat-y;
+	left: 11.9%;
+	z-index: 2;
+}
+
+.carousel-control.right {
+	background: url(images/fade-left.png) 50% 0 repeat-y;
+	right: 11.9%;
+	z-index: 2;
+}
+
+.icon-circle-arrow-left {
+	display: inline-block;
+	left: 7%;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    z-index: 3;
+}
+
+.icon-circle-arrow-right {
+	display: inline-block;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    z-index: 3;
+}
+
+/************ Image carousel end ************/
+
+/************ Slogan section begin ************/
+
+.slogan-area {
+	background-image: url(images/bg_slogan.png);
+	padding: 0 0 12px 0;
+}
+
+.slogan {
+	color: #829839;
+	font: italic 50px "PhilItaly", sans-serif;
+	text-align: center;
+}
+
+.slogan-comment {
+	color: #A2A095;
+	font-size: 20px;
+	text-align: center;
+}
+
+/*********** Slogan section end ************/
+
+/*********** Widget section begin ************/
+
+.widget-boxes {
+	text-align: center;
+	width: 100%;
+}
+
+.just-border {
+	border-bottom: 7px solid #E8E8E8;
+}
+
+.widget-left {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1%;
+	vertical-align: top;
+	width: 25%;
+}
+
+.widget-center {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1%;
+	vertical-align: top;
+	width: 25%;
+}
+
+.widget-right {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1%;
+	vertical-align: top;
+	width: 25%;
+}
+
+.widget-title {
+	border-bottom: 7px solid #CCC;
+	color: #5B3D00;
+	display: inline;
+	font-size: 19px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.widget-content {
+	color: #818077;
+	font: 'Helvetica', sans-serif 14px;
+	padding: 10px;
+}
+
+/*********** Widget section end ************/
+
+/*********** Blog section begin ************/
+
+.entry-body {
+	padding: 0 25px 0 25px;
+}
+
+.entry-title h2 {
+	color: #829839;
+	font: italic "PhilItaly", sans-serif;
+}
+
+.portlet-blogs .entry-body .cover-image-container {
+	background-size: contain;
+	height: 350px;
+}
+
+/*********** Blog section end ************/
+
+/*********** Footer section begin ************/
+
+.website-footer {
+	background: #F0F0F0;
+	border-top: 6px solid #E9E9E9;
+	clear: both;
+	height: 150px;
+	position: relative;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Text24qf" type="text" index-type="keyword" instance-id="ffaz">
+		<dynamic-content language-id="en_US"><![CDATA[Slogan]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Text4u33" type="text" index-type="keyword" instance-id="vqgq">
+		<dynamic-content language-id="en_US"><![CDATA[This is where you can expound with details]]></dynamic-content>
+	</dynamic-element>
+</root>

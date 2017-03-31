@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Image1kd4" type="image" index-type="keyword" instance-id="ylxh">
+		<dynamic-content language-id="en_US"><![CDATA[{"groupId":"20141","name":"coffee_1.jpg","alt":"","title":"coffee_1.jpg","type":"journal","uuid":"2fe54164-b6b7-4540-dd73-5340a692907e","resourcePrimKey":"33768"}]]></dynamic-content>
+	</dynamic-element>
+</root>
