@@ -1,0 +1,26 @@
+@mixin setHeaderColors($color) {
+	.nav-trigger-close, a {
+		color: rgba($color, 0.6);
+
+		&:hover {
+			color: $color;
+		}
+	}
+
+	.selected a {
+		color: $color;
+	}
+}
+
+.light-theme #navigation {
+	background-color: #FFF;
+
+	@include setHeaderColors(#000);
+}
+
+@media (min-width: 450px) {
+	.light-theme .onscreen-nav #navigation {
+		background-color: transparent;
+		@include setHeaderColors(#FFF);
+	}
+}

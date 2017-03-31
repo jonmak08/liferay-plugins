@@ -1,0 +1,81 @@
+.onscreen-nav .nav-trigger-btn {
+	display: none;
+}
+
+.onscreen-nav #navigation {
+	background-color: transparent;
+	height: auto;
+	padding: 0;
+	position: static;
+
+	.nav-trigger-close {
+		display: none;
+	}
+
+	> ul {
+		@include align-items(center);
+		border-bottom-width: 0;
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-end);
+		margin: 0;
+
+		li {
+			margin: 0 0 0 20px;
+			padding: 10px;
+			position: relative;
+			text-align: center;
+			@include transition(background-color 0.2s linear);
+
+			.child-menu-wrapper {
+				padding: 11px 0 0;
+				position: absolute;
+				right: -27px;
+			}
+
+			.child-menu {
+				background-color: #FFF;
+				border: 1px solid rgba(0, 0, 0, 0.5);
+				box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+				@include display(flex);
+				@include flex-direction(column);
+				margin-top: 0;
+				padding: 10px;
+				position: relative;
+				width: 80px;
+				z-index: 950;
+
+				li {
+					margin: 0;
+					padding: 5px 0;
+
+					a {
+						color: rgba(0, 0, 0, 0.7);
+					}
+
+					&:hover a {
+						color: #000;
+					}
+				}
+			}
+
+			.child-menu, .child-menu:before, .child-menu:after, .child-menu li {
+				opacity: 0;
+				@include transition(0.2s linear all);
+			}
+
+			&.nav-has-children:hover {
+				background-color: rgba(#000, 0.05);
+
+				.child-menu, .child-menu:before, .child-menu:after, .child-menu li {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.delete-tab {
+		margin: -5px -18px 0 0;
+		padding: 3px;
+	}
+}

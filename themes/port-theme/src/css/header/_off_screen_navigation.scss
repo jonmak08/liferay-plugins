@@ -1,0 +1,114 @@
+@import '../_custom_vars.scss';
+
+.full-page-overlay {
+	@include transition(background 0.2s linear);
+}
+
+#nav-trigger {
+	display: none;
+
+	&:checked {
+		~ .full-page-overlay {
+			background-color: rgba(0, 0, 0, 0.2);
+			height: 100vh;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100vw;
+			z-index: 888;
+		}
+
+		+ .nav-trigger-btn {
+			opacity: 0.5;
+			@include transform(translateX(-$navigation-width));
+			z-index: 999;
+		}
+
+		~ #navigation {
+			box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+			position: absolute;
+			@include transform(translateX(-$navigation-width));
+		}
+
+		@media (max-width: 400px) {
+			+ .nav-trigger-btn, ~ #navigation {
+				@include transform(translateX(-$navigation-mobile-width));
+			}
+		}
+	}
+}
+
+.nav-trigger-btn {
+	color: #FFF;
+	font-size: 30px;
+	margin: 0;
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	@include transform(translateX(0));
+	@include transition(0.5s ease all);
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.5;
+	}
+}
+
+#navigation {
+	background-color: #333;
+	@include display(flex);
+	@include flex-direction(column);
+	font-size: 14px;
+	height: 100vh;
+	padding: 15px 20px;
+	position: absolute;
+	right: -$navigation-width;
+	top: 0;
+	@include transform(translateX(0));
+	@include transition(0.5s ease all);
+	width: $navigation-width;
+	z-index: 999;
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	> ul {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		padding-left: 0;
+	}
+
+	.child-menu {
+		margin: 10px 0;
+		padding-left: 10px;
+	}
+
+	.nav-trigger-close {
+		@include align-self(flex-end);
+		font-size: 20px;
+	}
+
+	.nav-trigger-close, a {
+		color: rgba(255, 255, 255, 0.5);
+		@include transition(color 0.2s linear);
+
+		&:hover, .selected a {
+			color: rgba(255, 255, 255, 1);
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+
+	.selected a {
+		color: rgba(255, 255, 255, 1);
+	}
+
+	@media (max-width: 400px) {
+		right: -$navigation-mobile-width;
+		width: $navigation-mobile-width;
+	}
+}

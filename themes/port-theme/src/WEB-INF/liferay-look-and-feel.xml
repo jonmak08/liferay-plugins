@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 7.0.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_7_0_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>7.0.0+</version>
+	</compatibility>
+	<theme id="port" name="Port">
+		<template-extension>ftl</template-extension>
+		<settings>
+			<setting configurable="true" key="off-screen-desktop-navigation" type="checkbox" value="true" />
+			<setting configurable="true" key="navigation-color-scheme" type="select" options="light,dark" value="dark" />
+			<setting configurable="true" key="Accent Color" type="select" options="blue,blue-green,gray,green,purple,red" value="blue-green" />
+		</settings>
+		<portlet-decorator id="barebone" name="Barebone">
+			<portlet-decorator-css-class>portlet-barebone</portlet-decorator-css-class>
+		</portlet-decorator>
+		<portlet-decorator id="borderless" name="Borderless">
+			<portlet-decorator-css-class>portlet-borderless</portlet-decorator-css-class>
+		</portlet-decorator>
+		<portlet-decorator id="decorate" name="Decorate">
+			<default-portlet-decorator>true</default-portlet-decorator>
+			<portlet-decorator-css-class>portlet-decorate</portlet-decorator-css-class>
+		</portlet-decorator>
+		<portlet-decorator id="portlet-banner" name="Banner">
+			<portlet-decorator-css-class>portlet-banner</portlet-decorator-css-class>
+		</portlet-decorator>
+		<portlet-decorator id="photo-bg" name="Photo BG">
+			<portlet-decorator-css-class>portlet-photo-bg</portlet-decorator-css-class>
+		</portlet-decorator>
+	</theme>
+</look-and-feel>

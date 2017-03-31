@@ -1,0 +1,61 @@
+  @font-face {
+	font-family: 'Nixie One';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Nixie One'), local('NixieOne-Regular'),
+		url(../fonts/nixie-one-v7-latin-regular.woff2) format('woff2'),
+		url(../fonts/nixie-one-v7-latin-regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Alegreya Sans SC';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Alegreya Sans SC'), local('AlegreyaSansSC-Regular'),
+		url(../fonts/alegreya-sans-sc-v3-latin-regular.woff2) format('woff2'),
+		url(../fonts/alegreya-sans-sc-v3-latin-regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Alegreya Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Alegreya Sans'), local('AlegreyaSans-Regular'),
+		url(../fonts/alegreya-sans-v3-latin-regular.woff2) format('woff2'),
+		url(../fonts/alegreya-sans-v3-latin-regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Material Icons'), local('MaterialIcons-Regular'),
+		url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+		url(../fonts/example.com/MaterialIcons-Regular.woff) format('woff'),
+}
+
+.material-icons {
+	direction: ltr;
+	display: inline-block;
+	font-family: 'Material Icons';
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: normal;
+	line-height: 1;
+	text-transform: none;
+	white-space: nowrap;
+	word-wrap: normal;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
