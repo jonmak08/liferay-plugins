@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Name" type="text" index-type="keyword" instance-id="jlfd">
+		<dynamic-content language-id="en_US"><![CDATA[Author One]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Bio" instance-id="nanj" type="textarea" index-type="text">
+		<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum corporis autem id nisi, vitae fugit mollitia dolorem rerum iusto quibusdam dolores error.]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="PersonDefaultURL" instance-id="qcex" type="text" index-type="keyword">
+		<dynamic-content language-id="en_US"><![CDATA[/o/port-theme/images/person_2.jpg]]></dynamic-content>
+	</dynamic-element>
+</root>

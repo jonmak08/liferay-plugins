@@ -1,0 +1,78 @@
+{
+	"availableLanguageIds": [
+		"en_US"
+	],
+	"defaultLanguageId": "en_US",
+	"fields": [
+		{
+			"label": {
+				"en_US": "Banner Size"
+			},
+			"options": [
+				{
+					"value": "medium",
+					"label": {
+						"en_US": "Default (medium)"
+					}
+				},
+				{
+					"value": "small-size",
+					"label": {
+						"en_US": "Small"
+					}
+				},
+				{
+					"value": "full-page",
+					"label": {
+						"en_US": "Full Page"
+					}
+				}
+			],
+			"predefinedValue": {
+				"en_US": [
+					""
+				]
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "string",
+			"indexType": "keyword",
+			"localizable": true,
+			"multiple": false,
+			"name": "BannerSize",
+			"readOnly": false,
+			"repeatable": false,
+			"required": false,
+			"showLabel": true,
+			"type": "select"
+		},
+		{
+			"label": {
+				"en_US": "Background Image"
+			},
+			"predefinedValue": {
+				"en_US": ""
+			},
+			"style": {
+				"en_US": ""
+			},
+			"tip": {
+				"en_US": ""
+			},
+			"dataType": "image",
+			"fieldNamespace": "ddm",
+			"indexType": "keyword",
+			"localizable": true,
+			"name": "BackgroundImage",
+			"readOnly": false,
+			"repeatable": false,
+			"required": true,
+			"showLabel": true,
+			"type": "ddm-image"
+		}
+	]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Heading" type="text" index-type="keyword" instance-id="guxv">
+		<dynamic-content language-id="en_US"><![CDATA[Sleek and Stylish]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="Subheading" type="text" index-type="keyword" instance-id="xqlr">
+		<dynamic-content language-id="en_US"><![CDATA[Port is an amazingly elegant theme]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="BannerSize" type="list" index-type="keyword" instance-id="otdt">
+		<dynamic-content language-id="en_US"><![CDATA[full-page]]></dynamic-content>
+	</dynamic-element>
+</root>

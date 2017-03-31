@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="Heading" type="text" index-type="keyword" instance-id="rgbw">
+		<dynamic-content language-id="en_US"><![CDATA[From the Blog]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="ButtonText" type="text" index-type="keyword" instance-id="xsqg">
+		<dynamic-content language-id="en_US"><![CDATA[View All]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="BlogTitle" type="text" index-type="keyword" instance-id="vfaw">
+		<dynamic-element name="DefaultBlogLink" instance-id="bbxg" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[./blogs]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Author" instance-id="ifdu" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Ben]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Category" instance-id="jmxo" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Category]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Date" instance-id="dfsv" type="ddm-date" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[2016-09-14]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Preview" instance-id="pvaf" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, repellendus deserunt minima temporibus omnis facilis quia, rerum eaque consequatur sequi eligendi magnam. Voluptatem ducimus repellat exercitationem facilis? Praesentium, natus nesciunt, qui eveniet, voluptatibus, vel dolor architecto autem aperiam magni veritatis explicabo beatae. Inventore sit sint minus, necessitatibus magni magnam. Quia!]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[Blog Title]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="BlogTitle" type="text" index-type="keyword" instance-id="kifz">
+		<dynamic-element name="DefaultBlogLink" instance-id="tamj" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[./blogs]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Author" instance-id="ebag" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Jonny]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Category" instance-id="dgfh" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Category 2]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Date" instance-id="citn" type="ddm-date" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[2016-07-14]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Preview" instance-id="okqe" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate laudantium officiis praesentium ducimus sit nam debitis assumenda molestiae tempore accusantium repudiandae doloribus velit eveniet esse, reprehenderit blanditiis ipsam impedit id dolorum, veniam ea quod, in voluptatem alias similique! Nihil architecto suscipit adipisci ullam aliquam officiis facere officia? Tenetur, et, mollitia!]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[Blog Title 2]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="BlogTitle" type="text" index-type="keyword" instance-id="xbkb">
+		<dynamic-element name="DefaultBlogLink" instance-id="caoj" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[./blogs]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Author" instance-id="kdgk" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Benjamin]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Category" instance-id="xcbf" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Category 3]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Date" instance-id="bfnt" type="ddm-date" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[2016-03-14]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-element name="Preview" instance-id="quoy" type="text" index-type="keyword">
+			<dynamic-content language-id="en_US"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate laudantium officiis praesentium ducimus sit nam debitis assumenda molestiae tempore accusantium repudiandae doloribus velit eveniet esse, reprehenderit blanditiis ipsam impedit id dolorum, veniam ea quod, in voluptatem alias similique! Nihil architecto suscipit adipisci ullam aliquam officiis facere officia? Tenetur, et, mollitia!]]></dynamic-content>
+		</dynamic-element>
+		<dynamic-content language-id="en_US"><![CDATA[Blog 3]]></dynamic-content>
+	</dynamic-element>
+</root>

@@ -1,0 +1,253 @@
+@import '../_custom_vars.scss';
+
+.portlet-custom {
+	color: black;
+	margin: 0 auto;
+	max-width: 1024px;
+
+	h1, h2, h3, h4 {
+		font-family: $alegreyaSans;
+		margin: 20px 0 10px;
+	}
+
+	hr {
+		border-top: 2px solid #EEE;
+	}
+
+	.navbar {
+		border-radius: 0;
+	}
+
+	.page-header {
+		text-align: center;
+	}
+
+	.form-control {
+		height: 33px;
+	}
+
+	&:hover .portlet-topper {
+		@include transform(translateY(-32px));
+	}
+
+	.portlet-content {
+		border-radius: 0;
+		border-width: 0;
+		margin: 20px 0;
+		padding: 0;
+	}
+
+	.overlay {
+		height: 100%;
+		opacity: 0;
+		position: static;
+
+		@include transition(background 0.2s linear);
+	}
+
+	.bio {
+		.bio-content {
+			@include display(flex);
+		}
+
+		img {
+			border-radius: 50%;
+			height: 75px;
+			margin-right: 20px;
+			width: 75px;
+		}
+
+		p {
+			font-size: 10px;
+		}
+	}
+
+	.works-display {
+		margin: 50px 0;
+
+		.heading {
+			padding: 10px;
+
+			h2 {
+				margin: 0;
+			}
+
+			h4 {
+				font-family: $helvetica;
+			}
+		}
+
+		.heading-row {
+			@include display(flex);
+			@include justify-content(space-between);
+		}
+
+		.card-item {
+			background-size: cover;
+			height: 200px;
+			margin: 20px 0;
+			text-align: center;
+
+			.overlay {
+				align-items: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.btn {
+				border-color: transparent;
+				color: transparent;
+				@include transition(0.2s linear all);
+
+				&:hover {
+					background-color: transparent;
+				}
+			}
+
+			&:hover {
+				.overlay {
+					opacity: 1;
+				}
+
+				.btn {
+					border-color: #FFF;
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	.blog-cards {
+		li {
+			text-align: left;
+
+			h5 {
+				color: #000;
+				font-family: $alegreyaSans;
+				font-size: 14px;
+				font-weight: bold;
+				@include transition(opacity 0.2s linear);
+
+				a {
+					color: inherit;
+					font-size: inherit;
+				}
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+
+			h6 {
+				font-size: 10px;
+				opacity: 0.6;
+			}
+
+			p {
+				font-size: 12px;
+			}
+
+			a {
+				font-size: 10px;
+			}
+		}
+	}
+
+	.blog-byline {
+		span {
+			font-weight: bold;
+		}
+	}
+
+	.blog-content {
+		img {
+			margin-bottom: 10px;
+		}
+	}
+
+	.blog-content-preview {
+		overflow: hidden;
+
+		p {
+			height: 50px;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.testimonials {
+		li {
+			max-width: 300px;
+		}
+
+		img {
+			border-radius: 50%;
+		}
+
+		p {
+			font-size: 10px;
+		}
+
+		h4, h5 {
+			font-weight: bold;
+			opacity: 0.7;
+		}
+
+		h5 {
+			font-size: 11px;
+		}
+	}
+
+	.group-testimonials {
+		margin: 50px 0;
+
+		img {
+			margin-bottom: 20px;
+			min-width: 260px;
+			padding: 0 75px;
+			width: 100%;
+		}
+
+		p {
+			padding: 10px;
+		}
+	}
+
+	.single-testimonial {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+
+		h4 {
+			margin: 0 0 10px;
+			width: 100%;
+		}
+
+		.testimonial-content {
+			align-items: flex-end;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			width: 50%;
+		}
+
+		img {
+			height: 100px;
+			object-fit: cover;
+			width: 100px;
+		}
+
+		p {
+			margin: 0;
+			padding: 10px 10px 5px;
+		}
+
+		h5 {
+			margin: 0 24px;
+		}
+	}
+
+	.form-control {
+		border-radius: 0;
+	}
+}

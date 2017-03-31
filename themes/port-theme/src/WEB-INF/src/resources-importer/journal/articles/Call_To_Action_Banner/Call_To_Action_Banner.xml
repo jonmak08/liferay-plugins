@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element name="CallToAction" type="text" index-type="keyword" instance-id="iwnh">
+		<dynamic-content language-id="en_US"><![CDATA[This is a longer call to action. We hope that you buy our product]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="ButtonText" type="text" index-type="keyword" instance-id="vxyv">
+		<dynamic-content language-id="en_US"><![CDATA[Click Me!]]></dynamic-content>
+	</dynamic-element>
+	<dynamic-element name="BannerSize" type="list" index-type="keyword" instance-id="reiu">
+		<dynamic-content language-id="en_US"><![CDATA[medium]]></dynamic-content>
+	</dynamic-element>
+</root>
